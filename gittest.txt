@@ -1,4 +1,7 @@
-git테스트를 시작하겠습니다.
+﻿git테스트를 시작하겠습니다.
 git명령어로 파일을 만들어서 github에 커밋하도록 하겠습니다.
 changes not stage for commit -- modified상태의 파일을 stage하기로 한다.
 git허브 테스트.
+
+
+자동커밋테스트
