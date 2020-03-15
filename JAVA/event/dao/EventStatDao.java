@@ -1,5 +1,5 @@
 /**
- * Title       : 
+ * Title       : change src
  * Description : Sample dao
  * Copyright   : Copyright (c) 2004
  * Company     : CyberImagination
@@ -23,7 +23,7 @@ public  class EventStatDao
 	{
 
 		DataSet     output  ;////[DB]input  data
-		Executor    executor;////[DB]query전송
+		Executor    executor;////[DB]query????
 
 		try {
 			output  = new DataSet();
