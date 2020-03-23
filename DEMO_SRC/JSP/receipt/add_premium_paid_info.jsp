@@ -162,9 +162,11 @@
 <body <%if( process.equals("L") ){%>onload="javascript:goTimeout('<%=payment.getText("rslt")%>')"<%}%> >
 <form name="paymentForm"  method="post">
 <input type="hidden" name="policy" value="<%=policy%>">
+<!--
 <input type="hidden" name="start" value="<%=start%>">
 <input type="hidden" name="end" value="<%=end%>">
 <input type="hidden" name="option" value="<%=option%>">
+-->
 <input type="hidden" name="language" value="<%=language%>">
 <input type="hidden" name="policy_apln_no" value="<%=policy_apln_no%>">
 <input type="hidden" name="ssn" value="<%=ssn%>">
