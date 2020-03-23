@@ -36,7 +36,7 @@ public  class ExceptionDao
 		catch (Exception e)
 		{
 			throw(e);
-                  e.printStackTrace();
+//                  e.printStackTrace();
 		}
 	}
 }

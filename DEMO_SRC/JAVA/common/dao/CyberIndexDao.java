@@ -21,7 +21,7 @@ public  class CyberIndexDao
         } catch(Exception e) {
         	Logger.debug.println("your findList : "+e.toString());
             throw e;
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 
