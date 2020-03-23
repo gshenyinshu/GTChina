@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0330" protocolName="db1">
+	<description>
+		store procedure  ksps0330 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0330(?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,option,policy,advdate,advcnt</setProperty>
+				<getProperty>rtn,errmsg1,ptd,modx,method,modprem,accprem,pdf,nfopt,divopt,ptd,paymthd,advbgym,advenym,modprm,migprm,preadv,preadvi,susp,advamt,advdc,netamt,pdcnt,lstpdym,prerate</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" type="string" size="0"/>
+			<field name="init" type="string" size="0"/>
+			<field name="option" type="string" size="0"/>
+			<field name="policy" type="string" size="0"/>
+			<field name="advdate" type="string" size="0"/>			
+			<field name="advcnt" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg1"  	       type="string" size="0"/>
+			<field name="ptd"       		type="string" size="0"/>
+			<field name="modx"      		type="string" size="0"/>
+			<field name="method"    		type="string" size="0"/>
+			<field name="modprem"   	type="string" size="0"/>
+			<field name="accprem"   	type="string" size="0"/>
+			<field name="pdf"       		type="string" size="0"/>
+			<field name="nfopt"    		type="string" size="0"/>
+			<field name="divopt"    		type="string" size="0"/>
+			<field name="ptd"       		type="string" size="0"/>
+			<field name="paymthd"   		type="string" size="0"/>
+			<field name="advbgym"   	type="string" size="0"/>
+			<field name="advenym"  	 	type="string" size="0"/>
+			<field name="modprm"    	type="string" size="0"/>
+			<field name="migprm"    		type="string" size="0"/>
+			<field name="preadv"    		type="string" size="0"/>
+			<field name="preadvi"   		type="string" size="0"/>
+			<field name="susp"      		type="string" size="0"/>
+			<field name="advamt"    		type="string" size="0"/>
+			<field name="advdc"     		type="string" size="0"/>
+			<field name="netamt"    		type="string" size="0"/>
+			<field name="pdcnt"     		type="string" size="0"/>
+			<field name="lstpdym"   		type="string" size="0"/>
+			<field name="prerate"   		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

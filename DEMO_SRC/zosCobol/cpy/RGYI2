@@ -1,0 +1,46 @@
+      ******************************************************************
+      *                                                                *
+      *   ??[¦¼/?K?E?Y  ?7v~  v?i?  JA?z?(?V?S?A?M  ?F?I?L?E?)       *
+      *                                                                *
+      *    DATASET  NAME   : UR.UF.RGV010                              *
+      *    COPY     NAME   : RGYI2                                     *
+      *                                                                *
+      *    RECORD   LENGTH : 122 BYTE                                  *
+      *    PRI KEY  LENGTH : 27  BYTE                                  *
+      *    ALT KEY  LENGTH : 27  BYTE                                  *
+      *                                                                *
+      *    CREATION.                                                   *
+      *   -------------                                                *
+      *    1995.06.07    LEE, JONG MIN.   INITIAL WRITTEN              *
+      *    1995.11.21    KIM, HONG KU.    MODIFY                       *
+      *                                                                *
+      ******************************************************************
+
+       01  RGV010-REC.
+
+           05  RGV010-KEY.
+               10  RGV010-BEF-ASS-YYMM-FR   PIC   X(06).
+               10  RGV010-BEF-TXTP-CD       PIC   X(02).
+               10  RGV010-BEF-RESID-BUSNID  PIC   X(13).
+               10  RGV010-BEF-RTN-TP        PIC   X(01).
+               10  RGV010-BEF-RTN-SERIAL-NO PIC  S9(04)  COMP.
+               10  RGV010-BEF-SERIAL-NO     PIC  S9(04)  COMP.
+               10  RGV010-BEF-TXPAYER-TP    PIC   X(01).
+           05  RGV010-BEF-TXPAYER-ID        PIC   X(13).
+           05  RGV010-ALT-KEY.
+               10  RGV010-AFT-ASS-YYMM-FR   PIC   X(06).
+               10  RGV010-AFT-TXTP-CD       PIC   X(02).
+               10  RGV010-AFT-RESID-BUSNID  PIC   X(13).
+               10  RGV010-AFT-RTN-TP        PIC   X(01).
+               10  RGV010-AFT-RTN-SERIAL-NO PIC  S9(04)  COMP.
+               10  RGV010-AFT-SERIAL-NO     PIC  S9(04)  COMP.
+               10  RGV010-AFT-TXPAYER-TP    PIC   X(01).
+           05  RGV010-AFT-TXPAYER-ID        PIC   X(13).
+           05  RGV010-PROCESS-TP            PIC   X(01).
+           05  RGV010-PROCESS-DT            PIC   X(08).
+           05  RGV010-DISTR-TXOFF-CD        PIC   X(03).
+           05  RGV010-TXOFF-CD              PIC   X(03).
+           05  RGV010-TX-OFFCR-CD           PIC   X(04).
+           05  RGV010-PROCESS-RSN           PIC   X(01).
+           05  FILLER                       PIC   X(22).
+

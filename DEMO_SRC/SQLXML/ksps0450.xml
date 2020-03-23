@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0450" protocolName="db1">
+	<description>
+		store procedure  ksps0450 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0450(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>musera,snddate,sndseq</setProperty>
+				<getProperty>rtn,errmsg,sndseq</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="musera" 		type="string" size="0"/>
+			<field name="snddate" 		type="string" size="0"/>
+			<field name="sndseq" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"             	type="string" size="0"/>
+			<field name="errmsg"           	type="string" size="0"/>
+			<field name="sndseq"      	type="string" size="0"/>
+		</block>                         
+	</output>   
+</transaction>  

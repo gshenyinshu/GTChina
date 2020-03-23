@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0921" protocolName="db1">
+	<description>
+		store procedure  ksps0921 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0921(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,client,zip1,zip3,sexcode,citycode,dmloc,comid,persname,corpname,inithold,jobcode,address1,address2,address3,address4,comname,deptname,phoneh,pnoneb,cellu01,faxnum1,smoke,pager1,email,chgaddr1,chgaddr2,addind_h,addind_o,innumber,emailservice</setProperty>
+				<getProperty>rtn,errmsg,errmsg1</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"       		type="string" size="0"/>
+			<field name="client"              	type="string" size="0"/>
+			<field name="zip1"                type="string" size="0"/>
+			<field name="zip3"         		type="string" size="0"/>
+			<field name="sexcode"          type="string" size="0"/>
+			<field name="citycode"          type="string" size="0"/>
+			<field name="dmloc"        		type="string" size="0"/>
+			<field name="comid"             	type="string" size="0"/>
+			<field name="persname"        type="string" size="0"/>
+			<field name="corpname"        type="string" size="0"/>
+			<field name="inithold"            type="string" size="0"/>			
+			<field name="jobcode"      		type="string" size="0"/>
+			<field name="address1"         type="string" size="0"/>
+			<field name="address2"         type="string" size="0"/>
+			<field name="address3"     		type="string" size="0"/>
+			<field name="address4"         type="string" size="0"/>
+			<field name="comname"        	type="string" size="0"/>
+			<field name="deptname"     	type="string" size="0"/>
+			<field name="phoneh"           	type="string" size="0"/>
+			<field name="pnoneb"           	type="string" size="0"/>
+			<field name="cellu01"            type="string" size="0"/>
+			<field name="faxnum1"      		type="string" size="0"/>
+			<field name="smoke"             type="string" size="0"/>
+			<field name="pager1"            	type="string" size="0"/>
+			<field name="email"        		type="string" size="0"/>
+			<field name="chgaddr1"         type="string" size="0"/>
+			<field name="chgaddr2"         type="string" size="0"/>
+			<field name="addind_h"     		type="string" size="0"/>
+			<field name="addind_o"         type="string" size="0"/>
+			<field name="innumber"         type="string" size="0"/>
+			<field name="emailservice"    	type="string" size="0"/>			
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"		type="string" size="0"/>
+			<field name="errmsg1"		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="get_login_sts" protocolName="db1">
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+  		<sql id='1'>
+			<query>
+				select 	TOP 1
+						login_sts, login_close_msg
+				from 	CYBER.dbo.CYBER_TBL_LOGIN_STATUS
+				order by chg_date desc, chg_time desc
+			</query>			
+			<mapping>		
+				<setProperty></setProperty>
+				<getProperty>login_sts, login_close_msg</getProperty>
+			</mapping>
+  		</sql>
+ 	</processor-info>
+ 
+	<input></input>
+	<output>
+		<block>
+			<field name="login_sts"  			type="string" size="0"/>
+			<field name="login_close_msg"		type="string" size="0"/>
+		</block>
+	</output>          
+</transaction>

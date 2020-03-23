@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name="appv_payment_select" protocolName="db1">
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'> 
+			<query>
+				SELECT POLICY_APLN_NO, RSLT 
+				FROM CYBER.dbo.CYBER_TBL_WB_PAYMENT
+				WHERE POLICY_APLN_NO = ?
+            </query>
+			<mapping>	
+				<setProperty> policy_apln_no </setProperty>
+                <getProperty> policy_apln_no, rslt </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+			<field name="policy_apln_no"    type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+			<field name="policy_apln_no"    type="string" size="0"/>
+			<field name="rslt"     			type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

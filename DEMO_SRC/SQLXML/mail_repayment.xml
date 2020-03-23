@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='mail_repayment' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select a.policy, 			
+				case b.option1 WHEN 'A' THEN '신청' END as option1,
+				case b.option2 WHEN 'P' THEN '보험계약대출' WHEN 'A' THEN '자동상환' END as option2,
+				b.pay_amt, b.pay_date,
+				convert(char(10), a.indate,121) as indate1,
+				a.ssn, 
+				a.owner, 
+				CONVERT(CHAR(10),a.prdate,121) as prdate,				
+				a.seq_no,
+				CASE srvc_cd WHEN 'E' THEN '보험계약대출자동상환' WHEN 'F' THEN '자동대출납부자동상환' END as srvc_cd				
+				from cyber.dbo.CYBER_TBL_wb_master a, cyber.dbo.CYBER_TBL_wb_auto_repayment b
+				where a.indate = b.indate 
+				and a.seq_no = b.seq_no
+				and a.indate = ?
+				and a.seq_no  = ?
+				and b.prcode = '1'
+				and srvc_cd = ?
+
+            </query>
+			<mapping>		
+				<setProperty>indate, seq_no, srvc_cd</setProperty>
+                <getProperty>policy, option1, option2, pay_amt, pay_date, indate1, ssn, owner, prdate, seq_no, srvc_cd</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="indate"				type="String" size="0" />	
+            <field name="seq_no"			type="String" size="0" />	            
+            <field name="srvc_cd"			type="String" size="0" />	   
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     	<field name="policy"			type="String" size="0"/>          
+	     	<field name="option1"            	type="String" size="0"/>
+	     	<field name="option2"               	type="String" size="0"/>
+	     	<field name="pay_amt"             	type="String" size="0"/>
+	     	<field name="pay_date"  		type="String" size="0"/>
+	     	<field name="indate1"   			type="String" size="0"/>
+	     	<field name="ssn"    			type="String" size="0"/>
+	     	<field name="owner"     			type="String" size="0"/>
+	     	<field name="prdate"            		type="String" size="0"/>
+	     	<field name="seq_no"            	type="String" size="0"/>
+	     	<field name="srvc_cd"            	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

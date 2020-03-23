@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_account' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select indate, seq_no, prcode, intime, policy_no, isnull(bank_code,'') as bank_code, 
+				(select isnull(bank_name,'') from cyber.dbo.CYBER_TBL_wb_bank  where bank_code = a.bank_code) as bank_name,
+				isnull(account_code,'') as account_code,
+				 isnull(account_name,'') as account_name,
+				isnull(account_ssn,'') as account_ssn, isnull(fb_day,'') as fb_day,
+				(CASE  group_yn WHEN 'y' THEN '신청' WHEN 'n' THEN '미신청' WHEN ''  THEN '미신청' END) as group_yn,
+				isnull(prdate,'') as prdate, isnull(prtime,'') as prtime,
+				isnull(prname,'') as prname
+				from cyber.dbo.CYBER_TBL_wb_account a
+				where indate = ?
+				and seq_no = ?
+				and prcode = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>indate,seq_no,prcode,intime,policy_no,bank_code, bank_name, account_code,account_name,account_ssn,fb_day,group_yn,prdate,prtime,prname</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"			type="String" size="0"/>      
+			<field name="seq_no"            	type="String" size="0"/>
+			<field name="prcode"            	type="String" size="0"/>
+			<field name="intime"            		type="String" size="0"/>
+			<field name="policy_no"         	type="String" size="0"/>
+			<field name="bank_code"         	type="String" size="0"/>
+			<field name="bank_name"		type="String" size="0"/>
+			<field name="account_code"      	type="String" size="0"/>
+			<field name="account_name"      	type="String" size="0"/>
+			<field name="account_ssn"       	type="String" size="0"/>
+			<field name="fb_day"            		type="String" size="0"/>
+			<field name="group_yn"          	type="String" size="0"/>
+			<field name="prdate"            		type="String" size="0"/>
+			<field name="prtime"            		type="String" size="0"/>
+			<field name="prname"            	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

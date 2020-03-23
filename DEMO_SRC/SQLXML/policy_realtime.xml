@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_realtime' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select top 20 indate, seq_no,
+				CASE srvc_cd WHEN 'A' THEN '고객정보변경' WHEN 'B' THEN '자동이체변경' WHEN 'C' THEN '자동이체해지'  WHEN 'D' THEN '그룹빌링' 
+				WHEN 'E' THEN '약대자동상환'  WHEN 'F' THEN 'APL자동상환' WHEN 'G' THEN '납주변경' WHEN 'H' THEN '변액보험펀드변경' WHEN 'I' THEN 'APL신청'
+				WHEN 'J' THEN 'APL해지'
+				WHEN 'K' THEN 'SNC특부신청' 
+				WHEN 'L' THEN 'LNB특부신청' 
+				WHEN 'M' THEN 'FNB특부신청' 			
+				WHEN 'N' THEN '동의철회/수신거부' 			
+				 END as srvc_cd,
+				policy,intime, ssn, owner,  prdate, prtime, ssn, 
+				isnull(email_cus_status,'') as email_cus_status, isnull(email_lp_status,'') as email_lp_status,
+				isnull(sms_cus_ststus,'') as sms_cus_status,  isnull(sms_lp_status,'') as sms_lp_status, 
+				CASE status WHEN '0' THEN '즉시처리' WHEN '' THEN '접수' WHEN '1' THEN '일괄처리'  WHEN '3' THEN '반송'  WHEN '2'  THEN '실패' END as status,
+				srvc_cd as srvc_code
+			from cyber.dbo.CYBER_TBL_wb_master
+			where indate+convert(varChar(1000),seq_no,1)  is not null
+			$where
+			and indate+convert(varChar(1000),seq_no,1)  not in
+			(
+				select top $page indate+convert(varChar(1000),seq_no,1) 
+				from cyber.dbo.CYBER_TBL_wb_master
+				where indate is not null
+				$subwhere
+				order by indate desc, intime desc
+			)			
+			order by indate desc, intime desc
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                		<getProperty>indate, seq_no, srvc_cd, policy, intime, ssn, owner, prdate, prtime, ssn, email_cus_status, email_lp_status, sms_cus_status, sms_lp_status,status, srvc_code</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"				type="int" size="0"/>	
+			<field name="where"			type="string" size="0"/>	
+			<field name="subwhere"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"            		type="string" size="0"/>	
+			<field name="seq_no"                	type="string" size="0"/>
+			<field name="srvc_cd"               	type="string" size="0"/>
+			<field name="policy"                	type="string" size="0"/>
+			<field name="intime"                	type="string" size="0"/>
+			<field name="ssn"                   	type="string" size="0"/>
+			<field name="owner"                 	type="string" size="0"/>
+			<field name="prdate"                	type="string" size="0"/>
+			<field name="prtime"                	type="string" size="0"/>
+			<field name="ssn"                   	type="string" size="0"/>
+			<field name="email_cus_status"    type="string" size="0"/>
+			<field name="email_lp_status"       type="string" size="0"/>
+			<field name="sms_cus_status"      type="string" size="0"/>
+			<field name="sms_lp_status"         type="string" size="0"/>
+			<field name="status"         		type="string" size="0"/>
+			<field name="srvc_code"         		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_repayment' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select indate, seq_no, prcode, intime,policy_no,
+					isnull(option1,'') as option1, isnull(option2,'') as option2,
+					(CASE option2 WHEN 'P' THEN '보험계약대출자동상환' WHEN 'A' THEN '자동대출납부자동상환' END) as opt2_name,
+					pay_amt, isnull(pay_date,'') as pay_date, isnull(prdate,'') as prdate,
+					isnull(prtime,'') as prtime, isnull(prname,'') as prname					
+					from cyber.dbo.CYBER_TBL_wb_auto_repayment				
+					where indate = ?
+					and seq_no = ?
+					and prcode = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>indate,seq_no,prcode,intime,policy_no,option1,option2,opt2_name,pay_amt,pay_date,prtime,prname</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"            		type="String" size="0"/>
+			<field name="seq_no"            	type="String" size="0"/>
+			<field name="prcode"            	type="String" size="0"/>
+			<field name="intime"            		type="String" size="0"/>
+			<field name="policy_no"         	type="String" size="0"/>
+			<field name="option1"           		type="String" size="0"/>
+			<field name="option2"           		type="String" size="0"/>
+			<field name="opt2_name"         	type="String" size="0"/>
+			<field name="pay_amt"           	type="String" size="0"/>
+			<field name="pay_date"          	type="String" size="0"/>
+			<field name="prtime"            		type="String" size="0"/>
+			<field name="prname"            	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

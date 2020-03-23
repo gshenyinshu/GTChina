@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name="appv_process_select" protocolName="db1">
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+/*
+    2007년 5월 22일 안병훈 : 완료상태만 카운팅 하던것을 마지막 상태가 결재신청, 은행신청전, 완료상태인 상태를 카운팅한다.
+				SELECT COUNT(PROC_STATUS) AS APPV_CNT
+				FROM CYBER.dbo.CYBER_TBL_WB_PROCESS
+				WHERE POLICY_APLN_NO = ?
+				AND PROC_STATUS = ?
+*/
+
+                select COUNT(PROC_STATUS) AS APPV_CNT
+                  from (select top 1 *
+                          from CYBER.dbo.CYBER_TBL_WB_PROCESS
+                         where POLICY_APLN_NO = ?
+                      order by proc_id desc) a
+                 where PROC_STATUS in ('22', '40', '80')
+            </query>
+			<mapping>
+				<setProperty> policy_apln_no </setProperty>
+                <getProperty> appv_cnt </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="policy_apln_no"   	type="string" size="0"/>
+			<field name="proc_status"      	type="string" size="0"/>
+        </block>
+	</input>
+
+	<output>
+		<block>
+			<field name="appv_cnt"   		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

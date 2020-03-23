@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_reissue_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select top 16 indate, isnull(id,'') as id, isnull(policy,'') as policy,
+				(CASE code WHEN '1' THEN '보험료 납부증명서' WHEN '2' THEN '보험 가입증명서' WHEN '3' THEN '보험 증권재발행' WHEN '4' THEN '대출 잔액증명서' END) as code,
+				(CASE subcode WHEN '1' THEN '전년말' WHEN '2' THEN '당년말' WHEN '3' THEN '현재시점' WHEN 'O' THEN '직장' WHEN 'H' THEN '자택' END) as subcode,
+				(CASE method WHEN '1' THEN '우편' WHEN '2' THEN 'eMail' WHEN '3' THEN '팩스'  WHEN '4' THEN '우편+eMail'  WHEN '5' THEN '우편+팩스' WHEN '6' THEN 'eMail+팩스' WHEN '7' THEN '우편+eMail+팩스' WHEN '8' THEN '화면출력' END) as method,
+				isnull(name,'') as name,
+				isnull(post,'') as post,
+				isnull(addr1,'') as addr1,isnull(addr2,'') as addr2, isnull(addr3,'') as addr3, isnull(addr4,'') as addr4,
+				isnull(fax,'') as fax, isnull(phone,'') as phone, isnull(email,'') as email, isnull(intime,'') as intime,
+				isnull(prdate,'') as prdate, isnull(prtime,'') as prtime, isnull(prname,'') as prname,
+				(CASE rtn WHEN '0' THEN '접수' WHEN '1' THEN '처리' WHEN '2' THEN '발송' WHEN '3' THEN '반송' END) rtn,
+				label_yn,
+				(select count(*) from CYBER.dbo.CYBER_TBL_wb_letter where indate+policy is not null $where ) as tot_cnt,
+				(select count(*) from CYBER.dbo.CYBER_TBL_wb_letter where indate+policy is not null and rtn='0' $where ) as rtn0,
+				(select count(*) from CYBER.dbo.CYBER_TBL_wb_letter where indate+policy is not null and rtn='1' $where ) as rtn1
+			from CYBER.dbo.CYBER_TBL_wb_letter
+			where indate+policy is not null
+			$where
+			and indate+policy not in
+			(
+				select top $page indate+policy
+				from CYBER.dbo.CYBER_TBL_wb_letter
+				where indate is not null
+				$subwhere
+				order by indate desc, intime desc
+			)
+			order by indate desc, intime desc
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>indate,id,policy,code,subcode,method,name,post,addr1,addr2,addr3,addr4,fax,phone,email,intime,prdate,prtime,prname,rtn,label_yn,tot_cnt,rtn0,rtn1</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"					type="int" size="0"/>	
+			<field name="where"					type="string" size="0"/>	
+			<field name="subwhere"				type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"                	type="String" size="0"/>
+			<field name="id"                    	type="String" size="0"/>
+			<field name="policy"                	type="String" size="0"/>
+			<field name="code"                  	type="String" size="0"/>
+			<field name="subcode"               	type="String" size="0"/>
+			<field name="method"                	type="String" size="0"/>
+			<field name="name"                  	type="String" size="0"/>
+			<field name="post"                  	type="String" size="0"/>
+			<field name="addr1"                 	type="String" size="0"/>
+			<field name="addr2"                 	type="String" size="0"/>
+			<field name="addr3"                 	type="String" size="0"/>
+			<field name="addr4"                 	type="String" size="0"/>
+			<field name="fax"                   	type="String" size="0"/>
+			<field name="phone"                 	type="String" size="0"/>
+			<field name="email"                 	type="String" size="0"/>
+			<field name="intime"                	type="String" size="0"/>
+			<field name="prdate"                	type="String" size="0"/>
+			<field name="prtime"                	type="String" size="0"/>
+			<field name="prname" 					type="String" size="0"/>
+			<field name="rtn"						type="String" size="0"/>
+			<field name="label_yn"					type="String" size="0"/>
+			<field name="tot_cnt"					type="String" size="0"/>
+			<field name="rtn0"						type="String" size="0"/>
+			<field name="rtn1"						type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

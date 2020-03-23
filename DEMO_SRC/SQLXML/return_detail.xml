@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_detail' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			update
+			$table
+			set rslt = ?, err_msg= ?, prdate=?, prtime=?, emp_no = ?
+			where indate = ?
+			and seq_no = ?
+			and prcode = ?
+			
+            </query>
+			<mapping>		
+				<setProperty>rslt, err_msg, prdate, prtime, emp_no, indate, seq_no, prcode</setProperty>
+                		<getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="table"				type="string" size="0"/>	
+			<field name="rslt"				type="string" size="0"/>	
+			<field name="err_msg"			type="string" size="0"/>	
+			<field name="prdate"			type="string" size="0"/>
+			<field name="prtime"			type="string" size="0"/>
+			<field name="emp_no"			type="string" size="0"/>
+			<field name="indate"			type="string" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>
+

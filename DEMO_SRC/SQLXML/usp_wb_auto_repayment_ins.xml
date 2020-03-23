@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="usp_wb_auto_repayment_ins" protocolName="db1">
+ <description>
+  usp_wb_auto_repayment_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_AUTO_REPAYMENT_INS(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in">v_indate</param>
+    <param seq="3"   mode="in">v_intime</param>
+    <param seq="4"   mode="in">v_policy</param>
+    <param seq="5"   mode="in">v_ssn</param> 
+    <param seq="6"   mode="in">v_owner</param> 
+    <param seq="7"   mode="in">v_status</param> 
+    <param seq="8"   mode="in">v_prdate</param> 
+    <param seq="9"   mode="in">v_prtime</param> 
+
+    <param seq="10"  mode="in">v_prcode</param> 
+    <param seq="11"  mode="in">v_option1</param>
+    <param seq="12"  mode="in">v_option2</param>
+    <param seq="13"  mode="in">v_pay_amt</param>
+    <param seq="14"  mode="in">v_pay_date</param> 
+    <param seq="15"  mode="in">v_mprdate</param> 
+    <param seq="16"  mode="in">v_mprtime</param> 
+    <param seq="17"  mode="in">v_prname</param>
+    <param seq="18"  mode="in">v_rslt</param>
+    <param seq="19"  mode="in">v_err_msg</param>
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="v_indate"       type="string" size="0"/>
+   <field name="v_intime"       type="string" size="0"/>
+   <field name="v_policy"       type="string" size="0"/>
+   <field name="v_ssn"          type="string" size="0"/>
+   <field name="v_owner"        type="string" size="0"/>
+   <field name="v_status"       type="string" size="0"/>
+   <field name="v_prdate"       type="string" size="0"/>
+   <field name="v_prtime"       type="string" size="0"/>
+   <field name="v_prcode"       type="string" size="0"/>
+   <field name="v_option1"      type="string" size="0"/>
+   <field name="v_option2"      type="string" size="0"/>
+   <field name="v_pay_amt"      type="string" size="0"/>
+   <field name="v_pay_date"     type="string" size="0"/>
+   <field name="v_mprdate"      type="string" size="0"/>
+   <field name="v_mprtime"      type="string" size="0"/>
+   <field name="v_prname"       type="string" size="0"/>
+   <field name="v_rslt"         type="string" size="0"/>
+   <field name="v_err_msg"      type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"           type="string" size="0"/>
+ 
+  </block>                                
+ </output>          
+</transaction>         
+ 

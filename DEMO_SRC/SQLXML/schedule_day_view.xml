@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='schedule_day_view' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select eff_date, work_gubun, week_gubun, work_start_time, work_end_time, comp_before, comp_after, close_start_time, close_end_time, prname, prdate
+                from CYBER.dbo.CYBER_TBL_WB_HOLIDAY
+                where eff_date = ?
+            </query>
+			<mapping>       
+				<getProperty>
+                              eff_date, work_gubun, week_gubun, work_start_time, work_end_time, comp_before, comp_after, close_start_time, close_end_time, prname, prdate
+                </getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="where"            type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="eff_date"    			type="string" size="0"/>     
+			<field name="work_gubun"        	type="string" size="0"/>
+			<field name="week_gubun"        	type="string" size="0"/>
+			<field name="work_start_time"   	type="string" size="0"/>
+			<field name="work_end_time"     	type="string" size="0"/>
+			<field name="comp_before"       	type="string" size="0"/>
+			<field name="comp_after"        	type="string" size="0"/>
+			<field name="close_start_time"  	type="string" size="0"/>
+			<field name="close_end_time"        type="string" size="0"/>
+			<field name="prname prdate"         type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

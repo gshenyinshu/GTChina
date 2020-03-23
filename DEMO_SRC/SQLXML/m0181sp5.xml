@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="m0181sp5" protocolName="db1">
+	<description>
+		store procedure  m0181sp5 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.M0181SP5(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,opt1,opt2,policy,regdate,paydate,cash,prmsusp,susp,plpay,tax,sndseq,bnkclt,bnkcode,bnkacct,agency</setProperty>
+				<getProperty>rtn,errmsg1,errmsg2,errmsg3,preloan,loan,lglfee,netpay,sndseq</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="String" size="0"/>
+			<field name="init"      	type="String" size="0"/>
+			<field name="opt1"      	type="String" size="0"/>
+			<field name="opt2"      	type="String" size="0"/>
+			<field name="policy"    	type="String" size="0"/>
+			<field name="regdate"   	type="String" size="0"/>
+			<field name="paydate"   	type="String" size="0"/>
+			<field name="cash"      	type="String" size="0"/>
+			<field name="prmsusp"  		type="String" size="0"/>
+			<field name="susp"      	type="String" size="0"/>
+			<field name="plpay"     	type="String" size="0"/>
+			<field name="tax"       	type="String" size="0"/>
+			<field name="sndseq"    	type="String" size="0"/>
+			<field name="bnkclt"    	type="String" size="0"/>
+			<field name="bnkcode"   	type="String" size="0"/>
+			<field name="bnkacct"   	type="String" size="0"/>
+			<field name="agency"   	type="String" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg1"  	    type="string" size="0"/>
+			<field name="errmsg2"       type="string" size="0"/>
+			<field name="errmsg3"      	type="string" size="0"/>
+			<field name="preloan"    	type="string" size="0"/>
+			<field name="loan"   		type="string" size="0"/>
+			<field name="lglfee"   		type="string" size="0"/>
+			<field name="netpay"       	type="string" size="0"/>
+			<field name="sndseq"    	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

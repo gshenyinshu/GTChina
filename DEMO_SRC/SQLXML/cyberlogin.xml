@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='cyberlogin' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select emp_no, isnull(emp_nm,'') as emp_nm, isnull(auth_cd,'') as auth_cd, isnull(auth_cd2,'') as auth_cd2, isnull(team_nm,'') as team_nm, isnull(old_pwd,'') as old_pwd,
+				isnull(chg_pwd_dt,'') as chg_pwd_dt from CYBER.dbo.CYBER_TBL_WB_PROC_EMP where emp_no=? and pwd = ?				
+            </query>
+			<mapping>		
+				<setProperty>id, pw</setProperty>
+                <getProperty>emp_no, emp_nm, auth_cd,auth_cd2, team_nm, old_pwd, chg_pwd_dt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="id"				type="String" size="0" />	
+            <field name="pw"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="emp_no"				type="string" size="0"/>			
+	     <field name="emp_nm"				type="string" size="0"/>			
+	     <field name="auth_cd"				type="string" size="0"/>	
+	     <field name="auth_cd2"				type="string" size="0"/>			
+	     <field name="team_nm"				type="string" size="0"/>			
+	     <field name="old_pwd"				type="string" size="0"/>			
+	     <field name="chg_pwd_dt"			type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='lp_search' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select lplevel, lpid, lpname, phonenumber1, phonenumber2, phonenumber3,  lpemail,
+					   isnull(b.agencyName,'') as location_1, agencyphonenumber 
+				from PRUDB.dbo.LifePlanner a, PRUDB.dbo.Agency b 
+				where a.agencyCode = b.agencyCode 
+				and lpcode = ?
+            </query>
+			<mapping>		
+				<setProperty>lpcode</setProperty>
+                <getProperty>lplevel, lpid, lpname,phonenumber1,phonenumber2,phonenumber3,lpemail, location_1, agencyphonenumber</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="lpcode"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	        <field name="lplevel"			type="string" size="0"/>			
+            <field name="lpid"				type="string" size="0"/>
+            <field name="lpname"			type="string" size="0"/>
+            <field name="phonenumber1"		type="string" size="0"/>
+            <field name="phonenumber2"		type="string" size="0"/>
+            <field name="phonenumber3"		type="string" size="0"/>
+            <field name="lpemail"			type="string" size="0"/>
+            <field name="location_1"		type="string" size="0"/>
+            <field name="agencyphonenumber"	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

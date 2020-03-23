@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="cyber_index_cause_total" protocolName="db1">
+ <description>
+  cyber_index_cause_total
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_CYBER_INDEX_CAUSE(?,?,?,?,?,?) }
+   </query>
+   <mapping>
+    <setProperty>
+    search,       
+	searchStr,       
+    sdate,
+	edate,
+	v_top,
+	v_mode
+	</setProperty>
+    <getProperty>
+	total
+	</getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="search"  	type="string" size="0"/>
+   <field name="searchStr"  	type="string" size="0"/>
+   <field name="sdate"  type="string" size="0"/>   
+   <field name="edate"  type="string" size="0"/>   
+   <field name="v_top"  type="string" size="0"/>   
+   <field name="v_mode"  type="string" size="0"/>   
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="total"             		type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>

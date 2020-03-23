@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="cyber_index_list" protocolName="db1">
+	<description>
+		store procedure  cyber_index_list
+	</description>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<sql>
+			<query type="storedprocedure">
+				{call CYBER.dbo.CYBER_USP_WB_CYBERINDEX2(?, ?)}
+			</query>
+			<mapping>
+				<setProperty>start_date, end_date</setProperty>
+				<getProperty>
+					item            
+					,total           
+					,total_cost      
+					,success         
+					,process         
+					,regist          
+					,fault           
+					,wait            
+					,return          
+					,success_count   
+					,service_count   
+					,service_percent 
+					,time_average					
+				</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="start_date" type="string" size="0"/>
+			<field name="end_date" type="string" size="0" />
+		</block>
+	</input>
+	<output>
+		<block>
+		   <field name="item"             		type="string" size="0"/>
+		   <field name="total"             		type="string" size="0"/>
+		   <field name="total_cost"             type="string" size="0"/>
+		   <field name="success"             	type="string" size="0"/>
+		   <field name="process"             	type="string" size="0"/>
+		   <field name="regist"             	type="string" size="0"/>
+		   <field name="fault"             		type="string" size="0"/>
+		   <field name="wait"             		type="string" size="0"/>
+		   <field name="return"             	type="string" size="0"/>
+		   <field name="success_count"          type="string" size="0"/>
+		   <field name="service_count"          type="string" size="0"/>
+		   <field name="service_percent"        type="string" size="0"/>
+		   <field name="time_average"            type="string" size="0"/>
+		</block>                                
+	</output>  
+	 <!--
+	1  :  항목          
+	2  :  총건수        
+	3  :  총금액(천원)  
+	4  :  성공          
+	5  :  처리중        
+	6  :  접수          
+	7  :  실패          
+	8  :  지연          
+	9  :  반송          
+	10 :  처리율        
+	11 :  S/L_CNT       
+	12 :  S/L           
+	13 :  평균처리시간  
+  -->        
+</transaction>         
+
+
+

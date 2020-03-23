@@ -1,0 +1,96 @@
+@import url("./layout.css");
+
+BODY,P,TD,TH,SELECT,INPUT,DIV,FORM,TEXTAREA,OPTION,SELECT,CAPTION {font-size:12px; font-family:µ¸¿ò; line-height:140%; color:#7F7F7F;}
+
+body, table, tr, th, td {   margin: 0px; padding: 0px; spacing: 0px; border: 0px; border-collapse: collapse; word-break: break; word-wrap: break-all;   }
+img {   border: 0;   }
+
+select   {   margin: 0px 0px -2px 0px;   }
+
+a {   color:#666666; text-decoration:none;   }
+a:hover {   color:#000000; text-decoration:none;   }
+
+.map a {   color:#666666; text-decoration:none;   }
+.map a:hover {   color:#000000; text-decoration:none;   }
+.map td {   text-align: left;   }
+
+input {   background-color: #FFFFFF; height:19px; border:1px solid #DEDEDE; background-color: #FFFFFF;   }
+textarea {   background-color: #FFFFFF; border:1px solid #DEDEDE; background-color: #FFFFFF;   }
+
+select {   padding: 5 10 3;   }
+option {   padding: 5 10 3;   }
+
+.subtitle tr{   text-align: center;   }
+.subtitle td {   color: #000000; vertical-align: top; padding: 10px 10px 0px; font-size: 12px;   }
+.subtitle th {   vertical-align: top; padding: 10px 1px 0px; font-size: 12px; border: none; font-weight: normal;  }
+.subtitle .subleft {   background: url(../../img/edit/subtitle_bgend.gif) no-repeat left;   }
+.subtitle .select {   background: #FFFFFF; border: E4E4E4 1 solid; border-bottom:none; font-weight:bold;   }
+.subright {    width: 1px; background: url(../../img/edit/subtitle_bgend.gif) no-repeat right;   }
+
+.subtitle a {   text-decoration: none;   }
+.subtitle a:hover {   text-decoration: underline;   }
+
+/*                     */   .radio {   width: 15px; height: 15px; border: none; margin: 0px -2px; 0px 0px; background-color: transparent;   }
+
+/*                     */   .box01 {   width: 60px;   }
+/*                     */   .box02 {   width: 80px;   }
+/*                     */   .box03 {   width: 80px;   }
+/*                     */   .box04 {   width: 160px;   }
+/*                     */   .box05 {   width: 400px;   }
+/*                     */   .box10 {   width: 100%;   }
+
+/*                     */   .font01 {   color: #FF0000;   }
+/*                     */   .font02 {   color: #FF0000;   }
+/*                     */   .font03 {   color: #FF0000;   }
+/*                     */   .font04 {   color: #FF0000;   }
+/*                     */   .font05 {   color: #FF0000;   }
+/*                     */   .font10 {   color: #A4A4A4;   }
+
+/* center              */   .btn00 {   text-align: center; padding: 12px 0px;   }
+/* right               */   .btn01 {   text-align: right; padding: 2px 0px;   }
+
+/* right               */   .btntop {   text-align: right; padding: 2px 0px;   }
+
+/*                     */   .title00 {   padding-bottom: 12px;   }
+/*                     */   .title01 {   vertical-align: bottom; font-weight: bold; color: #3D7BC4; padding: 0px 0px 7px 0px;   }
+/*                     */   .title02 {   vertical-align: bottom; font-weight: bold; padding: 0px;   }
+/*                     */   .titleimg {   vertical-align: top; padding: 0px 0px 17px 0px;   }
+
+/*                     */   .adm_table          {   margin: 0px 0px 10px;   }
+/*                     */   .adm_table tr       {   text-align: center;   }
+/*                     */   .adm_table th       {   background: #85A5E2; font-weight: normal; color: #FFFFFF;   }
+/*                     */   .adm_table .th2       {   padding: 3px 2px 1px;   }
+/*                     */   .adm_table td,th    {   border: #DEDEDE 1 solid; padding: 7px 2px 4px;   }
+
+/*                     */   .adm_table .adm01 td   {   background: #FFFFFF;   }
+/*                     */   .adm_table .adm02 td   {   background: #F6F6F6;   }
+
+/* top table           */   .adm_table .adm11 th   {   padding: 7px 5px 4px; background: #86C3E2;   }
+/*                     */   .adm_table .adm11 td   {   padding: 7px 5px 4px; text-align: left;   }
+
+/* top table           */   .adm_table .adm12 th   {   padding: 7px 10px 4px; background: #86C3E2;   }
+/*                     */   .adm_table .adm12 td   {   padding: 7px 30px 4px 10px; text-align: right;   }
+/*                     */   .adm_table .adm12 .le   {   padding: 7px 10px 4px 10px; text-align: left;   }
+/*                     */   .adm_table .adm12 .ce   {   padding: 7px 10px 4px 10px; text-align: center;   }
+
+/* top table           */   .adm_table .adm13 th   {   padding: 7px 5px 4px; background: #86C3E2;   }
+/*                     */   .adm_table .adm13 td   {   padding: 7px 5px 4px; text-align: right;   }
+/*                     */   .adm_table .adm13 .le   {   padding: 7px 10px 4px 10px; text-align: left;   }
+/*                     */   .adm_table .adm13 .ce   {   padding: 7px 10px 4px 10px; text-align: center;   }
+
+/* left table          */   .adm_table .adm15    {   text-align: right;   }
+/*                     */   .adm_table .adm15 th   {   padding: 7px 10px 4px; background: #8586E2;   }
+/*                     */   .adm_table .adm15 td   {   padding: 5px 10px 5px;   }
+
+/*                     */   .adm_table .adm16 th   {   background: #8586E2;   }
+/*                     */   .adm_table .adm16 td   {   padding: 5px 10px 5px;   }
+
+/* bot table           */   .adm_table .adm21 td   {   text-align: left; padding: 7px 10px 4px;   }
+/* bot table           */   .adm_table .adm21 .adm21   {   text-align: right; padding: 7px 30px 4px 10px;   }
+/* bot table           */   .adm_table .adm22 td   {   text-align: left; padding: 5px 10px 5px;   }
+/*                     */   .adm_table .adm23 td   {   text-align: right; padding: 7px 30px 4px;   }
+
+
+/* width radio button  */   .div_radio          {   position: relative; margin: -16 0 0 100;   }
+/* width radio button  */   .div_radio1          {   position: relative; margin: -20 0 0 50;   }
+

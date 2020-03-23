@@ -1,0 +1,6 @@
+
+           05  W-SSSDC-AREA.
+
+               10  W-SSSDC-IN-DATE     PIC  X(08)          VALUE SPACES.
+               10  W-SSSDC-STATUS      PIC  X(01)          VALUE SPACE.
+

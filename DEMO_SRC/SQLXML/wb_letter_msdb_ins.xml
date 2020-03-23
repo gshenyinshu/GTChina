@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name='wb_letter_msdb_ins' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/msdbDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+					EXEC msdb.dbo.sp_start_job @job_name = '증권 데이터 전송'
+            </query>
+			<mapping>		
+				
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='monitering_proof_sel' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select top 20 seq_no, indate, isnull(ssn,'') as ssn, isnull(inyear,'') as inyear,
+				(CASE subcode WHEN 'O' THEN '직장' WHEN 'H' THEN '자택' END) as subcode,
+				isnull(intime,'') as intime,
+				isnull(name,'') as name,
+				isnull(post,'') as post,
+				isnull(addr1,'') as addr1,isnull(addr2,'') as addr2, isnull(addr3,'') as addr3, isnull(addr4,'') as addr4,
+				(CASE pms WHEN 'Y' THEN '처리' WHEN 'N' THEN '미처리' END) pms,
+				isnull(prdate,'') as prdate, isnull(prtime,'') as prtime, isnull(prname,'') as prname
+			from CYBER.dbo.cyber_tbl_income_deduct_proof
+			where indate is not null
+			$where
+			and indate+ssn+inyear not in
+			(
+				select top $page indate+ssn+inyear
+				from CYBER.dbo.cyber_tbl_income_deduct_proof
+				where indate is not null
+				$subwhere
+				order by indate desc, intime desc
+			)
+			order by indate desc, intime desc
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>seq_no,indate,ssn,inyear,subcode,intime,name,post,addr1,addr2,addr3,addr4,pms,prdate,prtime,prname</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"						type="int" size="0"/>	
+			<field name="where"						type="string" size="0"/>	
+			<field name="subwhere"					type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="seq_no"                	type="String" size="0"/>
+			<field name="indate"                	type="String" size="0"/>
+			<field name="ssn"                    	type="String" size="0"/>
+			<field name="inyear"                	type="String" size="0"/>
+			<field name="subcode"               	type="String" size="0"/>
+			<field name="intime"                	type="String" size="0"/>
+			<field name="name"                  	type="String" size="0"/>
+			<field name="post"                  	type="String" size="0"/>
+			<field name="addr1"                 	type="String" size="0"/>
+			<field name="addr2"                 	type="String" size="0"/>
+			<field name="addr3"                 	type="String" size="0"/>
+			<field name="addr4"                 	type="String" size="0"/>
+			<field name="pms"                		type="String" size="0"/>
+			<field name="prdate"                	type="String" size="0"/>
+			<field name="prtime"                	type="String" size="0"/>
+			<field name="prname" 					type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0700" protocolName="db1">
+	<description>
+		store procedure  ksps0700 파라미터
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0700(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping-procedure>
+				<param seq="1"  mode="in">cltno</param>
+				<param seq="2"  mode="in">year</param>
+				<param seq="3"  mode="in">yyend</param>
+				<param seq="4"  mode="in">language</param>
+					
+				<param seq="1"  mode="out"  type="VARCHAR" size="10">cltno1</param>
+				<param seq="2"  mode="out"  type="VARCHAR" size="10">year1</param>
+				<param seq="3"  mode="out"  type="VARCHAR" size="10">yyend1</param>
+				<param seq="4"  mode="out"  type="VARCHAR" size="10">language1</param>		
+						
+				<param seq="5"  mode="out"  type="VARCHAR" size="10">rtn</param>
+				<param seq="6"  mode="out"  type="VARCHAR" size="10">errmsg</param>
+				<param seq="7"  mode="out"  type="VARCHAR" size="10">agadd1</param>
+				<param seq="8"  mode="out"  type="VARCHAR" size="10">agadd2</param>
+				<param seq="9"  mode="out"  type="VARCHAR" size="10">agzip</param>
+				<param seq="10"  mode="out" type="VARCHAR" size="10">brna</param>			
+				<param seq="11"  mode="out" type="VARCHAR" size="10">agcall</param>
+				<param seq="12"  mode="out" type="VARCHAR" size="10">agfax</param>
+				<param seq="13"  mode="out" type="VARCHAR" size="10">owner</param>
+				<param seq="14" mode="out"  type="VARCHAR" size="10">ownadd1</param>
+				<param seq="15" mode="out"  type="VARCHAR" size="10">ownadd2</param>
+				<param seq="16" mode="out"  type="VARCHAR" size="10">ownadd3</param>
+				<param seq="17" mode="out"  type="VARCHAR" size="10">ownzip</param>
+				<param seq="18" mode="out"  type="VARCHAR" size="10">taxyear</param>
+				<param seq="19" mode="out"  type="VARCHAR" size="10">plancd</param>
+				<param seq="20" mode="out"  type="VARCHAR" size="10">rs</param>
+				<param seq="21" mode="out"  type="VARCHAR" size="10">sub1</param>
+				<param seq="22" mode="out"  type="VARCHAR" size="10">sub2</param>
+				<param seq="23" mode="out"  type="VARCHAR" size="10">plnnm</param>
+				<param seq="24" mode="out"  type="VARCHAR" size="10">policy</param>			
+				<param seq="25" mode="out"  type="VARCHAR" size="10">insured</param>
+				<param seq="26" mode="out"  type="VARCHAR" size="10">modx</param>
+				<param seq="27" mode="out"  type="VARCHAR" size="10">lstyymm</param>
+				<param seq="28" mode="out"  type="VARCHAR" size="10">lstcnt</param>
+				<param seq="29" mode="out"  type="VARCHAR" size="10">issdate</param>
+				<param seq="30" mode="out"  type="VARCHAR" size="10">mthtax</param>
+				<param seq="31" mode="out"  type="VARCHAR" size="10">yeartax</param>
+				<param seq="32" mode="out"  type="VARCHAR" size="10">drwdate</param>
+				<param seq="33" mode="out"  type="VARCHAR" size="10">cnt</param>
+			</mapping-procedure>
+			<mapping>      
+				<setProperty></setProperty>
+				<getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="cltno"     	type="string" size="0"/>
+			<field name="year"      	type="string" size="0"/>
+			<field name="yyend"     	type="string" size="0"/>
+			<field name="language"  	type="string" size="0"/>
+		</block>                    
+	</input>                        
+	<output>                        
+		<block>  		                   
+			<field name="cltno1"		type="string" size="0"/>
+			<field name="year1"    		type="string" size="0"/>
+			<field name="yyend1"    	type="string" size="0"/>
+			<field name="languag1"    	type="string" size="0"/>			
+			<field name="rtn"     		type="string" size="0"/>
+			<field name="errmsg"     	type="string" size="0"/>
+			<field name="agadd1"    	type="string" size="0"/>
+			<field name="agadd2"     	type="string" size="0"/>
+			<field name="agzip"     	type="string" size="0"/>
+			<field name="brna"   		type="string" size="0"/>
+			<field name="agcall"   		type="string" size="0"/>
+			<field name="agfax"   		type="string" size="0"/>
+			<field name="owner"    		type="string" size="0"/>
+			<field name="ownadd1"  		type="string" size="0"/>
+			<field name="ownadd2"  		type="string" size="0"/>
+			<field name="ownadd3"  		type="string" size="0"/>
+			<field name="ownzip"     	type="string" size="0"/>
+			<field name="taxyear"     	type="string" size="0"/>
+			<field name="plancd"      	type="string" size="0"/>
+			<field name="rs"     		type="string" size="0"/>
+			<field name="sub1"    		type="string" size="0"/>
+			<field name="sub2"   		type="string" size="0"/>
+			<field name="plnnm"       	type="string" size="0"/>
+			<field name="policy"   		type="string" size="0"/>
+			<field name="insured"    	type="string" size="0"/>
+			<field name="modx"   		type="string" size="0"/>
+			<field name="lstyymm"    	type="string" size="0"/>
+			<field name="lstcnt"   		type="string" size="0"/>
+			<field name="issdate"   	type="string" size="0"/>
+			<field name="mthtax"		type="string" size="0"/>
+			<field name="yeartax"		type="string" size="0"/>
+			<field name="drwdate"		type="string" size="0"/>
+			<field name="cnt"			type="string" size="0"/>
+		</block>                                
+	</output>          
+</transaction>         

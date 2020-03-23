@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='wb_rslt_read' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select rslt, err_msg from CYBER.dbo.CYBER_TBL_WB_PAYMENT where policy_apln_no=?				
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>rslt, err_msg</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="rslt"				type="string" size="0"/>			
+	     <field name="err_msg"				type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

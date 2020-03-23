@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='get_procamt_info' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+				select 	policy_apln_no, policy_no, payor_ssn, (convert(varchar(8),apln_dt,112)) as apln_dt, (cast(apln_amt as varchar(10))) as apln_amt,
+						(convert(varchar(8),pay_dt,112)) as pay_dt, (cast(pay_amt as varchar(10))) as pay_amt
+				from 	cyber.dbo.cyber_tbl_wb_payment
+				where 	(convert(varchar(8),apln_dt,112)) = (convert(varchar(8),getdate(),112))
+--						and mode=? and srvc_cd=? and rslt=?	and payor_ssn=?
+						and mode=? and payor_ssn=? and rslt &lt;&gt; '1'
+            </query>
+			<mapping>
+				<setProperty>mode,ssn</setProperty>
+                <getProperty>policy_apln_no,policy_no,payor_ssn,apln_dt,apln_amt,pay_dt,pay_amt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="mode"      		type="String" size="0"/>
+			<field name="ssn"      			type="String" size="0"/>
+        </block>
+	</input>
+
+	<output>
+		<block>
+			<field name="policy_apln_no"	type="String" size="0"/>
+			<field name="policy_no"      	type="String" size="0"/>
+			<field name="payor_ssn"      	type="String" size="0"/>
+			<field name="apln_dt"    		type="String" size="0"/>
+			<field name="apln_amt"      	type="String" size="0"/>
+			<field name="pay_dt"      		type="String" size="0"/>
+			<field name="pay_amt"      		type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

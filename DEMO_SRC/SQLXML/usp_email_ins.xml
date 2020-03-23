@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="usp_email_ins" protocolName="db1">
+ <description>
+  usp_sms_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/CyberDS">
+  <sql>
+   <query type="storedprocedure">
+   {call EMS.dbo.USP_Send_RealTime_mail(?,?,?,?,?,?,?,?,?,?,?) }
+    <!--실서버:{call [amail-db].EMS.dbo.USP_Send_RealTime_mail(?,?,?,?,?,?,?,?,?,?,?) }-->
+	
+    
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="in" >v_mail_type</param>
+    <param seq="2"   mode="in">v_mail_type_seq</param>
+    <param seq="3"   mode="in">v_channel_code</param>
+    <param seq="4"   mode="in">v_member_id</param>
+    <param seq="5"   mode="in">v_to_name</param> 
+    <param seq="6"   mode="in">v_to_email</param> 
+    <param seq="7"   mode="in">v_mapping</param> 
+    <param seq="8"   mode="in">v_lp_code</param> 
+    <param seq="9"  mode="in">v_policy_number</param> 
+    <param seq="10"  mode="in">v_channel</param> 
+    <param seq="11"  mode="in">v_ilips_client_id</param> 
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="v_mail_type"  		  	type="string" size="0"/>
+   <field name="v_mail_type_seq"   	type="string" size="0"/>
+   <field name="v_channel_code"   	type="string" size="0"/>
+   <field name="v_member_id"   	  	type="string" size="0"/>
+   <field name="v_to_name"    		type="string" size="0"/>
+   <field name="v_to_email"   			type="string" size="0"/>
+   <field name="v_mapping"   	  		type="string" size="0"/>
+   <field name="v_lp_code"   	  		type="string" size="0"/>
+   <field name="v_policy_number"   	type="string" size="0"/>
+   <field name="v_channel"   	  		type="string" size="0"/>
+   <field name="v_ilips_client_id"   	  	type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>   
+  </block>                                
+ </output>          
+</transaction>

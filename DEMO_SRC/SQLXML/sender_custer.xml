@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sender_custer' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				SELECT
+					isnull(a.ssn,'') as ssn,
+					isnull(a.owner,'') as owner,
+					CASE b.email_service WHEN 'Y' THEN '이메일' WHEN 'N' THEN '우편' END as aemail_service,
+					CASE b.post_send WHEN 'H' THEN '자택' WHEN 'O' THEN '직장' END as apost_send,
+					isnull(b.home_post,'') as ahome_post,
+					isnull(b.home_addr1,'') as ahome_addr1,
+					isnull(b.home_addr2,'') as ahome_addr2,
+					isnull(b.home_phone1,'') as ahome_phone1,
+					isnull(b.home_phone2,'') as ahome_phone2,
+					isnull(b.home_phone3,'') as ahome_phone3,
+					isnull(b.office_post,'') as aoffice_post,
+					isnull(b.office_addr1,'') as aoffice_addr1,
+					isnull(b.office_addr2,'') as aoffice_addr2,
+					isnull(b.office_addr3,'') as aoffice_addr3, 
+					isnull(b.office_addr4,'') as aoffice_addr4,
+					isnull(b.office_phone1,'') as aoffice_phone1,
+					isnull(b.office_phone2,'') as aoffice_phone2,
+					isnull(b.office_phone3,'') as aoffice_phone3,
+					isnull(b.mobile1,'') as amobile1,
+					isnull(b.mobile2,'') as amobile2,
+					isnull(b.mobile3,'') as amobile3,
+					isnull(b.email,'') as aemail,
+					isnull(b.err_msg,'') as err_msg,
+					isnull(email_service_yn,''),
+					isnull(post_send_yn,''),
+					isnull(home_addr_yn,''),
+					isnull(home_phone_yn,''),
+					isnull(office_addr_yn,''),
+					isnull(office_phone_yn,''),
+					isnull(mobile_yn,''),
+					isnull(email_yn,'')
+					FROM CYBER.DBO.CYBER_TBL_WB_MASTER a, CYBER.DBO.CYBER_TBL_WB_MEMBER b
+					where a.indate = b.indate
+					and a.seq_no = b.seq_no
+					and a.indate = ?
+					and a.seq_no = ?
+					and b.prcode = ?
+
+            </query>
+			<mapping>		
+				<setProperty>indate, seq_no, prcode</setProperty>
+                <getProperty>ssn, owner, aemail_service,apost_send,ahome_post, ahome_addr1,ahome_addr2,ahome_phone1,ahome_phone2,ahome_phone3, aoffice_post,aoffice_addr1,aoffice_addr2,aoffice_addr3, aoffice_addr4,aoffice_phone1,aoffice_phone2,aoffice_phone3, amobile1,amobile2,amobile3,aemail, err_msg,email_service_yn, post_send_yn, home_addr_yn,home_phone_yn, office_addr_yn, office_phone_yn, mobile_yn, email_yn</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="indate"				type="String" size="0" />	
+            <field name="seq_no"				type="String" size="0" />	
+            <field name="prcode"				type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+			<field name="ssn"  	  	    type="String" size="0"/>          
+			<field name="owner"                 type="String" size="0"/>
+			<field name="aemail_service"        type="String" size="0"/>
+			<field name="apost_send"            type="String" size="0"/>
+			<field name="ahome_post"            type="String" size="0"/>
+			<field name="ahome_addr1"           type="String" size="0"/>
+			<field name="ahome_addr2"           type="String" size="0"/>
+			<field name="ahome_phone1"          type="String" size="0"/>
+			<field name="ahome_phone2"          type="String" size="0"/>
+			<field name="ahome_phone3"          type="String" size="0"/>
+			<field name="aoffice_post"          type="String" size="0"/>
+			<field name="aoffice_addr1"         type="String" size="0"/>
+			<field name="aoffice_addr2"         type="String" size="0"/>
+			<field name="aoffice_addr3"         type="String" size="0"/>
+			<field name="aoffice_addr4"         type="String" size="0"/>
+			<field name="aoffice_phone1"        type="String" size="0"/>
+			<field name="aoffice_phone2"        type="String" size="0"/>
+			<field name="aoffice_phone3"        type="String" size="0"/>
+			<field name="amobile1"              type="String" size="0"/>
+			<field name="amobile2"              type="String" size="0"/>
+			<field name="amobile3"              type="String" size="0"/>
+			<field name="aemail"                type="String" size="0"/>
+			<field name="err_msg"               type="String" size="0"/>
+			<field name="email_service_yn" 	    type="String" size="0"/>
+			<field name="post_send_yn"          type="String" size="0"/>
+			<field name="home_addr_yn"          type="String" size="0"/>
+			<field name="home_phone_yn"         type="String" size="0"/>
+			<field name="office_addr_yn"        type="String" size="0"/>
+			<field name="office_phone_yn"       type="String" size="0"/>
+			<field name="mobile_yn"             type="String" size="0"/>
+			<field name="email_yn"              type="String" size="0"/>
+
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,155 @@
+      *****************************************************************
+      *                                                               *
+      *   QMY00 - COMMON COMMUNICATION AREA                           *
+      *              FOR WORK-AREAS                                   *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   2003.01.23                INITIAL WRITTEN                   *
+      *                                                               *
+      *****************************************************************
+
+       01  W-COMM-AREA.
+      *                            ?LJA~?  ?/?~Ω·?/i?I?COMMAREA
+         05  W-SYSTEM-COMMON.
+      *                                     CALLING PGM ID
+           10  W-COMM-CALLING-PROGRAM       PIC  X(05)  VALUE SPACES.
+      *                                     STEP
+           10  W-COMM-STEP                  PIC  9(02)  VALUE ZEROS.
+      *                                    ?/Ê÷?/uVJ~(LOGON)
+           10  W-COMM-USERID                PIC  X(08)  VALUE SPACES.
+      *                                    ?/Ê÷?/uVJ~(v~∏›?)
+           10  W-SSPC1-USERID   REDEFINES   W-COMM-USERID.
+               15  FILLER                   PIC  X(08).
+      *                                    m?m÷º/E~p/(LOGON)   
+           10  W-COMM-TX-OFFCR-CD.
+      *                                    m?m÷º/E~p/(iA)    
+               15  W-COMM-TX-OFFCR-CD-DEPT  PIC  X(01)  VALUE  SPACES.
+      *                                    m?m÷º/E~p/(ia)    
+               15  W-COMM-TX-OFFCR-CD-SECT  PIC  X(01)  VALUE  SPACES.
+      *                                    m?m÷º/E~p/(⁄Áπ¨)    
+               15  W-COMM-TX-OFFCR-CD-RANK  PIC  X(02)  VALUE  SPACES.
+      *                                    m?m÷º/E~p/(⁄Áπ¨)    
+           10  W-SSPC1-TXOFFCR-CD REDEFINES W-COMM-TX-OFFCR-CD.
+               15  FILLER                   PIC  X(04).
+      *                                    [?sa⁄ÁE~p/(m?m÷º/LOGON)
+           10  W-COMM-TXOFF-CD              PIC  X(03).
+      *                                    [?sa⁄ÁE~p/(m?m÷º/v~∏›)
+           10  W-SSPC1-TXOFF-CD   REDEFINES W-COMM-TXOFF-CD.
+               15  FILLER                   PIC  X(03).
+      *                                    [?sa⁄Á~?  (m?m÷º/LOGON)
+           10  W-COMM-TXOFF-NM              PIC  X(20).
+      *                                    {7E~p/    (m?m÷º/LOGON)
+           10  W-COMM-DISTR-TXOFF           PIC  X(03).
+      *                                    ?7~?      (m?m÷º/LOGON)
+           10  W-COMM-OFFCR-NM              PIC  X(14).
+      *
+      *                                     FASTPATH FLAG
+           10  W-COMM-FAST-FLAG             PIC  X(01)  VALUE SPACE.
+      *                                     FASTPATH PROGRAM
+           10  W-COMM-FAST-PROGRAM          PIC  X(08)  VALUE SPACE.
+      *
+      *                                    iA[¶§~h?(?~ºﬂ?z)
+           10  W-COMM-ASS-PRD-FR            PIC  9(08)  VALUE ZEROS.
+      *                                    iA[¶§~h?(Ωª?/?z)
+           10  W-COMM-ASS-PRD-TO            PIC  9(08)  VALUE ZEROS.
+      *
+      *                                    ?/?3?/?/?atvuVJ~?awe
+           10  W-COMM-RES-BUSN-TP           PIC  X(01)  VALUE SPACES.
+      *                                    ?/?3?/p?suVJ~
+           10  W-COMM-BUSNID.
+      *                                    ?/?3?/p?suVJ~ 1
+               15  W-COMM-BUSNID-1          PIC  X(03)  VALUE SPACES.
+      *                                    ?/?3?/p?suVJ~ 2
+               15  W-COMM-BUSNID-2          PIC  X(02)  VALUE SPACES.
+      *                                    ?/?3?/p?suVJ~ 3
+               15  W-COMM-BUSNID-3          PIC  X(05)  VALUE SPACES.
+      *                                    ⁄÷J~          
+           10  W-COMM-TRADE-NM              PIC  X(40)  VALUE SPACES.
+      *
+      *                                    ?atvp?suVJ~(??[¶º/)
+           10  W-COMM-RESID-TXPAYER.
+      *                                    ?atvp?suVJ~ 1
+               15  W-COMM-RESID-TXPAYER-1   PIC  X(06)  VALUE SPACES.
+      *                                    ?atvp?suVJ~ 2
+               15  W-COMM-RESID-TXPAYER-2   PIC  X(07)  VALUE SPACES.
+      *                                    ??[¶º/?awe
+           10  W-COMM-TXPAYER-TP            PIC  X(01)  VALUE SPACES.
+      *                                    ?7~?
+           10  W-COMM-RESID-NM              PIC  X(20)  VALUE SPACES.
+      *                                    [?sa⁄Á~?(??[¶º/)
+           10  W-COMM-TXOFF-NM-TXPAYER      PIC  X(20)  VALUE SPACES.
+      *                                    [?sa⁄ÁE~p/(??[¶º/)
+           10  W-COMM-TXOFF-CD-TXPAYER      PIC  X(03)  VALUE SPACES.
+      *
+      *                                    [?~s?aweE~p/
+           10  W-COMM-TXTP-CD               PIC  X(02)  VALUE SPACES.
+      *                                    [?~s~?
+           10  W-COMM-TXTP-NM               PIC  X(20)  VALUE SPACES.
+      *                                    ?a?3ΩªE~p/
+           10  W-COMM-BUSNTP-TP             PIC  X(06)  VALUE SPACES.
+      *                                    ~?l??~?/I? LEVEL ID
+           10  W-COMM-MENU-LEVELID          PIC  X(14)  VALUE SPACES.
+      *
+      *                                    v~∏›CHECK 1
+           10  W-COMM-SSPC1.
+      *                                     TRANSACTION-ID
+               15  W-SSPC1-TRANS-ID         PIC  X(04)  VALUE SPACES.
+      *                                    ?~?7?vh/?/                
+               15  W-SSPC1-PERMIT           PIC  X(01)  VALUE SPACES.
+      *
+      *                                    ?~?s  v~∏›SUB PARM
+           10  W-COMM-SSPC2.
+      *                                     PROGRAM-ID
+               15  W-SSPC2-PROGRAM-ID       PIC  X(08)  VALUE SPACES.
+      *                                    {7⁄Á
+               15  W-SSPC2-TXOFF-CD         PIC  X(03)  VALUE SPACES.
+      *                                     USER-ID
+               15  W-SSPC2-USER-ID          PIC  X(08)  VALUE SPACES.
+      *                                     TERMINAL-ID
+               15  W-SSPC2-TERMINAL-ID      PIC  X(08)  VALUE SPACES.
+      *                                     ACCESS TYPE(CRUD)
+               15  W-SSPC2-ACCESS-TYPE      PIC  X(01)  VALUE SPACES.
+      *                                     TABLE~?
+               15  W-SSPC2-TABLE-ID         PIC  X(05)  VALUE SPACES.
+      *                                    ??[¶º/ID
+               15  W-SSPC2-TXPAYER-ID       PIC  X(13)  VALUE SPACES.
+      *                                    ??[¶º/  ?awe
+               15  W-SSPC2-TXPAYER-TP       PIC  X(01)  VALUE SPACES.
+      *                                    ?/?/iE?~Ê÷KEY
+               15  W-SSPC2-MGMT-NO          PIC  X(35)  VALUE SPACES.
+      *                                     RETURN CODE
+               15  W-SSPC2-STATUS           PIC  X(01)  VALUE SPACES.
+      *
+      *                                    ?3?auVJ~(j?n~)
+           10  W-COMM-NO1                   PIC  X(04)  VALUE SPACES.
+      *                                    ?3?auVJ~(?3?a{7⁄Á)
+           10  W-COMM-NO2                   PIC  X(03)  VALUE SPACES.
+      *                                    ?3?auVJ~(?z??uVJ~)
+           10  W-COMM-NO3                   PIC  9(07)  COMP-3.
+      *
+      *                                     ERROR-CODE
+           10  W-COMM-RC                    PIC  X(04).
+      *                                     SQLCODE
+           10  W-COMM-SQL  REDEFINES        W-COMM-RC.
+               15  FILLER                   PIC  -(04).
+      *                                    ~?[¶Ÿ~      
+           10  W-COMM-MSG                   PIC  X(80)  VALUE SPACES.
+      *                                    B¶Ωªº/?/  ?awe
+           10  W-COMM-END-FG                PIC  X(01)  VALUE SPACES.
+      *                                    ?~?siE?~  ?/wa
+           10  W-COMM-QSPC2-GB              PIC  X(01)  VALUE SPACES.
+      *                                    ?~?siE?~  ?/wa
+           10  W-COMM-IP-ADDRESS            PIC  X(15)  VALUE SPACES.
+      *                                    ?/we?a SPACE
+           10  FILLER                       PIC  X(16)  VALUE SPACES.
+
+      *                                    ?~l÷ ?  i?I?COMMAREA
+         05  W-SUBSYSTEM-COMMON.
+      *
+           10  FILLER                       PIC  X(150) VALUE SPACES.
+      *                                   PROGRAM SELF COMMAREA
+         05  W-PRIVATE.
+
+           10  FILLER                       PIC  X(3400) VALUE SPACES.
+

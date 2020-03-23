@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_common' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select indate, seq_no, gubun, srvc_cd,
+				isnull(policy,'') as policy_no
+				,isnull(data,'') as textdata
+				from cyber.dbo.cyber_wb_change
+				where indate = ?
+				and seq_no = ?
+				and gubun = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>indate,seq_no,gubun,srvc_cd,policy_no,textdata</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"            		type="String" size="0"/>
+			<field name="seq_no"            	type="String" size="0"/>
+			<field name="gubun"            	type="String" size="0"/>
+			<field name="srvc_cd"            		type="String" size="0"/>
+			<field name="policy_no"           		type="String" size="0"/>
+			<field name="textdata"           		type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

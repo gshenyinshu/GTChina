@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='cyber_index_pub_stat' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 	
+			select totol_count, Log_In,Confirm,	register_count		,owner_cnt,insurant_cnt, (owner_cnt + insurant_cnt) as tot_count
+				from (SELECT 
+					isnull(sum(case when tr_id in ('LOG_PUB','LOG_PWD') then 1 else 0 end),0) as 'totol_count',
+					isnull(sum(case when tr_id in ('LOG_PUB') then 1 else 0 end),0) as 'Log_In',
+					isnull(sum(case when tr_id like 'REC%' or tr_id like 'PAY%' then 1 else 0 end),0) as 'Confirm',
+					(select count(publiclogin) from prudb.dbo.prudb_tbl_userInfo
+						where publiclogin = 'Y'
+						and publiclogindate between ? and ?
+					) as 'register_count'
+					,
+					
+					(				select
+						count( distinct a.ownerssn ) 'owner_cnt'
+					from
+						prudb.dbo.insurancepolicy a, prudb.dbo.prudb_tbl_userInfo b
+					where
+						b.ssn = a.ownerssn
+						and b.publicLoginDate between ? and ? and (b.pkdate IS NULL OR b.pkdate = '')
+
+						
+						) as 'owner_cnt'
+						
+					,
+					(
+					
+					select
+						count( distinct a.insurantssn ) 'insurant_cnt'
+					from
+						prudb.dbo.insurancepolicy a, prudb.dbo.prudb_tbl_userInfo b
+					where
+						b.ssn = a.insurantssn
+						and a.insurantssn != a.ownerssn
+						and b.publicLoginDate  between ? and ?
+						AND (b.pkdate IS NULL OR b.pkdate = '')
+					
+					) as 'insurant_cnt'
+					
+					
+				FROM 
+					[AnyLog].[dbo].[ANYLOG_TBL_LOGDATA_PUBLIC_LOGIN_STAT]
+				where log_date between ? and ?
+				) as sum_count
+            </query>
+			<mapping>		
+				<setProperty>start_date, end_date, start_date, end_date,start_date, end_date,start_date, end_date</setProperty>
+                <getProperty>
+					totol_count            
+					,Log_In           
+					,Confirm      
+					,register_count	
+					,owner_cnt
+					,insurant_cnt	
+					,tot_count	
+				</getProperty>                			           			 
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="start_date" type="string" size="0"/>
+			<field name="end_date" type="string" size="0" />
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		   <field name="totol_count"             		type="string" size="0"/>
+		   <field name="Log_In"             		type="string" size="0"/>
+		   <field name="Confirm"             type="string" size="0"/>
+		   <field name="register_count"             	type="string" size="0"/>
+		   <field name="owner_cnt"             	type="string" size="0"/>
+		   <field name="insurant_cnt"             	type="string" size="0"/>
+		   <field name="tot_count"             	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

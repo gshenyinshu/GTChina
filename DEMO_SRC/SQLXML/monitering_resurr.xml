@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='monitering_resurr' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+		select top 20 indate, seq_no, isnull(policy_no,'') as policy_no, isnull(intime,'') as intime, isnull(ssn,'') as ssn,
+		(select lpname from PRUDB.dbo.LifePlanner a, PRUDB.dbo.Agency b where a.agencyCode = b.agencyCode and a.lpcode=svclp) as svclp,
+		isnull(lapsedate,'') as lapsedate, isnull(modprem,'') as modprem, isnull(totprem,'') as totprm, isnull(lprecv,'') as lprecv, isnull(smrecv,'') as smrecv,
+		isnull(owner,'') as owner
+		from cyber.dbo.CYBER_TBL_wb_rebirth
+		where indate is not null
+		$where
+		and indate+convert(varChar(1000),seq_no,1) not in
+		(
+		select top  $page indate+convert(varChar(1000),seq_no,1)
+		from cyber.dbo.CYBER_TBL_wb_rebirth
+		where indate is not null
+		$subwhere
+		order by indate desc, seq_no desc
+		)			
+		order by indate desc, seq_no desc
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                		<getProperty>indate,seq_no,policy_no,intime,ssn,svclp,lapsedate,modprem,totprm,lprecv,smrecv,owner</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"				type="int" size="0"/>	
+			<field name="where"			type="string" size="0"/>	
+			<field name="subwhere"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"   			type="String" size="0"/>
+			<field name="seq_no"        		type="String" size="0"/>
+			<field name="policy_no"     		type="String" size="0"/>
+			<field name="intime"            		type="String" size="0"/>
+			<field name="ssn"               		type="String" size="0"/>
+			<field name="svclp"             		type="String" size="0"/>
+			<field name="lapsedate"         	type="String" size="0"/>
+			<field name="modprem"           	type="String" size="0"/>
+			<field name="totprm"            		type="String" size="0"/>
+			<field name="lprecv"            		type="String" size="0"/>
+			<field name="smrecv"            	type="String" size="0"/>
+			<field name="owner"			type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

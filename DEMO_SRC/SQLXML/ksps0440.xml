@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0440" protocolName="db1">
+	<description>
+		store procedure  ksps0440 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call ksps0440(?)}
+			</query>
+			<mapping>
+				<setProperty>
+					ssno
+				</setProperty>
+				<getProperty>
+					ssno,
+					ckyn,
+					date
+				</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="ssno" 	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="ssno"  type="string" size="0"/>
+			<field name="ckyn"  type="string" size="0"/>
+			<field name="date"  type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction> 
+

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='auth_del' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+                    DELETE FROM CYBER.DBO.CYBER_TBL_WB_PROC_EMP WHERE emp_no = ?
+            </query>
+			<mapping>
+                <setProperty>emp_no</setProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="emp_no"       type="string" size="0"/>
+        </block>
+	</input>
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

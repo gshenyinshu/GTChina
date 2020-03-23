@@ -1,0 +1,8 @@
+
+           05  W-SSSAA-AREA.
+
+               10  W-SSSAA-IN-DATA     PIC  X(20)          VALUE SPACES.
+               10  W-SSSAA-OUT-DATA    PIC S9(13)V9(05)    VALUE ZEROS.
+               10  W-SSSAA-OUT-LOWCNT  PIC  9(01)          VALUE ZERO.
+               10  W-SSSAA-STATUS      PIC  X(01)          VALUE SPACE.
+

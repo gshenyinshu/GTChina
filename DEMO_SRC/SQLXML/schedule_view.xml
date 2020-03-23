@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<!--MyDiary보기-->
+<transaction name='schedule_view' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> select eff_date, work_gubun, week_gubun, work_start_time, work_end_time, comp_before, aomp_after, prname, prdate
+                    from CYBER.dbo.CYBER_TBL_HOLIDAY
+                    where  effdate=?
+            </query>
+			<mapping>		
+				<setProperty>effdate</setProperty>
+                <getProperty>eff_date, work_gubun, week_gubun, work_start_time, work_end_time, comp_before, aomp_after, prname, prdate</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="effdate"        type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+			<field name="eff_date"     			type="string" size="0"/>  
+			<field name="work_gubun"            type="string" size="0"/>
+			<field name="week_gubun"            type="string" size="0"/>
+			<field name="work_start_time"       type="string" size="0"/>
+			<field name="work_end_time"         type="string" size="0"/>
+			<field name="comp_before"           type="string" size="0"/>
+			<field name="aomp_after"            type="string" size="0"/>
+			<field name="prname, prdate"        type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

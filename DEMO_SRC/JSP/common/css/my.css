@@ -1,0 +1,67 @@
+table, tr, th, td {   margin: 0px; padding: 0px; spacing: 0px;  border-collapse: collapse; word-break: break; word-wrap: break-all;   }
+
+/* mypage list         */   .mylist01 {   line-height: 120%; vertical-align: bottom; text-align: justify; padding: 0px 0px 10px 16px; background: #fff url(../../img/common/bu_tri01.gif) no-repeat 11px 5px;   }
+/* mypage list         */   .mylist02 {   line-height: 120%; vertical-align: bottom; text-align: justify; padding: 0px 0px 0px 16px; background: #fff url(../../img/common/bu_tri01.gif) no-repeat 11px 6px;   }
+/* mypage list         */   .mylist03 {   line-height: 120%; vertical-align: bottom; text-align: justify; padding: 2px 0px 3px 16px;   }
+/* mypage list         */   .mylist04 {   line-height: 120%; vertical-align: bottom; text-align: justify; padding: 2px 0px 7px 16px;   }
+/* mypage health       */   .mylist05 {   line-height: 120%; vertical-align: bottom; text-align: justify; padding: 5px 0px 5px 16px; background: #fff url(../../img/common/bu_tri01.gif) no-repeat 11px 9px;   }
+
+/* mypage list + menu  */   .btn05 {   vertical-align: bottom; text-align: right; padding: 0px 0px 7px 11px;   }
+
+/* mypage date promise */   .date01 {   width: 22px; text-align: center; background: #92C4F7; color: #FFFFFF;   }
+/* mypage date work    */   .date02 {   width: 22px; text-align: center; background: #FBDE90; color: #FFFFFF;   }
+/* mypage date payment */   .date03 {   width: 22px; text-align: center; background: #F896A3; color: #FFFFFF;   }
+/* mypage date event   */   .date04 {   width: 22px; text-align: center; background: #CDEDA4; color: #FFFFFF;   }
+/* mypage date etc     */   .date05 {   width: 22px; text-align: center; background: #BDA2E7; color: #FFFFFF;   }
+
+/* mypage date etc     */   .sch {   position: relative; left: 20px; top: -15px; text-align: left;   }
+
+/* mypage date         */   a.fff:link    {   color: #fff; text-decoration: none;   }
+/* mypage date         */   a.fff:visited {   color: #fff; text-decoration: none;   }
+/* mypage date         */   a.fff:active  {   color: #fff; text-decoration: none;   }
+/* mypage date         */   a.fff:hover   {   color: #fff; text-decoration: none; cursor: hand;   }
+
+/* mypage date         */   a.3d:link {   color: #3D747C; text-decoration: underline;   }
+/* mypage date         */   a.3d:visited {   color: #3D747C; text-decoration: underline;   }
+/* mypage date         */   a.3d:active {   color: #3D747C; text-decoration: underline;   }
+/* mypage date         */   a.3d:hover {   color: #3D747C; text-decoration: underline; cursor: hand;   }
+
+/* mypage date         */   a.u:link {   text-decoration: none;   }
+/* mypage date         */   a.u:visited {   text-decoration: none;   }
+/* mypage date         */   a.u:active {   text-decoration: none;   }
+/* mypage date         */   a.u:hover {   color: #7F7F7F; text-decoration: underline; cursor: hand;   }
+
+/* mypage date         */   .letter {   margin: 0px 0px 10px; height: 131; overflow: auto;   }
+/* mypage date         */   .letter {   padding: 0px 0px 16px 0px; margin: 0px 0px 10px; width: 100%; height: 100%; overflow-x: auto; overflow-y: visible;   }
+
+/* mypage date         */   .font03 {   font-weight: normal; color: #3D747C;   }
+/* mypage date         */   .font11 {   font-size: 11px; word-spacing: -1px; font-family: Dotum,Dotumche; line-height:17px;}
+
+/*                     */   .mytable01 {   width: px; margin: 0px 0px 10px;   }  /* text + table */ 
+/*                     */   .mytable01 .my00 {   text-align: left; vertical-align: top; font-size: 12px; font-weight: normal; padding: 0px 0px 7px; border: #DADEDD 0 solid;   }
+/*                     */   .mytable01 .my01 {   height: 28px; text-align: center; color: #fff; padding: 5px 5px 3px; background: #85A5E2; border: #DADEDD 1 solid;   }
+/*                     */   .mytable01 .my02 {   height: 28px; color: #fff; padding: 5px 5px 3px; background: #85A5E2; border: #DADEDD 1 solid;   }
+/* check title         */   .mytable01 .my03 {   width: 33px; text-align: center; color: #fff; padding: 3px 3px; background: #85A5E2; border: #DADEDD 1 solid;   }
+/* check list          */   .mytable01 .my04 {   padding: 3px 5px; border: #DADEDD 1 solid;   }
+/*                     */   .mytable01 .my05 {   height: 28px; text-align: center; color: #fff; padding: 5px 5px 3px; background: #0DABB9; border: #DADEDD 1 solid;   }
+
+/* same padding        */   .mytable01 .my10 {   height: 28px; color: #808080; padding: 5px 5px 3px; background: #FFFFFF; border: #DADEDD 1 solid;   }
+/* basic 5 10 3 F8F8F8 */   .mytable01 .my11 {   height: 28px; color: #808080; padding: 5px 5px 3px; background: #F8F8F8; border: #DADEDD 1 solid;   }
+/* same padding        */   .mytable01 .my10 td {   height: 28px; color: #808080; padding: 5px 5px 3px; background: #FFFFFF; border: #DADEDD 1 solid;   }
+/* basic 5 10 3 F8F8F8 */   .mytable01 .my11 td {   height: 28px; color: #808080; padding: 5px 5px 3px; background: #F8F8F8; border: #DADEDD 1 solid;   }
+
+/* same padding        */   .mytable01 .my12 {   height: 28px; color: #808080; padding: 3px 5px 3px; background: #FFFFFF; border: #DADEDD 1 solid;   }
+/* basic 5 10 3 F8F8F8 */   .mytable01 .my13 {   height: 28px; color: #808080; padding: 3px 5px 3px; background: #F8F8F8; border: #DADEDD 1 solid;   }
+
+/* diary               */   .mytable02 {   margin: 0px;   }
+/* diary               */   .mytable02 td {   padding: 0px; border: #DADEDD 1 solid;   }
+
+/*                     */   .page {   width: px; height: 33px; margin: -10px 0px 0px; border-left: solid 1 #E4E4E4; border-right: solid 1 #E4E4E4;   }
+/*                     */   .page .my00 {   padding: 0px 0px 7px; border: #DADEDD 0 solid;   }
+
+.health {   height: 28px; text-align: center; background: #EFEFEF; border-top: solid 1 #DEDEDE; border-bottom: solid 1 #DEDEDE;   }
+.health a {   text-decoration: none;   }
+.health a:hover {   text-decoration: underline;   }
+
+
+.popletter td {   text-align: center;   }

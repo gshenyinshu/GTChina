@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_dayclose' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select top 20 policy_apln_no,
+				policy_no,
+				CASE mode WHEN '1' THEN '지금' WHEN '2' THEN '수납' END as mode_name,
+				CASE srvc_cd WHEN 1 THEN '약대지급' WHEN 2 THEN '약대상환' WHEN 3 THEN 'APL상환' WHEN 4 THEN '배당금' WHEN 5 THEN '휴면보험금'  WHEN 6 THEN '보험료수납' WHEN 7 THEN '배당금상계' WHEN 8 THEN '추가보험료수납' END as srvc_name,	
+				isnull(srvc_cd,'') as srvc_cd,
+				CASE pay_cd WHEN 1 THEN '전액' WHEN 2 THEN '일부' WHEN 3 THEN '이자'  WHEN '' THEN '' END as pay_name, 	
+				isnull(pay_cd,'') as pay_cd,
+				CONVERT(CHAR(10),apln_dt,112),
+				isnull(apln_amt,'0') as apln_amt,
+				(select isnull(bank_name,'') from CYBER.DBO.cyber_tbl_wb_bank a where a.bank_code = bank_cd) as bank_cd,
+				isnull(acct_no,'') as acct_no,
+				substring(payor_ssn,0,7) +'-'+substring(payor_ssn,7,13),
+				isnull(payor_nm,'') as payor_nm,
+				isnull(payor_phone,'') as payor_phone,
+				isnull(payor_email,'') as payor_email,
+				pay_amt,
+				CONVERT(CHAR(10),pay_dt,112) as pay_dt,
+				CASE rslt WHEN '' THEN '접수' WHEN '0' THEN '성공' WHEN '1' THEN '반송' WHEN '2' THEN '실패' WHEN '3' THEN '지연' WHEN 'A' THEN '처리중' END as rslt_name,
+				isnull(rslt,'') as rslt,
+				isnull(bank_conf_yn,'') as bank_conf_yn,
+				isnull(sending_num,'') as sending_num,
+				isnull(lp_id,'') as lp_id,
+				(select isnull(b.lpname,'') from PRUDB.DBO.lifeplanner b where b.lpcode = lp_id) as lpname
+			from cyber.dbo.CYBER_TBL_wb_payment
+			where policy_apln_no is not null
+			$where
+			and indate+policy_apln_no not in
+			(
+				select top $page policy_apln_no
+				from cyber.dbo.CYBER_TBL_wb_payment
+				where policy_apln_no is not null				
+				$subwhere
+				order by pay_dt desc
+			)			
+			order by pay_dt desc
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                		<getProperty>policy_apln_no, policy_no, mode_name, srvc_name, srvc_cd, pay_name, pay_cd, apln_dt,apln_amt, bank_cd, acct_no, payor_ssn, payor_nm, payor_phone, payor_email, pay_amt, pay_dt, rslt_name, rslt, bank_conf_yn, sending_num, lp_id, lpname</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"				type="int" size="0"/>	
+			<field name="where"			type="string" size="0"/>	
+			<field name="subwhere"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="policy_apln_no"    	type="string" size="0"/>
+			<field name="policy_no"         	type="string" size="0"/>
+			<field name="mode_name"         	type="string" size="0"/>
+			<field name="srvc_name"         	type="string" size="0"/>
+			<field name="srvc_cd"           	type="string" size="0"/>
+			<field name="pay_name"          	type="string" size="0"/>
+			<field name="pay_cd"            	type="string" size="0"/>
+			<field name="apln_dt"           		type="string" size="0"/>
+			<field name="apln_amt"          	type="string" size="0"/>
+			<field name="bank_cd"           	type="string" size="0"/>
+			<field name="acct_no"           	type="string" size="0"/>
+			<field name="payor_ssn"         	type="string" size="0"/>
+			<field name="payor_nm"          	type="string" size="0"/>
+			<field name="payor_phone"       	type="string" size="0"/>
+			<field name="payor_email"       	type="string" size="0"/>
+			<field name="pay_amt"           	type="string" size="0"/>
+			<field name="pay_dt"            		type="string" size="0"/>
+			<field name="rslt_name"         	type="string" size="0"/>
+			<field name="rslt"              		type="string" size="0"/>
+			<field name="bank_conf_yn"      	type="string" size="0"/>
+			<field name="sending_num"       	type="string" size="0"/>
+			<field name="lp_id"             		type="string" size="0"/>
+			<field name="lpname"			type="string" size="0"/>         
+		</block>
+	</output>
+</transaction>
+

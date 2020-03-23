@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='smslp' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select  isnull(a.srvc_name, '') as srvc_name, isnull(b.sender,'') as sender,
+						isnull(b.send_msg,'') as send_msg ,  isnull(b.send_err,'') as send_err , 
+						isnull(b.createdate,'') as createdate, isnull(prname,'') as prname, b.seq_no as seq_no		
+				from cyber.dbo.CYBER_TBL_wb_sms_code a, cyber.dbo.cyber_tbl_sms_lp_msg b
+				where a.seq_no = b.seq_no
+				$where				
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>srvc_name, sender, send_msg, send_err, createdate, prname, seq_no</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="where"					type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name= "srvc_name"			type="string" size="0"/>
+			<field name= "sender"        		type="string" size="0"/>
+			<field name= "send_msg" 			type="string" size="0"/>
+			<field name= "send_err"        		type="string" size="0"/>
+			<field name= "createdate"          	type="string" size="0"/>
+			<field name= "prname"         		type="string" size="0"/>
+			<field name= "seq_no"         		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

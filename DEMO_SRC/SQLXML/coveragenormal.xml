@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="coveragenormal" protocolName="db1">
+	<description>
+		store procedure  coveragenormal ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KSPS3501(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,plyno</setProperty>
+				<getProperty>rtn,errmsg,plyno,plncode,plnname,benefino01,benefinonm01,benefino02,benefinonm02,benefino03,benefinonm03,benefino04,benefinonm04,insprd,pydprd,modx,modprem,lstpdat,pdcnt,accprem,method,apl,status,lpsdte,revbgn,rvnstr,rvnend,rvnfin,rvncnt,agdorm,agdint,totprm,rae,issdte,wholelife,iterm,itermcd,pterm,ptermcd</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 				type="string" size="0"/>
+			<field name="init" 					type="string" size="0"/>
+			<field name="plyno" 				type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"              		type="string" size="0"/>
+			<field name="errmsg"           		type="string" size="0"/>
+			<field name="plyno"            		type="string" size="0"/>
+			<field name="plncode"          		type="string" size="0"/>
+			<field name="plnname"         		type="string" size="0"/>  
+			<field name="benefino01"      		type="string" size="0"/>
+			<field name="benefinonm01"     		type="string" size="0"/>
+			<field name="benefino02"      		type="string" size="0"/>
+			<field name="benefinonm02"     		type="string" size="0"/>
+			<field name="benefino03"      		type="string" size="0"/>
+			<field name="benefinonm03"     		type="string" size="0"/>
+			<field name="benefino04"      		type="string" size="0"/>
+			<field name="benefinonm04"     		type="string" size="0"/>
+			<field name="insprd"         		type="string" size="0"/>			
+			<field name="pydprd"           		type="string" size="0"/>
+			<field name="modx"             		type="string" size="0"/>
+			<field name="modprem"         		type="string" size="0"/>
+			<field name="lstpdat"          		type="string" size="0"/>
+			<field name="pdcnt"            		type="string" size="0"/>
+			<field name="accprem"         		type="string" size="0"/>
+			<field name="method"           		type="string" size="0"/>
+			<field name="apl"              		type="string" size="0"/>
+			<field name="status"           		type="string" size="0"/>
+			<field name="lpsdte"           		type="string" size="0"/>
+			<field name="revbgn"           		type="string" size="0"/>
+			<field name="rvnstr"           		type="string" size="0"/>
+			<field name="rvnend"           		type="string" size="0"/>
+			<field name="rvnfin"           		type="string" size="0"/>
+			<field name="rvncnt"           		type="string" size="0"/>
+			<field name="agdorm"           		type="string" size="0"/>
+			<field name="agdint"            	type="string" size="0"/>
+			<field name="totprm"            	type="string" size="0"/>
+			<field name="rae"               	type="string" size="0"/>
+			<field name="issdte"            	type="string" size="0"/>
+			<field name="wholelife"            	type="string" size="0"/>
+			<field name="iterm"            		type="string" size="0"/>
+			<field name="itermcd"            	type="string" size="0"/>
+			<field name="pterm"            		type="string" size="0"/>
+			<field name="ptermcd"            	type="string" size="0"/>
+		</block>              
+	</output>                 
+</transaction>                
+                              

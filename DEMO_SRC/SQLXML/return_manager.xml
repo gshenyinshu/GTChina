@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_manager' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 				
+			select top 20 (select a.cate_desc from cyber.dbo.CYBER_TBL_wb_return_category a where a.c_id = b.c_id) as cate_desc,
+			isnull(return_cause,'') as return_cause,
+			isnull(c_id,'') as c_id,
+			isnull(id,'') as id	
+			from CYBER.dbo.CYBER_TBL_WB_RETURN_CAUSE b
+			where id is not null		
+			and id not in
+			(
+				select top $page id
+				from CYBER.dbo.CYBER_TBL_WB_RETURN_CAUSE
+				where id is not null				
+			)			
+				
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>cate_desc, return_cause, c_id, id</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		<field name="page"				type="int" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="cate_desc"			type="string" size="0"/>			
+	     <field name="return_cause"		type="string" size="0"/>			
+	     <field name="c_id"				type="string" size="0"/>			
+	     <field name="id"					type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

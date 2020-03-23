@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sms_simple_send' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				INSERT INTO sms.dbo.em_tran
+				(tran_phone, tran_callback, tran_status, tran_date, tran_msg , tran_etc1, tran_etc2, tran_etc3) 
+				values (?, ?, '1', getdate(), ?, ?, ?, ?)
+            </query>
+			<mapping>		
+				<setProperty>RECEIVER_MOBILE, CUS_CALL_BACK, CUS_MSG, TRAN_ETC1, TRAN_ETC2, TRAN_ETC3</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+		<sql id='2'> 
+			<query> 
+				INSERT INTO cyber.dbo.CYBER_TBL_SMS_LOG
+				(tran_pr,srvc_cd,policy_no,tran_ssn,tran_nm)
+				
+				SELECT tran_pr,?,?,?,? FROM sms.dbo.em_tran 
+				WHERE tran_date = (
+					SELECT MAX(tran_date) 
+					FROM sms.dbo.em_tran
+					where tran_phone = ?
+					and tran_callback = ?
+					and tran_msg = ?
+					and tran_etc1 = ?
+					and tran_etc2 = ?
+					and tran_etc3 = ?
+					)			
+            </query>
+			<mapping>		
+				<setProperty>srvc_cd,policy_no,tran_ssn,tran_nm,RECEIVER_MOBILE, CUS_CALL_BACK, CUS_MSG, TRAN_ETC1, TRAN_ETC2, TRAN_ETC3</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+		
+		
+		
+	</processor-info>
+	<input>
+		<block>
+		     <field name="RECEIVER_MOBILE"				type="string" size="0"/>			
+		     <field name="CUS_CALL_BACK"				type="string" size="0"/>			
+		     <field name="CUS_MSG"					type="string" size="0"/>			
+		     <field name="TRAN_ETC1"				type="string" size="0"/>				     		
+			 <field name="TRAN_ETC2"				type="string" size="0"/>			
+			 <field name="TRAN_ETC3"				type="string" size="0"/>	
+			 <field name="srvc_cd"				type="string" size="0"/>
+			 <field name="policy_no"			type="string" size="0"/>
+			 <field name="tran_ssn"				type="string" size="0"/>
+			 <field name="tran_nm"				type="string" size="0"/>			     		
+	        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

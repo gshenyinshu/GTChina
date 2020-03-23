@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='process_sp_save' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				INSERT INTO cyber.dbo.cyber_tbl_sp_process_log
+				(
+				srvc_cd
+				,sp_nm
+				,tran_no 
+				,tran_nm
+				,tran_dt
+				,sp_in_put
+				,sp_out_put
+				) 
+				values (?, ? , ?, ?, getdate(), ?,?)
+            </query>
+			<mapping>		
+				<setProperty>
+				srvc_cd
+				,sp_nm
+				,tran_no
+				,tran_nm				
+				,sp_in_put
+				,sp_out_put	
+				</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+
+	</processor-info>
+	<input>
+		<block>
+		     <field name="srvc_cd"				type="string" size="0"/>			
+		     <field name="sp_nm"				type="string" size="0"/>	
+		     <field name="tran_no"				type="string" size="0"/>		
+		     <field name="tran_nm"				type="string" size="0"/>							
+		     <field name="sp_in_put"				type="string" size="0"/>				     		
+			 <field name="sp_out_put"				type="string" size="0"/>					     		
+	        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

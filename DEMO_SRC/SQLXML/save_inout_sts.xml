@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="save_inout_sts" protocolName="db1">
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+  		<sql id='1'>
+			<query>
+				INSERT INTO CYBER.dbo.CYBER_TBL_APPLY_STATUS(CHG_DATE, CHG_TIME, CHG_EMP_NO, PL_STS, PL_CLOSE_MSG, 
+							DIV_STS, DIV_CLOSE_MSG, REST_STS, REST_CLOSE_MSG, DIVOFF_STS, DIVOFF_CLOSE_MSG, 
+							PREM_STS, PREM_CLOSE_MSG, ADDPREM_STS, ADDPREM_CLOSE_MSG, 
+							PLREPAY_STS, PLREPAY_CLOSE_MSG, APL_STS, APL_CLOSE_MSG)
+				VALUES(convert(varchar(8), getdate(),112), convert(varchar(8), getdate(),108), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+			</query>			
+			<mapping>		
+				<setProperty>
+					emp_no, pl_sts, pl_close_msg, div_sts, div_close_msg, rest_sts, rest_close_msg,
+					divoff_sts, divoff_close_msg, prem_sts, prem_close_msg, addprem_sts, addprem_close_msg,
+					plrepay_sts, plrepay_close_msg, apl_sts, apl_close_msg
+				</setProperty>
+				<getProperty></getProperty>
+			</mapping>
+  		</sql>
+ 	</processor-info>
+ 
+	<input>
+		<block>
+			<field name="emp_no"  			type="string" size="0"/>
+			<field name="pl_sts"  			type="string" size="0"/>
+			<field name="div_sts"  			type="string" size="0"/>
+			<field name="rest_sts"  		type="string" size="0"/>
+			<field name="divoff_sts"  		type="string" size="0"/>
+			<field name="prem_sts"  		type="string" size="0"/>
+			<field name="addprem_sts"  		type="string" size="0"/>
+			<field name="plrepay_sts"  		type="string" size="0"/>
+			<field name="apl_sts"  			type="string" size="0"/>
+			<field name="pl_close_msg"		type="string" size="0"/>
+			<field name="div_close_msg"		type="string" size="0"/>
+			<field name="rest_close_msg"	type="string" size="0"/>
+			<field name="divoff_close_msg"	type="string" size="0"/>
+			<field name="prem_close_msg"	type="string" size="0"/>
+			<field name="addprem_close_msg"	type="string" size="0"/>
+			<field name="plrepay_close_msg"	type="string" size="0"/>
+			<field name="apl_close_msg"		type="string" size="0"/>
+		</block>
+	</input>
+	<output></output>          
+</transaction>

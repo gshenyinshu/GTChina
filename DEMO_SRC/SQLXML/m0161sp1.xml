@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="m0161sp1" protocolName="db1">
+	<description>
+		store procedure  m0161sp1 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				EXEC PCKCOCEJCM1.USPCOCEJCM1_LIST(?,?)
+			</query>
+			<mapping>
+				<setProperty>policy,cnvdate</setProperty>
+				<getProperty>rtn,errmsg,lapldat,bcashvl,refnprm,val_pua,acu_div,acc_div,missusp,prmsusp,pdffund,acrdpdf,os_disb,tot_amt,pl_prin,pl_int,apl_amt,ard_apl,red_amt,act_amt,rid_num,plancd,plnrate,sub1,sub2,rid_nam,rid_fac,cvlstyy,cvdynan,cvnxtyy,cvdypan,ridcash,tot_premium,basloan,refprem,lstloan,loanamt,loanval,factor,act_amt2,lstloan2,basloan2,loanamt2,refprem2,loanval2,ddwl-rt,errmsg2,loanval80,loanval100</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="policy" 		type="string" size="0"/>
+			<field name="cnvdate" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"   			type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="lapldat"       	type="string" size="0"/>
+			<field name="bcashvl"       	type="string" size="0"/>
+			<field name="refnprm"       	type="string" size="0"/>
+			<field name="val_pua"       	type="string" size="0"/>
+			<field name="acu_div"       	type="string" size="0"/>
+			<field name="acc_div"       	type="string" size="0"/>
+			<field name="missusp"       	type="string" size="0"/>
+			<field name="prmsusp"       	type="string" size="0"/>
+			<field name="pdffund"       	type="string" size="0"/>
+			<field name="acrdpdf"       	type="string" size="0"/>
+			<field name="os_disb"       	type="string" size="0"/>
+			<field name="tot_amt"       	type="string" size="0"/>
+			<field name="pl_prin"       	type="string" size="0"/>
+			<field name="pl_int"        	type="string" size="0"/>
+			<field name="apl_amt"       	type="string" size="0"/>
+			<field name="ard_apl"       	type="string" size="0"/>
+			<field name="red_amt"       	type="string" size="0"/>
+			<field name="act_amt"       	type="string" size="0"/>
+			<field name="rid_num"       	type="string" size="0"/>
+			<field name="plancd"        	type="string" size="0"/>
+			<field name="plnrate"       	type="string" size="0"/>
+			<field name="sub1"          	type="string" size="0"/>
+			<field name="sub2"          	type="string" size="0"/>
+			<field name="rid_nam"       	type="string" size="0"/>
+			<field name="rid_fac"       	type="string" size="0"/>
+			<field name="cvlstyy"       	type="string" size="0"/>
+			<field name="cvdynan"       	type="string" size="0"/>
+			<field name="cvnxtyy"       	type="string" size="0"/>
+			<field name="cvdypan"       	type="string" size="0"/>
+			<field name="ridcash"       	type="string" size="0"/>
+			<field name="tot_premium"   	type="string" size="0"/>
+			<field name="basloan"       	type="string" size="0"/>
+			<field name="refprem"       	type="string" size="0"/>
+			<field name="lstloan"       	type="string" size="0"/>
+			<field name="loanamt"       	type="string" size="0"/>
+			<field name="loanval"       	type="string" size="0"/>
+			<field name="factor"        	type="string" size="0"/>
+			<field name="act_amt2"        	type="string" size="0"/>
+			<field name="lstloan2"        	type="string" size="0"/>
+			<field name="basloan2"        	type="string" size="0"/>
+			<field name="loanamt2"        	type="string" size="0"/>
+			<field name="refprem2"        	type="string" size="0"/>
+			<field name="loanval2"        	type="string" size="0"/>
+			<field name="ddwl-rt"        	type="string" size="0"/>
+			<field name="errmsg2"        	type="string" size="0"/>
+			<field name="loanval80"        	type="string" size="0"/>
+			<field name="loanval100"        type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

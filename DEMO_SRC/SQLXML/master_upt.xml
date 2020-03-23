@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='master_upt' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				 update  CYBER.DBO.CYBER_TBL_WB_MASTER
+				 set status = ?, prdate=?, prtime=?
+				 where indate = ?
+				 and seq_no = ?
+            </query>
+			<mapping>		
+				<setProperty>status, prdate, prtime, indate, seq_no</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		     <field name="status"				type="string" size="0"/>			
+		     <field name="prdate"				type="string" size="0"/>			
+		     <field name="prtime"				type="string" size="0"/>			
+		     <field name="indate"				type="string" size="0"/>			
+		     <field name="seq_no"			type="string" size="0"/>				     		
+	        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

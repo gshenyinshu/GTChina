@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='displayStatus' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select p1.policy_no as policy_no, 
+				CASE p2.proc_status WHEN '' THEN '접수' WHEN '0' THEN '성공'  WHEN '2' THEN '실패' WHEN '3' THEN '지연'  END as rslt_name, 
+				(select emp_nm from cyber.dbo.CYBER_TBL_wb_proc_emp p3 where p2.proc_emp_no = p3.emp_no) as emp_nm
+				 from cyber.dbo.CYBER_TBL_wb_payment p1, cyber.dbo.CYBER_TBL_wb_process p2
+				where p2.policy_apln_no = ?
+				and p2.flag = '1'
+				and p2.policy_apln_no = p1.policy_apln_no	
+				order by p2.proc_dt asc
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>policy_no, rslt_name, emp_nm</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="policy_no"				type="string" size="0"/>			
+	     <field name="rslt_name"				type="string" size="0"/>			
+	     <field name="emp_nm"				type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

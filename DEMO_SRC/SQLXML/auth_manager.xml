@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='auth_manager' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+			select top 20 isnull(emp_nm,'') as emp_nm, isnull(emp_no,'') as emp_no,
+				CASE auth_cd WHEN '40' THEN 'Admin' WHEN '30' THEN '결재자' WHEN '31' THEN '1차결재자' WHEN '32' THEN '2차결재자' WHEN '33' THEN '3차결재자' WHEN '20' THEN '상담원' WHEN '10' THEN '조회' WHEN '00' THEN '삭제' WHEN '90' THEN '청약철회관리자' ELSE '' END as auth_name,
+				isnull(auth_cd,'') as auth_cd,
+				isnull(auth_cd2,'') as auth_cd2,
+				isnull(team_nm,'') as team_nm,
+				isnull(chg_pwd_dt,'') as  chg_pwd_dt,
+				isnull(pwd,'') as pwd,
+				isnull(hand_phone, '') as hand_phone,
+				isnull(hand_phone_yn, '') as hand_phone_yn,
+				isnull(email, '') as email,
+				isnull(email_yn, '') as email_yn
+			from CYBER.dbo.CYBER_TBL_WB_PROC_EMP
+			where emp_no is not null
+			$where
+			and emp_no not in
+			(
+				select top $page emp_no
+				from CYBER.dbo.CYBER_TBL_WB_PROC_EMP
+				where emp_no is not null
+				$subwhere
+			)
+
+            </query>
+			<mapping>
+				<setProperty></setProperty>
+                <getProperty>emp_nm, emp_no, auth_name, auth_cd,auth_cd2, team_nm, chg_pwd_dt, pwd, hand_phone, hand_phone_yn, email, email_yn</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		<field name="page"				type="int" size="0"/>
+		<field name="where"			type="string" size="0"/>
+		<field name="subwhere"			type="string" size="0"/>
+        </block>
+	</input>
+
+	<output>
+		<block>
+	     <field name="emp_nm"				type="string" size="0"/>
+	     <field name="emp_no"				type="string" size="0"/>
+	     <field name="auth_name"				type="string" size="0"/>
+	     <field name="auth_cd"				type="string" size="0"/>
+	     <field name="auth_cd2"				type="string" size="0"/>
+	     <field name="team_nm"				type="string" size="0"/>
+	     <field name="chg_pwd_dt"			type="string" size="0"/>
+	     <field name="pwd"					type="string" size="0"/>
+	     <field name="hand_phone"				type="string" size="0"/>
+	     <field name="hand_phone_yn"				type="string" size="0"/>
+	     <field name="email"				type="string" size="0"/>
+	     <field name="email_yn"				type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

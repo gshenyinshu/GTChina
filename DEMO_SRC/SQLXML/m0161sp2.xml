@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="m0161sp2" protocolName="db1">
+	<description>
+		store procedure  m0161sp2 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.M0161SP2(?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcode,init,policy,recvdat,screen</setProperty>
+				<getProperty>rtn,errmsg,divdopt,divdate,ldivyy,totdivd,divthis,tdivint,curint,aftint,avg_bal,tdivsum,thissum,intsum,cintsum,aintsum,balsum</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcode"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+			<field name="recvdat"       	type="string" size="0"/>
+			<field name="screen"        	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"  			type="string" size="0"/>  
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="divdopt"       	type="string" size="0"/>
+			<field name="divdate"       	type="string" size="0"/>
+			<field name="ldivyy"        	type="string" size="0"/>
+			<field name="totdivd"       	type="string" size="0"/>
+			<field name="divthis"       	type="string" size="0"/>
+			<field name="tdivint"       	type="string" size="0"/>
+			<field name="curint"        	type="string" size="0"/>
+			<field name="aftint"        		type="string" size="0"/>
+			<field name="avg_bal"       	type="string" size="0"/>
+			<field name="tdivsum"       	type="string" size="0"/>
+			<field name="thissum"       	type="string" size="0"/>
+			<field name="intsum"        	type="string" size="0"/>
+			<field name="cintsum"       	type="string" size="0"/>
+			<field name="aintsum"       	type="string" size="0"/>
+			<field name="balsum"        	type="string" size="0"/>
+		</block>                         
+	</output>   
+</transaction>  

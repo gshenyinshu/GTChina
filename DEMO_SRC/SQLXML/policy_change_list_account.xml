@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_change_list_account' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select policy_no, bank_code, account_code, account_name, account_ssn, fb_day, group_yn, isnull(account_yn,'') as account_yn                
+                from CYBER.dbo.CYBER_TBL_WB_ACCOUNT 
+				where indate = ?
+                and seq_no = ?
+                and prcode = '1'
+            </query>
+			<mapping>       
+				<setProperty>indate, seq_no</setProperty> 
+				<getProperty>policy_no, bank_code, account_code, account_name, account_ssn, fb_day, group_yn, account_yn</getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+			<field name="indate"  			type="string" size="0"/>
+		    <field name="seq_no"  			type="string" size="0"/>		
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		    <field name="policy_no"      	type="string" size="0"/>
+		    <field name="bank_code"         type="string" size="0"/>
+		    <field name="account_code"      type="string" size="0"/>
+		    <field name="account_name"      type="string" size="0"/>
+		    <field name="account_ssn"       type="string" size="0"/>
+		    <field name="fb_day"        	type="string" size="0"/>
+		    <field name="group_yn"     		type="string" size="0"/>
+		    <field name="account_yn"     		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

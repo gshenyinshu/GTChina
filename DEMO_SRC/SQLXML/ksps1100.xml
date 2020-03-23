@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1100" protocolName="db1">
+	<description>
+		store procedure  ksps1100 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1100(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,bgnyymm,endyymm,bgncnt,endcnt,modprem</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"		type="string" size="0"/>
+			<field name="bgnyymm"		type="string" size="0"/>
+			<field name="endyymm"		type="string" size="0"/>
+			<field name="bgncnt"		type="string" size="0"/>
+			<field name="endcnt"		type="string" size="0"/>
+			<field name="modprem"		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

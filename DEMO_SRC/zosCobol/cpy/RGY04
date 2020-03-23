@@ -1,0 +1,42 @@
+      ******************************************************************
+      *                                                                *
+      *                                                                *
+      *    ?vi~Úç  h1ÙÖæÖ  wa[s~?[?}?ia  ?V?S?A?M  ?F?I?L?E          *
+      *                                                                *
+      *     DATA SET  NAME : UR.UF.RGV040                              *
+      *     COPY BOOK NAME : RGY04                                     *
+      *                                                                *
+      *     RECORD  LENGTH : 3037 BYTE                                 *
+      *     KEY     LENGTH :   27 BYTE                                 *
+      *                                                                *
+      *    CREATION.     S.E NAME         DESCRIPTION                  *
+      *   ------------- ---------------- ----------------------------  *
+      *    1995.06.07                     INITIAL WRITTEN              *
+      *                                                                *
+      ******************************************************************
+
+       01  RGV040-REC.
+
+           10  RGV040-KEY.
+               15  RGV040-RESID-BUSNID       PIC  X(13).
+               15  RGV040-TXTP-CD            PIC  X(02).
+               15  RGV040-ASS-YYMM-FR.
+                   20  RGV040-ASS-YY-FR      PIC  X(04).
+                   20  RGV040-ASS-MM-FR      PIC  X(02).
+               15  RGV040-RTN-TP             PIC  X(01).
+               15  RGV040-RTN-SERIAL-NO      PIC S9(04) COMP.
+               15  RGV040-SERIAL-NO          PIC S9(04) COMP.
+               15  RGV040-TXPAYER-TP         PIC  X(01).
+
+           10  RGV040-PROCESS-DT.
+               15  RGV040-PROCESS-YY-DT      PIC  X(04).
+               15  RGV040-PROCESS-MM-DT      PIC  X(02).
+               15  RGV040-PROCESS-DD-DT      PIC  X(02).
+           10  RGV040-TRAILER-CNT            PIC S9(04) COMP.
+           10  RGV040-DTL-DATA    OCCURS 50 INDEXED BY A-INDEX.
+               15  RGV040-TABLE-ID           PIC  X(05).
+               15  RGV040-GUBN               PIC  X(07).
+               15  RGV040-GUBN2              PIC  X(10).
+               15  RGV040-FIELD-ID           PIC  X(30).
+               15  RGV040-SUM-AMT            PIC S9(15) COMP-3.
+

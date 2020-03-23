@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="seloption" protocolName="db1">
+	<description>
+		select option  ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				SELECT FLD0050
+				FROM PRUKFILES.ORDUPO
+				WHERE FLD0002 = ?
+			</query>
+			<mapping>
+				<setProperty>plyno</setProperty>
+				<getProperty>option</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="plyno" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="option"  	  type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       
+
+
+

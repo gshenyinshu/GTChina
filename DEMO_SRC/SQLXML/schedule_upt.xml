@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="schedule_upt" protocolName="db1">
+ <description>
+  schedule_upt
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_SCHEDULE_UPT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in">work_start</param>
+    <param seq="3"   mode="in">work_end</param> 
+    <param seq="4"   mode="in">work_start2</param>
+    <param seq="5"   mode="in">work_end2</param> 
+    <param seq="6"   mode="in">closing</param>
+    <param seq="7"   mode="in">allday</param> 
+    <param seq="8"   mode="in">billing</param>
+    <param seq="9"   mode="in">sixclose</param>
+    <param seq="10"  mode="in">aplclose</param>
+    <param seq="11"  mode="in">delay_auto_close</param>
+    <param seq="12"  mode="in">pl_repay_day</param>
+    <param seq="13"  mode="in">work_gubun</param>
+    <param seq="14"  mode="in">delay_pay_close</param>
+    <param seq="15"  mode="in">work_gubun_check_val</param>    
+    
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="work_start"  		type="string" size="0"/>
+   <field name="work_end"   	  	type="string" size="0"/>
+   <field name="work_start2"  		type="string" size="0"/>
+   <field name="work_end2"   	  	type="string" size="0"/>
+   <field name="closing"   	  	    type="string" size="0"/>
+   <field name="allday"   	  		type="string" size="0"/>
+   <field name="billing"   	  		type="string" size="0"/>
+   <field name="sixclose" 		    type="string" size="0"/>
+   <field name="aplclose" 		    type="string" size="0"/>
+   <field name="delay_auto_close" 	type="string" size="0"/>
+   <field name="pl_repay_day" 		type="string" size="0"/>
+   <field name="work_gubun" 		type="string" size="0"/>
+   <field name="delay_pay_close" 	type="string" size="0"/>
+   <field name="work_gubun_check_val" 	type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"             	type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>
+

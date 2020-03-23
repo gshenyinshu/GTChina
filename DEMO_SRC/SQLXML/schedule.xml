@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='schedule' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select eff_date, isnull(work_gubun,'') as work_gubun, isnull(week_gubun,'') as week_gubun, isnull(work_start_time,'') as work_start_time, isnull(work_end_time,'') as work_end_time,
+					isnull(work_start_time2,'') as work_start_time2, isnull(work_end_time2,'') as work_end_time2,
+					isnull(comp_before,'') as comp_before, isnull(comp_after,'') as comp_after, isnull(close_start_time,'') as close_start_time, isnull(close_end_time,'') as close_end_time,closing,
+					billing, sixclose, aplclose, delay_auto_close, pl_repay_day, delay_pay_close
+			from CYBER.dbo.CYBER_TBL_WB_HOLIDAY
+			where eff_date = ?
+            </query>
+			<mapping>	
+				<setProperty>allday</setProperty>	
+                <getProperty>eff_date, work_gubun, week_gubun, work_start_time, work_end_time, work_start_time2, work_end_time2, comp_before, comp_after, close_start_time, close_end_time,closing, billing, sixclose, aplclose,delay_auto_close,pl_repay_day, delay_pay_close</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="allday"				type="String" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="eff_date"   			type="String" size="0"/>    
+			<field name="work_gubun"   			type="String" size="0"/>    
+			<field name="week_gubun"            type="String" size="0"/>
+			<field name="work_start_time"       type="String" size="0"/>
+			<field name="work_end_time"         type="String" size="0"/>
+			<field name="work_start_time2"       type="String" size="0"/>
+			<field name="work_end_time2"         type="String" size="0"/>
+			<field name="comp_before"           type="String" size="0"/>
+			<field name="comp_after"            type="String" size="0"/>
+			<field name="close_start_time"      type="String" size="0"/>
+			<field name="close_end_time"        type="String" size="0"/>
+			<field name="closing"        		type="String" size="0"/>
+			<field name="billing"        		type="String" size="0"/>
+			<field name="sixclose"        		type="String" size="0"/>
+			<field name="aplclose"        		type="String" size="0"/>
+			<field name="delay_auto_close"      type="String" size="0"/>
+			<field name="pl_repay_day"        	type="String" size="0"/>
+			
+			<field name="delay_pay_close"        	type="String" size="0"/>
+			
+		</block>
+	</output>
+</transaction>
+

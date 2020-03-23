@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name="usp_wb_payment_rslt" protocolName="db1">
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'> 
+			<query>
+                update CYBER.dbo.CYBER_TBL_WB_PAYMENT 
+                set rslt = 'A', recon_id = ?
+                where policy_apln_no=?
+            </query>
+			<mapping>	
+				<setProperty>recon_id, policy_apln_no</setProperty>
+                <getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="recon_id"      type="string" size="0"/>
+            <field name="policy_apln_no"      type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

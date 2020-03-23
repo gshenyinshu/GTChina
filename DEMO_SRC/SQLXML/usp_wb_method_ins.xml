@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="usp_wb_method_ins" protocolName="db1">
+ <description>
+  usp_wb_method_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call  CYBER.dbo.CYBER_USP_WB_METHOD_INS(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in">v_indate</param>
+    <param seq="3"   mode="in">v_intime</param>
+    <param seq="4"   mode="in">v_policy</param>
+    <param seq="5"   mode="in">v_ssn</param> 
+    <param seq="6"   mode="in">v_owner</param> 
+    <param seq="7"   mode="in">v_status</param> 
+    <param seq="8"   mode="in">v_prdate</param> 
+    <param seq="9"   mode="in">v_prtime</param> 
+    
+    <param seq="10"  mode="in">v_prcode</param> 
+    <param seq="11"  mode="in">v_option1</param>
+    <param seq="12"  mode="in">v_option2</param>
+    <param seq="13"  mode="in">v_eff_date</param>
+    <param seq="14"  mode="in">v_nf_opt</param> 
+    <param seq="15"  mode="in">v_divi_opt</param>
+    <param seq="16"  mode="in">v_method</param> 
+    <param seq="17"  mode="in">v_mode</param> 
+    <param seq="18"  mode="in">v_fund_type</param>
+    <param seq="19"  mode="in">v_mprdate</param>
+    <param seq="20"  mode="in">v_mprtime</param>
+    <param seq="21"  mode="in">v_prname</param>
+    <param seq="22"  mode="in">v_rslt</param> 
+    <param seq="23"  mode="in">v_err_msg</param>
+    
+    <param seq="24"  mode="in">a_prcode</param> 
+    <param seq="25"  mode="in">a_option1</param>
+    <param seq="26"  mode="in">a_option2</param>
+    <param seq="27"  mode="in">a_eff_date</param>
+    <param seq="28"  mode="in">a_nf_opt</param>
+    <param seq="29"  mode="in">a_divi_opt</param>
+    <param seq="30"  mode="in">a_method</param> 
+    <param seq="31"  mode="in">a_mode</param> 
+    <param seq="32"  mode="in">a_fund_type</param>
+    <param seq="33"  mode="in">a_prdate</param>
+    <param seq="34"  mode="in">a_prtime</param>
+    <param seq="35"  mode="in">a_prname</param> 
+    <param seq="36"  mode="in">a_rslt</param> 
+    <param seq="37"  mode="in">a_err_msg</param> 
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="v_indate"       type="string" size="0"/>
+   <field name="v_intime"       type="string" size="0"/>
+   <field name="v_policy"       type="string" size="0"/>
+   <field name="v_ssn"          type="string" size="0"/>
+   <field name="v_owner"        type="string" size="0"/>
+   <field name="v_status"       type="string" size="0"/>
+   <field name="v_prdate"       type="string" size="0"/>
+   <field name="v_prtime"       type="string" size="0"/>
+   <field name="v_prcode"       type="string" size="0"/>
+   <field name="v_option1"      type="string" size="0"/>
+   <field name="v_option2"      type="string" size="0"/>
+   <field name="v_eff_date"     type="string" size="0"/>
+   <field name="v_nf_opt"       type="string" size="0"/>
+   <field name="v_divi_opt"     type="string" size="0"/>
+   <field name="v_method"       type="string" size="0"/>
+   <field name="v_mode"         type="string" size="0"/>
+   <field name="v_fund_type"    type="string" size="0"/>
+   <field name="v_mprdate"      type="string" size="0"/>
+   <field name="v_mprtime"      type="string" size="0"/>
+   <field name="v_prname"       type="string" size="0"/>
+   <field name="v_rslt"         type="string" size="0"/>
+   <field name="v_err_msg"      type="string" size="0"/>
+   <field name="a_prcode"       type="string" size="0"/>
+   <field name="a_option1"      type="string" size="0"/>
+   <field name="a_option2"      type="string" size="0"/>
+   <field name="a_eff_date"     type="string" size="0"/>
+   <field name="a_nf_opt"       type="string" size="0"/>
+   <field name="a_divi_opt"     type="string" size="0"/>
+   <field name="a_method"       type="string" size="0"/>
+   <field name="a_mode"         type="string" size="0"/>
+   <field name="a_fund_type"    type="string" size="0"/>
+   <field name="a_prdate"      type="string" size="0"/>
+   <field name="a_prtime"      type="string" size="0"/>
+   <field name="a_prname"       type="string" size="0"/>
+   <field name="a_rslt"         type="string" size="0"/>
+   <field name="a_err_msg"      type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"           type="string" size="0"/>
+ 
+  </block>                                
+ </output>          
+</transaction>         
+ 

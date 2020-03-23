@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='baccountmail' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select 
+				(select isnull(c.bank_name,'')  from CYBER.dbo.CYBER_TBL_WB_BANK  c where c.bank_code = b.bank_code) as bbank_name,
+				isnull(b.account_code,'') as baccount_code,
+				isnull(b.fb_day,'') as bfb_day
+				from cyber.dbo.CYBER_TBL_wb_master a, cyber.dbo.CYBER_TBL_wb_account b
+				where a.indate = b.indate 
+				and a.seq_no = b.seq_no				
+				and a.indate = ?
+				and a.seq_no  = ?
+				and b.prcode = '0'
+				and srvc_cd = ?
+            </query>
+			<mapping>		
+				<setProperty>indate, seq_no, srvc_cd</setProperty>
+                <getProperty>bbank_name, baccount_code, bfb_day</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="indate"				type="String" size="0" />	
+            <field name="seq_no"			type="String" size="0" />	
+            <field name="srvc_cd"			type="String" size="0" />	            
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     	<field name="bbank_name"			type="String" size="0"/>          
+	     	<field name="baccount_code"			type="String" size="0" />	
+	     	<field name="bfb_day"			type="String" size="0" />	
+		</block>
+	</output>
+</transaction>

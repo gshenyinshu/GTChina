@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='withdrawal_save' protocolName='db1'>
+    <processor-info type="dbms" datasource="">
+        <transaction-type>rollback</transaction-type>
+        <sql id='1'>
+            <query>
+                    UPDATE CYBER.DBO.CYBER_TBL_WB_WITHDRAWAL SET
+                           MEMO       = ?
+                         $where
+                     WHERE POLICY_NO = ?
+                       AND SEQ       = ?
+            </query>
+            <mapping>
+                <setProperty>memo, policy_no, seq</setProperty>
+            </mapping>
+        </sql>
+    </processor-info>
+    <input>
+        <block>
+            <field name="memo"          type="string" size="0"/>
+            <field name="policy_no"     type="string" size="0"/>
+            <field name="seq"           type="string" size="0"/>
+            <field name="where"         type="string" size="0"/>
+        </block>
+    </input>
+    <output>
+        <block repeat='1'>
+        </block>
+    </output>
+</transaction>

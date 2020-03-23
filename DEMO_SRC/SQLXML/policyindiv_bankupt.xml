@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policyindiv_bankupt' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>          
+                      update CYBER.dbo.CYBER_TBL_WB_MASTER 
+			  set status = '2' 
+			  where indate = ?
+			  and seq_no = ?
+			  
+                      update  CYBER.dbo.CYBER_TBL_WB_ACCOUNT 
+			  set rslt = '2', emp_no = ?,
+			  err_msg = ?, prdate = getdate()
+			  where indate = ?
+			  and seq_no = ?
+			  and prcode ='1'
+			  
+
+
+			  
+            </query>
+			<mapping>
+				<setProperty>indate, seq_no, emp_no,err_msg, indate, seq_no</setProperty>             
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="indate"            type="string" size="0"/>
+            <field name="seq_no"            type="string" size="0"/>
+            <field name="emp_no"      		type="string" size="0"/>
+            <field name="err_msg"          	type="string" size="0"/>
+            <field name="indate"            type="string" size="0"/>
+            <field name="seq_no"      		type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

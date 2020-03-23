@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='monitering_proof_search_sel' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+				SELECT TOP 20 SEARCH_DATE, SEARCH_TIME, SSN, NAME, SEARCH_CODE, PROOF_CODE, KORENG, PROOF_USAGE
+				FROM ANYLOG.dbo.ANYLOG_TBL_PROOF_SEARCH_LOGDATA
+				WHERE SEARCH_DATE IS NOT NULL
+				$where
+				AND SEARCH_DATE+SEARCH_TIME+SSN+NAME NOT IN
+				(
+					SELECT TOP $page SEARCH_DATE+SEARCH_TIME+SSN+NAME
+					FROM ANYLOG.dbo.ANYLOG_TBL_PROOF_SEARCH_LOGDATA
+					WHERE SEARCH_DATE IS NOT NULL
+					$subwhere
+					ORDER BY SEARCH_DATE DESC, SEARCH_TIME DESC
+				)
+				ORDER BY SEARCH_DATE DESC, SEARCH_TIME DESC
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>search_date, search_time, ssn, name, search_code, proof_code, koreng, proof_usage</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"						type="int" size="0"/>	
+			<field name="where"						type="string" size="0"/>	
+			<field name="subwhere"					type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="search_date"              	type="String" size="0"/>
+			<field name="search_time"              	type="String" size="0"/>
+			<field name="ssn"                    	type="String" size="0"/>
+			<field name="name"                		type="String" size="0"/>
+			<field name="search_code"               type="String" size="0"/>
+			<field name="proof_code"                type="String" size="0"/>
+			<field name="koreng"                  	type="String" size="0"/>
+			<field name="proof_usage"               type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

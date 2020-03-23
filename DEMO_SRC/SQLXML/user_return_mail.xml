@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='user_return_mail' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select policy_no, 
+				CASE srvc_cd WHEN 1 THEN '보험계약대출신청' WHEN 2 THEN '보험계약대출상환' WHEN 3 THEN '자동대출납부상환' WHEN 4 THEN '배당금' WHEN 5 THEN '휴면보험금'  WHEN 6 THEN '보험료납부' WHEN 7 THEN '배당금상계' WHEN 8 THEN '추가보험료납부' END as srvc_name,
+				apln_dt, payor_ssn, payor_nm, payor_phone, payor_email, lp_id,
+				(select lpname from PRUDB.dbo.LifePlanner a, PRUDB.dbo.Agency b where a.agencyCode = b.agencyCode and lpcode=lp_id) as lpname,
+				(select lpemail from PRUDB.dbo.LifePlanner a, PRUDB.dbo.Agency b where a.agencyCode = b.agencyCode and lpcode=lp_id) as lpemail
+				from CYBER.DBO.CYBER_TBL_WB_PAYMENT
+				where policy_apln_no = ?
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>policy_no, srvc_name, apln_dt, payor_ssn, payor_nm,payor_phone, payor_email, lp_id, lpname, lpemail</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"				type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     	<field name="policy_no"			type="String" size="0"/>          
+	     	<field name="srvc_name"		type="String" size="0"/>          
+	     	<field name="apln_dt"			type="String" size="0"/>          
+	     	<field name="payor_ssn"		type="String" size="0"/>          
+	     	<field name="payor_nm"			type="String" size="0"/>
+	     	<field name="payor_phone"		type="String" size="0"/>          
+	     	<field name="payor_email"		type="String" size="0"/>          
+	     	<field name="lp_id"				type="String" size="0"/>          
+	     	<field name="lpname"			type="String" size="0"/>          
+	     	<field name="lpemail"			type="String" size="0"/>          
+		</block>
+	</output>
+</transaction>

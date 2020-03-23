@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0910" protocolName="db1">
+	<description>
+		store procedure  ksps0910 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0910(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,plcyno</setProperty>
+				<getProperty>rtn,errmsg,modprem,accprem,pdf,nfopt,ptd,status,rdate,cnvdate,wrtlpcd,wrtlpna,beflpcd,beflpna,svrlpcd,svrlpna,szstdat,szendat,p3prem,p6prem,p12prem,p3multi,p6multi,p12multi,fundtype,fundrate,emailservice,sp_ind,g_ind,h_ind</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 	type="string" size="0"/>
+			<field name="init" 		type="string" size="0"/>
+			<field name="plcyno" 	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn" 				type="string" size="0"/>        
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="modprem"      type="string" size="0"/>
+			<field name="accprem"      type="string" size="0"/>
+			<field name="pdf"           	type="string" size="0"/>
+			<field name="nfopt"         	type="string" size="0"/>
+			<field name="ptd"           	type="string" size="0"/>
+			<field name="status"        	type="string" size="0"/>
+			<field name="rdate"         	type="string" size="0"/>
+			<field name="cnvdate"       type="string" size="0"/>
+			<field name="wrtlpcd"       	type="string" size="0"/>
+			<field name="wrtlpna"       	type="string" size="0"/>
+			<field name="beflpcd"       	type="string" size="0"/>
+			<field name="beflpna"       	type="string" size="0"/>
+			<field name="svrlpcd"       	type="string" size="0"/>
+			<field name="svrlpna"       	type="string" size="0"/>
+			<field name="szstdat"       	type="string" size="0"/>
+			<field name="szendat"       type="string" size="0"/>
+			<field name="p3prem"        type="string" size="0"/>
+			<field name="p6prem"        type="string" size="0"/>
+			<field name="p12prem"      	type="string" size="0"/>
+			<field name="p3multi"       	type="string" size="0"/>
+			<field name="p6multi"       	type="string" size="0"/>
+			<field name="p12multi"      	type="string" size="0"/>
+			<field name="fundtype"      	type="string" size="0"/>
+			<field name="fundrate"      	type="string" size="0"/>
+			<field name="emailservice"  type="string" size="0"/>
+			<field name="sp_ind"        	type="string" size="0"/>
+			<field name="g_ind"         	type="string" size="0"/>
+			<field name="h_ind"         	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

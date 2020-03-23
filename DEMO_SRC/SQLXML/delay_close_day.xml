@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='delay_close_day' protocolName='db1'>
+<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+<transaction-type>rollback</transaction-type>
+<sql id='1'>
+	<query> 
+		SELECT EFF_DATE, APLCLOSE, DELAY_PAY_CLOSE
+		FROM CYBER.DBO.CYBER_TBL_WB_HOLIDAY
+		WHERE EFF_DATE = ?		
+        </query>
+	<mapping>		
+		<setProperty>today</setProperty>
+                <getProperty>
+               	eff_date, aplclose, delay_pay_close
+                </getProperty>
+	</mapping>
+</sql>
+</processor-info>
+
+<input>
+<block>
+	<field name="today"				type="string" size="0"/>	
+</block>
+</input>
+	
+<output>
+<block>
+     <field name="eff_date"				type="string" size="0"/>		
+     <field name="aplclose"				type="string" size="0"/>		
+     <field name="delay_pay_close"			type="string" size="0"/>			
+     
+</block>
+</output>
+</transaction>
+
+
+<!--
+eff_date  : workingday
+aplclose  : 유예건 APL 불가일
+delay_auto_close : 유예건(감/연) 제지급수령불가일
+-->
+

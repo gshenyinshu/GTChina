@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1180" protocolName="db1">
+	<description>
+		store procedure  ksps1180 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1180(?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>dept,init,policy,option1,option2,amount,paydat,recdat,strdat</setProperty>
+				<getProperty>rtn,errmsg,amount,paydat,recdat,strdat,autorepay</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="dept"        			type="string" size="0"/>
+			<field name="init"                	type="string" size="0"/>
+			<field name="policy"             	type="string" size="0"/>
+			<field name="option1"     			type="string" size="0"/>
+			<field name="option2"           	type="string" size="0"/>
+			<field name="amount"           		type="string" size="0"/>
+			<field name="paydat"      			type="string" size="0"/>
+			<field name="recdat"             	type="string" size="0"/>
+			<field name="strdat"              	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"      				type="string" size="0"/>
+			<field name="errmsg"          		type="string" size="0"/>
+			<field name="amount"   				type="string" size="0"/>
+			<field name="paydat"   				type="string" size="0"/>
+			<field name="recdat"   				type="string" size="0"/>
+			<field name="strdat"   				type="string" size="0"/>
+			<field name="autorepay"				type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

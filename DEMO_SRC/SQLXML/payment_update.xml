@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name="payment_update" protocolName="db1">
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'> 
+			<query>
+                update CYBER.dbo.CYBER_TBL_WB_PAYMENT 
+                set pay_amt = ?,
+                rslt = ?,
+                err_msg = ?                
+                where policy_apln_no=?
+            </query>
+			<mapping>	
+				<setProperty>pay_amt, rslt, err_msg, policy_apln_no</setProperty>
+                <getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+		<field name="pay_amt"      type="string" size="0"/>
+		<field name="rslt"      type="string" size="0"/>
+		<field name="err_msg"      type="string" size="0"/>
+            <field name="policy_apln_no"      type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

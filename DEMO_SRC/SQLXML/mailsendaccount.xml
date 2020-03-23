@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='mailsendaccount' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select a.policy, 				
+				convert(char(10), a.indate,121) as indate1,
+				a.ssn, 
+				a.owner, 
+				isnull(a.email_cus_status,'') as email_cus_status,
+				isnull(a.email_lp_status,'') as email_lp_status,  
+				isnull(a.sms_cus_ststus,'') as sms_cus_status,
+				isnull(a.sms_lp_status,'') as sms_lp_status, 
+				a.status,
+				CASE a.srvc_cd WHEN 'A' THEN '고객정보변경' WHEN 'B' THEN '자동이체신청' WHEN 'C' THEN '자동이체해지' WHEN 'D' THEN '그룹빌링' WHEN 'E' THEN '보험계약대출자동상환' WHEN 'F' THEN '자동대출자동상환' WHEN 'G' THEN '납부주기변경'
+				WHEN 'H' THEN '변액보험펀드변경' WHEN 'I' THEN '자동대출납부신청' WHEN 'J' THEN '자동대출납부해지'  END as srvc_name,				
+				a.indate, 
+				a.seq_no, 
+				(select isnull(c.bank_name,'')  from CYBER.dbo.CYBER_TBL_WB_BANK  c where c.bank_code = b.bank_code) as bank_name,
+				isnull(b.account_code,'') as account_code,
+				isnull(b.account_name,'') as account_name,
+				isnull(b.account_ssn,'') as account_ssn,
+				isnull(rslt,'') as rslt,
+				isnull(b.err_msg,'') as err_msg,
+				convert(char(10), a.prdate,121) as prdate,
+				isnull(fb_day,'') as fb_day
+				from cyber.dbo.CYBER_TBL_wb_master a, cyber.dbo.CYBER_TBL_wb_account b
+				where a.indate = b.indate 
+				and a.seq_no = b.seq_no
+				and a.indate = ?
+				and a.seq_no  = ?
+				and b.prcode = '1'
+				and srvc_cd = ?
+
+            </query>
+			<mapping>		
+				<setProperty>indate, seq_no, srvc_cd</setProperty>
+                <getProperty>policy, indate1, ssn, owner, email_cus_status, email_lp_status, sms_cus_status, sms_lp_status, status, srvc_name, indate, seq_no, bank_name, account_code, account_name, account_ssn, rslt, err_msg, prdate, fb_day</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="indate"			type="String" size="0" />	
+            <field name="seq_no"			type="String" size="0" />	
+            <field name="srvc_cd"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     	<field name="policy"			type="String" size="0"/>          
+	     	<field name="indate1"            	type="String" size="0"/>
+	     	<field name="ssn"               	type="String" size="0"/>
+	     	<field name="owner"             	type="String" size="0"/>
+	     	<field name="email_cus_status"  	type="String" size="0"/>
+	     	<field name="email_lp_status"   	type="String" size="0"/>
+	     	<field name="sms_cus_status"    	type="String" size="0"/>
+	     	<field name="sms_lp_status"     	type="String" size="0"/>
+	     	<field name="status"            	type="String" size="0"/>
+	     	<field name="srvc_name"         	type="String" size="0"/>
+	     	<field name="indate"            	type="String" size="0"/>
+	     	<field name="seq_no"            	type="String" size="0"/>
+	     	<field name="bank_name"            	type="String" size="0"/>
+	     	<field name="account_code"            	type="String" size="0"/>
+	     	<field name="account_name"            	type="String" size="0"/>
+	     	<field name="account_ssn"            	type="String" size="0"/>
+	     	<field name="rslt"            		type="String" size="0"/>
+	     	<field name="err_msg"            	type="String" size="0"/>
+		<field name="prdate"            	type="String" size="0"/>
+		<field name="fb_day"            	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

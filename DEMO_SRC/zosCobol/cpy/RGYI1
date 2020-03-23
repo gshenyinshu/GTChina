@@ -1,0 +1,91 @@
+      ******************************************************************
+      *                                                                *
+      *1   ?D?B  t~?a?s  ?vi~Úç  ?V?S?A?M  ?F?I?L?E  ?L?A?Y?O?U?T     
+      *                                                                *
+      *    DATA SET NAME  : UR.CI.RIV010                               *
+      *    COPY     NAME  : RGYI1                                      *
+      *    RECORD   LEN.  : 352 BYTE                                   *
+      *    KEY      LEN.  : 34  BYTE                                   *
+      *                                                                *
+      *    CREATION.                                                   *
+      *   -------------                                                *
+      *    1995.05.31    LEE, JONG MIN.   INITIAL WRITTEN              *
+      *    1995.08.16    LEE, WOONG-KYUN  MODIFY FIELDS LENGTH         *
+      *    1995.11.21    KIM, HONG KU     MODIFY                       *
+      *    1996.01.17    KIM, HONG KU     MODIFY                       *
+      *    1996.02.23    LEE,WOONG-KYUN   MODIFY                       *
+      *    1996.03.22    LEE,WOONG-KYUN   MODIFY                       *
+      *    1996.05.09    LEE,WOONG-KYUN   MODIFY                       *
+      *    1996.05.22    LEE,WOONG-KYUN   MODIFY                       *
+      *    1996.07.05    KIM,HONG-KU      MODIFY                       *
+      *                                                                *
+      ******************************************************************
+
+       01  RIV010-REC.
+
+           05  RIV010-KEY.
+
+1              10  RIV010-TXOFF-CD-KEY      PIC  X(03).
+4              10  RIV010-TX-OFFCR-CD-KEY   PIC  X(04).
+8              10  RIV010-TXTP-CD           PIC  X(02).
+10             10  RIV010-ASS-YYMM-FR       PIC  X(06).
+16             10  RIV010-RESID-BUSNID      PIC  X(13).
+29             10  RIV010-RTN-TP            PIC  X(01).
+30             10  RIV010-RTN-SERIAL-NO     PIC S9(04) COMP.
+32             10  RIV010-SERIAL-NO         PIC S9(04) COMP.
+34             10  RIV010-TXPAYER-TP        PIC  X(01).
+
+35         05  RIV010-TXPAYER-ID            PIC  X(13).
+48         05  RIV010-ASS-PRD-TO            PIC  X(08).
+56         05  RIV010-ASS-PRD-FR            PIC  X(08).
+64         05  RIV010-RTN-TP-GB             PIC  X(02).
+66         05  RIV010-RTN-DT                PIC  X(08).
+74         05  RIV010-ENTRY-DT              PIC  X(08).
+82         05  RIV010-EXPIRE-DT             PIC  X(08).
+90         05  RIV010-DISTR-TXOFF-CD        PIC  X(03).
+93         05  RIV010-TXOFF-CD              PIC  X(03).
+96         05  RIV010-TX-OFFCR-CD           PIC  X(04).
+100        05  RIV010-LGDONG-CD             PIC  X(10).
+110        05  RIV010-BOOK-NO               PIC S9(04) COMP.
+112        05  RIV010-SEQNO                 PIC S9(04) COMP.
+114        05  RIV010-COMP-STAT             PIC  X(02).
+116        05  RIV010-COMP-STAT-EDU         PIC  X(02).
+118        05  RIV010-COMP-STAT-AGCL        PIC  X(02).
+120        05  RIV010-RTN-STAT-CD           PIC  X(01).
+121        05  RIV010-PAY-CHNG-STAT         PIC  X(01).
+122        05  RIV010-RTN-METHOD            PIC  X(01).
+123        05  RIV010-RVS-DT                PIC  X(08).
+131        05  RIV010-TX-OFFCR-RVS          PIC  X(04).
+135        05  RIV010-ASS-STDAMT            PIC S9(15)V COMP-3.
+143        05  RIV010-CALCUL-TX             PIC S9(15)V COMP-3.
+151        05  RIV010-DDCT-TX               PIC S9(15)V COMP-3.
+159        05  RIV010-EXMPT-TX              PIC S9(15)V COMP-3.
+167        05  RIV010-DETRM-TX              PIC S9(15)V COMP-3.
+175        05  RIV010-PNLT-TX               PIC S9(15)V COMP-3.
+183        05  RIV010-PRPAID-TX             PIC S9(15)V COMP-3.
+191        05  RIV010-BAL-BEPAY-TX          PIC S9(15)V COMP-3.
+199        05  RIV010-INSTPAY-TX            PIC S9(15)V COMP-3.
+207        05  RIV010-NOMONEY-TX            PIC S9(15)V COMP-3.
+215        05  RIV010-DEFER-PAY-TX          PIC S9(15)V COMP-3.
+223        05  RIV010-BAL-PAYTX             PIC S9(15)V COMP-3.
+231        05  RIV010-BAL-PAYTX-EDUDFTX     PIC S9(15)V COMP-3.
+239        05  RIV010-BAL-PAYTX-AGCL        PIC S9(15)V COMP-3.
+247        05  RIV010-RVS-BAL-PAYTX         PIC S9(15)V COMP-3.
+255        05  RIV010-RVS-BAL-EDUDFTX       PIC S9(15)V COMP-3.
+263        05  RIV010-RVS-BAL-AGCL          PIC S9(15)V COMP-3.
+271        05  RIV010-RVS-RTN-TP            PIC  X(01).
+272        05  RIV010-BK-CD-RFND            PIC  X(02).
+274        05  RIV010-BK-ACCT-RFND          PIC  X(20).
+294        05  RIV010-RTN-PROC-TP           PIC  X(01).
+295        05  RIV010-RFND-GB               PIC  X(01).
+296        05  RIV010-CREAT-DT              PIC  X(08).
+304        05  RIV010-LAST-FG               PIC  X(01).
+305        05  RIV010-COMP-CNT              PIC  X(01).
+306        05  RIV010-COMP-END-FG           PIC  X(01).
+307        05  RIV010-RFND-CD               PIC  X(02).
+309        05  RIV010-RGST-OPEN-DT          PIC  X(08).
+317        05  RIV010-MATCH-CREATE-FG       PIC  X(01).
+318        05  RIV010-EARLY-RFND-TP         PIC  X(01).
+319        05  RIV010-OVER-RFND-GB          PIC  X(01).
+320        05  FILLER                       PIC  X(33).
+

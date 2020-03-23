@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1150" protocolName="db1">
+	<description>
+		store procedure  ksps1150 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1150(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,proc,reqdate,mastdte,remidte,insur,divi4,pdf,delay,paytot,loanfrom,dlyprm,subtrct,payamt,loanamt,loanint,loanto,divpolh,lstdte,lstcnt,dlydays</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 		type="string" size="0"/>
+			<field name="init" 			type="string" size="0"/>
+			<field name="policy" 		type="string" size="0"/>
+			<field name="option" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"           		type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="proc"      		type="string" size="0"/>
+			<field name="reqdate"       	type="string" size="0"/>
+			<field name="mastdte"      	type="string" size="0"/>  			
+			<field name="remidte"      	type="string" size="0"/>  			
+			<field name="insur"      		type="string" size="0"/>  			
+			<field name="divi4"      		type="string" size="0"/>  			
+			<field name="pdf"      		type="string" size="0"/>  			
+			<field name="delay"      		type="string" size="0"/>  			
+			<field name="paytot"      		type="string" size="0"/>  			
+			<field name="loanfrom"      	type="string" size="0"/>  			
+			<field name="dlyprm"      	type="string" size="0"/>
+			<field name="subtrct"      	type="string" size="0"/>
+			<field name="payamt"      	type="string" size="0"/>
+			<field name="loanamt"      	type="string" size="0"/>
+			<field name="loanint"      	type="string" size="0"/>
+			<field name="loanto"      		type="string" size="0"/>
+			<field name="divpolh"      	type="string" size="0"/>			
+			<field name="lstdte"      		type="string" size="0"/>			
+			<field name="lstcnt"      		type="string" size="0"/>			
+			<field name="dlydays"      	type="string" size="0"/>			
+			
+		</block>     
+	</output>        
+</transaction>       

@@ -1,0 +1,42 @@
+      ******************************************************************
+      *                                                                *
+      *    ?~??a¹ßVSAM FILE                                       *
+      *                                                                *
+      *    DATASET  NAME   : UR.CI.RGV020                              *
+      *    COPY     NAME   : RGY02                                     *
+      *                                                                *
+      *    RECORD   LENGTH : 3611 BYTE                                 *
+      *    PRI KEY  LENGTH : 27   BYTE                                 *
+      *                                                                *
+      *    CREATION.     S.E NAME         DESCRIPTION                  *
+      *   ------------- ---------------- ----------------------------  *
+      *    1995.06.07                     INITIAL WRITTEN              *
+      *                                                                *
+      ******************************************************************
+
+       01  RGV02-REC.
+
+           10  RGV02-KEY.
+               15 RGV02-RESID-BUSNID       PIC  X(13).
+               15 RGV02-TXTP-CD            PIC  X(02).
+               15 RGV02-ASS-YYMM-FR        PIC  X(06).
+               15 RGV02-RTN-TP             PIC  X(01).
+               15 RGV02-RTN-SERIAL-NO      PIC S9(04) COMP.
+               15 RGV02-SERIAL-NO          PIC S9(04) COMP.
+               15 RGV02-TXPAYER-TP         PIC  X(01).
+
+           10  RGV02-GAP-AMT               PIC S9(15) COMP-3.
+           10  RGV02-GAP-AMT-AGCL          PIC S9(15) COMP-3.
+           10  RGV02-GAP-AMT-EDU           PIC S9(15) COMP-3.
+      *
+           10  RGV02-PROCESS-DT            PIC  X(08).
+           10  RGV02-TRAILER-CNT           PIC S9(04) COMP.
+           10  RGV02-DTL-DATA      OCCURS 50 INDEXED BY R-INDEX.
+               15  RGV02-PGM-ID            PIC  X(05).
+               15  RGV02-TABLE-ID          PIC  X(05).
+               15  RGV02-GUBN1             PIC  X(05).
+               15  RGV02-GUBN2             PIC  X(10).
+               15  RGV02-FIELD-ID          PIC  X(30).
+               15  RGV02-ERR-AMT           PIC S9(15) COMP-3.
+               15  RGV02-NORMAL-AMT        PIC S9(15) COMP-3.
+

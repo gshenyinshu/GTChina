@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select top 20  P1.policy_apln_no, P1.policy_no, P1.user_id,
+				CASE P1.mode WHEN 1 THEN '지급' WHEN 2 THEN '수납' END as mode, 
+				CASE P1.srvc_cd WHEN 1 THEN '약대지급' WHEN 2 THEN '약대상환' WHEN 3 THEN 'APL상환' WHEN 4 THEN '배당금' WHEN 5 THEN '휴면보험금'  WHEN 6 THEN '보험료수납' WHEN 7 THEN '배당금상계' WHEN 8 THEN '추가보험료수납' END as srvc_name,
+				P1.srvc_cd, 
+				CASE P1.pay_cd WHEN 1 THEN '전액' WHEN 2 THEN '일부' WHEN 3 THEN '이자'  WHEN '' THEN '' END as pay_name, 
+				P1.pay_cd,
+				P1.apln_dt, P1.apln_amt, P1.bank_cd, P1.acct_no, P1.acct_nm, P1.payor_ssn, P1.payor_nm, P1.payor_phone,
+				P1.payor_email, P1.pay_amt, P1.pay_dt, 
+				CASE P1.rslt WHEN '' THEN '접수' WHEN '0' THEN '성공' WHEN '1' THEN '반송' WHEN '2' THEN '실패' WHEN '3' THEN '지연' WHEN 'A' THEN '처리중' END as rslt_name, 
+				P1.rslt,P1.bank_conf_yn, P1.err_msg, P1.sending_num, P1.lp_id,
+				CASE CONVERT(CHAR(4),P2.PROC_DT,112) WHEN '1900' THEN '' ELSE CONVERT(CHAR(10),P2.PROC_DT, 121) END AS proc_dt,
+				CASE CONVERT(CHAR(8),P2.PROC_DT,114) WHEN '00:00:00' THEN '' ELSE CONVERT(CHAR(8),P2.PROC_DT, 114) END AS proc_tm,
+				ISNULL(P3.EMP_NM,'') as emp_nm
+				from
+				(
+				 (CYBER.dbo.CYBER_TBL_WB_PAYMENT AS P1 LEFT JOIN CYBER.dbo.CYBER_vw_WB_PROCESS AS P2 ON P1.POLICY_APLN_NO = P2.POLICY_APLN_NO AND  P1.RSLT = P2.PROC_STATUS) 
+				  LEFT JOIN CYBER.dbo.CYBER_TBL_WB_PROC_EMP AS P3 ON P2.PROC_EMP_NO = P3.EMP_NO
+				 ) 
+				--INNER JOIN  prudb.dbo.insurancePolicy as P4  ON P1.POLICY_NO = P4.POLICYID 
+				where P1.mode in ('1','2','')
+				$where
+				and P1.policy_apln_no not in
+				(
+					select top $page P1.policy_apln_no
+					from 
+					(
+					 (CYBER.dbo.CYBER_TBL_WB_PAYMENT AS P1 LEFT JOIN CYBER.dbo.CYBER_vw_WB_PROCESS AS P2 ON P1.POLICY_APLN_NO = P2.POLICY_APLN_NO AND  P1.RSLT = P2.PROC_STATUS) 
+					  LEFT JOIN CYBER.dbo.CYBER_TBL_WB_PROC_EMP AS P3 ON P2.PROC_EMP_NO = P3.EMP_NO
+					 ) 
+					--INNER JOIN  prudb.dbo.insurancePolicy as P4  ON P1.POLICY_NO = P4.POLICYID 
+					where mode in ('1','2','')
+					$subwhere
+					order by P1.apln_dt desc
+				)
+				order by P1.apln_dt desc
+
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>policy_apln_no, policy_no,  user_id, mode, srvc_name, srvc_cd, pay_name,pay_cd, apln_dt, apln_amt, bank_cd, acct_no, acct_nm, payor_ssn, payor_nm,payor_phone, payor_email,pay_amt, pay_dt, rslt_name, rslt, bank_conf_yn,err_msg, sending_num, lp_id, proc_dt, proc_tm, emp_nm</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="page"				type="int" size="0"/>	
+			<field name="where"			type="string" size="0"/>	
+			<field name="subwhere"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name= "policy_apln_no"		type="string" size="0"/>
+			<field name= "policy_no"        		type="string" size="0"/>
+			<field name= "user_id" 			type="string" size="0"/>
+			<field name= "mode"             	type="string" size="0"/>
+			<field name= "srvc_name"        	type="string" size="0"/>
+			<field name= "srvc_cd"          	type="string" size="0"/>
+			<field name= "pay_name"         	type="string" size="0"/>
+			<field name= "pay_cd"           	type="string" size="0"/>
+			<field name= "apln_dt"          		type="string" size="0"/>
+			<field name= "apln_amt"         	type="string" size="0"/>
+			<field name= "bank_cd"          	type="string" size="0"/>
+			<field name= "acct_no"          	type="string" size="0"/>
+			<field name= "acct_nm"          	type="string" size="0"/>
+			<field name= "payor_ssn"        	type="string" size="0"/>
+			<field name= "payor_nm"         	type="string" size="0"/>
+			<field name= "payor_phone"      	type="string" size="0"/>
+			<field name= "payor_email"      	type="string" size="0"/>
+			<field name= "pay_amt"          	type="string" size="0"/>
+			<field name= "pay_dt"           		type="string" size="0"/>
+			<field name= "rslt_name"        	type="string" size="0"/>
+			<field name= "rslt"             		type="string" size="0"/>
+			<field name= "bank_conf_yn"     	type="string" size="0"/>
+			<field name= "err_msg"          	type="string" size="0"/>
+			<field name= "sending_num"      	type="string" size="0"/>
+			<field name= "lp_id"            		type="string" size="0"/>			
+			<field name= "proc_dt"            		type="string" size="0"/>
+			<field name= "proc_tm"            		type="string" size="0"/>
+			<field name= "emp_nm"            		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

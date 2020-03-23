@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="save_login_sts" protocolName="db1">
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+  		<sql id='1'>
+			<query>
+				INSERT INTO CYBER.dbo.CYBER_TBL_LOGIN_STATUS (CHG_DATE, CHG_TIME, CHG_EMP_NO, LOGIN_STS, LOGIN_CLOSE_MSG)
+				VALUES (convert(varchar(8), getdate(),112), convert(varchar(8), getdate(),108), ?, ?, ?)
+			</query>			
+			<mapping>		
+				<setProperty>emp_no, login_sts, login_close_msg</setProperty>
+				<getProperty></getProperty>
+			</mapping>
+  		</sql>
+ 	</processor-info>
+ 
+	<input>
+		<block>
+			<field name="emp_no"  				type="string" size="0"/>
+			<field name="login_sts"  			type="string" size="0"/>
+			<field name="login_close_msg"		type="string" size="0"/>
+		</block>
+	</input>
+	<output></output>          
+</transaction>

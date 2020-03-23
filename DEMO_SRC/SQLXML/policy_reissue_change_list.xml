@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_reissue_change_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select indate, id, policy, code, subcode
+                from CYBER.dbo.CYBER_TBL_WB_LETTER
+                where code = '3'
+                and rtn = '0'
+                order by indate asc
+            </query>
+			<mapping>       
+				<getProperty>indate, id, policy, code, subcode</getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block></block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"    	type="string" size="0"/>     
+			<field name="id"        	type="string" size="0"/>
+			<field name="policy"        type="string" size="0"/>
+			<field name="code"        	type="string" size="0"/>
+			<field name="subcode"       type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='wb_payment_display' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 				
+				select policy_no,
+				CASE srvc_cd WHEN 1 THEN '보험계약대출' WHEN 2 THEN '보험계약대출상환' WHEN 3 THEN '자동대출납부상환' WHEN 4 THEN '배당금' WHEN 5 THEN '휴면보험금'  WHEN 6 THEN '보험료수납' WHEN 7 THEN '배당금상계' WHEN 8 THEN '추가보험료수납' END as srvc_name,
+				srvc_cd,CASE pay_cd WHEN 1 THEN '전액' WHEN 2 THEN '일부' WHEN 3 THEN '이자' END  as pay_cd, 
+				apln_dt, apln_amt, 
+				(select bank_name from CYBER.dbo.CYBER_TBL_WB_BANK a where a.bank_code=bank_cd) as bank_name,
+				acct_no, acct_nm, payor_ssn, payor_nm, payor_phone, payor_email, pay_amt, pay_dt,lp_id, flag, policy_apln_no, isnull(pay_cd,'') as paycd				
+				from cyber.dbo.CYBER_TBL_wb_payment where policy_apln_no = ?
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>policy_no, srvc_name, srvc_cd, pay_cd, apln_dt, apln_amt, bank_name, acct_no, acct_nm, payor_ssn, payor_nm, payor_phone, payor_email, pay_amt, pay_dt, lp_id, flag, policy_apln_no,paycd</getProperty>                			           			 
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"		type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		<field name = "policy_no"           type="String" size="0"/>
+		<field name = "srvc_name"             type="String" size="0"/>
+		<field name = "srvc_cd"             type="String" size="0"/>
+		<field name = "pay_cd"              type="String" size="0"/>
+		<field name = "apln_dt"             type="String" size="0"/>
+		<field name = "apln_amt"            type="String" size="0"/>
+		<field name = "bank_name"             type="String" size="0"/>
+		<field name = "acct_no"             type="String" size="0"/>
+		<field name = "acct_nm"             type="String" size="0"/>
+		<field name = "payor_ssn"           type="String" size="0"/>
+		<field name = "payor_nm"            type="String" size="0"/>
+		<field name = "payor_phone"         type="String" size="0"/>
+		<field name = "payor_email"         type="String" size="0"/>
+		<field name = "pay_amt"             type="String" size="0"/>
+		<field name = "pay_dt"              type="String" size="0"/>
+		<field name = "lp_id"               type="String" size="0"/> 			 
+		<field name = "flag"               type="String" size="0"/> 
+		<field name = "policy_apln_no"     type="String" size="0"/> 
+		<field name = "paycd"     type="String" size="0"/> 
+		</block>
+	</output>
+</transaction>

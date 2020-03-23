@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sms_cu_upt' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				 update  CYBER.DBO.CYBER_TBL_SMS_CUSTOMER_MSG 
+				 set send_msg = ?, send_err = ?, prname = ?
+				 where seq_no = ?
+            </query>
+			<mapping>		
+				<setProperty>send_msg, send_err, prname, seq_no</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		     <field name="send_msg"				type="string" size="0"/>			
+		     <field name="send_err"				type="string" size="0"/>			
+		     <field name="prname"				type="string" size="0"/>			
+		     <field name="seq_no"				type="string" size="0"/>				     		
+	        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

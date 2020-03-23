@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="bankcd" protocolName="db1">
+	<description>
+		store procedure  bankcd 파라미터
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KCCM0104(?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping-procedure>
+				<param seq="1"  mode="in">policy</param>
+					
+				<param seq="1"  mode="out"  type="VARCHAR" size="10">policy1</param>
+				<param seq="2"  mode="out"  type="VARCHAR" size="10">rtn</param>
+				<param seq="3"  mode="out"  type="VARCHAR" size="10">errmsg</param>
+				<param seq="4"  mode="out"  type="VARCHAR" size="10">method</param>								
+				<param seq="5"  mode="out"  type="VARCHAR" size="10">bank_name</param>
+				<param seq="6"  mode="out"  type="VARCHAR" size="10">account_code</param>
+				<param seq="7"  mode="out"  type="VARCHAR" size="10">payor_name</param>
+				<param seq="8"  mode="out"  type="VARCHAR" size="10">payor_number</param>
+				<param seq="9"  mode="out"  type="VARCHAR" size="10">payor_biz_number</param>
+				<param seq="10"  mode="out" type="VARCHAR" size="10">pay_day</param>			
+			</mapping-procedure>
+			<mapping>      
+				<setProperty></setProperty>
+				<getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="policy"     	type="string" size="0"/>
+		</block>                    
+	</input>                        
+	<output>                        
+		<block>  		                   
+			<field name="policy1"				type="string" size="0"/>
+			<field name="rtn"    					type="string" size="0"/>
+			<field name="errmsg"    			type="string" size="0"/>
+			<field name="method"    			type="string" size="0"/>			
+			<field name="bank_name"   	type="string" size="0"/>
+			<field name="account_code"  type="string" size="0"/>
+			<field name="payor_name"    	type="string" size="0"/>
+			<field name="payor_number"  	type="string" size="0"/>
+			<field name="payor_biz_number"  type="string" size="0"/>
+			<field name="pay_day"   			type="string" size="0"/>
+		</block>                                
+	</output>          
+</transaction>         

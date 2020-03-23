@@ -1,0 +1,33 @@
+      ***************************************************************** 
+      *                                                               * 
+      *   SSYAX - ?a[~?aæÖ?pSPACE COMPRESS SUBPROGRAM COPY MEMBER   * 
+      *                                                               * 
+      *   MODIFICATIONS.                                              * 
+      *   --------------                                              * 
+      *   2001.06.15                                                  * 
+      *                                                               * 
+      ***************************************************************** 
+                                                                        
+                                                                        
+           05  W-SSSAX-AREA.                                            
+                                                                        
+               10  W-SSSAX-INPUT.                                       
+                   15  W-SSSAX-SI-DO         PIC  X(012)  VALUE SPACES. 
+                   15  W-SSSAX-GU-SI-GUN     PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAX-DONG-EUP-MYUN PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAX-GA-RI         PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAX-SAN-BUNJI     PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAX-BUNJI         PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAX-HO            PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAX-APT-BLOCK     PIC  X(030)  VALUE SPACES. 
+                   15  W-SSSAX-APT-DONG      PIC  X(012)  VALUE SPACES. 
+                   15  W-SSSAX-APT-HO        PIC  X(006)  VALUE SPACES. 
+                   15  W-SSSAX-TONG          PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAX-BAN           PIC  X(004)  VALUE SPACES. 
+               10  W-SSSAX-OUTPUT            PIC  X(122)  VALUE SPACES. 
+                                                                        
+                                                                        
+      ***************************************************************** 
+      *        END OF MEMBER 'NTA.ET.COPYLIB(SSYAX)'                  * 
+      ***************************************************************** 
+                                                                        

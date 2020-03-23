@@ -1,0 +1,4 @@
+           05  W-SSSHE-AREA.
+               10  W-SSSHE-I-LENGTH    PIC S9(09) COMP    VALUE +0.
+               10  W-SSSHE-I-DATA      PIC  X(100)        VALUE SPACES.
+               10  W-SSSHE-STATUS      PIC  X(01)         VALUE SPACE.

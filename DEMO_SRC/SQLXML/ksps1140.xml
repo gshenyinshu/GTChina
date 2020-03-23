@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1140" protocolName="db1">
+	<description>
+		store procedure  ksps1140 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KSPS1140(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>
+					deptcd,
+					init,
+					policy
+				</setProperty>
+				<getProperty>
+					rtn,
+					errmsg,
+					clntno,
+					rlown,
+					rlins,
+					rlpyr,
+					rlbnf
+				</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 	type="string" size="0"/>
+			<field name="init" 		type="string" size="0"/>
+			<field name="policy" 	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"     type="string" size="0"/>
+			<field name="errmsg"  type="string" size="0"/>
+			<field name="clntno"  type="string" size="0"/>
+			<field name="rlown"   type="string" size="0"/>
+			<field name="rlins"   type="string" size="0"/>  
+			<field name="rlpyr"   type="string" size="0"/>
+			<field name="rlbnf"   type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction> 

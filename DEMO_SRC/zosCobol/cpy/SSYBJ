@@ -1,0 +1,25 @@
+      *****************************************************************
+      *                                                               *
+      *   SSYBJ    - BIT MAP FOR ATTRIBUTES                           *
+      *                                                               *
+      *       REF:  CICS/ESA APPLICATION PROGRAMMING REFERENCE        *
+      *             v3.3 ( p252 )                                     *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   1994.10.28                                                  *
+      *                                                               *
+      *****************************************************************
+
+
+      ******************************************************************
+      *                    A T T R I B U T E S                         *
+      ******************************************************************
+
+       01  HILIGHTS.
+
+           05  C-HLIGHT-BLINK          PIC  X(01)           VALUE '1'.
+           05  C-HLIGHT-REVRS          PIC  X(01)           VALUE '2'.
+           05  C-HLIGHT-UNDERLINE      PIC  X(01)           VALUE '4'.
+           05  C-HLIGHT-NORM           PIC  X(01)           VALUE '?'.  
+

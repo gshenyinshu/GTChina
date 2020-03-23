@@ -1,0 +1,8 @@
+/* map                 */   .map   {   height: 48px; text-align: right; padding: 10px;   }
+
+/* menu                */   .menu  {   width: 155px; padding:0px; vertical-align: top; background: #F3F3F3;   }
+/* menu                */   .menu table  {   margin-top : -4px; padding-bottom: 10px;   }
+/* menu                */   .menu td  {   color: #000000; text-align: left; padding: 5px 0px 3px 5px; font-weight: bold; border-top: solid 2 #FFFFFF; border-bottom: solid 2 #FFFFFF;   }
+/* menu                */   .menu th  {   text-align: left; padding: 7px 0px 10px 25px; font-weight: bold; background: #FFFFFF; border: none;   }
+/* menu                */   .menu th .mn  {   color: #000000; margin-bottom: 5px;   }
+/* map                 */   .contents   {   padding: 30px 30px; vertical-align: top;   }
