@@ -116,10 +116,10 @@ public final class DeathRegistrationManager {
 
 					if (jobGb.equals("P") || jobGb.equals("C")) {
 						////// 계약자
-						if (result_arr[i].equals("Y") && !"".equals(rlown[i]) && rlown[i] != null) {
-							result_rtn = "1";
-							return result_rtn; 
-						}
+//						if (result_arr[i].equals("Y") && !"".equals(rlown[i]) && rlown[i] != null) {
+//							result_rtn = "1";
+//							return result_rtn; 
+//						}
 						////// 피보험자
 						if (result_arr[i].equals("Y") && !"".equals(rlins[i]) && rlins[i] != null) {
 							result_rtn = "2";
