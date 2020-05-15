@@ -39,6 +39,9 @@ public abstract class CudAction extends Action
 		{
 			throw(e);
 		}
+		finally{
+			return 0;
+		}
 	}
 
 	/**
