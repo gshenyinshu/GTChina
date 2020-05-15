@@ -1,4 +1,4 @@
-/*change src for test 20200316 6:09PM
+/*
  * Title       : RedirectAction
  * Description : redirect="true" 
  * Copyright   : Copyright (c) 2004
@@ -51,7 +51,3 @@ public abstract class CudAction extends Action
 		throws Exception;
 }
 
-class AAA {
-	System.out.println("error!");
-
-}

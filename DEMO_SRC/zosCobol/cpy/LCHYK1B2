@@ -1,0 +1,89 @@
+      ****************************************************************
+      *  HANDLER     : 가맹점　행태평점　반영용LAYOUT              *
+      *  DESCRIPTION : 가맹점　행태평점의　각FACTOR별　반영용   -*
+      *                내용　및　점수　관련LAYOUT                  *
+      *                                                              *
+      *  TOTAL SIZE  : 35  BYTES                                     *
+      *                                                              *
+      * 변경HISTORY                                                *
+      * 변경일자     CSR번호 작업자 작업내용                 *
+      *  ==========   =========   ======   ========================  *
+      *  2003/10/01              김만식 최초작성                 *
+      *                                                              *
+      ****************************************************************
+
+       01 LCHYK1B2.
+
+           05  K1B2-MCHT-N                    PIC X(10).
+           05  K1B2-BS-NO                     PIC X(02).
+           05  K1B2-DATA                      PIC X(20).
+
+      ** 01가맹점이용회원연체율
+           05  K1B2-DATA-01    REDEFINES      K1B2-DATA.
+
+               10 K1B2-DLAY-RT                PIC S9(03)V9(02) COMP-3.
+               10 FILLER                      PIC X(17).
+
+      ** 02가맹점승인기간
+           05  K1B2-DATA-02    REDEFINES      K1B2-DATA.
+
+               10 K1B2-CNTR-MON               PIC 9(03).
+               10 FILLER                      PIC X(17).
+
+      ** 03가맹점제휴여부
+           05  K1B2-DATA-03    REDEFINES      K1B2-DATA.
+
+               10 K1B2-AS-YN                  PIC X(01).
+               10 FILLER                      PIC X(19).
+
+      ** 04할부비중
+           05  K1B2-DATA-04    REDEFINES      K1B2-DATA.
+
+               10 K1B2-H-RT                   PIC 9(03).
+               10 FILLER                      PIC X(17).
+
+      ** 05매출액규모
+           05  K1B2-DATA-05    REDEFINES      K1B2-DATA.
+
+               10 K1B2-SLS-AMT                PIC S9(13) COMP-3.
+               10 FILLER                      PIC X(13).
+
+      ** 06건당　취급액
+           05  K1B2-DATA-06    REDEFINES      K1B2-DATA.
+
+               10 K1B2-SLS-PER-AMT            PIC S9(13) COMP-3.
+               10 FILLER                      PIC X(13).
+
+      ** 07이용회원등급별현황
+           05  K1B2-DATA-07    REDEFINES      K1B2-DATA.
+
+               10 K1B2-GRADE-RT               PIC 9(03).
+               10 FILLER                      PIC X(17).
+
+      ** 08이용회원BS평균점수
+           05  K1B2-DATA-08    REDEFINES      K1B2-DATA.
+
+               10 K1B2-AVG-BS-N               PIC 9(03).
+               10 FILLER                      PIC X(17).
+
+      ** 09가맹점손익규모
+           05  K1B2-DATA-09    REDEFINES      K1B2-DATA.
+
+               10 K1B2-PAL-AMT                PIC S9(13) COMP-3.
+               10 FILLER                      PIC X(13).
+
+      ** 10대표자카드소지여부
+           05  K1B2-DATA-10    REDEFINES      K1B2-DATA.
+
+               10 K1B2-OW-CRD-YN              PIC X(01).
+               10 K1B2-OW-CRD-N               PIC X(16).
+               10 K1B2-OW-BS                  PIC X(03).
+
+      ** 11요주의가맹점등재여부
+           05  K1B2-DATA-11    REDEFINES      K1B2-DATA.
+
+               10 K1B2-STATUS-CD              PIC X(02).
+               10 FILLER                      PIC X(18).
+
+           05  K1B2-BS-SC                     PIC S9(05) COMP-3.
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="contract_sum" protocolName="db1">
+	<description>
+		store procedure  contract_sum ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS3500(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,ssn</setProperty>
+				<getProperty>rtn,errmsg,plcyno,plncode,plnname,ownna,ownno,insna,insno,issdate,modprem,status,svclp,svclpname,fund,lstpdat,pdcnt,modx,method,nfopt,bankcode,payna,payno,fbsday,bankacc,hcind,custype,fpul,loanhis,ptd,lpsdte</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 		type="string" size="0"/>
+			<field name="init" 			type="string" size="0"/>
+			<field name="ssn" 			type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"               type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="plcyno"        	type="string" size="0"/>
+			<field name="plncode"       type="string" size="0"/>
+			<field name="plnname"       type="string" size="0"/>  
+			<field name="ownna"         type="string" size="0"/>
+			<field name="ownno"         type="string" size="0"/>
+			<field name="insna"         	type="string" size="0"/>
+			<field name="insno"         	type="string" size="0"/>
+			<field name="issdate"       	type="string" size="0"/>
+			<field name="modprem"      type="string" size="0"/>
+			<field name="status"        	type="string" size="0"/>
+			<field name="svclp"         	type="string" size="0"/>
+			<field name="svclpname"   	type="string" size="0"/>			
+			<field name="fund"          	type="string" size="0"/>
+			<field name="lstpdat"       	type="string" size="0"/>
+			<field name="pdcnt"         	type="string" size="0"/>
+			<field name="modx"          	type="string" size="0"/>
+			<field name="method"        	type="string" size="0"/>
+			<field name="nfopt"            type="string" size="0"/>			
+			<field name="bankcode"     type="string" size="0" default=""/>
+			<field name="payna"         	type="string" size="0"/>
+			<field name="payno"         	type="string" size="0"/>
+			<field name="fbsday"        	type="string" size="0"/>
+			<field name="bankacc"      	type="string" size="0"/>
+			<field name="hcind"         	type="string" size="0"/>
+			<field name="custype"       	type="string" size="0"/>
+			<field name="fpul"          	type="string" size="0"/>
+			<field name="loanhis"       	type="string" size="0"/>
+			<field name="ptd"            	type="string" size="0"/>
+			<field name="lpsdte"          type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

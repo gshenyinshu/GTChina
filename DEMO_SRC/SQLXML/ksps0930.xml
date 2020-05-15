@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0930" protocolName="db1">
+	<description>
+		store procedure  ksps0930 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0930(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'','','','')}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,cltno,schk,send,hchk,hpost,hadd1,hadd2,htchk,htela,htel1,htel2,ochk,opost,oadd1,oadd2,oadd3,oadd4,otchk,otela,otel1,otel2,mtchk,mtela,mtel1,mtel2,emchk,email,emschk,emserv,option,sexchk,sex,namechk,name</setProperty>
+				<getProperty>rtn,errmsg,sex,name,send,hpost,hadd1,hadd2,htela,htel1,htel2,opost,oadd1,oadd2,oadd3,oadd4,otela,otel1,otel2,mtela,mtel1,mtel2,faxa,fax1,fax2,cpna,cpn1,cpn2,paga,pag1,pag2,emails,moddate,channel,email,occu,appro,ncall</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="deptcd"			type="string" size="0"/>
+			<field name="init" 				type="string" size="0"/>
+			<field name="cltno"				type="string" size="0"/>
+			<field name="schk" 				type="string" size="0"/>
+			<field name="send" 				type="string" size="0"/>
+			<field name="hchk" 				type="string" size="0"/>
+			<field name="hpost"				type="string" size="0"/>
+			<field name="hadd1"				type="string" size="0"/>
+			<field name="hadd2"				type="string" size="0"/>
+			<field name="htchk"				type="string" size="0"/>
+			<field name="htela"				type="string" size="0"/>
+			<field name="htel1"				type="string" size="0"/>
+			<field name="htel2"				type="string" size="0"/>
+			<field name="ochk" 				type="string" size="0"/>
+			<field name="opost"				type="string" size="0"/>
+			<field name="oadd1"				type="string" size="0"/>
+			<field name="oadd2"				type="string" size="0"/>
+			<field name="oadd3"				type="string" size="0"/>
+			<field name="oadd4"				type="string" size="0"/>
+			<field name="otchk"				type="string" size="0"/>
+			<field name="otela"				type="string" size="0"/>
+			<field name="otel1"				type="string" size="0"/>
+			<field name="otel2"				type="string" size="0"/>
+			<field name="mtchk"				type="string" size="0"/>
+			<field name="mtela"				type="string" size="0"/>
+			<field name="mtel1"				type="string" size="0"/>
+			<field name="mtel2"				type="string" size="0"/>
+			<field name="emchk"				type="string" size="0"/>
+			<field name="email"				type="string" size="0"/>
+			<field name="emschk"			type="string" size="0"/>
+			<field name="emserv"			type="string" size="0"/>
+			<field name="option"			type="string" size="0"/>
+			<field name="sexchk"			type="string" size="0"/>
+			<field name="sex"				type="string" size="0"/>
+			<field name="namechk"			type="string" size="0"/>
+			<field name="name"				type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"    			type="string" size="0"/>
+			<field name="errmsg" 			type="string" size="0"/>
+			<field name="sex"    			type="string" size="0"/>
+			<field name="name"   			type="string" size="0"/>
+			<field name="send"   			type="string" size="0"/>
+			<field name="hpost"  			type="string" size="0"/>
+			<field name="hadd1"  			type="string" size="0"/>
+			<field name="hadd2"  			type="string" size="0"/>
+			<field name="htela"  			type="string" size="0"/>
+			<field name="htel1"  			type="string" size="0"/>
+			<field name="htel2"  			type="string" size="0"/>
+			<field name="opost"  			type="string" size="0"/>
+			<field name="oadd1"  			type="string" size="0"/>
+			<field name="oadd2"  			type="string" size="0"/>
+			<field name="oadd3"  			type="string" size="0"/>
+			<field name="oadd4"  			type="string" size="0"/>
+			<field name="otela"  			type="string" size="0"/>
+			<field name="otel1"  			type="string" size="0"/>
+			<field name="otel2"  			type="string" size="0"/>
+			<field name="mtela"  			type="string" size="0"/>
+			<field name="mtel1"  			type="string" size="0"/>
+			<field name="mtel2"  			type="string" size="0"/>
+			<field name="faxa"   			type="string" size="0"/>
+			<field name="fax1"  			type="string" size="0"/>
+			<field name="fax2"   			type="string" size="0"/>
+			<field name="cpna"   			type="string" size="0"/>
+			<field name="cpn1"   			type="string" size="0"/>
+			<field name="cpn2"   			type="string" size="0"/>
+			<field name="paga"   			type="string" size="0"/>
+			<field name="pag1"   			type="string" size="0"/>
+			<field name="pag2"   			type="string" size="0"/>
+			<field name="emails" 			type="string" size="0"/>
+			<field name="moddate"			type="string" size="0"/>
+			<field name="channel"			type="string" size="0"/>
+			<field name="email"  			type="string" size="0"/>
+			<field name="occu"   			type="string" size="0"/>
+			<field name="appro"				type="string" size="0"/>
+			<field name="ncall"				type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

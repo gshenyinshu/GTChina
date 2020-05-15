@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name="usp_wb_process_rslt" protocolName="db1">
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'> 
+			<query>
+                update CYBER.dbo.CYBER_TBL_WB_PROCESS
+                set proc_status = 'A'
+                where policy_apln_no=?
+            </query>
+			<mapping>	
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="policy_apln_no"      type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

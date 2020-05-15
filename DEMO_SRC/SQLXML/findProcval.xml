@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='findProcval' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select proc_status from CYBER.dbo.CYBER_TBL_WB_PROCESS where policy_apln_no=?				
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>proc_status</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="proc_status"				type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

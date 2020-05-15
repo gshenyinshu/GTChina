@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_content' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select 
+			CASE srvc_cd WHEN 'A' THEN '고객정보변경' WHEN 'B' THEN '자동이체변경' WHEN 'C' THEN '자동이체해지'  WHEN 'D' THEN '그룹빌링' 
+			WHEN 'E' THEN '보험계약대출자동상환'  WHEN 'F' THEN '자동대출납부자동상환' WHEN 'G' THEN '납부주기변경' WHEN 'H' THEN '변액보험펀드변경' WHEN 'I' THEN 'APL신청'
+			WHEN 'J' THEN 'APL해지' END as srvc_cd,
+			isnull(srvc_cd,'') as srvc_code,
+			policy, a.ssn,
+			CASE rslt WHEN '' THEN '접수' WHEN '0' THEN '즉시처리' WHEN '1' THEN '일괄처리' WHEN '2' THEN '실패' WHEN '3' THEN '반송' END as rslt,
+			isnull(b.err_msg,'') as err_msg,
+			isnull(a.owner,'') as owner
+			from cyber.dbo.CYBER_TBL_wb_master a, $table
+			where a.indate = b.indate
+			and a.seq_no = b.seq_no
+			and b.indate = ?
+			and b.seq_no = ?
+			and b.prcode = ?
+
+            </query>
+			<mapping>		
+				<setProperty>indate, seq_no, prcode</setProperty>
+                		<getProperty>srvc_cd, srvc_code, policy, ssn, rslt, err_msg, owner</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="table"				type="string" size="0"/>	
+			<field name="indate"			type="string" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+					<field name="srvc_cd"			type="string" size="0"/>	
+					<field name="srvc_code"			type="string" size="0"/>	
+					<field name="policy"			type="string" size="0"/>	
+					<field name="ssn"				type="string" size="0"/>	
+					<field name="rslt"				type="string" size="0"/>	
+					<field name="err_msg"			type="string" size="0"/>	
+					<field name="owner"			type="string" size="0"/>	
+
+		</block>
+	</output>
+</transaction>
+

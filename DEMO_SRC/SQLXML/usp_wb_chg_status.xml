@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="usp_wb_chg_status" protocolName="db1">
+ <description>
+  usp_wb_process_update
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_CHG_STATUS(?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in">policy_apln_no</param>
+    <param seq="3"   mode="in">proc_emp_no</param> 
+    <param seq="4"   mode="in">proc_status</param> 
+    <param seq="5"   mode="in">err_msg</param> 
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="policy_apln_no"  	type="string" size="0"/>
+   <field name="proc_emp_no"   	  	type="string" size="0"/>
+   <field name="proc_status"   	  	type="string" size="0"/>   
+   <field name="err_msg"   	  		type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"             	type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>

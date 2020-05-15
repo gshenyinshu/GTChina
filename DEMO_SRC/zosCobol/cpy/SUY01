@@ -1,0 +1,34 @@
+      ******************************************************************
+      *                                                                *
+      *    SUY01 : COBOL COPY MEMBER FOR USER MESSAGE DATASET          *
+      *               (US.CI.SUV010)        LAYOUT                     *
+      *                                                                *
+      *    MODIFICATIONS :                                             *
+      *                                                                *
+      *      DATE        AUTHOR                 DESCRIPTION            *
+      *    --------  ----------------  -----------------------------   *
+      *    94.11.21  OH,CHANG WOOK     INITIAL CODING                  *
+      *    95. 1.16  EOM, YEONG SEOG   AIX KEY FIELD INSERT            *
+      *    95. 2. 7  EOM, YEONG SEOG   PROCESS -> TEAM ?/?~  ~?C?v?i?*
+      *                                                                *
+      ******************************************************************
+                                                                        
+       01  W-MESSAGE.                                                   
+                                                                        
+           05  W-MSG-ID.                                                
+                                                                        
+               10  W-MSG-ID-PGMTYPE         PIC  X(01)  VALUE SPACE.    
+               10  W-MSG-ID-TEAM            PIC  X(01)  VALUE SPACE.    
+               10  W-MSG-ID-SEQNO           PIC  X(05)  VALUE SPACE.    
+                                                                        
+           05  W-MSG-PGMTYPE                PIC  X(01)  VALUE SPACE.    
+           05  W-MSG-TEAM                   PIC  X(01)  VALUE SPACE.    
+           05  W-MSG-CONTENTS               PIC  X(66)  VALUE SPACE.    
+                                                                        
+       01  W-MESSAGE1.                                                  
+                                                                        
+           05  W-MSG-AIX.                                               
+                                                                        
+               10  W-MSG-AIX-TEAM           PIC  X(01)  VALUE SPACE.    
+               10  W-MSG-AIX-CONTENTS       PIC  X(10)  VALUE SPACE.    
+                                                                        

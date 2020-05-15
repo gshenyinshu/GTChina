@@ -1,0 +1,49 @@
+      *****************************************************************
+      *                                                               *
+      *   MYY00 - ?vi~iE?~ ∂?-?L?~n?                                * 
+      *           COMMON COMMUNICATION AREA FOR WORK-AREAS            *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   2003.02.10                INITIAL WRITTEN                   *
+      *                                                               *
+      *****************************************************************
+      *
+       01  W-RETURN-AREA     REDEFINES W-COMM-AREA.
+      *            ?vi~ ∂ COMMAREA
+       05  FILLER                         PIC  X(450).
+      *            ?VA? COMMAREA
+       05  W-RETURN-COMMON.
+      *            ?vi~iE?~ ∂ COMMAREA
+           10  W-COMM-ASS-YYMM-FR         PIC  X(06).
+      *            iA[¶§~h?(j›Êz)
+           10  W-COMM-RTN-TP              PIC  X(01).
+      *            ?vi~?awe
+           10  W-COMM-RTN-TP-NM           PIC  X(14).
+      *            ?vi~?awe(DECODE)
+           10  W-COMM-RTN-TP-GB           PIC  X(02).
+      *            ?vi~Ωª??awe
+           10  W-COMM-RTN-TP-GB-NM        PIC  X(20).
+      *            ?vi~Ωª??awe(DECODE)
+           10  W-COMM-RTN-SERIAL-NO       PIC S9(04) COMP.
+      *            ?vi~{/?a
+           10  W-COMM-SERIAL-NO           PIC S9(04) COMP.
+      *            ?e{/uVJ~
+           10  W-COMM-RTN-STAT-CD         PIC  X(01).
+      *            ?vi~⁄÷JPE~p/
+           10  W-COMM-OFFCRCD-RTN         PIC  X(04).
+      *            m?m÷º/E~p/(?vi~)
+           10  W-COMM-OFFCRNM-RTN         PIC  X(14).
+      *            m?m÷º/~?  (?vi~)
+           10  W-COMM-BOOK-NO             PIC S9(04) COMP.
+      *            {buVJ~
+           10  W-COMM-SEQNO               PIC S9(04) COMP.
+      *            ?z??uVJ~
+           10  W-COMM-ENTRY-DT            PIC  X(08).
+      *            ª∑?ﬂªz?/
+           10  W-COMM-RTN-DT              PIC  X(08).
+      *            ?vi~?z?/
+           10  FILLER                     PIC  X(14).
+      *            iªŒ?    
+       05  W-RETURN-PRIVATE               PIC  X(3450).
+      *            ha?vπ÷πﬂ  

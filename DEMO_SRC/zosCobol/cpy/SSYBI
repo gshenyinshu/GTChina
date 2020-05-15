@@ -1,0 +1,24 @@
+      *****************************************************************
+      *                                                               *
+      *   SSYBI - DB2 STATUS SQL CODE                                 *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   1994.10.28                                                  *
+      *                                                         HK7.  *
+      *****************************************************************
+
+
+       01  C-SQL-CODE.
+
+           05  C-SQL-NORMAL            PIC S9(09) COMP-4 VALUE +0.
+           05  C-SQL-NOTFND            PIC S9(09) COMP-4 VALUE +100.
+               88 C-SQL-NOTFND-PACKAGE VALUE +100 -204 -805.
+           05  C-SQL-DUP               PIC S9(09) COMP-4 VALUE -803.
+           05  C-SQL-SELECT-DUP        PIC S9(09) COMP-4 VALUE -811.
+           05  C-SQL-RETRIEVE-NULL     PIC S9(09) COMP-4 VALUE -305.
+
+
+      *****************************************************************
+      *        END OF MEMBER 'NTA.ET.COPYLIB(SSYBI)'                  *
+      *****************************************************************

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sms_cu_uptdisplay' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select a.seq_no as seq_no, isnull(sender,'') as sender, isnull(call_back,'') as call_back, isnull(send_msg,'') as send_msg, isnull(send_err, '') as send_err, 
+				isnull(createdate,'') as createdate, isnull(prname ,'') as prname , b.srvc_name as srvc_name
+				 from CYBER.DBO.CYBER_TBL_SMS_CUSTOMER_MSG a, CYBER.DBO.CYBER_TBL_WB_SMS_CODE b where a.seq_no = ?
+				 and a.seq_no = b.seq_no
+            </query>
+			<mapping>		
+				<setProperty>seq_no</setProperty>
+                <getProperty>seq_no, sender, call_back, send_msg, send_err, createdate, prname, srvc_name </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="seq_no"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="seq_no"				type="string" size="0"/>			
+	     <field name="sender"				type="string" size="0"/>			
+	     <field name="call_back"			type="string" size="0"/>			
+	     <field name="send_msg"				type="string" size="0"/>			
+	     <field name="send_err"				type="string" size="0"/>			
+	     <field name="createdate"			type="string" size="0"/>			
+	     <field name="prname"				type="string" size="0"/>			
+	     <field name="srvc_name"			type="string" size="0"/>		
+		</block>
+	</output>
+</transaction>

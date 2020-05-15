@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='bank_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select isnull(bank_name,'') as bank_name, bank_code
+			from cyber.dbo.CYBER_TBL_wb_bank
+			$bank_code
+			
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                		<getProperty>bank_name, bank_code</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="$bank_code"	type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="bank_name"		type="string" size="0"/>
+			<field name="bank_code"        	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

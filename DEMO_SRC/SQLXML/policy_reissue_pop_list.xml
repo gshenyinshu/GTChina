@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_reissue_pop_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select  isnull(policy,'') as policy,
+					isnull(name,'') as name,
+					isnull(post,'') as post,
+					isnull(addr1,'') as addr1,
+					isnull(addr2,'') as addr2, 
+					isnull(addr3,'') as addr3, 
+					isnull(addr4,'') as addr4
+			from CYBER.dbo.CYBER_TBL_WB_LETTER
+			where indate = ?
+            and policy = ? 
+            and code = ? 
+            and subcode = ?
+			order by indate desc, intime desc
+            </query>
+			<mapping>		
+				<setProperty>indate, policy, code, subcode</setProperty>
+                <getProperty>policy, name, post, addr1, addr2, addr3, addr4</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"					type="String" size="0"/>	
+			<field name="policy"					type="String" size="0"/>	
+			<field name="code"						type="String" size="0"/>	
+			<field name="subcode"					type="String" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="policy"                	type="String" size="0"/>
+			<field name="name"                  	type="String" size="0"/>
+			<field name="post"                  	type="String" size="0"/>
+			<field name="addr1"                 	type="String" size="0"/>
+			<field name="addr2"                 	type="String" size="0"/>
+			<field name="addr3"                 	type="String" size="0"/>
+			<field name="addr4"                 	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.ejs.models.base.bindings.webappbnd:WebAppBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.ejs.models.base.bindings.webappbnd="webappbnd.xmi" xmi:id="WebAppBinding_1" virtualHostName="cyber_host">
+  <webapp href="WEB-INF/web.xml#WebApp"/>
+  <resRefBindings xmi:id="ResourceRefBinding_1176789057292" jndiName="jdbc/pruhomeDS">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1176789057289"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1176789057293" jndiName="jdbc/AS400DS">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1176789057290"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1176789057294" jndiName="jdbc/CyberDS">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1176789057291"/>
+  </resRefBindings>
+  <resRefBindings xmi:id="ResourceRefBinding_1176789057295" jndiName="jdbc/msdbDS">
+    <bindingResourceRef href="WEB-INF/web.xml#ResourceRef_1176789057292"/>
+  </resRefBindings>
+</com.ibm.ejs.models.base.bindings.webappbnd:WebAppBinding>

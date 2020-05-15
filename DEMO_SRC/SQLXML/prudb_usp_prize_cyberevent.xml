@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="prudb_usp_prize_cyberevent" protocolName="db1">
+ <description>
+  prudb_usp_prize_cyberevent
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call PRUDB.dbo.PRUDB_USP_PRIZE_CYBEREVENT(?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="in">applyweek</param>
+    <param seq="2"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="3"   mode="out" type="VARCHAR">rsltmsg</param>       
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="applyweek"  	type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"             	type="string" size="0"/>
+   <field name="rsltmsg"             	type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>

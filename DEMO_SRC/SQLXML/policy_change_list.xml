@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_change_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select indate, seq_no, srvc_cd
+                from CYBER.dbo.CYBER_TBL_WB_MASTER
+                where status = ''
+                order by indate asc, seq_no asc
+            </query>
+			<mapping>       
+				<getProperty>
+                	indate, seq_no, srvc_cd
+                </getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"    		type="string" size="0"/>     
+			<field name="seq_no"        	type="string" size="0"/>
+			<field name="srvc_cd"        	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

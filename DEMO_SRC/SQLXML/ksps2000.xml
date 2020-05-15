@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps2000" protocolName="db1">
+	<description>
+		store procedure  ksps2000 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS2000(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,gubun,reqnum,fromdt,policy,procdt,proctm,inout,procgb,lvlnum,lvlbef,mbkcd,mbkact,cltbk,cltact,cltnum,procamt,procno,brltcd</setProperty>
+				<getProperty>rtn,errmsg,policy,procdt,proctm,inout,procgbna,lvlnumna,lvlbefna,mbkna,mbkact,cltbkna,cltact,cltna,procamt,procno,brltcd,deptcd,userna</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"    	type="string" size="0"/>
+			<field name="init"              type="string" size="0"/>
+			<field name="gubun"            	type="string" size="0"/>
+			<field name="reqnum"   		type="string" size="0"/>
+			<field name="fromdt"          	type="string" size="0"/>
+			<field name="policy"         	type="string" size="0"/>
+			<field name="procdt"    	type="string" size="0"/>
+			<field name="proctm"            type="string" size="0"/>
+			<field name="inout"             type="string" size="0"/>
+			<field name="procgb"            type="string" size="0"/>
+			<field name="lvlnum"            type="string" size="0"/>
+			<field name="lvlbef"            type="string" size="0"/>
+			<field name="mbkcd"             type="string" size="0"/>
+			<field name="mbkact"            type="string" size="0"/>
+			<field name="cltbk"             type="string" size="0"/>
+			<field name="cltact"            type="string" size="0"/>
+			<field name="cltnum"            type="string" size="0"/>
+			<field name="procamt"           type="string" size="0"/>
+			<field name="procno"            type="string" size="0"/>
+			<field name="brltcd"            type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"     			type="string" size="0"/>
+			<field name="errmsg"         		type="string" size="0"/>
+			<field name="policy"  			type="string" size="0"/>
+			<field name="procdt"  			type="string" size="0"/>
+			<field name="proctm"  			type="string" size="0"/>
+			<field name="inout"   			type="string" size="0"/>
+			<field name="procgbna"			type="string" size="0"/>
+			<field name="lvlnumna"			type="string" size="0"/>
+			<field name="lvlbefna"			type="string" size="0"/>
+			<field name="mbkna"   			type="string" size="0"/>
+			<field name="mbkact"  			type="string" size="0"/>
+			<field name="cltbkna" 			type="string" size="0"/>
+			<field name="cltact"  			type="string" size="0"/>
+			<field name="cltna"   			type="string" size="0"/>
+			<field name="procamt" 			type="string" size="0"/>
+			<field name="procno"  			type="string" size="0"/>
+			<field name="brltcd"  			type="string" size="0"/>
+			<field name="deptcd"  			type="string" size="0"/>
+			<field name="userna"  			type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

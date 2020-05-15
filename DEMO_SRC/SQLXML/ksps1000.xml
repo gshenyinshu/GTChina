@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1000" protocolName="db1">
+	<description>
+		store procedure  ksps1000 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1000(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,policy,bank,bankacc,payor,fbsday,strtdat,achgdat,pahgdat,lstbildat,lstrdat,lstddat,prem,misc,autoprem,lsaddat,reason,ptd,pdf,restrict,rststdat,rsteddat,tranint,trandept,group</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" type="string" size="0"/>
+			<field name="init"   type="string" size="0"/>
+			<field name="policy" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn" 			type="string" size="0"/>     
+			<field name="errmsg"    type="string" size="0"/>
+			<field name="policy"    type="string" size="0"/>
+			<field name="bank"      type="string" size="0"/>
+			<field name="bankacc"   type="string" size="0"/>
+			<field name="payor"     type="string" size="0"/>
+			<field name="fbsday"    type="string" size="0"/>
+			<field name="strtdat"   type="string" size="0"/>
+			<field name="achgdat"   type="string" size="0"/>
+			<field name="pahgdat"   type="string" size="0"/>
+			<field name="lstbildat" type="string" size="0"/>
+			<field name="lstrdat"   type="string" size="0"/>
+			<field name="lstddat"   type="string" size="0"/>
+			<field name="prem"      type="string" size="0"/>
+			<field name="misc"      type="string" size="0"/>
+			<field name="autoprem"  type="string" size="0"/>
+			<field name="lsaddat"   type="string" size="0"/>
+			<field name="reason"    type="string" size="0"/>
+			<field name="ptd"       type="string" size="0"/>
+			<field name="pdf"       type="string" size="0"/>
+			<field name="restrict"  type="string" size="0"/>
+			<field name="rststdat"  type="string" size="0"/>
+			<field name="rsteddat"  type="string" size="0"/>
+			<field name="tranint"   type="string"  size="0"/>
+			<field name="trandept"  type="string" size="0"/>
+			<field name="group"     type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

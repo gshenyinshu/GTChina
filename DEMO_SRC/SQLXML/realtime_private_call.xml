@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_private_call' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select 
+					seq_no, indate, intime, prcode, ssn, apchk, appro, ncchk, ncall, emp_no, rslt, err_msg
+				from cyber.dbo.CYBER_TBL_WB_PRIVATE_CALL
+				where indate = ?
+				and seq_no = ?
+				and prcode = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>
+				seq_no, indate, intime, prcode, ssn, apchk, appro, ncchk, ncall, emp_no, rslt, err_msg
+			</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			 <field name= "seq_no" 	type="string" size="0"/>
+			 <field name= "indate" 	type="string" size="0"/>
+			 <field name= "intime" 	type="string" size="0"/>
+			 <field name= "prcode" 	type="string" size="0"/>
+			 <field name= "ssn" 		type="string" size="0"/>
+			 <field name= "apchk" 	type="string" size="0"/>
+			 <field name= "appro" 	type="string" size="0"/>
+			 <field name= "ncchk" 	type="string" size="0"/>
+			 <field name= "ncall" 	type="string" size="0"/>
+			 <field name= "emp_no" 	type="string" size="0"/>
+			 <field name= "rslt" 		type="string" size="0"/>
+			 <field name= "err_msg" type="string" size="0"/>		
+ 		</block>
+	</output>
+</transaction>

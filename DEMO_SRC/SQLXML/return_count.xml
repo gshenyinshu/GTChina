@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_count' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select count(*) as count from 
+				 CYBER.dbo.CYBER_TBL_WB_RETURN_CAUSE			 
+				where id is not null
+				
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>count</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+            <field name="count"	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

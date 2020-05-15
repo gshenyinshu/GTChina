@@ -1,0 +1,83 @@
+      ******************************************************************
+      *                                                                *
+      *    ADY2P : ?vi~Úç  ia?A  {çþ~?(»·?ßá,?7?7?,Úß½¦?,?~K¦á)      *
+      *                                                                *
+      *    W-ADP2P-AREA-------------------- 100 BYTE                    
+      *====W-ADP2P-INPUT(»·??}?~s?)                                  *
+      *          W-ADP2P-TXTP-CD      ?vi~?.[?~s?aweE~p/             *
+      *          W-ADP2P-ASS-YYMM-FR  ?vi~?.iA[¦¤~hÝá(jÝæz?)         *
+      *          W-ADP2P-RESID-BUSNID ?vi~?.??[¦¼/uVJ~               *
+      *          W-ADP2P-RTN-TP       ?vi~?.?vi~?awe                 *
+      *          W-ADP2P-RTN-SERIAL-NO?vi~?.?vi~{/?a                 *
+      *          W-ADP2P-SERIAL-NO    ?vi~?.?vi~?e{/uVJ~             *
+      *          W-ADP2P-TXPAYER-TP   ??[¦¼/?awe                     *
+      *          W-ADP2P-TXPAYER-ID   ma?/?/uVJ~                     *
+      *          W-ADP2P-TXOFF-CD     {7ÚçE~p/                       *
+      *          W-ADP2P-TX-OFFCR-CD  {çþ~m?mÖ¼/                     *
+      *          W-ADP2P-PROC-GUBUN   {çþ~?awe                       *
+      *          W-ADP2P-ACCT-GUBUN   ia?A?awe                       *
+      *          W-ADP2P-RTN-DT       ia?A  ?vi~?z?/                 *
+      *          W-ADP2P-BK-CD        ?»ã?~iE                       *
+      *          W-ADP2P-BK-ACCT      ia?AuVJ~                       *
+      *          W-ADP2P-CALL-PGM-NM   CALL}?  ?/?~?/?j              *
+      *          W-ADP2P-ACCT-DB-NM   ia?A[~[s  I¦»~x?~?             *
+      *                                                                *
+      *====W-ADP2P-OUTPUT(Bi??}?~s?)                                 *
+      *          W-ADP2P-IDENTITY-DT  ?z~?JB?v?z?/                   *
+      *          W-ADP2P-ACCT-STAT-TP ia?AÚÖHaE~p/                   *
+      *          W-ADP2P-RESULT-STATUS ?a}p  i?iA                    *
+      *                                                                *
+      *================================================================*
+      *          W-ADP2P-PROC-GUBUN :                                  *
+      *                          'I'    »·??                         *
+      *                          'U'    ?7?7                         *
+      *                          'D'    Úß½¦                         *
+      *                          'S'    ?~K?                         *
+      *                                                                *
+      *          W-ADP2P-ACCT-GUBUN :                                  *
+      *                          ' '     (TADAI & TADAS)               *
+      *                          '1'    ia?Aha?Z  ?vi~               *
+      *                          '2'    ?vi~Úç  ia?Aha?Z             *
+      *                                                                *
+      *          W-ADP2P-RESULT-STATUS :                               *
+      *                          ' ' : NORMAL DATA                     *
+      *                          '1' :?»ã?~iE  E~p/ERROR            *
+      *                          '2' :ia?AuVJ~ERROR                  *
+      *                          '3' : NOT-FOUND                       *
+      *                          '4' :?~?v?a  ia?A?A  n»»z}?         *
+      *                          '5' :B¦¤Ý¹?  ?vi~o?  ia?Ah/  ?v?a   *
+      *                          '6' : INSERT DUP ERROR                *
+      *                          'E' : OTHER DB2 ERROR                 *
+      *================================================================*
+      *                                                                *
+      *      DATE        AUTHOR                 DESCRIPTION            *
+      *    --------  ----------------  -----------------------------   *
+      *    02.03.19  O. S. R.          INITIAL CODING                  *
+      ******************************************************************
+                                                                        
+       10  W-ADP2P-AREA.                                                
+                                                                        
+           15  W-ADP2P-INPUT.                                           
+               20  W-ADP2P-TXTP-CD          PIC  X(02).                 
+               20  W-ADP2P-ASS-YYMM-FR      PIC  X(06).                 
+               20  W-ADP2P-RESID-BUSNID     PIC  X(13).                 
+               20  W-ADP2P-RTN-TP           PIC  X(01).                 
+               20  W-ADP2P-RTN-SERIAL-NO    PIC  S9(4) USAGE COMP.      
+               20  W-ADP2P-SERIAL-NO        PIC  S9(4) USAGE COMP.      
+               20  W-ADP2P-TXPAYER-TP       PIC  X(01).                 
+               20  W-ADP2P-TXPAYER-ID       PIC  X(13).                 
+               20  W-ADP2P-TXOFF-CD         PIC  X(03).                 
+               20  W-ADP2P-TX-OFFCR-CD      PIC  X(04).                 
+               20  W-ADP2P-PROC-GUBUN       PIC  X(01).                 
+               20  W-ADP2P-ACCT-GUBUN       PIC  X(01).                 
+               20  W-ADP2P-RTN-DT           PIC  X(08).                 
+               20  W-ADP2P-BK-CD            PIC  X(02).                 
+               20  W-ADP2P-BK-ACCT          PIC  X(20).                 
+               20  W-ADP2P-CALL-PGM-NM      PIC  X(05).                 
+               20  W-ADP2P-ACCT-DB-NM       PIC  X(05).                 
+                                                                        
+           15  W-ADP2P-OUTPUT.                                          
+               20  W-ADP2P-IDENTITY-DT      PIC  X(08).                 
+               20  W-ADP2P-ACCT-STAT-TP     PIC  X(02).                 
+               20  W-ADP2P-RESULT-STATUS    PIC  X(01).                 
+           15  FILLER                       PIC  X(01).                 

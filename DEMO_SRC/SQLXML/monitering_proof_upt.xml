@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='monitering_proof_upt' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				UPDATE CYBER.dbo.cyber_tbl_income_deduct_proof
+				set pms = 'Y' 
+				where indate = ?
+				and ssn = ?
+				and inyear = ?
+            </query>
+			<mapping>		
+				<setProperty>indate,ssn,inyear</setProperty>
+                <getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="indate"	type="String" size="0"/>
+            <field name="ssn"		type="String" size="0"/>
+            <field name="inyear"	type="String" size="0"/>
+        </block>
+	</input>
+	<output>
+		<block repeat='1'>
+		
+		</block>
+	</output>
+</transaction>

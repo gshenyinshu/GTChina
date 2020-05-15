@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='mail_simple_send' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+--                exec EMS.dbo.USP_Send_RealTime_mail '01', '42', '00000042', '',  @to_name, @to_email_addr, @back_cause,'','','Cyber',''
+                exec EMS.dbo.USP_Send_RealTime_mail ?, ?, ?, '',  ?, ?, ?,'','','Cyber',''
+            </query>
+			<mapping>
+				<setProperty>param1, param2, param3, to_name, to_email_addr, content</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		     <field name="param1"				type="string" size="0"/>
+		     <field name="param2"				type="string" size="0"/>
+		     <field name="param3"				type="string" size="0"/>
+		     <field name="to_name"				type="string" size="0"/>
+		     <field name="to_email_addr"		type="string" size="0"/>
+		     <field name="content"				type="string" size="0"/>
+	        </block>
+	</input>
+
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

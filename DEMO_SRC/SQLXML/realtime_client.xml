@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_client' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select (case  email_service when 'NULL' then '' when 'Y' then '이메일' when 'N' then '우편' end) as email_service,
+						(case  post_send when 'NULL' then '' when 'H' then '자택' when 'O' then '직장' end) as post_send,
+						home_post,home_addr1 ,home_addr2,
+						( replace(home_phone1,' ','')+'-'+replace(home_phone2,' ','') +'-'+replace( home_phone3,' ','') ) home_phone,
+						office_post,
+						office_addr1,office_addr2,office_addr3,office_addr4,
+						( replace(office_phone1,' ','')+'-'+replace(office_phone2,' ','') +'-'+replace( office_phone3,' ','') ) office_phone,
+						( replace(mobile1,' ','')+'-'+replace(mobile2,' ','') +'-'+replace( mobile3,' ','') ) mobile,
+						email,email_service_yn,post_send_yn,home_addr_yn,home_phone_yn,office_addr_yn,office_phone_yn,mobile_yn,email_yn, isnull(ssn,'') as ssn
+				from cyber.dbo.CYBER_TBL_wb_member
+				where indate = ?
+				and seq_no = ?
+				and prcode = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>email_service,post_send,home_post,home_addr1 ,home_addr2,
+						 home_phone,office_post,office_addr1,office_addr2,office_addr3,office_addr4,office_phone, mobile,email,
+						 email_service_yn,post_send_yn,home_addr_yn,home_phone_yn,office_addr_yn,office_phone_yn,mobile_yn,email_yn,ssn</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name= "email_service"		type="string" size="0"/>
+			<field name= "post_send"        	type="string" size="0"/>
+			<field name= "home_post"    	    type="string" size="0"/>
+			<field name= "home_addr1"       	type="string" size="0"/>
+			<field name= "home_addr2"       	type="string" size="0"/>
+			<field name= "home_phone"       	type="string" size="0"/>
+			<field name= "office_post"      	type="string" size="0"/>
+			<field name= "office_addr1"     	type="string" size="0"/>
+			<field name= "office_addr2"     	type="string" size="0"/>
+			<field name= "office_addr3"     	type="string" size="0"/>
+			<field name= "office_addr4"     	type="string" size="0"/>
+			<field name= "office_phone"     	type="string" size="0"/>
+			<field name= "mobile"           	type="string" size="0"/>
+			<field name= "email"     			type="string" size="0"/>
+			<field name= "email_service_yn"     type="string" size="0"/>
+			<field name= "post_send_yn"         type="string" size="0"/>
+			<field name= "home_addr_yn"         type="string" size="0"/>
+			<field name= "home_phone_yn"        type="string" size="0"/>
+			<field name= "office_addr_yn"       type="string" size="0"/>
+			<field name= "office_phone_yn"      type="string" size="0"/>
+			<field name= "mobile_yn"            type="string" size="0"/>
+			<field name= "email_yn"            	type="string" size="0"/>
+			<field name= "ssn"            	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

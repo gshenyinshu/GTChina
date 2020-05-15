@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='cyberevent_apply_stat' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select convert(char, applydate, 112) as applydate, count(ssn+applyweek) as applycnt 
+			from prudb.dbo.prudb_tbl_event_cyber
+			where convert(char, applydate, 112) between ? and ?
+			group by  convert(char, applydate, 112)
+			order by convert(char, applydate, 112)
+            </query>
+			<mapping>		
+				<setProperty>fromdate, todate</setProperty>
+                		<getProperty>applydate, applycnt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="fromdate"			type="string" size="0"/>	
+			<field name="todate"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+			<field name= "applydate"		type="string" size="0"/>
+			<field name= "applycnt"        		type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

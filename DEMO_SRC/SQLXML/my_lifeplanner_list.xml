@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='euc-kr'?>
+<transaction name='my_lifeplanner_list' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+			SELECT L.lpID, L.lpCode,  L.lpName, L.lpEmail,                
+			replace( L.phoneNumber1+ L.phoneNumber2+ L.phoneNumber3, ' ', '')  as phoneNumber,
+			L.lpLevel,  replace(A.agencyName, ' ', '') AS agencyName, A.agencycode as agencycode, H.photouploadname as picture --H.accesscode H.selectCode, 
+			FROM prudb.dbo.LifePlanner L, prudb.dbo.PRUDB_TBL_LP_BaseInfomation H,  prudb.dbo.Agency A                              
+			WHERE lpCode IN 
+			(                                                      
+				SELECT lpCode FROM prudb.dbo.insurancePolicy                                     
+				WHERE ownerSsn=?
+				OR insurantSsn=?
+			)                                                                      
+			AND L.lpID = H.lpID AND L.agencyCode = A.agencyCode 
+			UNION              
+			SELECT L.lpID, L.lpCode,  L.lpName, L.lpEmail,
+			replace( L.phoneNumber1+ L.phoneNumber2+ L.phoneNumber3, ' ', '')  as phoneNumber,
+			L.lpLevel,  replace(A.agencyName, ' ', '') AS agencyName, A.agencycode as agencycode, H.photouploadname as picture  --H.accesscode H.selectCode
+			FROM dbo.PRUDB_TBL_UserInfo U, prudb.dbo.LifePlanner L, prudb.dbo.PRUDB_TBL_LP_BaseInfomation H , prudb.dbo.Agency A                  
+			WHERE U.ssn=?
+			AND U.lpID = L.lpID AND U.lpID = H.lpID AND L.agencyCode = A.agencyCode              
+			</query>
+			<mapping>		
+				<setProperty>ssn, ssn, ssn</setProperty>
+				<getProperty>lpid, lpcode, lpname, lpemail, phone, lplevel, agencyname, agencycode, picture</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="ssn"				type="string" size="0"/>        
+			<field name="ssn"				type="string" size="0"/>
+			<field name="ssn"				type="string" size="0"/>
+		</block>
+	</input>
+
+	<output>
+		<block repeat='1'>
+			<field name="lpid"			type="string" size="0"/>
+			<field name="lpcode"        type="string" size="0"/>
+			<field name="lpname"        type="string" size="0"/>
+			<field name="lpemail"       type="string" size="0"/>
+			<field name="phone"         type="string" size="0"/>
+			<field name="lplevel"       type="string" size="0"/>
+			<field name="agencyname"    type="string" size="0"/>
+			<field name="agencycode"    type="string" size="0"/>
+			<field name="picture"        type="string" size="0"/>
+			
+		</block>
+	</output>
+</transaction>

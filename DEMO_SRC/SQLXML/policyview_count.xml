@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policyview_count' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+
+				SELECT 
+				SUM(1) as count				--전체
+				,SUM(CASE rslt WHEN '3' THEN 1 ELSE 0 END) as count1 --지연
+				,SUM(CASE rslt WHEN '2' THEN 1 ELSE 0 END) as count2 --실패
+				,SUM(CASE rslt WHEN 'A' THEN 1 ELSE 0 END) as count3 --처리중
+				,SUM(CASE rslt WHEN '' THEN 1 ELSE 0 END)  as count4 --접수
+				FROM 				
+				 CYBER.DBO.CYBER_TBL_WB_PAYMENT 								
+				where mode in ('1', '2', '')     	
+				$where	
+				
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>count,count1,count2,count3,count4</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="where"	type="String" size="0"/>        
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+            <field name="count"	type="String" size="0"/>
+            <field name="count1"	type="String" size="0"/>
+            <field name="count2"	type="String" size="0"/>
+            <field name="count3"	type="String" size="0"/>
+            <field name="count4"	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

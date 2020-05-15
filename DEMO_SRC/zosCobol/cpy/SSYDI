@@ -1,0 +1,19 @@
+
+           05  W-SSSDI-AREA.
+
+               10  W-SSSDI-DATE            PIC  X(08)  VALUE '00000000'.
+               10  W-SSSDI-DATER  REDEFINES  W-SSSDI-DATE.
+                   15  W-SSSDI-YYYY        PIC  9(04).
+                   15  W-SSSDI-MM          PIC  9(02).
+                   15  W-SSSDI-DD          PIC  9(02).
+
+               10  W-SSSDI-ILSU            PIC  X(04)  VALUE '0000'.
+               10  W-SSSDI-ILSUR  REDEFINES  W-SSSDI-ILSU
+                                           PIC  9(04).
+
+               10  W-SSSDI-YOIL            PIC  X(01)  VALUE SPACE.
+               10  W-SSSDI-HYIL            PIC  X(01)  VALUE SPACE.
+               10  W-SSSDI-CTL             PIC  X(01)  VALUE SPACE.
+
+               10  W-SSSDI-STATUS          PIC  X(02)  VALUE SPACES.
+

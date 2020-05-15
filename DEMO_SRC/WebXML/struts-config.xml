@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- 데이터 소스 -->
+	<data-sources>
+	</data-sources>
+
+	<!-- 양식 Bean -->
+	<form-beans>
+	</form-beans>
+
+	<!-- 글로벌 예외 -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- 글로벌 전달 -->
+	<global-forwards>
+	</global-forwards>
+
+	<!-- 조치 맵핑 -->
+   <action-mappings>
+
+   	<action
+        parameter="/user/login.jsp"
+        path="/loginForm"
+        type="org.apache.struts.actions.ForwardAction"
+        validate="false" />         
+
+	<action
+        parameter="/company/index_mian.do"
+        path="/index"
+        type="org.apache.struts.actions.ForwardAction"
+        validate="false" />         
+
+  </action-mappings>
+
+  <controller
+	    contentType="text/html;charset=euc-kr"
+	    debug="3"
+	    locale="true"
+	    nocache="true" 
+	    processorClass="org.apache.struts.action.RequestProcessor"/>
+
+
+
+	<!-- 메시지 자원 -->
+    <message-resources  parameter="prototype.resources.ApplicationResources"/>
+
+</struts-config>

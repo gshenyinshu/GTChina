@@ -1,0 +1,6 @@
+
+           05  W-SSSAB-AREA.
+
+               10  W-SSSAB-SSN         PIC  X(15)          VALUE SPACES.
+               10  W-SSSAB-STATUS      PIC  X(01)          VALUE SPACE.
+

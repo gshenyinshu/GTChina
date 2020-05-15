@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0800" protocolName="db1">
+	<description>
+		store procedure  ksps0800 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0800(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,snddate,regdate,pcsdate,cardcd,cardna,payamt,bankcd,bankna,bnkacc,paycd,payna,prcinit</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="snddate"         	type="string" size="0"/>
+			<field name="regdate"         	type="string" size="0"/>
+			<field name="pcsdate"         	type="string" size="0"/>
+			<field name="cardcd"         	type="string" size="0"/>
+			<field name="cardna"         	type="string" size="0"/>
+			<field name="payamt"        	type="string" size="0"/>
+			<field name="bankcd"           	type="string" size="0"/>
+			<field name="bankna"         	type="string" size="0"/>
+			<field name="bnkacc"        	type="string" size="0"/>
+			<field name="paycd"        	type="string" size="0"/>
+			<field name="payna"         	type="string" size="0"/>
+			<field name="prcinit"        	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

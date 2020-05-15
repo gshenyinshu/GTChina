@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='validday' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select 
+					case when (fdate &lt; nowday) 
+						then nowday 
+						else CONVERT(CHAR(8),(SELECT DATEADD(ms, -5, DATEADD(mm, DATEDIFF(m, 0, dateadd(mm, -1, getdate())) + 1, 0))),112)
+				end as validday -- 유효일
+				from(
+				 -- 현재일이 속한달의 업무가능일의 첫째날을 가져온다.
+					SELECT 
+					MIN(EFF_DATE) as fdate 
+					,CONVERT(CHAR(8),getdate(),112) as nowday
+					from cyber.dbo.cyber_tbl_wb_holiday 
+					WHERE work_gubun = '0'    -- 업무가능일 0
+					AND SUBSTRING(EFF_DATE,1,6) = CONVERT(CHAR(6),getdate(),112)  -- 해당월
+				) as datetab
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>validday</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="validday"				type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

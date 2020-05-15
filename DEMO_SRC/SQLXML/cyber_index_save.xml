@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="cyber_index_save" protocolName="db1">
+ <description>
+  cyber_index_save
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_CYBER_INDEX_SAVE(?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="in">flag</param>       
+	<param seq="2"   mode="in">seq</param>       
+    <param seq="3"   mode="in">cause</param>
+	<param seq="4"   mode="in">createdate</param>
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="flag"  	type="string" size="0"/>
+   <field name="seq"  	type="int" size="0"/>
+   <field name="cause"  type="string" size="0"/>   
+   <field name="createdate"  type="string" size="0"/>   
+ </block>
+ </input>
+ <output>
+  <block>
+  </block>                                
+ </output>          
+</transaction>

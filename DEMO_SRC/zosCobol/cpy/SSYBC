@@ -1,0 +1,112 @@
+                                                                        
+       01  COMMON-CONSTANTS.                                            
+                                                                        
+           05  C-CURSOR                PIC S9(04) COMP SYNC VALUE -1.   
+           05  C-ONE                   PIC S9(04) COMP SYNC VALUE +1.   
+           05  C-TWO                   PIC S9(04) COMP SYNC VALUE +2.   
+           05  C-THREE                 PIC S9(04) COMP SYNC VALUE +3.   
+           05  C-FOUR                  PIC S9(04) COMP SYNC VALUE +4.   
+           05  C-FIVE                  PIC S9(04) COMP SYNC VALUE +5.   
+           05  C-SIX                   PIC S9(04) COMP SYNC VALUE +6.   
+           05  C-SEVEN                 PIC S9(04) COMP SYNC VALUE +7.   
+           05  C-EIGHT                 PIC S9(04) COMP SYNC VALUE +8.   
+           05  C-NINE                  PIC S9(04) COMP SYNC VALUE +9.   
+           05  C-TEN                   PIC S9(04) COMP SYNC VALUE +10.  
+           05  C-FIFTEEN               PIC S9(04) COMP SYNC VALUE +15.  
+                                                                        
+           05  C-COMM-HELP-LNTH        PIC S9(04) COMP SYNC VALUE +3300.
+           05  C-COMMAREA-LNTH         PIC S9(04) COMP SYNC VALUE +800. 
+           05  C-CLEAR-MSG-LNTH        PIC S9(04) COMP SYNC VALUE +55.  
+           05  C-MSG-FILE-LNTH         PIC S9(04) COMP SYNC VALUE +75.  
+           05  C-MAX-TS-COUNT          PIC S9(04) COMP SYNC VALUE +100. 
+                                                                        
+           05  C-DATE-NULL             PIC  X(10)           VALUE       
+                                                           '0001-01-01'.
+           05  C-MSG-FILE-NAME         PIC  X(08)           VALUE       
+                                                           'SUV010  '.  
+                                                                        
+           05  C-PGM-HELP              PIC  X(08)           VALUE       
+                                                           'SHP00'.     
+           05  C-PGM-SSPC1             PIC  X(08)           VALUE       
+                                                           'SSPC1'.     
+           05  C-PGM-SSPC2             PIC  X(08)           VALUE       
+                                                           'SSPC2'.     
+           05  C-PGM-CODE-HELP         PIC  X(08)           VALUE       
+                                                           'SHP01'.     
+           05  C-PGM-CODE-HELP-LGDONG  PIC  X(08)           VALUE       
+                                                           'SHP04'.     
+           05  C-PGM-CODE-HELP-STDINCM PIC  X(08)           VALUE       
+                                                           'SHP05'.     
+           05  C-PGM-CODE-HELP-ORGACD  PIC  X(08)           VALUE       
+                                                           'SHP06'.     
+           05  C-PGM-CODE-HELP-BANKCD  PIC  X(08)           VALUE       
+                                                           'SHP07'.     
+           05  C-PGM-CODE-HELP-RESISTRY PIC X(08)           VALUE       
+                                                           'SHP08'.     
+           05  C-PGM-CODE-HELP-BUILDING PIC X(08)           VALUE       
+                                                           'SHP09'.     
+           05  C-HELP-AREA-HELP        PIC  X(04)           VALUE       
+                                                           'HELP'.      
+           05  C-HELP-SEND             PIC  X(01)           VALUE 'P'.  
+           05  C-HELP-CODE-SEND        PIC  X(01)           VALUE 'C'.  
+           05  C-HELP-RETURN           PIC  X(01)           VALUE 'D'.  
+                                                                        
+           05  C-CONFIRM-YES           PIC  X(01)           VALUE 'Y'.  
+                                                                        
+           05  C-SPACE                 PIC  X(01)           VALUE ' '.  
+                                                                        
+           05  C-CHAR-ONE              PIC  X(01)           VALUE '1'.  
+           05  C-CHAR-TWO              PIC  X(01)           VALUE '2'.  
+           05  C-CHAR-THREE            PIC  X(01)           VALUE '3'.  
+           05  C-CHAR-FOUR             PIC  X(01)           VALUE '4'.  
+           05  C-CHAR-FIVE             PIC  X(01)           VALUE '5'.  
+           05  C-CHAR-SIX              PIC  X(01)           VALUE '6'.  
+           05  C-CHAR-SEVEN            PIC  X(01)           VALUE '7'.  
+           05  C-CHAR-EIGHT            PIC  X(01)           VALUE '8'.  
+           05  C-CHAR-NINE             PIC  X(01)           VALUE '9'.  
+           05  C-CHAR-TEN              PIC  X(02)           VALUE '10'. 
+                                                                        
+           05  C-ACCESS-C              PIC  X(01)           VALUE 'C'.  
+           05  C-ACCESS-R              PIC  X(01)           VALUE 'R'.  
+           05  C-ACCESS-U              PIC  X(01)           VALUE 'U'.  
+           05  C-ACCESS-D              PIC  X(01)           VALUE 'D'.  
+                                                                        
+           05  C-PGM-TP-INPUT          PIC  X(01)           VALUE 'A'.  
+           05  C-PGM-TP-UPDATE         PIC  X(01)           VALUE 'B'.  
+           05  C-PGM-TP-QUERY          PIC  X(01)           VALUE 'C'.  
+           05  C-PGM-TP-DELETE         PIC  X(01)           VALUE 'D'.  
+           05  C-PGM-TP-PRINT          PIC  X(01)           VALUE 'E'.  
+           05  C-PGM-TP-HELP           PIC  X(01)           VALUE 'F'.  
+           05  C-PGM-TP-ELSE           PIC  X(01)           VALUE 'G'.  
+                                                                        
+           05  C-TEAM-TP-COMMON        PIC  X(01)           VALUE 'S'.  
+           05  C-TEAM-TP-TAXATION      PIC  X(01)           VALUE 'T'.  
+           05  C-TEAM-TP-RETURN        PIC  X(01)           VALUE 'R'.  
+           05  C-TEAM-TP-EXAMINATION   PIC  X(01)           VALUE 'E'.  
+           05  C-TEAM-TP-ACCOUNT       PIC  X(01)           VALUE 'A'.  
+           05  C-TEAM-TP-DATA          PIC  X(01)           VALUE 'B'.  
+           05  C-TEAM-TP-FOREIGN       PIC  X(01)           VALUE 'F'.  
+                                                                        
+           05  C-FAST-PATH-SEND        PIC  X(01)           VALUE 'Y'.  
+           05  C-ERROR-INDICATOR       PIC  X(01)           VALUE '?'.  
+           05  C-ASTERISK              PIC  X(01)           VALUE '*'.  
+                                                                        
+           05  C-ABEND-FG-DB2          PIC  X(01)           VALUE 'D'.  
+           05  C-ABEND-FG-CICS         PIC  X(01)           VALUE 'C'.  
+           05  C-ABEND-DB2             PIC  X(15)           VALUE       
+               'DB2 ERROR!!!'.                                          
+           05  C-ABEND-CICS            PIC  X(15)           VALUE       
+               'CICS ERROR!!!'.                                         
+                                                                        
+      *                                ***********         ************ 
+      *                                *   CARRIAGE CONTROL CONSTANTS * 
+      *                                *   (HEX ON?~  ?~K?h/l?)     * 
+      *                                ***********         ************ 
+                                                                        
+           05  C-CTRL-CHAR             PIC  X(01) VALUE ' '.            
+           05  C-PAGE-SKIP             PIC  X(01) VALUE ' '.         
+           05  C-LINE-SKIP             PIC  X(01) VALUE ' '. 
+           05  C-FORM-ENDJ             PIC  X(01) VALUE 'U'.            
+           05  C-SINGLE-LINE           PIC  X(01) VALUE ' '.            
+                                                                        
+                                                                        

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sms_log_list_count' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select count(*) as count from (
+					select 
+					et.tran_pr as tran_pr				
+					from 
+					cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join sms.dbo.em_tran et on cl.tran_pr = et.tran_pr
+					where 1 = 1 		
+					$where		
+					union				
+					select 
+					et.tran_pr as tran_pr	
+					from 
+					 cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join $logdatetable et on cl.tran_pr = et.tran_pr
+					where 1 = 1
+					$where	
+				) tocount
+							
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty>count</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="where"	type="String" size="0"/>     
+            <field name="logdatetable"	type="String" size="0"/>     
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+            <field name="count"	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="lendingamount" protocolName="db1">
+	<description>
+		store procedure  lendingamount ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				EXEC PCKADOWNRM1.USPADOWNRM1_CANCEL(?,?,?,?)
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy,option</setProperty>
+				<getProperty>rtn,errmsg,procdat,effdat,seq,loanamt,code,eflnamt,efreamt,int,ab,totamt,ind,srtdat,enddat,avrrt,tranint,status</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 		type="string" size="0"/>
+			<field name="init" 			type="string" size="0"/>
+			<field name="policy" 		type="string" size="0"/>
+			<field name="option" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+		  <field name="rtn"   			type="string" size="0"/> 		
+	      <field name="errmsg"    		type="string" size="0"/>
+	      <field name="procdat"   		type="string" size="0"/>
+	      <field name="effdat"    		type="string" size="0"/>
+	      <field name="seq"       		type="string" size="0"/>
+	      <field name="loanamt"   		type="string" size="0"/>
+	      <field name="code"      		type="string" size="0"/>
+	      <field name="eflnamt"   		type="string" size="0"/>
+	      <field name="efreamt"   		type="string" size="0"/>
+	      <field name="int"       		type="string" size="0"/>
+	      <field name="ab"        		type="string" size="0"/>
+	      <field name="totamt"    		type="string" size="0"/>
+	      <field name="ind"       		type="string" size="0"/>
+	      <field name="srtdat"    		type="string" size="0"/>
+	      <field name="enddat"    		type="string" size="0"/>
+	      <field name="avrrt"     		type="string" size="0"/>
+	     <field name="tranint"   		type="string" size="0"/>
+		  <field name="status"    		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

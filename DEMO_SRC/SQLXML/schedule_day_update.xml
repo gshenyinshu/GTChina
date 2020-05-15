@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<!--MyDiary추가입력-->
+<transaction name='schedule_day_update' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                update PRUDB.dbo.DaySchedule
+                set contents=? , scheduleType=?
+                where  userID=? and scheduleDate=? and insertDate=?
+            </query>
+			<mapping>
+				<setProperty>contents, scheduleType, userID, scheduleDate, insertDate</setProperty>             
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="contents"          type="string" size="0"/>
+            <field name="scheduleType"      type="string" size="0"/>
+            <field name="userID"            type="string" size="0"/>
+            <field name="scheduleDate"      type="string" size="0"/>
+            <field name="insertDate"        type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="custom_info" protocolName="db1">
+	<description>
+		store procedure  custom_info ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1410(?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,cltno,relation</setProperty>
+				<getProperty>rtn,errmsg,office,home,cel,postcd,add1,add2,add3,mphone</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="cltno"        	type="string" size="0"/>
+			<field name="relation"        	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="office"	         	type="string" size="0"/>
+			<field name="home"         	type="string" size="0"/>
+			<field name="cel"        	 	type="string" size="0"/>
+			<field name="postcd"        	type="string" size="0"/>
+			<field name="add1"        	type="string" size="0"/>
+			<field name="add2"        	type="string" size="0"/>
+			<field name="add3"        	type="string" size="0"/>
+			<field name="mphone"        	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

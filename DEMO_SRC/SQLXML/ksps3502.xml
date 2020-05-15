@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps3502" protocolName="db1">
+	<description>
+		store procedure  ksps3502 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS3502(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,cltno</setProperty>
+				<getProperty>rtn,errmsg,plyno,modprem,bankcode,payna,payno,bankacc,fbsday,modx,ownna,group,plncode</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+		   <field name="deptcd" 		type="string" size="0"/>
+		   <field name="init" 			type="string" size="0"/>
+			<field name="cltno" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"           type="string" size="0"/>
+			<field name="errmsg"        type="string" size="0"/>
+			<field name="plyno"        	type="string" size="0"/>
+			<field name="modprem"      	type="int" size="0"/>
+			<field name="bankcode"     	type="string" size="0"/>  
+			<field name="payna"         type="string" size="0"/>
+			<field name="payno"         type="string" size="0"/>
+			<field name="bankacc"      	type="string" size="0"/>
+			<field name="fbsday"        type="string" size="0"/>
+			<field name="modx"       	type="string" size="0"/>
+			<field name="ownna"       	type="string" size="0"/>
+			<field name="group"        	type="string" size="0"/>
+			<field name="plncode"       type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>

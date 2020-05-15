@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="total_oracle_member_proc" protocolName="db1">
+	<description>
+		store procedure  MAIL_ADDRESS_PKG.SEARCH_ADDRESS
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call MAIL_ADDRESS_PKG.SEARCH_ADDRESS ( v_client_id, v_identity_number, v_name, v_gender_type, v_client_type, v_zip_code, v_mail_address, v_email_address, v_telephone_number );}
+			</query>
+			<mapping-procedure>
+				<param seq="1"  mode="in">v_client_id</param>
+				<param seq="2"  mode="out" type="VARCHAR" size="10">v_identity_number</param>
+				<param seq="3"  mode="out" type="VARCHAR" size="10">v_name</param>
+				<param seq="4"  mode="out" type="VARCHAR" size="10">v_gender_type</param>
+				<param seq="5"  mode="out" type="VARCHAR" size="10">v_client_type</param>
+				<param seq="6"  mode="out" type="VARCHAR" size="10">v_zip_code</param>
+				<param seq="7"  mode="out" type="VARCHAR" size="10">v_mail_address</param>
+				<param seq="8"  mode="out" type="VARCHAR" size="10">v_email_address</param>
+				<param seq="9"  mode="out" type="VARCHAR" size="10">v_telephone_number</param>
+
+			</mapping-procedure>
+			<mapping>
+				<setProperty></setProperty>
+				<getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="v_client_id" type="int" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="v_identity_number"			type="string" size="0"/>
+			<field name="v_name"			type="string" size="0"/>
+			<field name="v_gender_type"			type="string" size="0"/>
+			<field name="v_client_type"			type="string" size="0"/>
+			<field name="v_zip_code"			type="string" size="0"/>
+			<field name="v_mail_address"			type="string" size="0"/>
+			<field name="v_email_address"			type="string" size="0"/>
+			<field name="v_telephone_number"			type="string" size="0"/>
+		</block>                                
+	</output>          
+</transaction>         

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1060" protocolName="db1">
+	<description>
+		store procedure  ksps1060 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1060(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,plancd,ratescale,plancd1,plancd2,planna,ownno,ownna,bank,bankacct,pacday,payno,payna,modprem,lifeamt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+		   <field name="deptcd" 	type="string" size="0"/>
+		   <field name="init" 	  	type="string" size="0"/>
+		   <field name="policy"   	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+				<field name="rtn"   			type="string" size="0"/>    
+				<field name="errmsg"    	type="string" size="0"/>
+				<field name="plancd"    	type="string" size="0"/>
+				<field name="ratescale" 	type="string" size="0"/>
+				<field name="plancd1"   	type="string" size="0"/>
+				<field name="plancd2"   	type="string" size="0"/>
+				<field name="planna"    	type="string" size="0"/>
+				<field name="ownno"     	type="string" size="0"/>
+				<field name="ownna"     	type="string" size="0"/>
+				<field name="bank"      	type="string" size="0"/>
+				<field name="bankacct"  	type="string" size="0"/>
+				<field name="pacday"    	type="string" size="0"/>
+				<field name="payno"     	type="string" size="0"/>
+				<field name="payna"     	type="string" size="0"/>
+				<field name="modprem"  	type="string" size="0"/>
+				<field name="lifeamt"   	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       
+

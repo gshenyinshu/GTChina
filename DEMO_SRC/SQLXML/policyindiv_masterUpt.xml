@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policyindiv_masterUpt' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>			
+				UPDATE CYBER.DBO.CYBER_TBL_WB_MASTER
+				set process_mode = ?
+				where indate = ?
+				and seq_no = ?			
+            </query>
+			<mapping>		
+				<setProperty>process_mode, indate, seq_no</setProperty>
+                <getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="process_mode"			type="string" size="0"/>	
+			<field name="indate"				type="string" size="0"/>	
+			<field name="seq_no"				type="string" size="0"/>	
+        </block>
+	</input>
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

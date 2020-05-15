@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<!--MyDiary수정-->
+<transaction name='policy_reissue_update' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> update cyber.dbo.CYBER_TBL_WB_LETTER
+                    set rtn = ?, prdate = ?, prtime = ?, prname = ?
+                    where indate = ?
+                    and policy = ? 
+                    and code = ? 
+                    and subcode = ?
+            </query>
+			<mapping>		
+				<setProperty>rtn, prdate, prtime, prname, indate, policy, code, subcode</setProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="rtn"        type="string" size="0"/>
+            <field name="prdate"     type="string" size="0"/>
+            <field name="prtime"     type="string" size="0"/>
+            <field name="prname"     type="string" size="0"/>
+            <field name="indate"     type="string" size="0"/>
+            <field name="policy"     type="string" size="0"/>
+            <field name="code"       type="string" size="0"/>
+            <field name="subcode"    type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

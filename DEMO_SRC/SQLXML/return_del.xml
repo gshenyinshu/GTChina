@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_del' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+                    DELETE FROM CYBER.dbo.CYBER_TBL_WB_RETURN_CAUSE WHERE c_id = ? and id = ?
+            </query>
+			<mapping>
+                <setProperty>c_id, id</setProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="c_id"       type="string" size="0"/>
+            <field name="id" 	   type="string" size="0"/>
+        </block>
+	</input>
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>

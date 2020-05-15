@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_change_list_repayment' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select b.policy_no, b.option1, b.option2, b.pay_amt, b.pay_date, a.owner, a.ssn
+                from CYBER.dbo.CYBER_TBL_WB_MASTER a, CYBER.dbo.CYBER_TBL_WB_AUTO_REPAYMENT b
+                where a.indate = b.indate
+				and a.seq_no = b.seq_no
+				and indate = ?
+                and seq_no = ?
+                and prcode = '1'
+            </query>
+			<mapping>      
+				<setProperty>indate, seq_no</setProperty> 
+				<getProperty>policy_no, option1, option2, pay_amt, pay_date, owner, ssn</getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+			<field name="indate"  			type="string" size="0"/>
+		    <field name="seq_no"  			type="string" size="0"/>		
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		    <field name="policy_no"     	type="string" size="0"/>
+		    <field name="option1"      		type="string" size="0"/>
+		    <field name="option2"         	type="string" size="0"/>
+		    <field name="pay_amt"      		type="string" size="0"/>
+		    <field name="pay_date"          type="string" size="0"/>
+		    <field name="owner"          type="string" size="0"/>
+		    <field name="ssn"          type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

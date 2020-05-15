@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='working2after' protocolName='db1'>
+<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+<transaction-type>rollback</transaction-type>
+<sql id='1'>
+    <query>
+      select EFF_DATE
+           , comp_after
+        from CYBER.dbo.CYBER_TBL_WB_HOLIDAY A, XNFCONTGRNTA001 b
+       where eff_date = (select comp_after
+                           from CYBER.dbo.CYBER_TBL_WB_HOLIDAY
+                          where eff_date = ?)
+         AND A.WEEK_GUBUN = B.PARTITIONKEY
+        </query>
+    <mapping>
+        <setProperty>today</setProperty>
+                <getProperty>
+                eff_date, comp_after
+                </getProperty>
+    </mapping>
+</sql>
+</processor-info>
+
+<input>
+<block>
+    <field name="today"             type="string" size="0"/>
+</block>
+</input>
+
+<output>
+<block>
+     <field name="eff_date"         type="string" size="0"/>
+     <field name="comp_after"       type="string" size="0"/>
+
+</block>
+</output>
+</transaction>

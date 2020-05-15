@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policysumcount' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 				
+				
+
+				select sum(convert(bigint, pay_amt)) as pay_amt
+				from
+				(
+					CYBER.dbo.CYBER_TBL_WB_PAYMENT AS P1 
+							INNER JOIN 
+							(
+								select pro1.* from 
+									CYBER.dbo.CYBER_TBL_WB_PROCESS PRO1
+								inner join
+									(
+									select max(proc_id) AS PROC_ID, policy_apln_no from CYBER.dbo.CYBER_TBL_WB_PROCESS
+									group by policy_apln_no
+									) PRO2
+								ON
+									 PRO1.PROC_ID = PRO2.PROC_ID
+								AND
+									 PRO1.POLICY_APLN_NO = PRO2.POLICY_APLN_NO 
+								WHERE PRO1.proc_id &lt;&gt;0
+								$where
+							) AS P2
+					
+							ON 
+								P1.POLICY_APLN_NO = P2.POLICY_APLN_NO     
+							$subwhere
+						) LEFT JOIN 
+							CYBER.dbo.CYBER_TBL_WB_PROC_EMP AS P3      
+						ON 
+							P2.PROC_EMP_NO = P3.EMP_NO
+						
+			
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                <getProperty> pay_amt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="where"	type="String" size="0"/>        
+            <field name="subwhere"	type="String" size="0"/>        
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+            <field name="pay_amt"	type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

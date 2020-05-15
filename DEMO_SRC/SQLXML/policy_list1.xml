@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_list1' protocolName='db1'>
+    <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+        <transaction-type>rollback</transaction-type>
+        <sql id='1'>
+            <query>
+                exec cyber.[dbo].[CYBER_USP_WB_POLICY_LIST] ?,?,'$where','$subwhere'
+            </query>
+            <mapping>
+                <setProperty>top, page</setProperty>
+                <getProperty>policy_apln_no, policy_no,  user_id, mode, srvc_name, srvc_cd, pay_name,pay_cd, apln_dt, apln_amt, bank_cd, acct_no, acct_nm, payor_ssn, payor_nm,payor_phone, payor_email,pay_amt, pay_dt, rslt_name, rslt, bank_conf_yn,err_msg, sending_num, lp_id, proc_dt, proc_tm, emp_nm, bank_name</getProperty>
+            </mapping>
+        </sql>
+    </processor-info>
+    <input>
+        <block>
+            <field name="top"               type="int" size="0"/>
+            <field name="page"              type="int" size="0"/>
+            <field name="where"             type="string" size="0"/>
+            <field name="subwhere"          type="string" size="0"/>
+        </block>
+    </input>
+
+    <output>
+        <block repeat='1'>
+            <field name= "policy_apln_no"       type="string" size="0"/>
+            <field name= "policy_no"            type="string" size="0"/>
+            <field name= "user_id"              type="string" size="0"/>
+            <field name= "mode"                 type="string" size="0"/>
+            <field name= "srvc_name"            type="string" size="0"/>
+            <field name= "srvc_cd"              type="string" size="0"/>
+            <field name= "pay_name"             type="string" size="0"/>
+            <field name= "pay_cd"               type="string" size="0"/>
+            <field name= "apln_dt"              type="string" size="0"/>
+            <field name= "apln_amt"             type="string" size="0"/>
+            <field name= "bank_cd"              type="string" size="0"/>
+            <field name= "acct_no"              type="string" size="0"/>
+            <field name= "acct_nm"              type="string" size="0"/>
+            <field name= "payor_ssn"            type="string" size="0"/>
+            <field name= "payor_nm"             type="string" size="0"/>
+            <field name= "payor_phone"          type="string" size="0"/>
+            <field name= "payor_email"          type="string" size="0"/>
+            <field name= "pay_amt"              type="string" size="0"/>
+            <field name= "pay_dt"               type="string" size="0"/>
+            <field name= "rslt_name"            type="string" size="0"/>
+            <field name= "rslt"                 type="string" size="0"/>
+            <field name= "bank_conf_yn"         type="string" size="0"/>
+            <field name= "err_msg"              type="string" size="0"/>
+            <field name= "sending_num"          type="string" size="0"/>
+            <field name= "lp_id"                type="string" size="0"/>
+            <field name= "proc_dt"              type="string" size="0"/>
+            <field name= "proc_tm"              type="string" size="0"/>
+            <field name= "emp_nm"               type="string" size="0"/>
+            <field name= "bank_name"            type="string" size="0"/>
+        </block>
+    </output>
+</transaction>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0300" protocolName="db1">
+	<description>
+		store procedure  ksps0300 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0300(?)}
+			</query>
+			<mapping>
+				<setProperty>policy</setProperty>
+				<getProperty>rtn,errmsg,ownid,ownna,insuid,insuna,payid,payna,ibenid,ibenna,ebenid,ebenna,fbenid,fbenna,lbenid,lbenna,pbenid,pbenna,dbenid,dbenna,erate,slpcd,slpname,slptel,occucd,particd,issdate,statcd,ptd,lpaidym,lretdat,lpadcnt,missusp,prmsusp,fnbcd,lnbcd,spcd,modx,modp,nfopt,divopt,method,os_disb,plancd,plannm,pdf,bankdd,posbil</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="policy" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"    		type="string" size="0"/>
+			<field name="errmsg"    	type="string" size="0"/>
+			<field name="ownid"     	type="string" size="0"/>
+			<field name="ownna"     	type="string" size="0"/>
+			<field name="insuid"    	type="string" size="0"/>
+			<field name="insuna"    	type="string" size="0"/>
+			<field name="payid"     	type="string" size="0"/>
+			<field name="payna"     	type="string" size="0"/>
+			<field name="ibenid"    	type="string" size="0"/>
+			<field name="ibenna"    	type="string" size="0"/>
+			<field name="ebenid"    	type="string" size="0"/>
+			<field name="ebenna"    	type="string" size="0"/>
+			<field name="fbenid"    	type="string" size="0"/>
+			<field name="fbenna"    	type="string" size="0"/>
+			<field name="lbenid"    	type="string" size="0"/>
+			<field name="lbenna"    	type="string" size="0"/>
+			<field name="pbenid"    	type="string" size="0"/>
+			<field name="pbenna"    	type="string" size="0"/>
+			<field name="dbenid"    	type="string" size="0"/>
+			<field name="dbenna"    	type="string" size="0"/>
+			<field name="erate"     	type="string" size="0"/>
+			<field name="slpcd"     	type="string" size="0"/>
+			<field name="slpname"   	type="string"  size="0"/>
+			<field name="slptel"    	type="string" size="0"/>
+			<field name="occucd"    	type="string" size="0"/>
+			<field name="particd"   	type="string" size="0"/>
+			<field name="issdate"   	type="string" size="0"/>
+			<field name="statcd"    	type="string" size="0"/>
+			<field name="ptd"       	type="string" size="0"/>
+			<field name="lpaidym"   	type="string" size="0"/>
+			<field name="lretdat"   	type="string" size="0"/>
+			<field name="lpadcnt"   	type="string" size="0"/>			
+			<field name="missusp"   	type="string" size="0"/>			
+			<field name="prmsusp"  	type="string" size="0"/>
+			<field name="fnbcd"     	type="string" size="0"/>
+			<field name="lnbcd"     	type="string" size="0"/>
+			<field name="spcd"      	type="string" size="0"/>
+			<field name="modx"      	type="string" size="0"/>
+			<field name="modp"      	type="string" size="0"/>
+			<field name="nfopt"     	type="string" size="0"/>
+			<field name="divopt"    	type="string" size="0"/>
+			<field name="method"    	type="string" size="0"/>
+			<field name="os_disb"   	type="string" size="0"/>
+			<field name="plancd"    	type="string" size="0"/>
+			<field name="plannm"    	type="string" size="0"/>
+			<field name="pdf"       	type="string" size="0"/>
+         		<field name="bankdd" 	type="string" size="0"/>
+         		<field name="posbil" 	type="string" size="0"/>
+		</block>     
+	</output>   
+</transaction>  

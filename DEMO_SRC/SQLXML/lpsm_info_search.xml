@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='lpsm_info_search' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				SELECT A.lpCode lp_code, A.lpName lp_name, A.lpEmail lp_email,
+					   B.lpCode sm_code, B.lpName sm_name, B.lpEmail sm_email
+				FROM
+				(
+					SELECT  *
+					FROM PRUDB.dbo.lifeplanner
+					WHERE  LPCODE = ?
+				)A,
+				(
+					SELECT *
+					FROM PRUDB.dbo.lifeplanner
+					WHERE  LPLEVEL = '002'
+				)B
+				WHERE A.agencycode = B .agencycode
+				AND A.teamcode = B .teamcode
+            </query>
+			<mapping>		
+				<setProperty>lpcode</setProperty>
+                <getProperty>lp_code,lp_name,lp_email,sm_code,sm_name,sm_email</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="lpcode"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	        <field name="lp_code"			type="string" size="0"/>			
+            <field name="lp_name"			type="string" size="0"/>
+            <field name="lp_email"			type="string" size="0"/>
+            <field name="sm_code"			type="string" size="0"/>
+            <field name="sm_name"			type="string" size="0"/>
+            <field name="sm_email"			type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,23 @@
+      ******************************************************************
+      *                                                                *
+      *    SHY01 : COBOL COPY MEMBER FOR USER HELP DATASET             *
+      *               (US.CI.SHV010)        LAYOUT                     *
+      *                                                                *
+      *    MODIFICATIONS :                                             *
+      *                                                                *
+      *      DATE        AUTHOR                 DESCRIPTION            *
+      *    --------  ----------------  -----------------------------   *
+      *    94.12.21  HK7 LEE           INITIAL CODING                  *
+      *    95. 5. 2  YS  EOM           KEY LENGTH CHANGE               *
+      *                                W-HELP-KEY-PGM : 4 -> 5 BYTES   *
+      ******************************************************************
+                                                                        
+       01  W-HELP.                                                      
+                                                                        
+           05  W-HELP-KEY.                                              
+                                                                        
+               10  W-HELP-KEY-PGM           PIC  X(05)  VALUE SPACE.    
+               10  W-HELP-KEY-SEQNO         PIC  X(03)  VALUE SPACE.    
+                                                                        
+           05  W-HELP-CONTENTS              PIC  X(80)  VALUE SPACE.    
+                                                                        

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0940" protocolName="db1">
+	<description>
+		store procedure  ksps0940 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0940(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy</setProperty>
+				<getProperty>rtn,errmsg,getjoi,fndamt,stddte,spcamt,fndkid,rate,effdate,prsdte,code1,code2,getjas,dteamt,spcsmat,bscamt,chgamt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"		type="string" size="0"/>
+			<field name="getjoi"			type="string" size="0"/>
+			<field name="fndamt"		type="string" size="0"/>
+			<field name="stddte"		type="string" size="0"/>
+			<field name="spcamt"		type="string" size="0"/>
+			<field name="fndkid"		type="string" size="0"/>
+			<field name="rate"			type="string" size="0"/>
+			<field name="effdate"		type="string" size="0"/>
+			<field name="prsdte"		type="string" size="0"/>
+			<field name="code1"		type="string" size="0"/>
+			<field name="code2"		type="string" size="0"/>
+			<field name="getjas"		type="string" size="0"/>
+			<field name="dteamt"		type="string" size="0"/>
+			<field name="spcsmat"		type="string" size="0"/>
+			<field name="bscamt"		type="string" size="0"/>
+			<field name="chgamt"		type="string" size="0"/>
+		</block>         
+	</output>            
+</transaction>           
+                         
+                         
+                         
+                         
+                         
+                         
+                         

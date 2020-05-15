@@ -1,0 +1,34 @@
+      ***************************************************************** 
+      *                                                               * 
+      *   SSYAV - ?a[~?aæÖ?pSPACE COMPRESS SUBPROGRAM COPY MEMBER   * 
+      *   {?i~-  TONG,BAN»¬APT BLOCK?V¹¦  æçC~?([¦¼Shau?  ?/{7?)* 
+      *                                                               * 
+      *   MODIFICATIONS.                                              * 
+      *   --------------                                              * 
+      *   2002.07.18                                                  * 
+      *                                                               * 
+      ***************************************************************** 
+                                                                        
+                                                                        
+           05  W-SSSAV-AREA.                                            
+                                                                        
+               10  W-SSSAV-INPUT.                                       
+                   15  W-SSSAV-SI-DO         PIC  X(012)  VALUE SPACES. 
+                   15  W-SSSAV-GU-SI-GUN     PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAV-DONG-EUP-MYUN PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAV-GA-RI         PIC  X(014)  VALUE SPACES. 
+                   15  W-SSSAV-SAN-BUNJI     PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAV-BUNJI         PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAV-HO            PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAV-APT-BLOCK     PIC  X(080)  VALUE SPACES. 
+                   15  W-SSSAV-APT-DONG      PIC  X(012)  VALUE SPACES. 
+                   15  W-SSSAV-APT-HO        PIC  X(006)  VALUE SPACES. 
+                   15  W-SSSAV-TONG          PIC  X(004)  VALUE SPACES. 
+                   15  W-SSSAV-BAN           PIC  X(004)  VALUE SPACES. 
+                                                                        
+               10  W-SSSAV-OUTPUT            PIC  X(172)  VALUE SPACES. 
+                                                                        
+      ***************************************************************** 
+      *        END OF MEMBER 'NTA.ET.COPYLIB(SSYAV)'                  * 
+      ***************************************************************** 
+                                                                        

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="sms_add" protocolName="db1">
+ <description>
+  usp_wb_process_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_SMS_ADD(?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in">srvc_name</param>
+    <param seq="3"   mode="in">call_back</param>
+    <param seq="4"   mode="in">send_msg</param> 
+    <param seq="5"   mode="in">send_err</param> 
+    <param seq="6"   mode="in">prname</param>
+    <param seq="7"   mode="in">cpflag</param>
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+  <field name="srvc_name"  		type="string" size="0"/>
+   <field name="call_back"  		type="string" size="0"/>
+   <field name="send_msg"   	  	type="string" size="0"/>
+   <field name="send_err"   	  	type="string" size="0"/>   
+   <field name="prname"   	  	type="string" size="0"/>   
+   <field name="cpflag"   	  	type="string" size="0"/>   
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"             	type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>

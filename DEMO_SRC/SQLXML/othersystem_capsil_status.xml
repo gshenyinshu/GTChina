@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="othersystem_capsil_status" protocolName="db1">
+    <description>
+        store procedure  KSPS3810 ResultSet
+    </description>
+    <processor-info type="dbms" datasource="jdbc/AS400DS">
+        <sql>
+            <query type="storedprocedure">
+                {call KORGPL.KSPS3810(?,?,?,?)}
+            </query>
+            <mapping>
+                <setProperty>deptcd,init,policy,aplndate</setProperty>
+                <getProperty>rtn,errmsg,msg1,msg2,msg3,msg4,msg5,msg6</getProperty>
+            </mapping>
+        </sql>
+    </processor-info>
+
+    <input>
+        <block>
+            <field name="deptcd"        type="String" size="0"/>
+            <field name="init"          type="String" size="0"/>
+            <field name="policy"        type="String" size="0"/>
+            <field name="aplndate"      type="String" size="0"/>
+        </block>
+    </input>
+    <output>
+        <block>
+            <field name="rtn"           type="string" size="0"/>
+            <field name="errmsg"        type="string" size="0"/>
+            <field name="msg1"          type="string" size="0"/>
+            <field name="msg2"          type="string" size="0"/>
+            <field name="msg3"          type="string" size="0"/>
+            <field name="msg4"          type="string" size="0"/>
+            <field name="msg5"          type="string" size="0"/>
+            <field name="msg6"          type="string" size="0"/>
+        </block>
+    </output>
+</transaction>

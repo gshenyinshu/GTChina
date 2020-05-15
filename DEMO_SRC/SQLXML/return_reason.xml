@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_reason' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+			select id, isnull(name,'') as name, isnull(message,'') as message
+			from cyber.dbo.CYBER_TBL_wb_return
+			$where
+			
+            </query>
+			<mapping>		
+				<setProperty></setProperty>
+                		<getProperty>id, name, message</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="where"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="id"            		type="string" size="0"/>	
+			<field name="name"             	type="string" size="0"/>
+			<field name="message"        	type="string" size="0"/>
+		</block>
+	</output>
+</transaction>
+

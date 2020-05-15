@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="withdrawal_list" protocolName="db1">
+    <description>
+        CYBER_TBL_WB_WITHDRAWAL table select
+    </description>
+    <processor-info type="dbms" datasource="">
+        <transaction-type>rollback</transaction-type>
+        <sql id='1'>
+            <query>
+                select top 20 w.policy_no, w.seq, w.client_ssn, w.client_name, w.status_cd, w.apl_date, w.con_date, w.emp_id, w.memo,
+                e.emp_nm
+                from cyber.dbo.cyber_tbl_wb_withdrawal w
+                left join
+                poknt2.hrm.dbo.hrm_tbl_emp e
+                on w.emp_id = e.emp_no
+                where 1 = 1
+                $where
+                and w.policy_no + convert(char(1), w.seq) not in
+                (
+                    select top $page policy_no + convert(char(1), seq)
+                    from cyber.dbo.cyber_tbl_wb_withdrawal
+                    where 1 = 1
+                    $where
+                    order by apl_date desc, policy_no, seq desc
+                )
+                order by w.apl_date desc, policy_no, seq desc
+            </query>
+            <mapping>
+                <setProperty></setProperty>
+                <getProperty>policy_no, seq, client_ssn, client_name, status_cd, apl_date, con_date, emp_id, memo, emp_nm</getProperty>
+            </mapping>
+        </sql>
+    </processor-info>
+
+    <input>
+        <block>
+            <field name="page"              type="int" size="0"/>
+            <field name="where"         type="string" size="0"/>
+            <field name="subwhere"          type="string" size="0"/>
+        </block>
+    </input>
+
+    <output>
+        <block repeat='1'>
+            <field name="policy_no"         type="string" size="0"/>
+            <field name="seq"         type="string" size="0"/>
+            <field name="client_ssn"      type="string" size="0"/>
+            <field name="client_name"      type="string" size="0"/>
+            <field name="status_cd"       type="string" size="0"/>
+            <field name="apl_date"          type="string" size="0"/>
+            <field name="con_date"          type="string" size="0"/>
+            <field name="emp_id"            type="string" size="0"/>
+            <field name="emp_nm"            type="string" size="0"/>
+            <field name="memo"          type="string" size="0"/>
+        </block>
+    </output>
+</transaction>

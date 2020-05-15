@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0340" protocolName="db1">
+	<description>
+		store procedure  ksps0340 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				EXEC PCKCOCECTM1.USPCOCECTM1_INSERT(?,?,?,?,?,?)
+			</query>
+			<mapping>
+				<setProperty>musera,sbkcda,sbknoa,amount,pyrna,procgb</setProperty>
+				<getProperty>rtn,errmsg,payorna</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="musera" type="string" size="0"/>
+			<field name="sbkcda"   type="string" size="0"/>
+			<field name="sbknoa" type="string" size="0"/>
+			<field name="amount" type="string" size="0"/>
+			<field name="pyrna" type="string" size="0"/>
+			<field name="procgb" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn" 		  type="string" size="0"/>    	
+			<field name="errmsg"  	  type="string" size="0"/>
+			<field name="payorna"  	  type="string" size="0"/>
+			
+		</block>     
+	</output>        
+</transaction>       

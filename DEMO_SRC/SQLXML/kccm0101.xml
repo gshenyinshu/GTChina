@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="kccm0101" protocolName="db1">
+	<description>
+		store procedure  kccm0101 파라미터
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KCCM0101(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping-procedure>
+				<param seq="1"  mode="in">cltno</param>
+				<param seq="2"  mode="out" type="VARCHAR" size="10">rtn</param>
+				<param seq="3"  mode="out" type="VARCHAR" size="10">errmsg</param>
+				<param seq="4"  mode="out" type="VARCHAR" size="10">name</param>
+				<param seq="5"  mode="out" type="VARCHAR" size="10">h_addr1</param>
+				<param seq="6"  mode="out" type="VARCHAR" size="10">h_addr2</param>
+				<param seq="7"  mode="out" type="VARCHAR" size="10">h_phone</param>
+				<param seq="8"  mode="out" type="VARCHAR" size="10">o_addr1</param>			
+				<param seq="9"  mode="out" type="VARCHAR" size="10">o_addr2</param>
+				<param seq="10" mode="out" type="VARCHAR" size="10">o_addr3</param>
+				<param seq="11" mode="out" type="VARCHAR" size="10">o_addr4</param>
+				<param seq="12" mode="out" type="VARCHAR" size="10">o_phone</param>
+				<param seq="13" mode="out" type="VARCHAR" size="10">o_fax</param>
+				<param seq="14" mode="out" type="VARCHAR" size="10">c_phone</param>
+				<param seq="15" mode="out" type="VARCHAR" size="10">w_phone</param>
+				<param seq="16" mode="out" type="VARCHAR" size="10">pager</param>
+				<param seq="17" mode="out" type="VARCHAR" size="10">mail_place</param>
+				<param seq="18" mode="out" type="VARCHAR" size="10">h_zip</param>
+				<param seq="19" mode="out" type="VARCHAR" size="10">o_zip</param>
+				<param seq="20" mode="out" type="VARCHAR" size="10">email_service</param>
+				<param seq="21" mode="out" type="VARCHAR" size="10">udate</param>
+				<param seq="22" mode="out" type="VARCHAR" size="10">place</param>			
+				<param seq="23" mode="out" type="VARCHAR" size="10">email</param>
+				<param seq="24" mode="out" type="VARCHAR" size="10">occupation_class</param>
+				
+			</mapping-procedure>
+			<mapping>
+				<setProperty></setProperty>
+				<getProperty></getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="cltno" type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"                		type="string" size="0"/>
+			<field name="errmsg"            		type="string" size="0"/>
+			<field name="name"              		type="string" size="0"/>
+			<field name="h_addr1"           	type="string" size="0"/>
+			<field name="h_addr2"           	type="string" size="0"/>
+			<field name="h_phone"           	type="string" size="0"/>
+			<field name="o_addr1"           	type="string" size="0"/>
+			<field name="o_addr2"           	type="string" size="0"/>
+			<field name="o_addr3"           	type="string" size="0"/>
+			<field name="o_addr4"           	type="string" size="0"/>
+			<field name="o_phone"           	type="string" size="0"/>
+			<field name="o_fax"             		type="string" size="0"/>
+			<field name="c_phone"           	type="string" size="0"/>
+			<field name="w_phone"           	type="string" size="0"/>
+			<field name="pager"             		type="string" size="0"/>
+			<field name="mail_place"        	type="string" size="0"/>
+			<field name="h_zip"             		type="string" size="0"/>
+			<field name="o_zip"             		type="string" size="0"/>
+			<field name="email_service"    	type="string" size="0"/>
+			<field name="udate"            		type="string" size="0"/>
+			<field name="place"            		type="string" size="0"/>
+			<field name="email"            		type="string" size="0"/>
+			<field name="occupation_class"  	type="string" size="0"/>
+		</block>                                
+	</output>          
+</transaction>         

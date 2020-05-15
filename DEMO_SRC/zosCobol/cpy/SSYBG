@@ -1,0 +1,70 @@
+                                                                        
+       01  COMMON-WORKAREAS.                                            
+                                                                        
+           05  W-ABSTIME               PIC S9(18) COMP SYNC VALUE +0.   
+                                                                        
+           05  W-SQLCODE-TSAAA         PIC S9(09) COMP SYNC VALUE +0.   
+           05  W-SQLCODE-TSAAB         PIC S9(09) COMP SYNC VALUE +0.   
+           05  W-SQLCODE-TSAAC         PIC S9(09) COMP SYNC VALUE +0.   
+           05  W-SQLCODE-TSAAD         PIC S9(09) COMP SYNC VALUE +0.   
+                                                                        
+           05  W-YEAR                  PIC S9(09) COMP SYNC VALUE +0.   
+           05  W-TS-LENGTH             PIC S9(04) COMP SYNC VALUE +0.   
+           05  W-TS-ITEM               PIC S9(04) COMP SYNC VALUE +0.   
+           05  W-INDEX                 PIC S9(03) COMP-3    VALUE +0.   
+                                                                        
+                                                                        
+           05  W-DB2DATE.                                               
+                                                                        
+               10  W-DB2DATE-YEAR     PIC  9(04) VALUE ZERO.            
+               10  W-DB2DATE-YEAR-R   REDEFINES  W-DB2DATE-YEAR.        
+                   15  FILLER         PIC  X(02).                       
+                   15  W-DB2DATE-YY   PIC  X(02).                       
+                                                                        
+               10  FILLER             PIC  X(01) VALUE '-'.             
+               10  W-DB2DATE-MM       PIC  X(02) VALUE SPACES.          
+               10  FILLER             PIC  X(01) VALUE '-'.             
+               10  W-DB2DATE-DD       PIC  X(02) VALUE SPACES.          
+                                                                        
+           05  W-DATE.                                                  
+                                                                        
+               10  W-DATE-YY           PIC  X(02)     VALUE SPACE.      
+               10  FILLER              PIC  X(01)     VALUE SPACE.      
+               10  W-DATE-MM           PIC  X(02)     VALUE SPACE.      
+               10  FILLER              PIC  X(01)     VALUE SPACE.      
+               10  W-DATE-DD           PIC  X(02)     VALUE SPACE.      
+                                                                        
+           05  W-TIME                  PIC  X(08)     VALUE SPACE.      
+           05  W-NETNAME               PIC  X(08)     VALUE SPACE.      
+           05  W-USERID                PIC  X(08)     VALUE SPACE.      
+           05  W-XCTL-PGM              PIC  X(08)     VALUE SPACE.      
+           05  W-LINK-PGM              PIC  X(08)     VALUE SPACE.      
+                                                                        
+           05  W-MAPSET-NAME           PIC  X(08)     VALUE SPACE.      
+           05  W-MAP-NAME              PIC  X(08)     VALUE SPACE.      
+                                                                        
+           05  W-START-TRN             PIC  X(04)     VALUE SPACE.      
+           05  W-START-TRM             PIC  X(04)     VALUE SPACE.      
+                                                                        
+           05  W-RECORD-TXPAYER-ID     PIC  X(14)     VALUE SPACES.     
+           05  W-PROGRAM-ID            PIC  X(08)     VALUE SPACES.     
+           05  W-TABLE-ID              PIC  X(05)     VALUE SPACES.     
+           05  W-DATA-USER-CD          PIC  X(04)     VALUE SPACES.     
+           05  W-CLOSING-FLAG          PIC  X(01)     VALUE SPACE.      
+           05  W-ACCESS-TYPE           PIC  X(01)     VALUE SPACE.      
+           05  W-ACCESS-PERMIT         PIC  X(01)     VALUE SPACE.      
+                                                                        
+           05  W-SYSTEM-MESSAGE.                                        
+                                                                        
+               10  W-ABEND-PGMID       PIC  X(10)     VALUE SPACE.      
+                                                                        
+               10  W-ABEND.                                             
+                   15  W-ABEND-FG      PIC  X(01)     VALUE SPACE.      
+                       88  W-ABEND-FG-DB2             VALUE 'D'.        
+                       88  W-ABEND-FG-CICS            VALUE 'C'.        
+                   15  FILLER          PIC  X(14)     VALUE SPACE.      
+                                                                        
+               10  FILLER              PIC  X(05)     VALUE 'CODE='.    
+               10  W-ABEND-CODE        PIC  ----9     VALUE ZERO.       
+               10  FILLER              PIC  X(01)     VALUE ' '.        
+               10  W-ABEND-SECTION     PIC  X(30)     VALUE SPACE.      

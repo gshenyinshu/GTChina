@@ -1,0 +1,265 @@
+      *****************************************************************
+      *                                                               *
+      *   RYY00 - ?vi~iE?~ ∂                                        *
+      *           COMMON COMMUNICATION AREA FOR WORK-AREAS            *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   1995.05.13                INITIAL WRITTEN                   *
+      *                                                               *
+      *****************************************************************
+      *
+       01  W-RETURN-AREA     REDEFINES  W-COMM-AREA.
+      *            ?vi~ ∂ COMMAREA
+         05  FILLER                         PIC  X(400).
+      *            ?VA? COMMAREA
+         05  W-RETURN-COMMON.
+      *            ?vi~iE?~ ∂ COMMAREA
+           10  W-COMM-CALLING-PGM2        PIC  X(08).
+      *            CALLING PROGRAM 2
+           10  W-COMM-ASS-YYMM-FR         PIC  X(06).
+      *            iA[¶§~h?(j›Êz)
+           10  W-COMM-RTN-TP              PIC  X(01).
+      *            ?vi~?awe
+           10  W-COMM-RTN-TP-NM           PIC  X(08).
+      *            ?vi~?awe(DECODE)
+           10  W-COMM-RTN-TP-GB           PIC  X(02).
+      *            ?vi~Ωª??awe
+      *    10  W-COMM-RTN-TP-GB-NM        PIC  X(40).
+      *            ?vi~Ωª??awe(DECODE)
+           10  W-COMM-RTN-SERIAL-NO       PIC S9(04) COMP.
+      *            ?vi~{/?a
+           10  W-COMM-SERIAL-NO           PIC S9(04) COMP.
+      *            ?e{/uVJ~
+           10  W-COMM-RTN-STAT-CD         PIC  X(01).
+      *            ?vi~⁄÷JPE~p/
+           10  W-COMM-TXOFFCR-RTN         PIC  X(04).
+      *            m?m÷º/E~p/(?vi~)
+           10  W-COMM-BOOK-NO             PIC S9(04) COMP.
+      *            {buVJ~
+           10  W-COMM-SEQNO               PIC S9(04) COMP.
+      *            ?z??uVJ~
+           10  W-COMM-ENTRY-DT            PIC  X(08).
+      *            ª∑?ﬂªz?/
+           10  W-COMM-RTN-DT              PIC  X(08).
+      *            ?vi~?z?/
+           10  W-COMM-RCVE-NO.
+      *            ?3?auVJ~(tv?v)
+               15  W-COMM-RCVE-NO-YY      PIC  X(02).
+      *            ?3?auVJ~(j?n~)
+               15  W-COMM-RCVE-NO-TXOFF   PIC  X(03).
+      *            ?3?auVJ~({7⁄Á)
+               15  W-COMM-RCVE-NO-SEQNO   PIC S9(07) COMP-3.
+      *            ?3?auVJ~(?z??uVJ~)
+           10  W-COMM-TX-SRVC-TP          PIC  X(02).
+      *            tv?vª¶J?
+      *    10  W-COMM-TX-SRVC-TP-NM       PIC  X(40).
+      *            tv?vª¶J?(DECODE)
+           10  W-COMM-TXPAYER-ID          PIC  X(13).
+      *            ??[¶º/uVJ~
+           10  W-COMM-MSG-ID              PIC  X(07).
+      *            ~?[¶Ÿ~ ID
+           10  W-COMM-TS-ID               PIC  X(08).
+      *            TEMPORARY STORAGE ID
+           10  W-COMM-FLAG-1              PIC  X(01).
+      *            ?/wa 1
+           10  W-COMM-FLAG-2              PIC  X(01).
+      *            ?/wa 2
+           10  W-COMM-UNPOST-RSN          PIC  X(01).
+      *            t~?a?s?/ª¶E~p/?(?1?:t~?a?s?,?2?:?~?pp?s?)
+           10  W-COMM-TS-PAGE             PIC S9(02)  COMP.
+      *            TEMPORARY STORAGE PAGE
+      *****************************************************************
+      *                                                               *
+      *    ATTRIBUTE SAVE COMMUNICATION AREA                          *
+      *              FOR WORK-AREAS                                   *
+      *****************************************************************
+           10  W-COMM-A1                  PIC  X(01).
+           10  W-COMM-A2                  PIC  X(01).
+           10  W-COMM-A3                  PIC  X(01).
+           10  W-COMM-A4                  PIC  X(01).
+           10  W-COMM-A5                  PIC  X(01).
+           10  W-COMM-A6                  PIC  X(01).
+           10  W-COMM-A7                  PIC  X(01).
+           10  W-COMM-A8                  PIC  X(01).
+           10  W-COMM-A9                  PIC  X(01).
+           10  W-COMM-A10                 PIC  X(01).
+           10  W-COMM-A11                 PIC  X(01).
+           10  W-COMM-A12                 PIC  X(01).
+           10  W-COMM-A13                 PIC  X(01).
+           10  W-COMM-A14                 PIC  X(01).
+           10  W-COMM-A15                 PIC  X(01).
+           10  W-COMM-A16                 PIC  X(01).
+           10  W-COMM-A17                 PIC  X(01).
+           10  W-COMM-A18                 PIC  X(01).
+           10  W-COMM-A19                 PIC  X(01).
+           10  W-COMM-A20                 PIC  X(01).
+           10  W-COMM-A21                 PIC  X(01).
+           10  W-COMM-A22                 PIC  X(01).
+           10  W-COMM-A23                 PIC  X(01).
+           10  W-COMM-A24                 PIC  X(01).
+           10  W-COMM-A25                 PIC  X(01).
+           10  W-COMM-A26                 PIC  X(01).
+           10  W-COMM-A27                 PIC  X(01).
+           10  W-COMM-A28                 PIC  X(01).
+           10  W-COMM-A29                 PIC  X(01).
+           10  W-COMM-A30                 PIC  X(01).
+           10  W-COMM-A31                 PIC  X(01).
+           10  W-COMM-A32                 PIC  X(01).
+           10  W-COMM-A33                 PIC  X(01).
+           10  W-COMM-A34                 PIC  X(01).
+           10  W-COMM-A35                 PIC  X(01).
+           10  W-COMM-A36                 PIC  X(01).
+           10  W-COMM-A37                 PIC  X(01).
+           10  W-COMM-A38                 PIC  X(01).
+           10  W-COMM-A39                 PIC  X(01).
+           10  W-COMM-A40                 PIC  X(01).
+           10  W-COMM-A41                 PIC  X(01).
+           10  W-COMM-A42                 PIC  X(01).
+           10  W-COMM-A43                 PIC  X(01).
+           10  W-COMM-A44                 PIC  X(01).
+           10  W-COMM-A45                 PIC  X(01).
+
+           10  W-COMM-H1                  PIC  X(01).
+           10  W-COMM-H2                  PIC  X(01).
+           10  W-COMM-H3                  PIC  X(01).
+           10  W-COMM-H4                  PIC  X(01).
+           10  W-COMM-H5                  PIC  X(01).
+           10  W-COMM-H6                  PIC  X(01).
+           10  W-COMM-H7                  PIC  X(01).
+           10  W-COMM-H8                  PIC  X(01).
+           10  W-COMM-H9                  PIC  X(01).
+           10  W-COMM-H10                 PIC  X(01).
+           10  W-COMM-H11                 PIC  X(01).
+           10  W-COMM-H12                 PIC  X(01).
+           10  W-COMM-H13                 PIC  X(01).
+           10  W-COMM-H14                 PIC  X(01).
+           10  W-COMM-H15                 PIC  X(01).
+           10  W-COMM-H16                 PIC  X(01).
+           10  W-COMM-H17                 PIC  X(01).
+           10  W-COMM-H18                 PIC  X(01).
+           10  W-COMM-H19                 PIC  X(01).
+           10  W-COMM-H20                 PIC  X(01).
+           10  W-COMM-H21                 PIC  X(01).
+           10  W-COMM-H22                 PIC  X(01).
+           10  W-COMM-H23                 PIC  X(01).
+           10  W-COMM-H24                 PIC  X(01).
+           10  W-COMM-H25                 PIC  X(01).
+           10  W-COMM-H26                 PIC  X(01).
+           10  W-COMM-H27                 PIC  X(01).
+           10  W-COMM-H28                 PIC  X(01).
+           10  W-COMM-H29                 PIC  X(01).
+           10  W-COMM-H30                 PIC  X(01).
+           10  W-COMM-H31                 PIC  X(01).
+           10  W-COMM-H32                 PIC  X(01).
+           10  W-COMM-H33                 PIC  X(01).
+           10  W-COMM-H34                 PIC  X(01).
+           10  W-COMM-H35                 PIC  X(01).
+           10  W-COMM-H36                 PIC  X(01).
+           10  W-COMM-H37                 PIC  X(01).
+           10  W-COMM-H38                 PIC  X(01).
+           10  W-COMM-H39                 PIC  X(01).
+           10  W-COMM-H40                 PIC  X(01).
+           10  W-COMM-H41                 PIC  X(01).
+           10  W-COMM-H42                 PIC  X(01).
+           10  W-COMM-H43                 PIC  X(01).
+           10  W-COMM-H44                 PIC  X(01).
+           10  W-COMM-H45                 PIC  X(01).
+      *****************************************************************
+      *                                                               *
+      *   SSYBF - COMMON COMMUNICATION AREA                           *
+      *              FOR WORK-AREAS                                   *
+      *****************************************************************
+      *                                      CALLING PGM ID 1
+           10  W-COMM2-CALLING-PROGRAM1      PIC  X(08).
+      *                                     ??[¶º/?awe
+           10  W-COMM2-TXPAYER-TP            PIC  X(01).
+      *                                     m?m÷º/E~p/(LOG-ON)
+           10  W-COMM2-TX-OFFCR-CD.
+      *                                     m?m÷º/E~p/(iA)
+               15  W-COMM2-TX-OFFCR-CD-DEPT  PIC  X(01).
+      *                                     m?m÷º/E~p/(ia)
+               15  W-COMM2-TX-OFFCR-CD-SECT  PIC  X(01).
+      *                                     m?m÷º/E~p/(⁄Áπ¨)
+               15  W-COMM2TX-OFFCR-CD-RANK   PIC  X(02).
+      *                                     ?/?3?/p?suVJ~
+           10  W-COMM2-BUSNID.
+      *                                     ?/?3?/p?suVJ~ 1
+               15  W-COMM2-BUSNID-1          PIC  X(03).
+      *                                     ?/?3?/p?suVJ~ 2
+               15  W-COMM2-BUSNID-2          PIC  X(02).
+      *                                     ?/?3?/p?suVJ~ 3
+               15  W-COMM2-BUSNID-3          PIC  X(05).
+      *                                     ⁄÷J~
+           10  W-COMM2-TRADE-NM              PIC  X(30).
+      *                                     ?7~?(??[¶º/)
+           10  W-COMM2-NM-TXPAYER            PIC  X(20).
+      *                                     [?~s?aweE~p/
+           10  W-COMM2-TXTP-CD               PIC  X(02).
+      *                                     [?sa⁄ÁE~p/(m?m÷º/)
+           10  W-COMM2-TXOFF-CD-INCHARGE     PIC  X(03).
+      *                                     ?atvp?suVJ~(??[¶º/)
+           10  W-COMM2-RESID-TXPAYER.
+      *                                     ?atvp?suVJ~ 1
+               15  W-COMM2-RESID-TXPAYER-1   PIC  X(06).
+      *                                     ?atvp?suVJ~ 2
+               15  W-COMM2-RESID-TXPAYER-2   PIC  X(07).
+      *                                     ~?l??~?/I? LEVEL ID
+           10  W-COMM2-MENU-LEVELID          PIC  X(14).
+      *             TEMPORARY STORAGE PAGE
+           10  W-COMM2-TS-PAGE               PIC S9(02)  COMP.
+      *             INDEX
+           10  W-COMM2-IDX                   PIC S9(02)  COMP.
+      *             TEMPORARY STORAGE ITEM COUNT
+           10  W-COMM2-TS-CNT                PIC S9(02)  COMP.
+      *             iA[¶§~h›·(?~ºﬂ?z?)
+           10  W-COMM2-ASS-PRD-FR            PIC  X(08).
+      *             iA[¶§~h›·(Ωª?/?z?)
+           10  W-COMM2-ASS-PRD-TO            PIC  X(08).
+      *
+      **********************************************************
+      *                                      v~∏›CHECK 1
+           10  W-COMM-SSPC3.
+      *                                       USER-ID
+               15  W-SSPC3-USER-ID           PIC  X(08).
+      *                                      ?~?7?vh/?/?/wa  
+               15  W-SSPC3-TERMINAL-ID       PIC  X(08).
+      *                                       TRANSACTION-ID
+               15  W-SSPC3-TRANS-ID          PIC  X(04).
+      *                                      {7⁄ÁE~p/        
+               15  W-SSPC3-TXOFF-CD          PIC  X(03).
+      *                                      m?m÷º/E~p/    
+               15  W-SSPC3-TXOFFCR-CD        PIC  X(04).
+      *                                      v~∏›?awe      
+               15  W-SSPC3-SECURITY-LEVEL    PIC  X(01).
+      *                                      ?~?siE?~?awe  
+               15  W-SSPC3-RECORDING-NEED    PIC  X(01).
+      *                                      ?~?7?vh/?/?/wa  
+               15  W-SSPC3-PERMIT            PIC  X(01).
+      *                                       STATUS CODE  
+               15  W-SSPC3-STATUS            PIC  X(01).
+      *                                      ?~?s  v~∏›SUB PARM
+           10  W-COMM-SSPC4.
+      *                                       PROGRAM-ID
+               15  W-SSPC4-PROGRAM-ID        PIC  X(08).
+      *                                      {7⁄Á
+               15  W-SSPC4-TXOFF-CD          PIC  X(03).
+      *                                       USER-ID
+               15  W-SSPC4-USER-ID           PIC  X(08).
+      *                                       TERMINAL-ID
+               15  W-SSPC4-TERMINAL-ID       PIC  X(08).
+      *                                       ACCESS TYPE
+               15  W-SSPC4-ACCESS-TYPE       PIC  X(01).
+      *                                       TABLE~?
+               15  W-SSPC4-TABLE-ID          PIC  X(05).
+      *                                      ??[¶º/ID
+               15  W-SSPC4-TXPAYER-ID        PIC  X(13).
+      *                                      ??[¶º/  ?awe
+               15  W-SSPC4-TXPAYER-TP        PIC  X(01).
+      *                                       RETURN CODE
+               15  W-SSPC4-STATUS            PIC  X(01).
+      *
+           10  W-COMM-FILLER                 PIC  X(10).
+      *            ?/ª¶we?a SPACE
+       05  W-RTN-PRIVATE                     PIC  X(400).
+      *            ha?vπ÷πﬂ  

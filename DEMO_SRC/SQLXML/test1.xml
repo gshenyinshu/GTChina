@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="test1" protocolName="db1">
+	<description>
+		store procedure  test1 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS3506(?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,cltno</setProperty>
+				<getProperty>rtn,errmsg,plyno,planname,plrate,plamt,plint,loanableamt,loanprin,plint2,lprin,intpdate,aplprin,aplrate,divamt,redamt,premamt,refdate,hamt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+		   <field name="deptcd" 	type="string" size="0"/>
+		   <field name="init" 	  	type="string" size="0"/>
+		   <field name="cltno"   	type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>	        
+			<field name="errmsg"        type="string" size="0"/>
+			<field name="plyno"         type="string" size="0"/>
+
+			<field name="planname"      type="string" size="0"/>
+			<field name="plrate"        type="string" size="0"/>
+			<field name="plamt"         type="string" size="0"/>
+			<field name="plint"         type="string" size="0"/>
+			<field name="loanableamt"   type="string" size="0"/>
+			<field name="loanprin"      type="string" size="0"/>
+			<field name="plint2"        type="string" size="0"/>
+			<field name="lprin"         type="string" size="0"/>
+			<field name="intpdate"      type="string" size="0"/>
+			<field name="aplprin"       type="string" size="0"/>
+			<field name="aplrate"       type="string" size="0"/>
+			<field name="divamt"        type="string" size="0"/>
+			<field name="redamt"        type="string" size="0"/>
+			<field name="premamt"       type="string" size="0"/>
+			<field name="refdate"       type="string" size="0"/>
+			<field name="hamt"          type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       
+

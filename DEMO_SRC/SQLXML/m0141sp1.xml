@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="m0141sp1" protocolName="db1">
+	<description>
+		store procedure  m0141sp1 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.M0141SP1(?,?,?,?,?,?,?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcode,init,opt1,opt2,policy,effdate,nfopt,diviopt,method,mode,podday</setProperty>
+				<getProperty>rtn,errmsg,mod_fac,prem,faceamt,matdate,lpsdate,csvprem,disbamt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcode"		type="string" size="0"/>	
+			<field name="init"          		type="string" size="0"/>
+			<field name="opt1"          	type="string" size="0"/>
+			<field name="opt2"          	type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+			<field name="effdate"       	type="string" size="0"/>
+			<field name="nfopt"         	type="string" size="0"/>
+			<field name="diviopt"       	type="string" size="0"/>
+			<field name="method"        	type="string" size="0"/>
+			<field name="mode"	        	type="string" size="0"/>			
+			<field name="podday"       	type="string" size="0"/>			
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"					type="string" size="0"/>
+			<field name="errmsg"         type="string" size="0"/>
+			<field name="mod_fac"       type="string" size="0"/>
+			<field name="prem"            type="string" size="0"/>
+			<field name="faceamt"        type="string" size="0"/>
+			<field name="matdate"        type="string" size="0"/>
+			<field name="lpsdate"        type="string" size="0"/>
+			<field name="csvprem"       type="string" size="0"/>
+			<field name="disbamt"			 type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

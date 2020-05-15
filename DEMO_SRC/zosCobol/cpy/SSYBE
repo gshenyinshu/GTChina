@@ -1,0 +1,106 @@
+      *****************************************************************
+      *                                                               *
+      *   SSYBE - EIBRESP VALUES FOR CICS RETURN CODE PROCESSING      *
+      *                                                               *
+      *       REF:  CICS/ESA APPLICATION PROGRAMMING REFERENCE        *
+      *             V3.3   p316-317                                   *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   1994.10.26                                                  *
+      *                                                               *
+      *****************************************************************
+
+
+       01  W-RETURN-CODE              PIC S9(07) COMP.
+
+                88  W-RETURN-NORMAL                 VALUE +00.
+                88  W-RETURN-CICS-ERROR             VALUE +01.
+                88  W-RETURN-RDATT                  VALUE +02.
+                88  W-RETURN-WRBRK                  VALUE +03.
+                88  W-RETURN-EOF                    VALUE +04.
+                88  W-RETURN-EODS                   VALUE +05.
+                88  W-RETURN-EOC                    VALUE +06.
+                88  W-RETURN-INBFMH                 VALUE +07.
+                88  W-RETURN-ENDINPT                VALUE +08.
+                88  W-RETURN-NONVAL                 VALUE +09.
+
+                88  W-RETURN-NOSTART                VALUE +10.
+                88  W-RETURN-TERMIDERR              VALUE +11.
+                88  W-RETURN-DSIDERR                VALUE +12.
+                88  W-RETURN-NOTFND                 VALUE +13.
+                88  W-RETURN-DUPREC                 VALUE +14.
+                88  W-RETURN-DUPKEY                 VALUE +15.
+                88  W-RETURN-INVREQ                 VALUE +16.
+                88  W-RETURN-IOERR                  VALUE +17.
+                88  W-RETURN-NOSPACE                VALUE +18.
+                88  W-RETURN-NOT-OPEN               VALUE +19.
+
+                88  W-RETURN-ENDFILE                VALUE +20.
+                88  W-RETURN-ILLOGIC                VALUE +21.
+                88  W-RETURN-LENGERR                VALUE +22.
+                88  W-RETURN-QZERO                  VALUE +23.
+                88  W-RETURN-SIGNAL                 VALUE +24.
+                88  W-RETURN-QBUSY                  VALUE +25.
+                88  W-RETURN-ITEMERR                VALUE +26.
+                88  W-RETURN-PGMIDERR               VALUE +27.
+                88  W-RETURN-TRANSIDERR             VALUE +28.
+                88  W-RETURN-ENDDATA                VALUE +29.
+
+                88  W-RETURN-INVTSREQ               VALUE +30.
+                88  W-RETURN-EXPIRED                VALUE +31.
+                88  W-RETURN-RETPAGE                VALUE +32.
+                88  W-RETURN-RTEFAIL                VALUE +33.
+                88  W-RETURN-RTESOME                VALUE +34.
+                88  W-RETURN-TSIOERR                VALUE +35.
+                88  W-RETURN-MAPFAIL                VALUE +36.
+                88  W-RETURN-INVERRTERM             VALUE +37.
+                88  W-RETURN-INVMPSZ                VALUE +38.
+                88  W-RETURN-IGRFQID                VALUE +39.
+
+                88  W-RETURN-CICS-OVERFLOW          VALUE +40.
+                88  W-RETURN-INVLOC                 VALUE +41.
+                88  W-RETURN-NOSTG                  VALUE +42.
+                88  W-RETURN-JIDERR                 VALUE +43.
+                88  W-RETURN-QIDERR                 VALUE +44.
+                88  W-RETURN-NOJBUFSP               VALUE +45.
+                88  W-RETURN-DSSTAT                 VALUE +46.
+                88  W-RETURN-SELNERR                VALUE +47.
+                88  W-RETURN-FUNCERR                VALUE +48.
+                88  W-RETURN-UNEXPIN                VALUE +49.
+
+                88  W-RETURN-NOPASSBKRD             VALUE +50.
+                88  W-RETURN-NOPASSBKWR             VALUE +51.
+      *         88  W-RETURN--                      VALUE +52.
+                88  W-RETURN-SYSIDERR               VALUE +53.
+                88  W-RETURN-ISCINVREQ              VALUE +54.
+                88  W-RETURN-ENQBUSY                VALUE +55.
+                88  W-RETURN-ENVDEFERR              VALUE +56.
+                88  W-RETURN-IGREQCD                VALUE +57.
+                88  W-RETURN-SESSIONERR             VALUE +58.
+                88  W-RETURN-SYSBUSY                VALUE +59.
+
+                88  W-RETURN-SESSBUSY               VALUE +60.
+                88  W-RETURN-NOTALLOC               VALUE +61.
+                88  W-RETURN-CBIDERR                VALUE +62.
+                88  W-RETURN-INVEXITREQ             VALUE +63.
+                88  W-RETURN-INVPARTNSET            VALUE +64.
+                88  W-RETURN-INVPARTN               VALUE +65.
+                88  W-RETURN-PARTNFAIL              VALUE +66.
+      *         88  W-RETURN--                      VALUE +67.
+      *         88  W-RETURN--                      VALUE +68.
+                88  W-RETURN-USERIDERR              VALUE +69.
+
+                88  W-RETURN-NOTAUTH                VALUE +70.
+                88  W-RETURN-SUPPRESSED             VALUE +72.
+
+                88  W-RETURN-TERMERR                VALUE +81.
+                88  W-RETURN-ROLLEDBACK             VALUE +82.
+                88  W-RETURN-DISABLED               VALUE +84.
+                88  W-RETURN-OPENERR                VALUE +87.
+
+                88  W-RETURN-LOADING                VALUE +94.
+
+      *****************************************************************
+      *        END OF MEMBER 'NTA.ET.COPYLIB(SAYRE)'                  *
+      *****************************************************************

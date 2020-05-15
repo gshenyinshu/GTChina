@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<mylp>
+	<description>
+	<![CDATA[
+
+		사용법
+		Variable.get([variable이름] + "." + [sub element 이름]);
+		ex)
+		import kr.co.prudential.pruhome.common.utility.Variable;
+
+		Variable.get("example.value1") => "sealife manswei~"
+		Variable.get("example.value2") => "sealife manmanswei~"
+
+		초기화는
+		Variable.initialize();
+	
+	]]>
+	</description>
+	<variable name="pruhome">
+		<description>prudential.co.kr 관련url정보들</description>
+		<url>n2.prudential.co.kr</url>
+		<document-root>/usr/WebSphere/AppServer/installedApps/was_1Network/pruhome.ear/pruhome.war</document-root>
+	</variable>
+	<variable name="mylp">
+		<description>mylp.com url정보들</description>
+		<url>n2.mylp.com</url>
+		<lphome-url>dev.mylp.com</lphome-url>
+	</variable>
+	<variable name="upload_cck">
+		<description>CCK upload파일</description>
+		<url-path>http://${pruhome.url}/upload/cck[YOUR_TABLE][DIRECTORY]</url-path>
+		<real-path>${pruhome.document-root}/upload/cck[YOUR_TABLE][DIRECTORY]</real-path>
+	</variable>
+	<variable name="upload">
+		<description>푸르덴셜 홈페이지 upload파일</description>
+		<url-path>http://${pruhome.url}/upload[YOUR_TABLE][DIRECTORY]</url-path>
+		<real-path>${pruhome.document-root}/upload[YOUR_TABLE][DIRECTORY]</real-path>
+	</variable>
+	<variable name="namo-file">
+		<description>나모의 파일경로, 버전 및 삽입이미지의 저장폴더</description>
+		<file>/common/cab/NamoWec.cab</file>
+		<version>5,0,0,31</version>
+		<init-file-url>/common/cab/namo.env</init-file-url>
+		<init-file-ver>3.0</init-file-ver>
+
+		<url>http://${pruhome.url}/upload[YOUR_TABLE][DIRECTORY]</url>
+		<url-path>http://${pruhome.url}/upload[YOUR_TABLE][DIRECTORY]/namo</url-path>
+		<real>${pruhome.document-root}/upload[YOUR_TABLE][DIRECTORY]</real>
+		<real-path>${pruhome.document-root}/upload[YOUR_TABLE][DIRECTORY]/namo</real-path>
+	</variable>
+	<variable name="klia">
+		<description>생명보험협회</description>
+		<url>http://www.klia.or.kr</url>
+	</variable>
+	<variable name="adobe">
+		<description>아크로벳다운로드</description>
+		<url>http://www.korea.adobe.com/products/acrobat/readstep.html</url>
+	</variable>
+	<variable name="fss">
+		<description>금융감독원</description>
+		<url>http://www.fss.or.kr</url>
+	</variable>    
+	<variable name="cyber">
+		<description>사이버센터 처리계정</description>
+		<id>cyber</id>
+	</variable>
+	<variable name="attach-file">
+		<description>프르매거진 첨부 파일</description>
+		<url-path>/upload/prumagazine/attach</url-path>
+		<real-path>${pruhome.document-root}/upload/prumagazine/attach</real-path>
+	</variable>
+	
+	<variable name="society-file">
+		<description>사회공헌 나모첨부파일, 사진업로드, 동영상업로드</description>
+		<url-path>/upload/society/[YEAR]/[MENU]</url-path>
+		<real-path>${pruhome.document-root}/upload/society/[YEAR]/[MENU]</real-path>
+		<photo-url-path>/upload/society/[YEAR]/photos/[CATEGORY]</photo-url-path>
+		<photo-real-path>${pruhome.document-root}/upload/society/[YEAR]/photos/[CATEGORY]</photo-real-path>
+		<movie-url-path>/upload/society/[YEAR]/movies/[CATEGORY]</movie-url-path>
+		<movie-real-path>${pruhome.document-root}/upload/society/[YEAR]/movies/[CATEGORY]</movie-real-path>
+	</variable>
+
+	<variable name="mypage-loveLetter">
+		<description>MyPage 첨부파일 upload</description>
+		<url-path>/upload/mypage/loveletter/[YEAR]</url-path>
+		<real-path>${pruhome.document-root}/upload/mypage/loveletter/[YEAR]</real-path>
+	</variable>
+
+
+	
+	<variable name="webadmin-news">
+		<description>사진업로드, 원본파일업로드</description>
+		<url-path>/upload/news/[YEAR]/[MENU]</url-path>
+		<real-path>${pruhome.document-root}/upload/news/[YEAR]/[MENU]</real-path>
+		<photo-url-path>/upload/news/[YEAR]/[CATEGORY]</photo-url-path>
+		<photo-real-path>${pruhome.document-root}/upload/news/[YEAR]/[CATEGORY]</photo-real-path>
+	</variable>
+
+	<variable name="webadmin-lpnotice">
+		<description>LP 공지 첨부파일 업로드</description>
+		<url-path>/upload/lpnotice/[DATE]</url-path>
+		<real-path>${pruhome.document-root}/upload/lpnotice/[DATE]</real-path>
+	</variable>
+
+	<variable name="webadmin-lpnews">
+		<description>LP 뉴스 첨부파일 업로드</description>
+		<url-path>/upload/lpnews/[DATE]</url-path>
+		<real-path>${pruhome.document-root}/upload/lpnews/[DATE]</real-path>
+	</variable>
+
+	<variable name="webadmin-product">
+		<description>판매상품 목록 첨부파일 업로드</description>
+		<url-path>/upload/product/[DIV]</url-path>
+		<real-path>${pruhome.document-root}/upload/product/[DIV]</real-path>
+	</variable>
+
+	<variable name="webadmin-survey">
+		<description>신규고객 만족도 첨부파일 업로드</description>
+		<url-path>/upload/survey/[DIV]</url-path>
+		<real-path>${pruhome.document-root}/upload/survey/[DIV]</real-path>
+	</variable>
+
+	<variable name="webadmin-location">
+		<description>지점정보 첨부파일 업로드</description>
+		<url-path>/upload/agency/[CODE]</url-path>
+		<real-path>${pruhome.document-root}/upload/agency/[CODE]</real-path>
+	</variable>
+
+	<variable name="webadmin-popup">
+		<description>팝업관리 첨부파일 업로드</description>
+		<url-path>/upload/popup/[DATE]</url-path>
+		<real-path>${pruhome.document-root}/upload/popup/[DATE]</real-path>
+	</variable>
+
+	<variable name="webadmin-bestlp">
+		<description>bestlp 첨부파일 업로드</description>
+		<url-path>/upload/bestlp/[DIV]</url-path>
+		<real-path>${pruhome.document-root}/upload/bestlp/[DIV]</real-path>
+	</variable>
+
+	<variable name="email-id">
+		<description>각기능별 메일 id</description>
+		<common-pwd>36</common-pwd>
+		<loveletter-send>87</loveletter-send>
+               <cyber01>51</cyber01>
+                <cyber02>52</cyber02>
+                <cyber03>53</cyber03>
+                <cyber04>54</cyber04>
+                <cyber05>55</cyber05>
+                <cyber06>56</cyber06>
+                <cyber07>57</cyber07>
+                <cyber08>58</cyber08>
+                <cyber09>59</cyber09>
+                <cyber10>60</cyber10>
+                <cyber11>61</cyber11>
+                <cyber12>62</cyber12>
+                <cyber13>63</cyber13>
+                <cyber14>64</cyber14>
+                <cyber15>65</cyber15>
+                <cyber16>66</cyber16>
+                <cyber17>67</cyber17>
+                <cyber18>68</cyber18>
+                <cyber19>69</cyber19>
+                <cyber20>70</cyber20>
+                <cyber21>71</cyber21>
+                <cyber22>72</cyber22>
+                <cyber23>73</cyber23>
+                <cyber24>74</cyber24>
+                <cyber25>75</cyber25>
+	</variable>
+	
+	<variable name="plan">
+		<description>상품설계 산출기준일 설정</description>
+		<calculation-day>20050401</calculation-day>
+	</variable>
+
+</mylp>

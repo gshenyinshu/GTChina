@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='sel_indiv' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select a.c_id, b.id, b.return_cause from CYBER.dbo.CYBER_TBL_wb_return_category a, CYBER.dbo.CYBER_TBL_wb_return_cause b
+				where b.id = ?
+				and b.c_id = ?
+				and a.c_id = b.c_id
+            </query>
+			<mapping>		
+				<setProperty>id, c_id</setProperty>
+                <getProperty>c_id, id, return_cause</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="id"			type="String" size="0" />	
+            <field name="c_id"			type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="c_id"				type="string" size="0"/>			
+	     <field name="id"				type="string" size="0"/>			
+	     <field name="return_cause"				type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="euc-kr"?>
+ 
+<transaction name="usp_sms_ins" protocolName="db1">
+ <description>
+  usp_sms_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/CyberDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_CYBERCENTER_SMS_SEND(?,?,?,?,?,?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>       
+    <param seq="2"   mode="in" >v_sms_code</param>
+    <param seq="3"   mode="in">v_success_yn</param>
+    <param seq="4"   mode="in">v_policy_no</param>
+    <param seq="5"   mode="in">v_name</param>
+    <param seq="6"   mode="in">v_owner</param> 
+    <param seq="7"   mode="in">v_owner_mobile</param> 
+    <param seq="8"   mode="in">v_lp_code</param> 
+    <param seq="9"   mode="in">v_amt</param> 
+    <param seq="10"  mode="in">v_gubun</param> 
+    <param seq="11"  mode="in">tran_etc1</param> 
+    <param seq="12"  mode="in">tran_etc2</param> 
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+ 
+ <input>
+  <block>
+   <field name="v_sms_code"  		  	type="string" size="0"/>
+   <field name="v_success_yn"   	 	type="string" size="0"/>
+   <field name="v_policy_no"   	  		type="string" size="0"/>
+   <field name="v_name"   	  			type="string" size="0"/>
+   <field name="v_owner"    		  	type="string" size="0"/>
+   <field name="v_owner_mobile"   		type="string" size="0"/>
+   <field name="v_lp_code"   	  		type="string" size="0"/>
+   <field name="v_amt"   	  			type="string" size="0"/>
+   <field name="v_gubun"   	  			type="string" size="0"/>
+   <field name="tran_etc1"   	  		type="string" size="0"/>
+   <field name="tran_etc2"   	  		type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"             type="string" size="0"/>
+  </block>                                
+ </output>          
+</transaction>

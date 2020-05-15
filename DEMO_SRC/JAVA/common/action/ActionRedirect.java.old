@@ -1,0 +1,65 @@
+/**
+ * Title       : ActionRedirect
+ * Description : redirect="true" 
+ * Copyright   : Copyright (c) 2004
+ * Company     : CyberImagination
+ * @author Dong-hyun Sohn test
+ * @version 1.0
+ */
+
+package gtone.changeminer.common.action;
+
+import org.apache.struts.action.ActionForward;
+import java.util.HashMap;
+import java.util.Iterator;
+
+public  class ActionRedirect
+{
+	ActionForward forward;
+	HashMap       hashMap;
+
+	public static ActionRedirect newInstance()
+	{
+		return new  ActionRedirect();
+	}
+
+	public ActionRedirect()
+	{
+		forward = null;
+		hashMap = new HashMap();
+	}
+
+	public void setForward(ActionForward forward)
+	{
+		this.forward = forward;
+	}
+
+	public void setParam(String name, String value)
+	{
+		hashMap.put(name, value);
+	}
+
+	public void setParam(String name, int value)
+	{
+		setParam(name, String.valueOf(value));
+	}
+
+	public String getPath()
+	{
+		StringBuffer buffer = new StringBuffer();
+		Iterator iter = hashMap.keySet().iterator();
+		String and = "?";
+		
+		for (int i = 0; iter.hasNext();)
+		{
+			String name = (String)iter.next();
+			buffer.append(and + name + "=" + hashMap.get(name));
+			and = "&";
+		}
+
+		String redirectPath = forward.getPath() + buffer.toString();
+		return redirectPath;
+	}
+}
+
+

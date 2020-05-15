@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="sms_log_list" protocolName="db1">
+    <description>
+        sms.dbo.em_tran cyber.dbo.CYBER_TBL_SMS_LOG  table select
+    </description>
+    <processor-info type="dbms" datasource="">
+        <transaction-type>rollback</transaction-type>
+        <sql id='1'>
+            <query>
+            
+            SELECT TOP 20 
+            tran_pr
+            ,policy_no
+			,tran_date_dt
+			,tran_date_tm
+			,tran_status
+			,tran_phone
+			,tran_nm
+			,tran_msg            
+            from 
+			(
+				select 
+				et.tran_pr as tran_pr
+				,et.tran_date as tran_date
+				,cl.policy_no as policy_no
+				,CASE CONVERT(CHAR(4),et.tran_date,112) WHEN '1900' THEN '' ELSE CONVERT(CHAR(10),et.tran_date, 121) END AS tran_date_dt 
+				,CASE CONVERT(CHAR(8),et.tran_date,114) WHEN '00:00:00' THEN '' ELSE CONVERT(CHAR(8),et.tran_date, 114) END AS tran_date_tm 
+				,'대기' as tran_status
+				,convert(nvarchar(15),et.tran_phone collate Korean_Wansung_CI_AS) as tran_phone
+				,convert(nvarchar(20),cl.tran_nm collate Korean_Wansung_CI_AS) as tran_nm
+				,convert(nvarchar(255),et.tran_msg collate Korean_Wansung_CI_AS) as tran_msg
+				from 
+				cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join sms.dbo.em_tran et on cl.tran_pr = et.tran_pr
+				where 1 = 1 
+				$where  -- 조건으로 검색
+				
+				union
+				
+				select 
+				et.tran_pr as tran_pr
+				,et.tran_date as tran_date
+				,cl.policy_no as policy_no
+				,CASE CONVERT(CHAR(4),et.tran_date,112) WHEN '1900' THEN '' ELSE CONVERT(CHAR(10),et.tran_date, 121) END AS tran_date_dt
+				,CASE CONVERT(CHAR(8),et.tran_date,114) WHEN '00:00:00' THEN '' ELSE CONVERT(CHAR(8),et.tran_date, 114) END AS tran_date_tm
+				,rc.result_name
+				,convert(nvarchar(15),et.tran_phone collate Korean_Wansung_CI_AS)as tran_phone
+				,convert(nvarchar(20),cl.tran_nm collate Korean_Wansung_CI_AS) as tran_nm
+				,convert(nvarchar(255),et.tran_msg collate Korean_Wansung_CI_AS) as tran_msg
+				from 
+				 cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join $logdatetable et on cl.tran_pr = et.tran_pr
+				left outer join sms.app_sms.em_result_code rc on et.tran_rslt = rc.result_code
+				where 1 = 1
+				$where -- 조건으로 검색
+			) un where 1 = 1
+			
+			and tran_pr not in
+			(select top  $page  tran_pr from
+				(select 
+				et.tran_pr as tran_pr
+				,et.tran_date as tran_date
+				from 
+				cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join sms.dbo.em_tran et on cl.tran_pr = et.tran_pr
+				where 1 = 1
+				$where -- 조건으로 검색
+				union
+				select 
+				et.tran_pr as tran_pr
+				,et.tran_date as tran_date
+				from 
+				cyber.dbo.CYBER_TBL_SMS_LOG cl left outer join $logdatetable et on cl.tran_pr = et.tran_pr
+				where 1 = 1
+				$where -- 조건으로 검색
+				) ou  
+			where 1 = 1 order by tran_date desc)
+			
+			order by tran_date desc
+            
+            
+            </query>
+            <mapping>
+                <setProperty></setProperty>
+                <getProperty>tran_pr
+				                ,policy_no
+				                ,tran_date_dt
+				                ,tran_date_tm
+				                ,tran_status
+				                ,tran_phone
+				                ,tran_nm
+				                ,tran_msg
+                </getProperty>
+            </mapping>
+        </sql>
+    </processor-info>
+
+    <input>
+        <block>
+            <field name="page"              type="int" size="0"/>
+            <field name="where"         type="string" size="0"/>
+            <field name="logdatetable"         type="string" size="0"/>
+        </block>
+    </input>
+
+    <output>
+        <block repeat='1'>
+            <field name="tran_pr"         type="string" size="0"/>
+            <field name="policy_no"         type="string" size="0"/>
+            <field name="tran_date_dt"         type="string" size="0"/>
+            <field name="tran_date_tm"      type="string" size="0"/>
+            <field name="tran_status"      type="string" size="0"/>
+            <field name="tran_phone"       type="string" size="0"/>
+            <field name="tran_nm"          type="string" size="0"/>
+            <field name="tran_msg"          type="string" size="0"/>
+        </block>
+    </output>
+</transaction>

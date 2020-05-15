@@ -1,0 +1,63 @@
+      *****************************************************************
+      *                                                               *
+      *   SSYBB - BIT MAP FOR ATTRIBUTES                              *
+      *                                                               *
+      *       REF:  CICS/ESA APPLICATION PROGRAMMING REFERENCE        *
+      *             v3.3 ( p252 )                                     *
+      *                                                               *
+      *   MODIFICATIONS.                                              *
+      *   --------------                                              *
+      *   1994.10.28                                                  *
+      *                                                               *
+      *****************************************************************
+
+
+      ******************************************************************
+      *                    A T T R I B U T E S                         *
+      ******************************************************************
+
+       01  ATTRIBUTES.
+
+           05  C-ATTRB-UPROT           PIC  X(01)           VALUE ' '.
+           05  C-ATTRB-UPROT-MDT       PIC  X(01)           VALUE 'A'.
+      *    05  C-                      PIC  X(01)           VALUE 'D'.
+      *    05  C-                      PIC  X(01)           VALUE 'E'.
+           05  C-ATTRB-UPROT-BRT       PIC  X(01)           VALUE 'H'.
+           05  C-ATTRB-UPROT-BRT-MDT   PIC  X(01)           VALUE 'I'.
+           05  C-ATTRB-UPROT-DRK       PIC  X(01)           VALUE '<'.
+           05  C-ATTRB-UPROT-DRK-MDT   PIC  X(01)           VALUE '('.
+           05  C-ATTRB-UPROT-NUM       PIC  X(01)           VALUE '&'.
+           05  C-ATTRB-UPROT-NUM-MDT   PIC  X(01)           VALUE 'J'.
+      *    05  C-                      PIC  X(01)           VALUE 'M'.
+      *    05  C-                      PIC  X(01)           VALUE 'N'.
+           05  C-ATTRB-UPROT-NUM-BRT   PIC  X(01)           VALUE 'Q'.
+           05  C-ATTRB-UPROT-NUM-BRT-MDT
+                                       PIC  X(01)           VALUE 'R'.
+           05  C-ATTRB-UPROT-NUM-DRK   PIC  X(01)           VALUE '*'.
+           05  C-ATTRB-UPROT-NUM-DRK-MDT
+                                       PIC  X(01)           VALUE ')'.
+
+           05  C-ATTRB-PROT            PIC  X(01)           VALUE '-'.
+           05  C-ATTRB-PROT-MDT        PIC  X(01)           VALUE '/'.
+      *    05  C-                      PIC  X(01)           VALUE 'U'.
+      *    05  C-ATTRB-PROT-MDT        PIC  X(01)           VALUE 'V'.
+           05  C-ATTRB-PROT-BRT        PIC  X(01)           VALUE 'Y'.
+           05  C-ATTRB-PROT-BRT-MDT    PIC  X(01)           VALUE 'Z'.
+           05  C-ATTRB-PROT-DRK        PIC  X(01)           VALUE '%'.
+           05  C-ATTRB-PROT-DRK-MDT    PIC  X(01)           VALUE '_'.
+
+           05  C-ATTRB-ASKIP           PIC  X(01)           VALUE '0'.
+           05  C-ATTRB-ASKIP-MDT       PIC  X(01)           VALUE '1'.
+           05  C-ATTRB-ASKIP-UNDERLINE PIC  X(01)           VALUE '4'.
+      *    05  C-                      PIC  X(01)           VALUE '5'.
+           05  C-ATTRB-ASKIP-BRT       PIC  X(01)           VALUE '8'.
+           05  C-ATTRB-ASKIP-BRT-MDT   PIC  X(01)           VALUE '9'.
+           05  C-ATTRB-ASKIP-DRK       PIC  X(01)           VALUE '@'.
+           05  C-ATTRB-ASKIP-DRK-MDT   PIC  X(01)           VALUE ''''.
+
+
+
+      ******************************************************************
+      *             END OF NTA.ET.COPYLIB(SSYBB)                       *
+      ******************************************************************
+

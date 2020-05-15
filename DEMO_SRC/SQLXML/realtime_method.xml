@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='realtime_method' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+		<query>
+				select indate, seq_no, prcode,intime,
+					(CASE option1 WHEN '3' THEN '납입주기' WHEN '5' THEN '변액보험펀드' WHEN 'A' THEN 'APL신청' WHEN 'D' THEN 'APL해지' END) as option1,
+					 (CASE option2 WHEN 'A' THEN 'APL' WHEN '' THEN '' END) as option2,
+					isnull(policy_no,'') as policy_no, isnull(eff_date,'') as eff_date,
+					(CASE  nf_opt WHEN '4' THEN '신청' WHEN '9' THEN '해지' WHEN ''  THEN '' END) as nf_opt,
+					(CASE method  WHEN 'D' THEN '자동이체' WHEN 'G' THEN '직접납부' WHEN 'F' THEN '지로' WHEN 'E' THEN '직접납부' WHEN '' THEN '' END) as method,
+					(CASE mode    WHEN '01' THEN '월납' WHEN '03' THEN '3월납' WHEN '06' THEN '6월납' WHEN '12' THEN '연납' WHEN ''  THEN '' END) as mode,
+					(CASE fund_type WHEN 'MS001' THEN '혼합형' WHEN 'BN001' THEN '채권형' WHEN 'MXU01' THEN '혼합형' WHEN 'MXU02' THEN '안정혼합형' WHEN '' THEN '' END) as fund_type,
+					isnull(prdate,'') as prdate, isnull(prtime,'') as prtime, isnull(prname,'') as prname, nf_opt as nf_opt1
+				from cyber.dbo.CYBER_TBL_wb_method
+				where indate = ?
+				and seq_no = ?
+				and prcode = ?
+        </query>
+		<mapping>		
+			<setProperty>indate,seq_no,prcode</setProperty>
+            <getProperty>indate,seq_no,prcode,intime,option1,option2,policy_no,eff_date,nf_opt,method,mode,fund_type,prdate,prtime,prname, nf_opt1</getProperty>
+		</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+			<field name="indate"			type="String" size="0"/>	
+			<field name="seq_no"			type="string" size="0"/>	
+			<field name="prcode"			type="string" size="0"/>	
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+			<field name="indate"            		type="String" size="0"/>
+			<field name="seq_no"            	type="String" size="0"/>
+			<field name="prcode"            	type="String" size="0"/>
+			<field name="intime"            		type="String" size="0"/>
+			<field name="option1"           		type="String" size="0"/>
+			<field name="option2"           		type="String" size="0"/>
+			<field name="policy_no"         	type="String" size="0"/>
+			<field name="eff_date"          		type="String" size="0"/>
+			<field name="nf_opt"            		type="String" size="0"/>
+			<field name="method"            	type="String" size="0"/>
+			<field name="mode"              	type="String" size="0"/>
+			<field name="fund_type"         	type="String" size="0"/>
+			<field name="prdate"            		type="String" size="0"/>
+			<field name="prtime"            		type="String" size="0"/>
+			<field name="prname"   			type="String" size="0"/>
+			<field name="nf_opt1"   			type="String" size="0"/>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='policy_change_list_member' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query>
+                select ssn,email_service_yn,email_service,post_send_yn,post_send,home_addr_yn,home_post,home_addr1,home_addr2,
+					   home_phone_yn,home_phone1,home_phone2,home_phone3,office_addr_yn,office_post,office_addr1,office_addr2,office_addr3,office_addr4,
+					   office_phone_yn,office_phone1,office_phone2,office_phone3,mobile_yn,mobile1,mobile2,mobile3,email_yn,email
+				from CYBER.dbo.CYBER_TBL_WB_MEMBER
+                where indate = ?
+                and seq_no = ?
+                and prcode = '1'
+            </query>
+			<mapping>       
+				<setProperty>indate, seq_no</setProperty> 
+				<getProperty>
+                	 ssn,email_service_yn,email_service,post_send_yn,post_send,home_addr_yn,home_post,home_addr1,home_addr2,
+					 home_phone_yn,home_phone1,home_phone2,home_phone3,office_addr_yn,office_post,office_addr1,office_addr2,office_addr3,office_addr4,
+					 office_phone_yn,office_phone1,office_phone2,office_phone3,mobile_yn,mobile1,mobile2,mobile3,email_yn,email
+                </getProperty>  
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+			<field name="indate"  			type="string" size="0"/>
+		    <field name="seq_no"  			type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		    <field name="ssn"  				type="string" size="0"/>
+		    <field name="email_service_yn"  type="string" size="0"/>
+		    <field name="email_service"     type="string" size="0"/>
+		    <field name="post_send_yn"      type="string" size="0"/>
+		    <field name="post_send"         type="string" size="0"/>
+		    <field name="home_addr_yn"      type="string" size="0"/>
+		    <field name="home_post"         type="string" size="0"/>
+		    <field name="home_addr1"        type="string" size="0"/>
+		    <field name="home_addr2"        type="string" size="0"/>
+		    <field name="home_phone_yn"     type="string" size="0"/>
+		    <field name="home_phone1"       type="string" size="0"/>
+		    <field name="home_phone2"       type="string" size="0"/>
+		    <field name="home_phone3"       type="string" size="0"/>
+		    <field name="office_addr_yn"    type="string" size="0"/>
+		    <field name="office_post"       type="string" size="0"/>
+		    <field name="office_addr1"      type="string" size="0"/>
+		    <field name="office_addr2"      type="string" size="0"/>
+		    <field name="office_addr3"      type="string" size="0"/>
+		    <field name="office_addr4"      type="string" size="0"/>
+		    <field name="office_phone_yn"   type="string" size="0"/>
+		    <field name="office_phone1"     type="string" size="0"/>
+		    <field name="office_phone2"     type="string" size="0"/>
+		    <field name="office_phone3"     type="string" size="0"/>
+		    <field name="mobile_yn"         type="string" size="0"/>
+		    <field name="mobile1"           type="string" size="0"/>
+		    <field name="mobile2"           type="string" size="0"/>
+		    <field name="mobile3"           type="string" size="0"/>
+		    <field name="email_yn"          type="string" size="0"/>
+		    <field name="email"             type="string" size="0"/>
+		</block>
+	</output>
+</transaction>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps2200" protocolName="db1">
+	<description>
+		store procedure  ksps2200 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+			{call KSPS2610(?,?)}
+				<!--{call KORGPL.KSPS2610(?,?)}-->
+			</query>
+			<mapping>
+				<setProperty>deptcd,policy</setProperty>
+				<getProperty>rtn,errmsg,ownid,ownna,plancd,plannm,reqyn,bankdd</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 		type="string" size="0"/>
+			<field name="policy" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"           type="string" size="0"/>
+			<field name="errmsg"     	type="string" size="0"/>
+			<field name="ownid"    		type="string" size="0"/>
+			<field name="ownna"      	type="string" size="0"/>
+			<field name="plancd"      	type="string" size="0"/>
+			<field name="plannm"      	type="string" size="0"/>
+			<field name="reqyn"      	type="string" size="0"/>
+			<field name="bankdd"      	type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>

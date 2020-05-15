@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="auth_add" protocolName="db1">
+ <description>
+  usp_wb_process_ins
+ </description>
+ <processor-info type="dbms" datasource="jdbc/pruhomeDS">
+  <sql>
+   <query type="storedprocedure">
+    {call CYBER.dbo.CYBER_USP_WB_AUTH_INS2(?,?,?,?,?,?,?,?,?,?,?,?,?) }
+   </query>
+   <mapping-procedure>
+    <param seq="1"   mode="out" type="VARCHAR">rslt</param>
+    <param seq="2"   mode="in">emp_no</param>
+    <param seq="3"   mode="in">pwd</param>
+    <param seq="4"   mode="in">emp_nm</param>
+    <param seq="5"   mode="in">auth_cd</param>
+    <param seq="6"   mode="in">auth_cd2</param>
+    <param seq="7"   mode="in">team_nm</param>
+    <param seq="8"   mode="in">old_pwd</param>
+    <param seq="9"   mode="in">chg_pwd_dt</param>
+    <param seq="10"   mode="in">hand_phone</param>
+    <param seq="11"   mode="in">hand_phone_yn</param>
+    <param seq="12"   mode="in">email</param>
+    <param seq="13"   mode="in">email_yn</param>
+   </mapping-procedure>
+   <mapping>
+    <setProperty></setProperty>
+    <getProperty></getProperty>
+   </mapping>
+  </sql>
+ </processor-info>
+
+ <input>
+  <block>
+   <field name="emp_no"             type="string" size="0"/>
+   <field name="pwd"                type="string" size="0"/>
+   <field name="emp_nm"             type="string" size="0"/>
+   <field name="auth_cd"            type="string" size="0"/>
+   <field name="auth_cd2"            type="string" size="0"/>
+   <field name="team_nm"            type="string" size="0"/>
+   <field name="old_pwd"            type="string" size="0"/>
+   <field name="chg_pwd_dt"         type="string" size="0"/>
+   <field name="hand_phone"         type="string" size="0"/>
+   <field name="hand_phone_yn"      type="string" size="0"/>
+   <field name="email"              type="string" size="0"/>
+   <field name="email_yn"           type="string" size="0"/>
+ </block>
+ </input>
+ <output>
+  <block>
+   <field name="rslt"               type="string" size="0"/>
+  </block>
+ </output>
+</transaction>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0810" protocolName="db1">
+	<description>
+		store procedure  ksps0810 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0810(?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,policy,midate,cardcd</setProperty>
+				<getProperty>rtn,errmsg,insur,divi1,divi2,divi3,divi4,nonpar,pdf,delay,paytot,plprin,plint,dlyprm,unearn,unenint,tax,stamp,subtrct,payamt</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd"		type="string" size="0"/>
+			<field name="init"          		type="string" size="0"/>
+			<field name="policy"        	type="string" size="0"/>
+			<field name="midate"        	type="string" size="0"/>
+			<field name="cardcd"		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"        	type="string" size="0"/>
+			<field name="insur"         	type="string" size="0"/>
+			<field name="divi1"         	type="string" size="0"/>
+			<field name="divi2"         	type="string" size="0"/>
+			<field name="divi3"         	type="string" size="0"/>
+			<field name="divi4"         	type="string" size="0"/>
+			<field name="nonpar"        	type="string" size="0"/>
+			<field name="pdf"           	type="string" size="0"/>
+			<field name="delay"         	type="string" size="0"/>
+			<field name="paytot"        	type="string" size="0"/>
+			<field name="plprin"        	type="string" size="0"/>
+			<field name="plint"         	type="string" size="0"/>
+			<field name="dlyprm"        	type="string" size="0"/>
+			<field name="unearn"        	type="string" size="0"/>
+			<field name="unenint"       	type="string" size="0"/>
+			<field name="tax"           	type="string" size="0"/>
+			<field name="stamp"         	type="string" size="0"/>
+			<field name="subtrct"       	type="string" size="0"/>
+			<field name="payamt"		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='return_upt' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				 update  CYBER.dbo.CYBER_TBL_WB_RETURN_CAUSE
+				 set c_id = ?, return_cause = ?
+				 where id = ?
+            </query>
+			<mapping>		
+				<setProperty>c_id, return_cause, id</setProperty>
+                <getProperty> </getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+		     <field name="c_id"					type="string" size="0"/>			
+		     <field name="return_cause"			type="string" size="0"/>			
+		     <field name="id"						type="string" size="0"/>			
+	        </block>
+	</input>
+	
+	<output>
+		<block>
+		</block>
+	</output>
+</transaction>

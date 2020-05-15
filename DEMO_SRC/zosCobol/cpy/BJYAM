@@ -1,0 +1,31 @@
+      ****************************************************************
+      **                                                            **
+      **        u3?vma{/ma?~?/we?S  JA?z  ( 1712 BYTES )          **
+      **                                                            **
+      **         1. KET FIELD  : BJVAM0-KEY                         **
+      **         2. KEY LENGTH : 14 BYTES                           **
+      **         3. AUTHOR     : KIM.J.B (655)                      **
+      **                                                            **
+      ****************************************************************
+       01  BJVAM0-R.                                                    
+           05  BJVAM0-KEY.                                              
+               10  BJVAM0-BUSNID.                                       
+                   15  BJVAM0-BUSNID1         PIC  X(03).               
+                   15  BJVAM0-BUSNID2         PIC  X(02).               
+                   15  BJVAM0-BUSNID3         PIC  X(05).               
+               10  BJVAM0-BUSN-YEAR           PIC  X(04).               
+           05  BJVAM0-TXOFF-CD                PIC  X(03).               
+           05  BJVAM0-YEAR.                                             
+               10  BJVAM0-YEAR-BUSN-PRD.                                
+                   15  BJVAM0-YEAR-BUSN-PRD-FR   PIC  X(04).            
+                   15  BJVAM0-YEAR-BUSN-PRD-TO   PIC  X(04).            
+               10  BJVAM0-YEAR-BUSNTP-CD      PIC  X(07).               
+               10  BJVAM0-YEAR-TABLE          OCCURS 70.                
+                   15  BJVAM0-YEAR-AMT        PIC S9(15)  COMP-3.       
+                   15  BJVAM0-YEAR-RATE       PIC S999V9.               
+                   15  BJVAM0-YEAR-COUNT-RATE PIC S999V9.               
+                   15  BJVAM0-YEAR-INCRE-RATE PIC S999V9.               
+                   15  BJVAM0-YEAR-TREND-RATE PIC S999V9.               
+      ****************************************************************
+      **                   END    OF   COPYLIB (BJYAM)              **
+      ****************************************************************

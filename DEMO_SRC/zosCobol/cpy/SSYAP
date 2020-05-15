@@ -1,0 +1,48 @@
+      ***************************************************************** 
+      *                                                               * 
+      *   SSYAP -  NUMERIC EDIT SUBPROGRAM COPY MEMBER                * 
+      *                                                               * 
+      *   MODIFICATIONS.                                              * 
+      *   --------------                                              * 
+      *   1995.12.11       WRITTEN BY YEONG SEOG, EOM                 * 
+      *                                                               * 
+      ***************************************************************** 
+                                                                        
+           05  W-SSSAP-AREA.                                            
+                                                                        
+               10  W-SSSAP-INPUT             PIC  X(020)  VALUE SPACES. 
+               10  W-SSSAP-POINT             PIC  9(002)  VALUE ZEROS.  
+               10  W-SSSAP-OUTPUT            PIC  X(009)  VALUE SPACES. 
+               10  W-SSSAP-OUTPUT0    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(017)        COMP-3. 
+               10  W-SSSAP-OUTPUT1    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(016)V9(01)  COMP-3. 
+               10  W-SSSAP-OUTPUT2    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(015)V9(02)  COMP-3. 
+               10  W-SSSAP-OUTPUT3    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(014)V9(03)  COMP-3. 
+               10  W-SSSAP-OUTPUT4    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(013)V9(04)  COMP-3. 
+               10  W-SSSAP-OUTPUT5    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(012)V9(05)  COMP-3. 
+               10  W-SSSAP-OUTPUT6    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(011)V9(06)  COMP-3. 
+               10  W-SSSAP-OUTPUT7    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(010)V9(07)  COMP-3. 
+               10  W-SSSAP-OUTPUT8    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(009)V9(08)  COMP-3. 
+               10  W-SSSAP-OUTPUT9    REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(008)V9(09)  COMP-3. 
+               10  W-SSSAP-OUTPUT10   REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(007)V9(10)  COMP-3. 
+               10  W-SSSAP-OUTPUT11   REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(006)V9(11)  COMP-3. 
+               10  W-SSSAP-OUTPUT12   REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(005)V9(12)  COMP-3. 
+               10  W-SSSAP-OUTPUT13   REDEFINES     W-SSSAP-OUTPUT      
+                                             PIC S9(004)V9(13)  COMP-3. 
+               10  W-SSSAP-STATUS            PIC  X(001)  VALUE SPACE.  
+                                                                        
+      ***************************************************************** 
+      *        END OF MEMBER 'NTA.ET.COPYLIB(SSYAP)'                  * 
+      ***************************************************************** 

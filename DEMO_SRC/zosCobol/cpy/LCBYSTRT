@@ -1,0 +1,26 @@
+      ****************************************************************
+      *  FILE NAME   : LCBYSTRT (BATCH STARTAREA)                    *
+      *  DESCRIPTION : ERROR HANDLING & MESSAGE PROCESSING STANDARD -*
+      *AREA FOR BATCH PROGRAM                                        *
+      *                                                              *
+      *  TOTAL SIZE  : 300 BYTES                                     *
+      *                                                              *
+      * 변경HISTORY                                                *
+      * 변경일자     CSR번호 작업자 작업내용                 *
+      *  ==========   =========   ======   ========================  *
+      *  2003/07/23              김강용 최초작성                 *
+      ****************************************************************
+           05  (BNCS)-ERR-REC                  PIC  X(300).
+           05  (BNCS)-ERR-REC-R  REDEFINES  (BNCS)-ERR-REC.
+               10  (BNCS)-BOCOM-ERR-TYPE       PIC  X(001).
+               10  (BNCS)-BOCOM-ERR-PROG       PIC  X(008).
+               10  (BNCS)-BOCOM-ERR-PARAGRAPH  PIC  X(008).
+               10  (BNCS)-BOCOM-ERR-TBLNAME    PIC  X(008).
+               10  (BNCS)-BOCOM-ERR-FUNC       PIC  X(008).
+               10  (BNCS)-BOCOM-ERR-STATUS     PIC S9(008)
+                          SIGN IS LEADING.
+               10  (BNCS)-BOCOM-ERR-SUBMSG     PIC  X(050).
+               10  (BNCS)-BOCOM-ERR-DATA       PIC  X(128).
+               10  (BNCS)-BOCOM-ERR-SQLCODE    PIC  -------9.
+               10  (BNCS)-BOCOM-ERR-FILLER     PIC  X(073).
+

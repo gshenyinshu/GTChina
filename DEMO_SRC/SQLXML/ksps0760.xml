@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps0760" protocolName="db1">
+	<description>
+		store procedure  ksps0760 파라미터
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS0760(?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>dept,
+                             init,
+                             insuid,
+                             policy
+                </setProperty>
+				<getProperty>rtn,
+                            errmsg,	
+                            insuid,	
+                            policy,	
+                            totpol,	
+                            medrej,	
+                            numcom,	
+                            life,		
+                            adb,		
+                            cond,		
+                            risk,		
+                            fisday,	
+                            hignum,	
+                            name,		
+                            eacpol,	
+                            eacsup,	
+                            eacsts1,	
+                            eacsts2,	
+                            eacsp,		
+                            eaciss,	
+                            eacmed,	
+                            eacjob,	
+                            eacage,	
+                            eaclif,	
+                            eacaib,	
+                            eacadb,	
+                            eachos,	
+                            eaccan,	
+                            eacsrg,	
+                            eacdrep,	
+                            eactit,	
+                            eacdrsn,	
+                            totlif,	
+                            totaib,	
+                            totadb,	
+                            tothos,	
+                            totcan,	
+                            totsrg
+				</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="dept"          type="string" size="0"/>
+			<field name="init"          type="string" size="0"/>
+			<field name="insuid"        type="string" size="0"/>
+			<field name="policy"        type="string" size="0"/>
+		</block>
+	</input>
+
+	<output>
+		<block>
+			<field name="rtn"			type="string" size="0"/>
+			<field name="errmsg"		type="string" size="0"/>
+			<field name="insuid"		type="string" size="0"/>
+			<field name="policy"		type="string" size="0"/>
+			<field name="totpol"		type="string" size="0"/>
+			<field name="medrej"		type="string" size="0"/>
+			<field name="numcom"		type="string" size="0"/>
+			<field name="life"			type="string" size="0"/>
+			<field name="adb"			type="string" size="0"/>
+			<field name="cond"			type="string" size="0"/>
+			<field name="risk"			type="string" size="0"/>
+			<field name="fisday"		type="string" size="0"/>
+			<field name="hignum"		type="string" size="0"/>
+			<field name="name"			type="string" size="0"/>
+			<field name="eacpol"		type="string" size="0"/>
+			<field name="eacsup"		type="string" size="0"/>
+			<field name="eacsts1"		type="string" size="0"/>
+			<field name="eacsts2"		type="string" size="0"/>
+			<field name="eacsp"			type="string" size="0"/>
+			<field name="eaciss"		type="string" size="0"/>
+			<field name="eacmed"		type="string" size="0"/>
+			<field name="eacjob"		type="string" size="0"/>
+			<field name="eacage"		type="string" size="0"/>
+			<field name="eaclif"		type="string" size="0"/>
+			<field name="eacaib"		type="string" size="0"/>
+			<field name="eacadb"		type="string" size="0"/>
+			<field name="eachos"		type="string" size="0"/>
+			<field name="eaccan"		type="string" size="0"/>
+			<field name="eacsrg"		type="string" size="0"/>
+			<field name="eacdrep"		type="string" size="0"/>
+			<field name="eactit"		type="string" size="0"/>
+			<field name="eacdrsn"		type="string" size="0"/>
+			<field name="totlif"		type="string" size="0"/>
+			<field name="totaib"		type="string" size="0"/>
+			<field name="totadb"		type="string" size="0"/>
+			<field name="tothos"		type="string" size="0"/>
+			<field name="totcan"		type="string" size="0"/>
+			<field name="totsrg"		type="string" size="0"/>
+		</block>                                
+	</output>          
+</transaction>         

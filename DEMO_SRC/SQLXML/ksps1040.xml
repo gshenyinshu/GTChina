@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<transaction name="ksps1040" protocolName="db1">
+	<description>
+		store procedure  ksps1040 ResultSet
+	</description>
+	<processor-info type="dbms" datasource="jdbc/AS400DS">
+		<sql>
+			<query type="storedprocedure">
+				{call KORGPL.KSPS1040(?,?,?,?,?)}
+			</query>
+			<mapping>
+				<setProperty>deptcd,init,cltno,opt,amt</setProperty>
+				<getProperty>rtn,errmsg,policy,bnkcd,bnkacc,pyrnme,pyrno,tradte,chkcd</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+
+	<input>
+		<block>
+			<field name="deptcd" 	type="string" size="0"/>
+			<field name="init" 		type="string" size="0"/>
+			<field name="cltno" 	type="string" size="0"/>
+			<field name="opt" 		type="string" size="0"/>
+			<field name="amt" 		type="string" size="0"/>
+		</block>
+	</input>
+	<output>
+		<block>
+			<field name="rtn"        	   type="string" size="0"/>
+			<field name="errmsg"     		type="string" size="0"/>
+			<field name="policy"      		type="string" size="0"/>
+			<field name="bnkcd"      		type="string" size="0"/>
+			<field name="bnkacc"    		type="string" size="0"/>  
+			<field name="pyrnme"    		type="string" size="0"/>
+			<field name="pyrno"      		type="string" size="0"/>
+			<field name="tradte"      		type="string" size="0"/>
+			<field name="chkcd"      		type="string" size="0"/>
+		</block>     
+	</output>        
+</transaction>       

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<transaction name='wb_payment_sending' protocolName='db1'>
+	<processor-info type="dbms" datasource="jdbc/pruhomeDS">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> 
+				select convert(char(8), apln_dt, 112) as date2,  sending_num, isnull(pay_dt,'') as date  from cyber.dbo.CYBER_TBL_wb_payment where policy_apln_no =?
+            </query>
+			<mapping>		
+				<setProperty>policy_apln_no</setProperty>
+                <getProperty>date2, sending_num, date</getProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	<input>
+		<block>
+            <field name="policy_apln_no"		type="String" size="0" />	
+        </block>
+	</input>
+	
+	<output>
+		<block>
+	     <field name="date2"						type="string" size="0"/>			
+	     <field name="sending_num"				type="string" size="0"/>			
+	     <field name="date"						type="string" size="0"/>			
+		</block>
+	</output>
+</transaction>

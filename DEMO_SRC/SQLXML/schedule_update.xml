@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='euc-kr'?>
+
+<!--MyDiary수정-->
+<transaction name='schedule_update' protocolName='db1'>
+	<processor-info type="dbms" datasource="">
+		<transaction-type>rollback</transaction-type>
+		<sql id='1'>
+			<query> update PRUDB.dbo.MonthSchedule 
+                    set subject=? , contents=?
+                    where userID=? and scheduleDate=substring(?,1,6)
+            </query>
+			<mapping>		
+				<setProperty>subject, contents, userID, scheduleDate</setProperty>
+			</mapping>
+		</sql>
+	</processor-info>
+	
+	<input>
+		<block>
+            <field name="subject"       type="string" size="0"/>
+            <field name="contents"      type="string" size="0"/>
+            <field name="userID"        type="string" size="0"/>
+            <field name="scheduleDate"  type="string" size="0"/>
+        </block>
+	</input>
+	
+	<output>
+		<block repeat='1'>
+		</block>
+	</output>
+</transaction>
