@@ -51,7 +51,7 @@ public abstract class CudAction extends Action
 		throws Exception;
 }
 
-public class AAA {
+class AAA {
 	System.out.println("error!");
 
 }
