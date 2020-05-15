@@ -1,6 +1,6 @@
 /**
  * Title       : io_schema executor
- * Description : anylogic ƒ3—5 Interactionƒ0®7 ƒ2ì2ƒ2ë5ƒ2ù5ƒ1ó9 execute()ƒ0®7 ƒ2£5ƒ6ˆ8ƒ2¢7ƒ4à3ƒ3Á9‚9ƒ9.
+ * Description : anylogic ï¿½3ï¿½5 Interactionï¿½0ï¿½7 ï¿½2ï¿½2ï¿½2ï¿½5ï¿½2ï¿½5ï¿½1ï¿½9 execute()ï¿½0ï¿½7 ï¿½2ï¿½5ï¿½6ï¿½8ï¿½2ï¿½7ï¿½4ï¿½3ï¿½3ï¿½9ï¿½9ï¿½9.
  * Copyright   : Copyright (c) 2004
  * Company     : CyberImagination
  * @author Dong-hyun Sohn
@@ -28,7 +28,7 @@ import anyframe.data.cci.DefaultConnectionFactory;
  *                   description="devserver : nec2/ call sp (db2)"
  *                   scope="Unshareable"
  */
-public  class Executor
+public  final class Executor
 {
 	private static Executor executor = null;
 	private Connection connection    = null;
