@@ -1,0 +1,216 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp");
+   ("version", "1.2rc2.1");
+}
+{
+   (!29, "userId"S);
+   (!27, "/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\""S);
+   (!28, "/test/init_db.do?id="S);
+   (!25, "/board/list.do\">게시판</a></li>\r\n			<li><a href=\""S);
+   (!26, "/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\""S);
+   (!23, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\""S);
+   (!24, "/index.html\">홈으로</a></li>\r\n			<li><a href=\""S);
+   (!21, "/login.do\";\r\n				break;\r\n			}\r\n		}\r\n	}\r\n</script>\r\n</head>\r\n<body onload=\"checkErrCode()\">\r\n	<div id=\"container\">\r\n\r\n		<h1>\r\n			"S);
+   (!22, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp");
+   (!31, "\r\n		</h1>\r\n\r\n\r\n		<div id=\"content-container\">\r\n			<div id=\"content\">\r\n              "S);
+   (!30, "\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>"S);
+   (!18, "\r\n<script type=\"text/javascript\">\r\n	function checkErrCode(){\r\n		var errCode = "S);
+   (!19, "errCode"S);
+   (!32, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/main.jsp");
+   (!14, "\r\n"S);
+   (!15, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Login</title>\r\n<link href=\""S);
+   (!33, "\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\r\n<html>\r\n<head>\r\n<title>로그인 페이지</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\">\r\n</head>\r\n\r\n<body>\r\n   <img src=\"img/spring.jpg\" width=\"500\" height=\"400\">\r\n</body>\r\n</html>\r\n"S);
+   (!34, "\r\n			</div>\r\n		    <div id=\"aside\">\r\n				"S);
+   (!16, "/css/main.css\" rel=\"stylesheet\"\r\n	type=\"text/css\">\r\n"S);
+   (!17, "\r\n	"S);
+   (!35, "\r\n				"S);
+   (!36, "\r\n				<form action=\"login.do\" method=\"post\">\r\n					<fieldset>\r\n						<center>\r\n							<label for=\"userId\">메일주소 : </label> <input type=\"text\"\r\n								id=\"userId\" name=\"userId\" class=\"loginInput\" value=\""S);
+   (!10, "page");
+   (!37, "\" />\r\n							<span class=\"error\">"S);
+   (!11, "this");
+   (!38, "</span><br />\r\n							<label for=\"userPw\">비밀번호 : </label> <input type=\"password\"\r\n								id=\"userPw\" name=\"userPw\" class=\"loginInput\" /> <span\r\n								class=\"error\">"S);
+   (!12, "_jspx_out");
+   (!39, "</span><br />\r\n							<br /> <input type=\"submit\" value=\"로그인\" class=\"submitBt\" /> <input\r\n								type=\"button\" value=\"회원가입\" class=\"submitBt\"\r\n								onClick='window.open(\"member/join.do\",\"_blank\",\"width=400,height=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no\");' />\r\n						</center>\r\n					</fieldset>\r\n				</form>		    </div>\r\n			<div id=\"footer\">\r\n				"S);
+   (!13, "_jspx_page_context");
+   (!20, ";\r\n		if(errCode != null || errCode != \"\"){\r\n			switch (errCode) {\r\n			case 1:\r\n				alert(\"가입된 사용자ID가 아닙니다!\");\r\n				break;\r\n			case 2:\r\n				alert(\"비밀번호가 일치하지 않습니다!\");\r\n				break;\r\n			case 4:\r\n				alert(\"로그인후에 사용가능합니다.\");\r\n				break;\r\n			case 3:\r\n				alert(\"회원가입 처리가 완료되었습니다! 로그인 해 주세요!\");\r\n				location.href = \r\n					\""S);
+   (!9, "config");
+   (!40, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/footer.jsp");
+   (!42, "\r\n			</div>\r\n		</div>\r\n	</div>\r\n\r\n</body>\r\n</html>"S);
+   (!41, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n\r\n</head>\r\n<body> \r\n		<p>		  \r\n                Copyright (C) 김영숙(yskim@openeg.co.kr), 2014\r\n		</p>\r\n</body>\r\n</html>"S);
+   (!4, "out");
+   (!3, "response");
+   (!2, "request");
+   (!1, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp");
+   (!8, "application");
+   (!7, "session");
+   (!6, "pageContext");
+   (!5, "_jspxFactory");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp",
+   CL([public,final],(temp,login___),(org.apache.jasper.runtime,HttpJspBase),[(org.apache.jasper.runtime,JspSourceDependent)])
+   {
+
+   }
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp",
+   CN([public],(temp,login___),[],[],
+   {[
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp",
+   FN([public],((temp,login___),"_jspService"):unit,[(!2:class((javax.servlet.http,HttpServletRequest)),(!)),(!3:class((,HttpServletResponse)),(!))],[(java.io,IOException),(,ServletException)],
+   {[
+      {VD(!4,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!5,class((,JspFactory)),{NO(class((,JspFactory)),[],[]),class((,JspFactory)),(!)})
+      ,(!)};
+      {VD(!6,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {VD(!7,class((,HttpSession)),{NO(class((,HttpSession)),[],[]),class((,HttpSession)),(!)})
+      ,(!)};
+      {VD(!8,class((,ServletContext)),{NO(class((,ServletContext)),[],[]),class((,ServletContext)),(!)})
+      ,(!)};
+      {VD(!9,class((,ServletConfig)),{NO(class((,ServletConfig)),[],[]),class((,ServletConfig)),(!)})
+      ,(!)};
+      {VD(!10,class((java.lang,Object)),{V(!11),class((temp,login___)),(!)})
+      ,(!)};
+      {VD(!12,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!13,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(2#11,2#16,!1)}],{V(!4),class((,JspWriter)),(2#10,2#17,!1)})
+      ,(2#1,2#17,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(3#11,3#16,!1)}],{V(!4),class((,JspWriter)),(3#10,3#17,!1)})
+      ,(3#1,3#17,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(4#11,4#16,!1)}],{V(!4),class((,JspWriter)),(4#10,4#17,!1)})
+      ,(4#1,4#17,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!15,string,(5#11,5#258,!1)}],{V(!4),class((,JspWriter)),(5#10,5#259,!1)})
+      ,(5#1,5#259,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(11#33,11#34,!1)}),class((,UnknownType)),(11#33,11#34,!1)}],{V(!4),class((,JspWriter)),(11#10,11#35,!1)})
+      ,(11#1,11#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!16,string,(11#11,11#79,!1)}],{V(!4),class((,JspWriter)),(11#10,11#80,!1)})
+      ,(11#1,11#80,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!17,string,(13#11,13#17,!1)}],{V(!4),class((,JspWriter)),(13#10,13#18,!1)})
+      ,(13#1,13#18,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(14#11,14#16,!1)}],{V(!4),class((,JspWriter)),(14#10,14#17,!1)})
+      ,(14#1,14#17,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!18,string,(15#11,15#111,!1)}],{V(!4),class((,JspWriter)),(15#10,15#112,!1)})
+      ,(15#1,15#112,!1)};
+      {PC(((,JspWriter),"write"),[class((,ErrCode))],[{CS(class((,ErrCode)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!19,string,(18#42,18#50,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(18#41,18#51,!1)}),class((,UnknownType)),(18#41,18#51,!1)}),class((,ErrCode)),(18#41,18#51,!1)}],{V(!4),class((,JspWriter)),(18#10,18#53,!1)})
+      ,(18#1,18#53,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!20,string,(18#11,18#707,!1)}],{V(!4),class((,JspWriter)),(18#10,18#708,!1)})
+      ,(18#1,18#708,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#33,33#34,!1)}),class((,UnknownType)),(33#33,33#34,!1)}],{V(!4),class((,JspWriter)),(33#10,33#35,!1)})
+      ,(33#1,33#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!21,string,(33#11,33#257,!1)}],{V(!4),class((,JspWriter)),(33#10,33#258,!1)})
+      ,(33#1,33#258,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!23,string,(2#11,2#751,!22)}],{V(!4),class((,JspWriter)),(2#10,2#752,!22)})
+      ,(2#1,2#752,!22)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(27#33,27#34,!22)}),class((,UnknownType)),(27#33,27#34,!22)}],{V(!4),class((,JspWriter)),(27#10,27#35,!22)})
+      ,(27#1,27#35,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!24,string,(27#11,27#79,!22)}],{V(!4),class((,JspWriter)),(27#10,27#80,!22)})
+      ,(27#1,27#80,!22)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(28#33,28#34,!22)}),class((,UnknownType)),(28#33,28#34,!22)}],{V(!4),class((,JspWriter)),(28#10,28#35,!22)})
+      ,(28#1,28#35,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!25,string,(28#11,28#79,!22)}],{V(!4),class((,JspWriter)),(28#10,28#80,!22)})
+      ,(28#1,28#80,!22)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(29#33,29#34,!22)}),class((,UnknownType)),(29#33,29#34,!22)}],{V(!4),class((,JspWriter)),(29#10,29#35,!22)})
+      ,(29#1,29#35,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!26,string,(29#11,29#87,!22)}],{V(!4),class((,JspWriter)),(29#10,29#88,!22)})
+      ,(29#1,29#88,!22)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(30#33,30#34,!22)}),class((,UnknownType)),(30#33,30#34,!22)}],{V(!4),class((,JspWriter)),(30#10,30#35,!22)})
+      ,(30#1,30#35,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!27,string,(30#11,30#295,!22)}],{V(!4),class((,JspWriter)),(30#10,30#296,!22)})
+      ,(30#1,30#296,!22)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#33,33#34,!22)}),class((,UnknownType)),(33#33,33#34,!22)}],{V(!4),class((,JspWriter)),(33#10,33#35,!22)})
+      ,(33#1,33#35,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!28,string,(33#11,33#32,!22)}],{V(!4),class((,JspWriter)),(33#10,33#33,!22)})
+      ,(33#1,33#33,!22)};
+      {PC(((,JspWriter),"write"),[class((,UserId))],[{CS(class((,UserId)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!29,string,(33#41,33#48,!22)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#40,33#49,!22)}),class((,UnknownType)),(33#40,33#49,!22)}),class((,UserId)),(33#40,33#49,!22)}],{V(!4),class((,JspWriter)),(33#10,33#51,!22)})
+      ,(33#1,33#51,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!30,string,(33#11,33#125,!22)}],{V(!4),class((,JspWriter)),(33#10,33#126,!22)})
+      ,(33#1,33#126,!22)};
+      {PC(((,JspWriter),"write"),[string],[{!31,string,(44#11,44#151,!1)}],{V(!4),class((,JspWriter)),(44#10,44#152,!1)})
+      ,(44#1,44#152,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(1#11,1#16,!32)}],{V(!4),class((,JspWriter)),(1#10,1#17,!32)})
+      ,(1#1,1#17,!32)};
+      {PC(((,JspWriter),"write"),[string],[{!33,string,(2#11,2#311,!32)}],{V(!4),class((,JspWriter)),(2#10,2#312,!32)})
+      ,(2#1,2#312,!32)};
+      {PC(((,JspWriter),"write"),[string],[{!34,string,(50#11,50#113,!1)}],{V(!4),class((,JspWriter)),(50#10,50#114,!1)})
+      ,(50#1,50#114,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!35,string,(53#11,53#41,!1)}],{V(!4),class((,JspWriter)),(53#10,53#42,!1)})
+      ,(53#1,53#42,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!36,string,(54#11,54#420,!1)}],{V(!4),class((,JspWriter)),(54#10,54#421,!1)})
+      ,(54#1,54#421,!1)};
+      {PC(((,JspWriter),"write"),[class((,UserId))],[{CS(class((,UserId)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!29,string,(59#41,59#48,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(59#40,59#49,!1)}),class((,UnknownType)),(59#40,59#49,!1)}),class((,UserId)),(59#40,59#49,!1)}],{V(!4),class((,JspWriter)),(59#10,59#51,!1)})
+      ,(59#1,59#51,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!37,string,(59#11,59#95,!1)}],{V(!4),class((,JspWriter)),(59#10,59#96,!1)})
+      ,(59#1,59#96,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!38,string,(60#11,60#345,!1)}],{V(!4),class((,JspWriter)),(60#10,60#346,!1)})
+      ,(60#1,60#346,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!39,string,(63#11,63#713,!1)}],{V(!4),class((,JspWriter)),(63#10,63#714,!1)})
+      ,(63#1,63#714,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!41,string,(2#11,2#419,!40)}],{V(!4),class((,JspWriter)),(2#10,2#420,!40)})
+      ,(2#1,2#420,!40)};
+      {PC(((,JspWriter),"write"),[string],[{!42,string,(71#11,71#105,!1)}],{V(!4),class((,JspWriter)),(71#10,71#106,!1)})
+      ,(71#1,71#106,!1)};
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp",
+   [
+      D("\n	function checkErrCode(){\n		var errCode = __UNKNOWN__;\n		if(errCode != null || errCode != \"\"){\n			switch (errCode) {\n			case 1:\n				alert(\"가입된 사용자ID가 아닙니다!\");\n				break;\n			case 2:\n				alert(\"비밀번호가 일치하지 않습니다!\");\n				break;\n			case 4:\n				alert(\"로그인후에 사용가능합니다.\");\n				break;\n			case 3:\n				alert(\"회원가입 처리가 완료되었습니다! 로그인 해 주세요!\");\n				location.href = \n					\"__UNKNOWN__/login.do\";\n				break;\n			}\n		}\n	}\n",16,(16#32,37#10)),
+      D("\r\n",2,(2#11,2#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n",3,(3#11,3#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n",4,(4#11,4#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Login</title>\r\n<link href=\"",5,(5#11,5#258,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("  __UNKNOWN__  ",11,(11#33,11#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("/css/main.css\" rel=\"stylesheet\"\r\n	type=\"text/css\">\r\n",11,(11#11,11#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n	",13,(13#11,13#17,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n",14,(14#11,14#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n<script type=\"text/javascript\">\r\n	function checkErrCode(){\r\n		var errCode = ",15,(15#11,15#111,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("  __UNKNOWN__  ",18,(18#41,18#51,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D(";\r\n		if(errCode != null || errCode != \"\"){\r\n			switch (errCode) {\r\n			case 1:\r\n				alert(\"가입된 사용자ID가 아닙니다!\");\r\n				break;\r\n			case 2:\r\n				alert(\"비밀번호가 일치하지 않습니다!\");\r\n				break;\r\n			case 4:\r\n				alert(\"로그인후에 사용가능합니다.\");\r\n				break;\r\n			case 3:\r\n				alert(\"회원가입 처리가 완료되었습니다! 로그인 해 주세요!\");\r\n				location.href = \r\n					\"",18,(18#11,18#707,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("  __UNKNOWN__  ",33,(33#33,33#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("/login.do\";\r\n				break;\r\n			}\r\n		}\r\n	}\r\n</script>\r\n</head>\r\n<body onload=\"checkErrCode()\">\r\n	<div id=\"container\">\r\n\r\n		<h1>\r\n			",33,(33#11,33#257,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\"",2,(2#11,2#751,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",27,(27#33,27#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/index.html\">홈으로</a></li>\r\n			<li><a href=\"",27,(27#11,27#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",28,(28#33,28#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/board/list.do\">게시판</a></li>\r\n			<li><a href=\"",28,(28#11,28#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",29,(29#33,29#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\"",29,(29#11,29#87,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",30,(30#33,30#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\"",30,(30#11,30#295,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#33,33#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/init_db.do?id=",33,(33#11,33#32,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#40,33#49,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>",33,(33#11,33#125,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("\r\n		</h1>\r\n\r\n\r\n		<div id=\"content-container\">\r\n			<div id=\"content\">\r\n              ",44,(44#11,44#151,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n",1,(1#11,1#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/main.jsp")),
+      D("\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\r\n<html>\r\n<head>\r\n<title>로그인 페이지</title>\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\">\r\n</head>\r\n\r\n<body>\r\n   <img src=\"img/spring.jpg\" width=\"500\" height=\"400\">\r\n</body>\r\n</html>\r\n",2,(2#11,2#311,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/main.jsp")),
+      D("\r\n			</div>\r\n		    <div id=\"aside\">\r\n				",50,(50#11,50#113,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n				",53,(53#11,53#41,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n				<form action=\"login.do\" method=\"post\">\r\n					<fieldset>\r\n						<center>\r\n							<label for=\"userId\">메일주소 : </label> <input type=\"text\"\r\n								id=\"userId\" name=\"userId\" class=\"loginInput\" value=\"",54,(54#11,54#420,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("  __UNKNOWN__  ",59,(59#40,59#49,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\" />\r\n							<span class=\"error\">",59,(59#11,59#95,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("</span><br />\r\n							<label for=\"userPw\">비밀번호 : </label> <input type=\"password\"\r\n								id=\"userPw\" name=\"userPw\" class=\"loginInput\" /> <span\r\n								class=\"error\">",60,(60#11,60#345,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("</span><br />\r\n							<br /> <input type=\"submit\" value=\"로그인\" class=\"submitBt\" /> <input\r\n								type=\"button\" value=\"회원가입\" class=\"submitBt\"\r\n								onClick='window.open(\"member/join.do\",\"_blank\",\"width=400,height=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no\");' />\r\n						</center>\r\n					</fieldset>\r\n				</form>		    </div>\r\n			<div id=\"footer\">\r\n				",63,(63#11,63#713,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n\r\n</head>\r\n<body> \r\n		<p>		  \r\n                Copyright (C) 김영숙(yskim@openeg.co.kr), 2014\r\n		</p>\r\n</body>\r\n</html>",2,(2#11,2#419,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/footer.jsp")),
+      D("\r\n			</div>\r\n		</div>\r\n	</div>\r\n\r\n</body>\r\n</html>",71,(71#11,71#105,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/login.jsp"))
+   ]
+   }
+]

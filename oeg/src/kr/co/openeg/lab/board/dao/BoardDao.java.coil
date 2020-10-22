@@ -1,0 +1,195 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!10, "recommendcount");
+   (!9, "hitcount");
+   (!4, "type");
+   (!3, "idx");
+   (!2, "showArticleLimit");
+   (!1, "startArticleNum");
+   (!8, "comment");
+   (!7, "board");
+   (!6, "endArticleNum");
+   (!5, "keyword");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   CL([public],(kr.co.openeg.lab.board.dao,BoardDao),(java.lang,Object),[])
+   {
+
+   }
+   ,(8#8,50#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   CN([public],(kr.co.openeg.lab.board.dao,BoardDao),[],[],
+   {[
+      {RE0
+      ,(8#8,8#8)}
+      ]
+   ,(8#8,8#8)}
+   )
+   ,(8#8,8#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectBoardList"):class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),[(!1:int,(10#42,10#60)),(!2:int,(10#63,10#82))],[],
+   {[
+      {RE0
+      ,(10#9,10#84)}
+      ]
+   ,(10#9,10#84)}
+   )
+   ,(10#9,10#84)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectOneArticle"):class((kr.co.openeg.lab.board.model,BoardModel)),[(!3:int,(13#37,13#43))],[],
+   {[
+      {RE0
+      ,(13#9,13#45)}
+      ]
+   ,(13#9,13#45)}
+   )
+   ,(13#9,13#45)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectArticle"):class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),[(!4:string,(16#40,16#50)),(!5:string,(16#53,16#66)),(!1:int,(16#69,16#87)),(!6:int,(16#90,16#106))],[],
+   {[
+      {RE0
+      ,(16#9,16#108)}
+      ]
+   ,(16#9,16#108)}
+   )
+   ,(16#9,16#108)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectCommentList"):class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),[(!3:int,(19#51,19#57))],[],
+   {[
+      {RE0
+      ,(19#9,19#59)}
+      ]
+   ,(19#9,19#59)}
+   )
+   ,(19#9,19#59)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectOneComment"):class((kr.co.openeg.lab.board.model,BoardCommentModel)),[(!3:int,(22#44,22#50))],[],
+   {[
+      {RE0
+      ,(22#9,22#52)}
+      ]
+   ,(22#9,22#52)}
+   )
+   ,(22#9,22#52)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"updateArticle"):unit,[(!7:class((kr.co.openeg.lab.board.model,BoardModel)),(25#28,25#43))],[],
+   {[
+      {RE0
+      ,(25#9,25#45)}
+      ]
+   ,(25#9,25#45)}
+   )
+   ,(25#9,25#45)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"insertArticle"):unit,[(!7:class((kr.co.openeg.lab.board.model,BoardModel)),(28#28,28#43))],[],
+   {[
+      {RE0
+      ,(28#9,28#45)}
+      ]
+   ,(28#9,28#45)}
+   )
+   ,(28#9,28#45)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"insertComment"):unit,[(!8:class((kr.co.openeg.lab.board.model,BoardCommentModel)),(31#28,31#52))],[],
+   {[
+      {RE0
+      ,(31#9,31#54)}
+      ]
+   ,(31#9,31#54)}
+   )
+   ,(31#9,31#54)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"updateHitcount"):unit,[(!9:int,(34#29,34#40)),(!3:int,(34#43,34#49))],[],
+   {[
+      {RE0
+      ,(34#9,34#51)}
+      ]
+   ,(34#9,34#51)}
+   )
+   ,(34#9,34#51)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"updateRecommendCount"):unit,[(!10:int,(37#35,37#52)),(!3:int,(37#55,37#61))],[],
+   {[
+      {RE0
+      ,(37#9,37#63)}
+      ]
+   ,(37#9,37#63)}
+   )
+   ,(37#9,37#63)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectTotalNum"):int,[],[],
+   {[
+      {RE0
+      ,(40#9,40#29)}
+      ]
+   ,(40#9,40#29)}
+   )
+   ,(40#9,40#29)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"selectSearchTotalNum"):int,[(!4:string,(43#34,43#44)),(!5:string,(43#47,43#60))],[],
+   {[
+      {RE0
+      ,(43#9,43#62)}
+      ]
+   ,(43#9,43#62)}
+   )
+   ,(43#9,43#62)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"deleteComment"):unit,[(!3:int,(46#28,46#34))],[],
+   {[
+      {RE0
+      ,(46#9,46#36)}
+      ]
+   ,(46#9,46#36)}
+   )
+   ,(46#9,46#36)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   FN([package],((kr.co.openeg.lab.board.dao,BoardDao),"deleteArticle"):unit,[(!3:int,(49#28,49#34))],[],
+   {[
+      {RE0
+      ,(49#9,49#36)}
+      ]
+   ,(49#9,49#36)}
+   )
+   ,(49#9,49#36)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/dao/BoardDao.java",
+   [
+      S("// get all contents in JMBoard table\r\n",9),
+      S("// show detail about selected article\r\n",12),
+      S("// get search result list\r\n",15),
+      S("// get all comments\r\n",18),
+      S("// get a comment\r\n",21),
+      S("// modify(update) article\r\n",24),
+      S("// insert article data\r\n",27),
+      S("// insert comment data\r\n",30),
+      S("// update hitcount\r\n",33),
+      S("// update recommendcount\r\n",36),
+      S("// get contents count\r\n",39),
+      S("// get count of search results\r\n",42),
+      S("// delete a comment\r\n",45),
+      S("// delete a article\r\n",48)
+   ]
+   }
+]

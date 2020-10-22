@@ -1,0 +1,1048 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!121, " 정보를 삭제하였습니다."S);
+   (!120, "delete"S);
+   (!29, "java.lang.Runtime");
+   (!27, "#TmpAATDICF2");
+   (!28, "/bin/sh"S);
+   (!25, "#Tmp1");
+   (!26, "1"N);
+   (!23, "/c"S);
+   (!24, "s");
+   (!21, "#TmpAATDICF1");
+   (!22, "cmd.exe"S);
+   (!31, "EUC-KR"S);
+   (!30, "in");
+   (!128, "level");
+   (!129, "S"S);
+   (!126, "100"N);
+   (!127, "처리결과: "S);
+   (!124, " 사용자 등록을 완료하였습니다."S);
+   (!125, "사용자 등록 실패: "S);
+   (!122, "edit"S);
+   (!123, "result");
+   (!110, "등록되지 않은 사용자입니다. "S);
+   (!18, "os.name"S);
+   (!19, "cmd");
+   (!14, "file1.txt"S);
+   (!15, "process");
+   (!16, "osName");
+   (!17, "java.lang.System");
+   (!10, "data"S);
+   (!11, "type"S);
+   (!12, " "S);
+   (!13, "/"S);
+   (!20, "window"S);
+   (!119, " ]  사용자정보 업데이트를 완료하였습니다."S);
+   (!115, "userId가 입력되지 않았습니다."S);
+   (!116, "modify"S);
+   (!117, "사용자정보 조회부터 실행하세요"S);
+   (!118, "[ 사용자ID: "S);
+   (!111, "member"S);
+   (!112, "조회결과 [ 사용자ID: "S);
+   (!98, "size");
+   (!113, "  이름: "S);
+   (!99, "strings");
+   (!114, " ]"S);
+   (!45, "RSA 암호화 테스트."S);
+   (!46, "4"N);
+   (!43, "AES 복호화 테스트."S);
+   (!44, "3"N);
+   (!49, "BASE64 인코딩 테스트."S);
+   (!47, "RSA 복호화 테스트."S);
+   (!48, "잘못된 요청입니다."S);
+   (!108, ""S);
+   (!109, "this");
+   (!53, "HTML 인코딩 테스트."S);
+   (!52, "URL 디코딩 테스트."S);
+   (!51, "URL 인코딩 테스트."S);
+   (!50, "BASE64 디코딩 테스트."S);
+   (!102, "url");
+   (!103, "redirect 테스트 오류"S);
+   (!100, "hello"S);
+   (!101, "  int overflow test"S);
+   (!106, "action"S);
+   (!107, "view"S);
+   (!104, "m");
+   (!105, "action");
+   (!32, "실행결과: <br/>"S);
+   (!33, "true");
+   (!34, "<br/>"S);
+   (!35, "e");
+   (!36, "실행오류발생"S);
+   (!37, "type");
+   (!38, "kr.co.openeg.lab.test.util.TestUtil");
+   (!39, "0"N);
+   (!9, "data");
+   (!40, "SHA-256 테스트."S);
+   (!42, "2"N);
+   (!41, "AES 암호화 테스트."S);
+   (!4, "name");
+   (!3, "buffer");
+   (!2, "request");
+   (!1, "/test/test"S);
+   (!8, "session");
+   (!7, "util");
+   (!6, "실행결과: "S);
+   (!5, "name"S);
+   (!69, "id");
+   (!68, "ERROR"S);
+   (!67, "../domxss.jsp?message="S);
+   (!66, "response");
+   (!65, "&lt;script&gt;alert('xss');&lt;/script&gt;"S);
+   (!74, "MySQL 조회결과:    "S);
+   (!75, "MS SQL Server 조회결과:    "S);
+   (!72, "passwd"S);
+   (!73, "ID,PASSWD 조회 결과:   "S);
+   (!70, "id"S);
+   (!71, "passwd");
+   (!59, ">"S);
+   (!58, "&lt;"S);
+   (!55, "HTML 디코딩 테스트."S);
+   (!54, "5"N);
+   (!57, "<"S);
+   (!56, "정규식테스트  입력값: "S);
+   (!61, "map");
+   (!62, "1"S);
+   (!63, "<script>alert('xss');</script>"S);
+   (!64, "2"S);
+   (!60, "&gt;"S);
+   (!89, "  쿠키값 추가"S);
+   (!88, "openeg="S);
+   (!87, "365"N);
+   (!92, "i");
+   (!93, "="S);
+   (!90, "cookies");
+   (!91, "수신된 쿠키<br/>"S);
+   (!96, "HTTP 응답 분할 테스트: Cookie 값 확인"S);
+   (!97, "수신데이터: "S);
+   (!94, "요청오류"S);
+   (!95, "수신된 데이터: "S);
+   (!77, "admin"S);
+   (!76, "userId"S);
+   (!79, "작업권한이 없습니다."S);
+   (!78, "DB 초기화 완료"S);
+   (!130, "G"S);
+   (!131, "관리자 권한으로 작업을 수행합니다"S);
+   (!132, "일반사용자 권한으로 작업을 수행합니다"S);
+   (!134, "512"N);
+   (!133, "cbuf");
+   (!136, "에러발생으로 요청을 처리할 수 없습니다. "S);
+   (!135, "fr");
+   (!80, "/openeg/login.do"S);
+   (!81, "인증테스트"S);
+   (!82, "java.lang.Integer");
+   (!83, "c");
+   (!84, "openeg"S);
+   (!85, "60"N);
+   (!86, "24"N);
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   CL([public],(kr.co.openeg.lab.test.controller,TestController),(java.lang,Object),[])
+   {
+      ([private],"service":class((kr.co.openeg.lab.member.service,MemberService)),(32#31,32#37))
+   }
+   ,(29#8,439#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   CN([public],(kr.co.openeg.lab.test.controller,TestController),[],[],
+   {[
+      {RE0
+      ,(29#8,29#8)}
+      ]
+   ,(29#8,29#8)}
+   )
+   ,(29#8,29#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"test"):string,[],[],
+   {[
+      {RE({!1,string,(37#24,37#35)})
+      ,(37#17,37#36)};
+      {RE0
+      ,(35#16,38#9)}
+      ]
+   ,(35#16,38#9)}
+   )
+   ,(35#16,38#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testXpathInjection"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(42#42,42#67))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(43#37,43#54)})
+      ,(43#30,43#54)};
+      {VD(!4,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!5,string,(44#50,44#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(44#49,44#56)}),class((,UnknownType)),(44#49,44#56)})
+      ,(44#24,44#56)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!6,string,(45#31,45#38)}],{V(!3),class((java.lang,StringBuffer)),(45#30,45#39)})
+      ,(45#17,45#39)};
+      {VD(!7,class((kr.co.openeg.lab.test.util,TestUtil)),{NO(class((kr.co.openeg.lab.test.util,TestUtil)),[],[]),class((kr.co.openeg.lab.test.util,TestUtil)),(46#31,46#44)})
+      ,(46#26,46#44)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((kr.co.openeg.lab.test.util,TestUtil),"readXML"),[string],[{V(!4),string,(47#40,47#43)}],{V(!7),class((kr.co.openeg.lab.test.util,TestUtil)),(47#39,47#44)}),string,(47#39,47#44)}],{V(!3),class((java.lang,StringBuffer)),(47#26,47#45)})
+      ,(47#13,47#45)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(48#31,48#32)}),string,(48#31,48#32)})
+      ,(48#9,48#33)};
+      {RE0
+      ,(42#16,50#9)}
+      ]
+   ,(42#16,50#9)}
+   )
+   ,(42#16,50#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testCommandInjection"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(54#44,54#69)),(!8:class((javax.servlet.http,HttpSession)),(54#72,54#90))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(55#37,55#54)})
+      ,(55#30,55#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(56#50,56#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(56#49,56#56)}),class((,UnknownType)),(56#49,56#56)})
+      ,(56#24,56#56)};
+      {IF0({BO(&&,{BO(!=,{V(!9),string,(59#18,59#21)},{NIL,id,(59#26,59#29)}),bool,(59#18,59#21)},{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{!11,string,(59#47,59#52)}],{V(!9),string,(59#46,59#53)}),bool,(59#46,59#53)}),bool,(59#18,59#21)},
+         {[
+            {({LL(!9),string,(60#25,60#28)},{BO(+,{BO(+,{BO(+,{V(!9),string,(60#30,60#33)},{!12,string,(60#35,60#37)}),string,(60#30,60#33)},{FC(((,UnknownType),"getRealPath"),[string],[{!13,string,(61#82,61#84)}],{FC(((,UnknownType),"getServletContext"),[],[],{FC(((javax.servlet.http,HttpServletRequest),"getSession"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(61#47,61#48)}),class((,UnknownType)),(61#47,61#48)}),class((,UnknownType)),(61#67,61#68)}),class((,UnknownType)),(61#81,61#85)}),string,(60#30,60#33)},{!14,string,(62#29,62#39)}),string,(60#30,60#33)})
+            ,(60#25,60#28)};
+            {PC(((java.io,PrintStream),"println"),[string],[{V(!9),string,(63#44,63#47)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(63#43,63#48)})
+            ,(63#25,63#48)}
+            ]
+         ,(59#56,64#13)})
+      ,(59#13,64#13)};
+      {VD(!15,class((java.lang,Process)))
+      ,(66#25,66#31)};
+      {VD(!16,string,{SC(((java.lang,System),"getProperty"),[string],[{!18,string,(67#52,67#60)}]),string,(67#51,67#61)})
+      ,(67#24,67#61)};
+      {VD(!19,arr(string))
+      ,(68#26,68#28)};
+      {IF({FC(((java.lang,String),"startsWith"),[string],[{!20,string,(70#52,70#59)}],{FC(((java.lang,String),"toLowerCase"),[],[],{V(!16),string,(70#38,70#39)}),string,(70#38,70#39)}),bool,(70#51,70#60)},
+         {[
+            {VD(!21,arr(string),([{"0"N,int,(!)}],[{!22,string,(71#42,71#50)},{!23,string,(71#52,71#55)},{V(!9),string,(71#57,71#60)}]))
+            ,(!)};
+            {({LL(!19),arr(string),(71#21,71#23)},{V(!21),arr(string),(!)})
+            ,(71#21,71#23)};
+            {FL(L5,
+               {[
+                  {VD(!24,string,{AA({V(!19),arr(string),(72#37,72#39)},[{V(!25),int,(72#33,72#33)}]),string,(72#37,72#39)})
+                  ,(72#33,72#33)}
+               ]
+               ,(72#21,73#47)},{V(!19),arr(string),(72#37,72#39)},
+               {[
+                  {({LL(!25),int,(72#33,72#33)},{BO(+,{V(!25),int,(72#33,72#33)},{!26,int,(72#37,72#39)}),int,(72#33,72#33)})
+                  ,(72#33,72#33)}
+               ]
+               ,(72#21,73#47)},
+               {[
+                  {VD(!24,string,{AA({V(!19),arr(string),(72#37,72#39)},[{V(!25),int,(72#33,72#33)}]),string,(72#37,72#39)})
+                  ,(72#33,72#33)};
+                  {PC(((java.io,PrintStream),"print"),[string],[{BO(+,{V(!24),string,(73#41,73#41)},{!12,string,(73#43,73#45)}),string,(73#41,73#41)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(73#40,73#46)})
+                  ,(73#24,73#46)}
+                  ]
+               ,(?)})
+            ,(72#21,73#47)}
+            ]
+         ,(70#63,74#17)},
+         {[
+            {VD(!27,arr(string),([{"0"N,int,(!)}],[{!28,string,(75#42,75#50)},{V(!9),string,(75#52,75#55)}]))
+            ,(!)};
+            {({LL(!19),arr(string),(75#21,75#23)},{V(!27),arr(string),(!)})
+            ,(75#21,75#23)}
+            ]
+         ,(74#24,76#17)})
+      ,(70#17,76#17)};
+      {TR(
+         {[
+            {({LL(!15),class((java.lang,Process)),(79#25,79#31)},{FC(((java.lang,Runtime),"exec"),[arr(string)],[{V(!19),arr(string),(79#61,79#63)}],{SC(((java.lang,Runtime),"getRuntime"),[],[]),class((java.lang,Runtime)),(79#53,79#54)}),class((java.lang,Process)),(79#60,79#64)})
+            ,(79#25,79#31)};
+            {VD(!30,class((java.io,InputStream)),{FC(((java.lang,Process),"getInputStream"),[],[],{V(!15),class((java.lang,Process)),(80#64,80#65)}),class((java.io,InputStream)),(80#64,80#65)})
+            ,(80#37,80#65)};
+            {VD(!24,class((java.util,Scanner)),{NO(class((java.util,Scanner)),[class((java.io,InputStream)),string],[{V(!30),class((java.io,InputStream)),(81#49,81#50)},{!31,string,(81#52,81#59)}]),class((java.util,Scanner)),(81#37,81#60)})
+            ,(81#33,81#60)};
+            {PC(((java.lang,StringBuffer),"append"),[string],[{!32,string,(82#39,82#51)}],{V(!3),class((java.lang,StringBuffer)),(82#38,82#52)})
+            ,(82#25,82#52)};
+            {WL(L6,{BO(==,{FC(((java.util,Scanner),"hasNextLine"),[],[],{V(!24),class((java.util,Scanner)),(83#44,83#45)}),bool,(83#44,83#45)},{!33,bool,(83#50,83#53)}),bool,(83#44,83#45)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{FC(((java.util,Scanner),"nextLine"),[],[],{V(!24),class((java.util,Scanner)),(84#53,84#54)}),string,(84#53,84#54)},{!34,string,(84#56,84#62)}),string,(84#53,84#54)}],{V(!3),class((java.lang,StringBuffer)),(84#42,84#63)})
+                  ,(84#29,84#63)}
+                  ]
+               ,(83#56,85#25)})
+            ,(83#25,85#25)}
+            ]
+         ,(78#17,86#17)}
+         ,[
+            {((java.io,IOException),{V(!35),class((java.io,IOException)),(86#26,86#38)},
+            {[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!36,string,(88#39,88#46)}],{V(!3),class((java.lang,StringBuffer)),(88#38,88#47)})
+               ,(88#25,88#47)};
+               {PC(((java.lang,Throwable),"printStackTrace"),[],[],{V(!35),class((java.io,IOException)),(89#42,89#43)})
+               ,(89#25,89#43)}
+               ]
+            ,(86#19,90#17)}),(86#19,90#17)}],
+         {;
+         ,(78#17,86#17)})
+      ,(78#17,86#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(91#47,91#48)}),string,(91#47,91#48)})
+      ,(91#25,91#49)};
+      {RE0
+      ,(54#16,93#9)}
+      ]
+   ,(54#16,93#9)}
+   )
+   ,(54#16,93#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testEncryption"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(97#38,97#63))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(98#37,98#54)})
+      ,(98#30,98#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(99#50,99#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(99#49,99#56)}),class((,UnknownType)),(99#49,99#56)})
+      ,(99#24,99#56)};
+      {VD(!37,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!11,string,(100#50,100#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(100#49,100#56)}),class((,UnknownType)),(100#49,100#56)})
+      ,(100#24,100#56)};
+      {SW({SC(((kr.co.openeg.lab.test.util,TestUtil),"getInt"),[string],[{V(!37),string,(101#42,101#45)}]),int,(101#41,101#46)},
+         [
+         ({!39,int,(102#22,102#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!40,string,(103#39,103#52)}],{V(!3),class((java.lang,StringBuffer)),(103#38,103#53)})
+               ,(103#25,103#53)};
+               {BR @ 
+               ,(103#56,103#61)}
+               ],(102#17,103#61)}),
+         ({!26,int,(104#22,104#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!41,string,(105#39,105#52)}],{V(!3),class((java.lang,StringBuffer)),(105#38,105#53)})
+               ,(105#25,105#53)};
+               {BR @ 
+               ,(105#56,105#61)}
+               ],(104#17,105#61)}),
+         ({!42,int,(106#22,106#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!43,string,(107#39,107#52)}],{V(!3),class((java.lang,StringBuffer)),(107#38,107#53)})
+               ,(107#25,107#53)};
+               {BR @ 
+               ,(107#56,107#61)}
+               ],(106#17,107#61)}),
+         ({!44,int,(108#22,108#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!45,string,(109#39,109#52)}],{V(!3),class((java.lang,StringBuffer)),(109#38,109#53)})
+               ,(109#25,109#53)};
+               {BR @ 
+               ,(109#56,109#61)}
+               ],(108#17,109#61)}),
+         ({!46,int,(110#22,110#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!47,string,(111#39,111#52)}],{V(!3),class((java.lang,StringBuffer)),(111#38,111#53)})
+               ,(111#25,111#53)};
+               {BR @ 
+               ,(111#56,111#61)}
+               ],(110#17,111#61)}),
+         (,{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!48,string,(113#31,113#42)}],{V(!3),class((java.lang,StringBuffer)),(113#30,113#43)})
+               ,(113#17,113#43)}
+               ],(112#13,113#44)})
+         ])
+      ,(101#17,114#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(116#31,116#32)}),string,(116#31,116#32)})
+      ,(116#9,116#33)};
+      {RE0
+      ,(97#16,118#9)}
+      ]
+   ,(97#16,118#9)}
+   )
+   ,(97#16,118#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testEncoding"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(122#36,122#61))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(123#37,123#54)})
+      ,(123#30,123#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(124#50,124#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(124#49,124#56)}),class((,UnknownType)),(124#49,124#56)})
+      ,(124#24,124#56)};
+      {VD(!37,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!11,string,(125#50,125#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(125#49,125#56)}),class((,UnknownType)),(125#49,125#56)})
+      ,(125#24,125#56)};
+      {SW({SC(((kr.co.openeg.lab.test.util,TestUtil),"getInt"),[string],[{V(!37),string,(126#42,126#45)}]),int,(126#41,126#46)},
+         [
+         ({!39,int,(127#22,127#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!49,string,(128#39,128#55)}],{V(!3),class((java.lang,StringBuffer)),(128#38,128#56)})
+               ,(128#25,128#56)};
+               {BR @ 
+               ,(128#59,128#64)}
+               ],(127#17,128#64)}),
+         ({!26,int,(129#22,129#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!50,string,(130#39,130#55)}],{V(!3),class((java.lang,StringBuffer)),(130#38,130#56)})
+               ,(130#25,130#56)};
+               {BR @ 
+               ,(130#59,130#64)}
+               ],(129#17,130#64)}),
+         ({!42,int,(131#22,131#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!51,string,(132#39,132#52)}],{V(!3),class((java.lang,StringBuffer)),(132#38,132#53)})
+               ,(132#25,132#53)};
+               {BR @ 
+               ,(132#56,132#61)}
+               ],(131#17,132#61)}),
+         ({!44,int,(133#22,133#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!52,string,(134#39,134#52)}],{V(!3),class((java.lang,StringBuffer)),(134#38,134#53)})
+               ,(134#25,134#53)};
+               {BR @ 
+               ,(134#56,134#61)}
+               ],(133#17,134#61)}),
+         ({!46,int,(135#22,135#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!53,string,(136#39,136#53)}],{V(!3),class((java.lang,StringBuffer)),(136#38,136#54)})
+               ,(136#25,136#54)};
+               {BR @ 
+               ,(136#57,136#62)}
+               ],(135#17,136#62)}),
+         ({!54,int,(137#22,137#22)},{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!55,string,(138#39,138#53)}],{V(!3),class((java.lang,StringBuffer)),(138#38,138#54)})
+               ,(138#25,138#54)};
+               {BR @ 
+               ,(138#57,138#62)}
+               ],(137#17,138#62)}),
+         (,{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!48,string,(140#31,140#42)}],{V(!3),class((java.lang,StringBuffer)),(140#30,140#43)})
+               ,(140#17,140#43)}
+               ],(139#13,140#44)})
+         ])
+      ,(126#17,141#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(142#39,142#40)}),string,(142#39,142#40)})
+      ,(142#17,142#41)};
+      {RE0
+      ,(122#16,143#9)}
+      ]
+   ,(122#16,143#9)}
+   )
+   ,(122#16,143#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testRegEx"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(147#33,147#58))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(148#37,148#54)})
+      ,(148#30,148#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(149#50,149#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(149#49,149#56)}),class((,UnknownType)),(149#49,149#56)})
+      ,(149#24,149#56)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{!56,string,(150#31,150#45)},{V(!9),string,(150#47,150#50)}),string,(150#31,150#45)}],{V(!3),class((java.lang,StringBuffer)),(150#30,150#51)})
+      ,(150#17,150#51)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(151#31,151#32)}),string,(151#31,151#32)})
+      ,(151#9,151#33)};
+      {RE0
+      ,(147#16,153#9)}
+      ]
+   ,(147#16,153#9)}
+   )
+   ,(147#16,153#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testXss"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(157#31,157#56))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(158#37,158#54)})
+      ,(158#30,158#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(159#50,159#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(159#49,159#56)}),class((,UnknownType)),(159#49,159#56)})
+      ,(159#24,159#56)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((java.lang,String),"replaceAll"),[string,string],[{!59,string,(160#71,160#73)},{!60,string,(160#76,160#81)}],{FC(((java.lang,String),"replaceAll"),[string,string],[{!57,string,(160#47,160#49)},{!58,string,(160#52,160#57)}],{V(!9),string,(160#46,160#58)}),string,(160#46,160#58)}),string,(160#70,160#82)}],{V(!3),class((java.lang,StringBuffer)),(160#30,160#83)})
+      ,(160#17,160#83)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(162#31,162#32)}),string,(162#31,162#32)})
+      ,(162#9,162#33)};
+      {RE0
+      ,(157#16,163#9)}
+      ]
+   ,(157#16,163#9)}
+   )
+   ,(157#16,163#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testXssB"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(167#32,167#57))],[],
+   {[
+      {VD(!61,class((java.util,HashMap,[string,string])),{NO(class((java.util,HashMap,[string,string])),[],[]),class((java.util,HashMap,[string,string])),(168#38,168#65)})
+      ,(168#32,168#65)};
+      {PC(((java.util,HashMap,[string,string]),"put"),[`K,`V],[{!62,string,(169#17,169#19)},{!63,string,(169#22,169#53)}],{V(!61),class((java.util,HashMap,[string,string])),(169#16,169#54)})
+      ,(169#9,169#54)};
+      {PC(((java.util,HashMap,[string,string]),"put"),[`K,`V],[{!64,string,(170#17,170#19)},{!65,string,(170#22,170#65)}],{V(!61),class((java.util,HashMap,[string,string])),(170#16,170#66)})
+      ,(170#9,170#66)};
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(171#37,171#54)})
+      ,(171#30,171#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(172#50,172#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(172#49,172#56)}),class((,UnknownType)),(172#49,172#56)})
+      ,(172#24,172#56)};
+      {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!9),string,(173#32,173#35)}],{!62,string,(173#21,173#23)}),bool,(173#31,173#36)},
+         {[
+            {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((java.util,HashMap,[string,string]),"get"),[class((java.lang,Object))],[{!62,string,(174#47,174#49)}],{V(!61),class((java.util,HashMap,[string,string])),(174#46,174#50)}),string,(174#46,174#50)}],{V(!3),class((java.lang,StringBuffer)),(174#38,174#51)})
+            ,(174#25,174#51)}
+            ]
+         ,(173#39,175#17)},
+         {[
+            {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!9),string,(175#39,175#42)}],{!64,string,(175#28,175#30)}),bool,(175#38,175#43)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((java.util,HashMap,[string,string]),"get"),[class((java.lang,Object))],[{!64,string,(176#47,176#49)}],{V(!61),class((java.util,HashMap,[string,string])),(176#46,176#50)}),string,(176#46,176#50)}],{V(!3),class((java.lang,StringBuffer)),(176#38,176#51)})
+                  ,(176#25,176#51)}
+                  ]
+               ,(175#46,177#17)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!48,string,(178#39,178#50)}],{V(!3),class((java.lang,StringBuffer)),(178#38,178#51)})
+                  ,(178#25,178#51)}
+                  ]
+               ,(177#24,179#17)})
+            ,(175#23,179#17)}
+            ]
+         ,(175#23,179#17)})
+      ,(173#17,179#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(180#31,180#32)}),string,(180#31,180#32)})
+      ,(180#9,180#33)};
+      {RE0
+      ,(167#16,181#9)}
+      ]
+   ,(167#16,181#9)}
+   )
+   ,(167#16,181#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testXssC"):unit,[(!2:class((javax.servlet.http,HttpServletRequest)),(184#30,184#55)),(!66:class((javax.servlet.http,HttpServletResponse)),(184#58,184#85))],[],
+   {[
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(185#50,185#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(185#49,185#56)}),class((,UnknownType)),(185#49,185#56)})
+      ,(185#24,185#56)};
+      {TR(
+         {[
+            {PC(((javax.servlet.http,HttpServletResponse),"sendRedirect"),[string],[{BO(+,{!67,string,(187#40,187#63)},{V(!9),string,(187#65,187#68)}),string,(187#40,187#63)}],{V(!66),class((javax.servlet.http,HttpServletResponse)),(187#39,187#69)})
+            ,(187#18,187#69)}
+            ]
+         ,(186#9,188#9)}
+         ,[
+            {((java.io,IOException),{V(!35),class((java.io,IOException)),(188#18,188#30)},
+            {[
+               {PC(((java.io,PrintStream),"println"),[string],[{!68,string,(190#30,190#36)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(190#29,190#37)})
+               ,(190#11,190#37)}
+               ]
+            ,(188#11,191#9)}),(188#11,191#9)}],
+         {;
+         ,(186#9,188#9)})
+      ,(186#9,188#9)};
+      {RE0
+      ,(184#16,192#9)}
+      ]
+   ,(184#16,192#9)}
+   )
+   ,(184#16,192#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testSqlInjection"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(196#40,196#65))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(197#37,197#54)})
+      ,(197#30,197#54)};
+      {VD(!69,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!70,string,(198#48,198#51)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(198#47,198#52)}),class((,UnknownType)),(198#47,198#52)})
+      ,(198#24,198#52)};
+      {VD(!71,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!72,string,(199#52,199#59)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(199#51,199#60)}),class((,UnknownType)),(199#51,199#60)})
+      ,(199#24,199#60)};
+      {VD(!7,class((kr.co.openeg.lab.test.util,TestUtil)),{NO(class((kr.co.openeg.lab.test.util,TestUtil)),[],[]),class((kr.co.openeg.lab.test.util,TestUtil)),(200#31,200#44)})
+      ,(200#26,200#44)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!73,string,(201#31,201#51)}],{V(!3),class((java.lang,StringBuffer)),(201#30,201#53)})
+      ,(201#17,201#53)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((kr.co.openeg.lab.test.util,TestUtil),"readDB"),[string,string],[{V(!69),string,(202#43,202#44)},{V(!71),string,(202#47,202#52)}],{V(!7),class((kr.co.openeg.lab.test.util,TestUtil)),(202#42,202#53)}),string,(202#42,202#53)}],{V(!3),class((java.lang,StringBuffer)),(202#30,202#54)})
+      ,(202#17,202#54)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(203#31,203#32)}),string,(203#31,203#32)})
+      ,(203#9,203#33)};
+      {RE0
+      ,(196#16,205#9)}
+      ]
+   ,(196#16,205#9)}
+   )
+   ,(196#16,205#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testSqlInjectionB"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(209#41,209#66))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(210#37,210#54)})
+      ,(210#30,210#54)};
+      {VD(!69,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!70,string,(211#48,211#51)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(211#47,211#52)}),class((,UnknownType)),(211#47,211#52)})
+      ,(211#24,211#52)};
+      {VD(!7,class((kr.co.openeg.lab.test.util,TestUtil)),{NO(class((kr.co.openeg.lab.test.util,TestUtil)),[],[]),class((kr.co.openeg.lab.test.util,TestUtil)),(212#31,212#44)})
+      ,(212#26,212#44)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!74,string,(213#31,213#47)}],{V(!3),class((java.lang,StringBuffer)),(213#30,213#49)})
+      ,(213#17,213#49)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((kr.co.openeg.lab.test.util,TestUtil),"readDB2"),[string],[{V(!69),string,(214#44,214#45)}],{V(!7),class((kr.co.openeg.lab.test.util,TestUtil)),(214#43,214#46)}),string,(214#43,214#46)}],{V(!3),class((java.lang,StringBuffer)),(214#30,214#47)})
+      ,(214#17,214#47)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(215#31,215#32)}),string,(215#31,215#32)})
+      ,(215#9,215#33)};
+      {RE0
+      ,(209#16,217#9)}
+      ]
+   ,(209#16,217#9)}
+   )
+   ,(209#16,217#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testSqlInjectionB2"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(221#42,221#67))],[(java.lang,Exception)],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(222#37,222#54)})
+      ,(222#30,222#54)};
+      {VD(!69,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!70,string,(223#48,223#51)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(223#47,223#52)}),class((,UnknownType)),(223#47,223#52)})
+      ,(223#24,223#52)};
+      {VD(!7,class((kr.co.openeg.lab.test.util,TestUtil)),{NO(class((kr.co.openeg.lab.test.util,TestUtil)),[],[]),class((kr.co.openeg.lab.test.util,TestUtil)),(224#31,224#44)})
+      ,(224#26,224#44)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!75,string,(225#31,225#55)}],{V(!3),class((java.lang,StringBuffer)),(225#30,225#57)})
+      ,(225#17,225#57)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{FC(((kr.co.openeg.lab.test.util,TestUtil),"readDB3"),[string],[{V(!69),string,(226#44,226#45)}],{V(!7),class((kr.co.openeg.lab.test.util,TestUtil)),(226#43,226#46)}),string,(226#43,226#46)}],{V(!3),class((java.lang,StringBuffer)),(226#30,226#47)})
+      ,(226#17,226#47)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(227#31,227#32)}),string,(227#31,227#32)})
+      ,(227#9,227#33)};
+      {RE0
+      ,(221#16,229#9)}
+      ]
+   ,(221#16,229#9)}
+   )
+   ,(221#16,229#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"initDB"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(233#30,233#55)),(!66:class((javax.servlet.http,HttpServletResponse)),(233#58,233#85))],[(java.lang,Exception)],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(234#37,234#54)})
+      ,(234#30,234#54)};
+      {VD(!69,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!70,string,(235#50,235#53)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(235#49,235#54)}),class((,UnknownType)),(235#49,235#54)})
+      ,(235#24,235#54)};
+      {IF({BO(&&,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((,UnknownType),"getAttribute"),[string],[{!76,string,(236#66,236#73)}],{FC(((javax.servlet.http,HttpServletRequest),"getSession"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(236#50,236#51)}),class((,UnknownType)),(236#50,236#51)}),class((,UnknownType)),(236#65,236#74)}],{V(!69),string,(236#31,236#75)}),bool,(236#31,236#75)},{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!69),string,(236#95,236#96)}],{!77,string,(236#80,236#86)}),bool,(236#94,236#97)}),bool,(236#31,236#75)},
+         {[
+            {VD(!7,class((kr.co.openeg.lab.test.util,DBinit)),{NO(class((kr.co.openeg.lab.test.util,DBinit)),[],[]),class((kr.co.openeg.lab.test.util,DBinit)),(237#34,237#45)})
+            ,(237#29,237#45)};
+            {PC(((kr.co.openeg.lab.test.util,DBinit),"initMySQLDB"),[],[],{V(!7),class((kr.co.openeg.lab.test.util,DBinit)),(239#38,239#39)})
+            ,(239#22,239#39)};
+            {PC(((java.lang,StringBuffer),"append"),[string],[{!78,string,(240#36,240#46)}],{V(!3),class((java.lang,StringBuffer)),(240#35,240#47)})
+            ,(240#22,240#47)}
+            ]
+         ,(236#100,241#17)},
+         {[
+            {PC(((java.lang,StringBuffer),"append"),[string],[{!79,string,(242#39,242#51)}],{V(!3),class((java.lang,StringBuffer)),(242#38,242#52)})
+            ,(242#25,242#52)}
+            ]
+         ,(241#24,243#17)})
+      ,(236#17,243#17)};
+      {PC(((,UnknownType),"invalidate"),[],[],{FC(((javax.servlet.http,HttpServletRequest),"getSession"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(244#35,244#36)}),class((,UnknownType)),(244#35,244#36)})
+      ,(244#17,244#49)};
+      {PC(((javax.servlet.http,HttpServletResponse),"sendRedirect"),[string],[{!80,string,(245#39,245#56)}],{V(!66),class((javax.servlet.http,HttpServletResponse)),(245#38,245#57)})
+      ,(245#17,245#57)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(246#31,246#32)}),string,(246#31,246#32)})
+      ,(246#9,246#33)};
+      {RE0
+      ,(233#16,248#9)}
+      ]
+   ,(233#16,248#9)}
+   )
+   ,(233#16,248#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testAuthenticator"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(252#41,252#66)),(!66:class((javax.servlet.http,HttpServletResponse)),(253#25,253#52)),(!8:class((javax.servlet.http,HttpSession)),(253#55,253#73))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(254#37,254#54)})
+      ,(254#30,254#54)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!81,string,(255#31,255#37)}],{V(!3),class((java.lang,StringBuffer)),(255#30,255#38)})
+      ,(255#17,255#38)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(256#31,256#32)}),string,(256#31,256#32)})
+      ,(256#9,256#33)};
+      {RE0
+      ,(252#16,258#9)}
+      ]
+   ,(252#16,258#9)}
+   )
+   ,(252#16,258#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testSecureCookie"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(262#40,262#65)),(!66:class((javax.servlet.http,HttpServletResponse)),(262#68,262#95))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(263#37,263#54)})
+      ,(263#30,263#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(264#50,264#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(264#49,264#56)}),class((,UnknownType)),(264#49,264#56)})
+      ,(264#24,264#56)};
+      {VD(!37,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!11,string,(265#50,265#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(265#49,265#56)}),class((,UnknownType)),(265#49,265#56)})
+      ,(265#24,265#56)};
+      {SW({SC(((java.lang,Integer),"parseInt"),[string],[{V(!37),string,(266#42,266#45)}]),int,(266#41,266#46)},
+         [
+         ({!39,int,(267#22,267#22)},{[
+               {VD(!83,class((javax.servlet.http,Cookie)),{NO(class((javax.servlet.http,Cookie)),[string,string],[{!84,string,(268#45,268#52)},{V(!9),string,(268#54,268#57)}]),class((javax.servlet.http,Cookie)),(268#34,268#58)})
+               ,(268#32,268#58)};
+               {PC(((javax.servlet.http,Cookie),"setMaxAge"),[int],[{BO(*,{BO(*,{BO(*,{!85,int,(269#37,269#38)},{!85,int,(269#40,269#41)}),int,(269#37,269#38)},{!86,int,(269#43,269#44)}),int,(269#37,269#38)},{!87,int,(269#46,269#48)}),int,(269#37,269#38)}],{V(!83),class((javax.servlet.http,Cookie)),(269#36,269#49)})
+               ,(269#25,269#49)};
+               {PC(((javax.servlet.http,Cookie),"setPath"),[string],[{!13,string,(270#35,270#37)}],{V(!83),class((javax.servlet.http,Cookie)),(270#34,270#38)})
+               ,(270#25,270#38)};
+               {PC(((javax.servlet.http,HttpServletResponse),"addCookie"),[class((javax.servlet.http,Cookie))],[{V(!83),class((javax.servlet.http,Cookie)),(271#44,271#44)}],{V(!66),class((javax.servlet.http,HttpServletResponse)),(271#43,271#45)})
+               ,(271#25,271#45)};
+               {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{!88,string,(272#39,272#47)},{V(!9),string,(272#49,272#52)}),string,(272#39,272#47)},{!89,string,(272#55,272#64)}),string,(272#39,272#47)}],{V(!3),class((java.lang,StringBuffer)),(272#38,272#65)})
+               ,(272#25,272#65)};
+               {BR @ 
+               ,(273#25,273#30)}
+               ],(267#17,273#30)}),
+         ({!26,int,(274#22,274#22)},{[
+               {VD(!90,arr(class((javax.servlet.http,Cookie))),{FC(((javax.servlet.http,HttpServletRequest),"getCookies"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(275#62,275#63)}),class((,UnknownType)),(275#62,275#63)})
+               ,(275#34,275#63)};
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!91,string,(276#39,276#51)}],{V(!3),class((java.lang,StringBuffer)),(276#38,276#52)})
+               ,(276#25,276#52)};
+               {FL(L7,
+                  {[
+                     {VD(!92,int,{!39,int,(277#38,277#38)})
+                     ,(277#34,277#38)}
+                  ]
+                  ,(277#25,280#25)},{BO(<,{V(!92),int,(277#41,277#41)},{OA({V(!90),arr(class((javax.servlet.http,Cookie))),(277#45,277#58)},"length"),int,(277#45,277#58)}),bool,(277#41,277#41)},
+                  {[
+                     {({LL(!92),int,(277#61,277#61)},{BO(+,{V(!92),int,(277#61,277#61)},{!26,int,(277#61,277#61)}),int,(277#61,277#61)})
+                     ,(277#61,277#61)}
+                  ]
+                  ,(277#25,280#25)},
+                  {[
+                     {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{FC(((javax.servlet.http,Cookie),"getName"),[],[],{AA({V(!90),arr(class((javax.servlet.http,Cookie))),(278#50,278#52)},[{V(!92),int,(278#51,278#51)}]),class((javax.servlet.http,Cookie)),(278#50,278#52)}),class((,UnknownType)),(278#61,278#62)},{!93,string,(278#65,278#67)}),string,(278#61,278#62)}],{V(!3),class((java.lang,StringBuffer)),(278#42,278#68)})
+                     ,(278#29,278#68)};
+                     {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{FC(((javax.servlet.http,Cookie),"getValue"),[],[],{AA({V(!90),arr(class((javax.servlet.http,Cookie))),(279#50,279#52)},[{V(!92),int,(279#51,279#51)}]),class((javax.servlet.http,Cookie)),(279#50,279#52)}),class((,UnknownType)),(279#62,279#63)},{!34,string,(279#67,279#73)}),string,(279#62,279#63)}],{V(!3),class((java.lang,StringBuffer)),(279#42,279#74)})
+                     ,(279#29,279#74)}
+                     ]
+                  ,(277#66,280#25)})
+               ,(277#25,280#25)};
+               {BR @ 
+               ,(281#25,281#30)}
+               ],(274#17,281#30)}),
+         (,{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!94,string,(283#39,283#44)}],{V(!3),class((java.lang,StringBuffer)),(283#38,283#45)})
+               ,(283#25,283#45)};
+               {BR @ 
+               ,(284#25,284#30)}
+               ],(282#17,284#30)})
+         ])
+      ,(266#17,285#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(287#31,287#32)}),string,(287#31,287#32)})
+      ,(287#9,287#33)};
+      {RE0
+      ,(262#16,288#9)}
+      ]
+   ,(262#16,288#9)}
+   )
+   ,(262#16,288#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testHttpSplit"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(293#37,293#62)),(!66:class((javax.servlet.http,HttpServletResponse)),(293#65,293#92))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(294#37,294#54)})
+      ,(294#30,294#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(295#50,295#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(295#49,295#56)}),class((,UnknownType)),(295#49,295#56)})
+      ,(295#24,295#56)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!95,string,(296#36,296#46)},{V(!9),string,(296#48,296#51)}),string,(296#36,296#46)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(296#35,296#52)})
+      ,(296#17,296#52)};
+      {PC(((javax.servlet.http,HttpServletResponse),"setHeader"),[string,string],[{!84,string,(297#36,297#43)},{V(!9),string,(297#46,297#49)}],{V(!66),class((javax.servlet.http,HttpServletResponse)),(297#35,297#50)})
+      ,(297#17,297#50)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{!96,string,(300#31,300#59)}],{V(!3),class((java.lang,StringBuffer)),(300#30,300#60)})
+      ,(300#17,300#60)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(301#35,301#36)}),string,(301#35,301#36)})
+      ,(301#13,301#37)};
+      {RE0
+      ,(293#16,302#9)}
+      ]
+   ,(293#16,302#9)}
+   )
+   ,(293#16,302#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testIntOverflow"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(306#39,306#64)),(!66:class((javax.servlet.http,HttpServletResponse)),(306#67,306#94))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(307#37,307#54)})
+      ,(307#30,307#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(308#50,308#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(308#49,308#56)}),class((,UnknownType)),(308#49,308#56)})
+      ,(308#24,308#56)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!97,string,(309#36,309#44)},{V(!9),string,(309#46,309#49)}),string,(309#36,309#44)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(309#35,309#50)})
+      ,(309#17,309#50)};
+      {VD(!98,int,{SC(((java.lang,Integer),"parseInt"),[string],[{V(!9),string,(310#43,310#46)}]),int,(310#42,310#47)})
+      ,(310#21,310#47)};
+      {VD(!99,arr(string),{NO(string,[{BO(+,{V(!98),int,(311#47,311#50)},{!26,int,(311#52,311#52)}),int,(311#47,311#50)}]),arr(string),(311#36,311#53)})
+      ,(311#26,311#53)};
+      {({LA({V(!99),arr(string),(312#16,312#18)},[{!39,int,(312#17,312#17)}]),string,(312#16,312#18)},{!100,string,(312#20,312#26)})
+      ,(312#16,312#18)};
+      {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{AA({V(!99),arr(string),(313#30,313#32)},[{!39,int,(313#31,313#31)}]),string,(313#30,313#32)},{!101,string,(313#34,313#54)}),string,(313#30,313#32)}],{V(!3),class((java.lang,StringBuffer)),(313#22,313#55)})
+      ,(313#9,313#55)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(314#35,314#36)}),string,(314#35,314#36)})
+      ,(314#13,314#37)};
+      {RE0
+      ,(306#16,315#9)}
+      ]
+   ,(306#16,315#9)}
+   )
+   ,(306#16,315#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testForwarding"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(319#38,319#63)),(!66:class((javax.servlet.http,HttpServletResponse)),(319#65,319#92))],[],
+   {[
+      {VD(!102,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(320#49,320#54)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(320#48,320#55)}),class((,UnknownType)),(320#48,320#55)})
+      ,(320#24,320#55)};
+      {TR(
+         {[
+            {PC(((javax.servlet.http,HttpServletResponse),"sendRedirect"),[string],[{V(!102),string,(322#47,322#49)}],{V(!66),class((javax.servlet.http,HttpServletResponse)),(322#46,322#50)})
+            ,(322#25,322#50)}
+            ]
+         ,(321#17,323#17)}
+         ,[
+            {((java.io,IOException),{V(!35),class((java.io,IOException)),(323#26,323#38)},
+            {[
+               {RE({!103,string,(324#32,324#48)})
+               ,(324#25,324#49)}
+               ]
+            ,(323#19,325#17)}),(323#19,325#17)}],
+         {;
+         ,(321#17,323#17)})
+      ,(321#17,323#17)};
+      {RE({NIL,id,(326#24,326#27)})
+      ,(326#17,326#28)};
+      {RE0
+      ,(319#16,327#9)}
+      ]
+   ,(319#16,327#9)}
+   )
+   ,(319#16,327#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testAccessControlPost"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(332#45,332#70)),(!66:class((javax.servlet.http,HttpServletResponse)),(332#72,332#99)),(!8:class((javax.servlet.http,HttpSession)),(333#45,333#63))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(334#30,334#47)})
+      ,(334#23,334#47)};
+      {VD(!104,class((kr.co.openeg.lab.member.model,MemberModel)),{NIL,class((kr.co.openeg.lab.member.model,MemberModel)),(335#24,335#27)})
+      ,(335#22,335#27)};
+      {VD(!4,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!5,string,(336#45,336#50)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(336#44,336#51)}),class((,UnknownType)),(336#44,336#51)})
+      ,(336#17,336#51)};
+      {VD(!105,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!106,string,(337#45,337#52)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(337#44,337#53)}),class((,UnknownType)),(337#44,337#53)})
+      ,(337#17,337#53)};
+      {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!105),string,(339#28,339#33)}],{!107,string,(339#14,339#19)}),bool,(339#27,339#34)},
+         {[
+            {IF({BO(&&,{BO(!=,{V(!4),string,(340#16,340#19)},{NIL,id,(340#24,340#27)}),bool,(340#16,340#19)},{UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!4),string,(340#44,340#47)}],{!108,string,(340#34,340#35)}),bool,(340#43,340#48)}),bool,(340#43,340#48)}),bool,(340#16,340#19)},
+               {[
+                  {({LL(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(341#16,341#16)},{FC(((kr.co.openeg.lab.member.service,MemberService),"findMember"),[string],[{V(!4),string,(341#37,341#40)}],{OA({V(!109),class((kr.co.openeg.lab.test.controller,TestController)),(341#36,341#41)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(341#36,341#41)}),class((kr.co.openeg.lab.member.model,MemberModel)),(341#36,341#41)})
+                  ,(341#16,341#16)};
+                  {IF({BO(==,{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(342#19,342#19)},{NIL,id,(342#22,342#25)}),bool,(342#19,342#19)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!110,string,(343#31,343#48)}],{V(!3),class((java.lang,StringBuffer)),(343#30,343#49)})
+                        ,(343#17,343#49)}
+                        ]
+                     ,(342#28,344#16)},
+                     {[
+                        {PC(((javax.servlet.http,HttpSession),"setAttribute"),[string,class((kr.co.openeg.lab.member.model,MemberModel))],[{!111,string,(346#38,346#45)},{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(346#48,346#48)}],{V(!8),class((javax.servlet.http,HttpSession)),(346#37,346#49)})
+                        ,(346#17,346#49)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{!112,string,(347#31,347#46)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserId"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(347#59,347#60)}),string,(347#59,347#60)}),string,(347#31,347#46)},{!113,string,(347#62,347#69)}),string,(347#31,347#46)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserName"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(347#84,347#85)}),string,(347#84,347#85)}),string,(347#31,347#46)},{!114,string,(347#88,347#91)}),string,(347#31,347#46)}],{V(!3),class((java.lang,StringBuffer)),(347#30,347#92)})
+                        ,(347#17,347#92)}
+                        ]
+                     ,(344#23,348#16)})
+                  ,(342#16,348#16)}
+                  ]
+               ,(340#51,349#12)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!115,string,(350#30,350#50)}],{V(!3),class((java.lang,StringBuffer)),(350#29,350#51)})
+                  ,(350#16,350#51)}
+                  ]
+               ,(349#17,351#12)})
+            ,(340#12,351#12)}
+            ]
+         ,(339#37,353#10)},
+         {[
+            {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!105),string,(353#37,353#42)}],{!116,string,(353#21,353#28)}),bool,(353#36,353#43)},
+               {[
+                  {({LL(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(354#12,354#12)},{CS(class((kr.co.openeg.lab.member.model,MemberModel)),{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!111,string,(354#48,354#55)}],{V(!8),class((javax.servlet.http,HttpSession)),(354#47,354#56)}),class((,UnknownType)),(354#47,354#56)}),class((kr.co.openeg.lab.member.model,MemberModel)),(354#47,354#56)})
+                  ,(354#12,354#12)};
+                  {IF({BO(==,{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(355#15,355#15)},{NIL,id,(355#18,355#21)}),bool,(355#15,355#15)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!117,string,(356#30,356#47)}],{V(!3),class((java.lang,StringBuffer)),(356#29,356#48)})
+                        ,(356#16,356#48)}
+                        ]
+                     ,(355#24,357#12)},
+                     {[
+                        {PC(((kr.co.openeg.lab.member.model,MemberModel),"setUserName"),[string],[{V(!4),string,(358#30,358#33)}],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(358#29,358#34)})
+                        ,(358#16,358#34)};
+                        {PC(((kr.co.openeg.lab.member.service,MemberService),"modifyMember"),[class((kr.co.openeg.lab.member.model,MemberModel))],[{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(359#37,359#37)}],{OA({V(!109),class((kr.co.openeg.lab.test.controller,TestController)),(359#36,359#38)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(359#36,359#38)})
+                        ,(359#16,359#38)};
+                        {PC(((javax.servlet.http,HttpSession),"setAttribute"),[string,class((kr.co.openeg.lab.member.model,MemberModel))],[{!111,string,(360#37,360#44)},{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(360#47,360#47)}],{V(!8),class((javax.servlet.http,HttpSession)),(360#36,360#48)})
+                        ,(360#16,360#48)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{!118,string,(361#30,361#40)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserId"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(361#53,361#54)}),string,(361#53,361#54)}),string,(361#30,361#40)},{!113,string,(361#56,361#63)}),string,(361#30,361#40)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserName"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(361#78,361#79)}),string,(361#78,361#79)}),string,(361#30,361#40)},{!119,string,(362#32,362#57)}),string,(361#30,361#40)}],{V(!3),class((java.lang,StringBuffer)),(361#29,362#58)})
+                        ,(361#16,362#58)}
+                        ]
+                     ,(357#19,363#13)})
+                  ,(355#12,363#13)}
+                  ]
+               ,(353#46,365#10)},
+               {[
+                  {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!105),string,(365#37,365#42)}],{!120,string,(365#21,365#28)}),bool,(365#36,365#43)},
+                     {[
+                        {({LL(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(366#15,366#15)},{CS(class((kr.co.openeg.lab.member.model,MemberModel)),{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!111,string,(366#51,366#58)}],{V(!8),class((javax.servlet.http,HttpSession)),(366#50,366#59)}),class((,UnknownType)),(366#50,366#59)}),class((kr.co.openeg.lab.member.model,MemberModel)),(366#50,366#59)})
+                        ,(366#15,366#15)};
+                        {IF({BO(==,{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(367#18,367#18)},{NIL,id,(367#21,367#24)}),bool,(367#18,367#18)},
+                           {[
+                              {PC(((java.lang,StringBuffer),"append"),[string],[{!117,string,(368#37,368#54)}],{V(!3),class((java.lang,StringBuffer)),(368#36,368#55)})
+                              ,(368#23,368#55)}
+                              ]
+                           ,(367#27,369#15)},
+                           {[
+                              {PC(((kr.co.openeg.lab.member.service,MemberService),"deleteMember"),[class((kr.co.openeg.lab.member.model,MemberModel))],[{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(370#38,370#38)}],{OA({V(!109),class((kr.co.openeg.lab.test.controller,TestController)),(370#37,370#39)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(370#37,370#39)})
+                              ,(370#17,370#39)};
+                              {PC(((javax.servlet.http,HttpSession),"removeAttribute"),[string],[{!111,string,(371#41,371#48)}],{V(!8),class((javax.servlet.http,HttpSession)),(371#40,371#49)})
+                              ,(371#17,371#49)};
+                              {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserId"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(372#42,372#43)}),string,(372#42,372#43)},{!121,string,(372#45,372#59)}),string,(372#42,372#43)}],{V(!3),class((java.lang,StringBuffer)),(372#30,372#60)})
+                              ,(372#17,372#60)}
+                              ]
+                           ,(369#22,373#15)})
+                        ,(367#15,373#15)}
+                        ]
+                     ,(365#46,375#10)},
+                     {[
+                        {IF0({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!105),string,(375#35,375#40)}],{!122,string,(375#21,375#26)}),bool,(375#34,375#41)},
+                           {[
+                              {IF({BO(&&,{BO(!=,{V(!4),string,(376#17,376#20)},{NIL,id,(376#25,376#28)}),bool,(376#17,376#20)},{UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{V(!4),string,(376#45,376#48)}],{!108,string,(376#35,376#36)}),bool,(376#44,376#49)}),bool,(376#44,376#49)}),bool,(376#17,376#20)},
+                                 {[
+                                    {({LL(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(377#17,377#17)},{NO(class((kr.co.openeg.lab.member.model,MemberModel)),[int,string,string,string,string,string],[{!39,int,(377#35,377#35)},{V(!4),string,(377#37,377#40)},{!108,string,(377#42,377#43)},{!108,string,(377#45,377#46)},{!108,string,(377#48,377#49)},{!108,string,(377#51,377#52)}]),class((kr.co.openeg.lab.member.model,MemberModel)),(377#19,377#53)})
+                                    ,(377#17,377#17)};
+                                    {VD(!123,int,{FC(((kr.co.openeg.lab.member.service,MemberService),"addMember"),[class((kr.co.openeg.lab.member.model,MemberModel))],[{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(378#46,378#46)}],{OA({V(!109),class((kr.co.openeg.lab.test.controller,TestController)),(378#45,378#47)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(378#45,378#47)}),int,(378#45,378#47)})
+                                    ,(378#21,378#47)};
+                                    {IF({BO(==,{V(!123),int,(379#22,379#27)},{!44,int,(379#32,379#32)}),bool,(379#22,379#27)},
+                                       {[
+                                          {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserId"),[],[],{V(!104),class((kr.co.openeg.lab.member.model,MemberModel)),(380#51,380#52)}),string,(380#51,380#52)},{!124,string,(380#54,380#72)}),string,(380#51,380#52)}],{V(!3),class((java.lang,StringBuffer)),(380#39,380#73)})
+                                          ,(380#26,380#73)}
+                                          ]
+                                       ,(379#35,381#17)},
+                                       {[
+                                          {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{!125,string,(382#39,382#51)},{V(!123),int,(382#53,382#58)}),string,(382#39,382#51)}],{V(!3),class((java.lang,StringBuffer)),(382#38,382#59)})
+                                          ,(382#25,382#59)}
+                                          ]
+                                       ,(381#24,383#17)})
+                                    ,(379#17,383#17)}
+                                    ]
+                                 ,(376#52,384#13)},
+                                 {[
+                                    {PC(((java.lang,StringBuffer),"append"),[string],[{!115,string,(385#32,385#52)}],{V(!3),class((java.lang,StringBuffer)),(385#31,385#53)})
+                                    ,(385#18,385#53)}
+                                    ]
+                                 ,(384#19,386#13)})
+                              ,(376#13,386#13)}
+                              ]
+                           ,(375#44,387#10)})
+                        ,(375#16,387#10)}
+                        ]
+                     ,(375#16,387#10)})
+                  ,(365#16,387#10)}
+                  ]
+               ,(365#16,387#10)})
+            ,(353#17,387#10)}
+            ]
+         ,(353#17,387#10)})
+      ,(339#10,387#10)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(388#32,388#33)}),string,(388#32,388#33)})
+      ,(388#10,388#34)};
+      {RE0
+      ,(332#16,389#9)}
+      ]
+   ,(332#16,389#9)}
+   )
+   ,(332#16,389#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   FN([public],((kr.co.openeg.lab.test.controller,TestController),"testException"):string,[(!2:class((javax.servlet.http,HttpServletRequest)),(393#37,393#62)),(!66:class((javax.servlet.http,HttpServletResponse)),(393#65,393#92))],[],
+   {[
+      {VD(!3,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(394#37,394#54)})
+      ,(394#30,394#54)};
+      {VD(!9,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!10,string,(395#50,395#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(395#49,395#56)}),class((,UnknownType)),(395#49,395#56)})
+      ,(395#24,395#56)};
+      {VD(!37,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!11,string,(396#50,396#55)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(396#49,396#56)}),class((,UnknownType)),(396#49,396#56)})
+      ,(396#24,396#56)};
+      {SW({SC(((java.lang,Integer),"parseInt"),[string],[{V(!37),string,(397#42,397#45)}]),int,(397#41,397#46)},
+         [
+         ({!39,int,(399#22,399#22)},{[
+               {VD(!92,int,{BO(/,{!126,int,(400#31,400#33)},{SC(((kr.co.openeg.lab.test.util,TestUtil),"getInt"),[string],[{V(!9),string,(400#51,400#54)}]),int,(400#50,400#55)}),int,(400#31,400#33)})
+               ,(400#29,400#55)};
+               {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{!127,string,(401#39,401#46)},{V(!92),int,(401#48,401#48)}),string,(401#39,401#46)}],{V(!3),class((java.lang,StringBuffer)),(401#38,401#49)})
+               ,(401#25,401#49)};
+               {BR @ 
+               ,(402#25,402#30)}
+               ],(399#17,402#30)}),
+         ({!26,int,(404#22,404#22)},{[
+               {VD(!128,string,{!129,string,(405#40,405#42)})
+               ,(405#34,405#42)};
+               {TR(
+                  {[
+                     {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{!77,string,(407#46,407#52)}],{V(!9),string,(407#45,407#53)}),bool,(407#45,407#53)},
+                        {[
+                           {({LL(!128),string,(408#34,408#38)},{!129,string,(408#40,408#42)})
+                           ,(408#34,408#38)}
+                           ]
+                        ,(407#56,409#29)},
+                        {[
+                           {({LL(!128),string,(410#34,410#38)},{!130,string,(410#40,410#42)})
+                           ,(410#34,410#38)}
+                           ]
+                        ,(409#36,411#29)})
+                     ,(407#29,411#29)}
+                     ]
+                  ,(406#27,412#27)}
+                  ,[
+                     {((java.lang,Exception),{V(!35),class((java.lang,Exception)),(412#34,412#44)},
+                     {[
+                        {;
+                        ,(412#46,412#47)}
+                        ]
+                     ,(412#28,412#47)}),(412#28,412#47)}],
+                  {;
+                  ,(406#27,412#27)})
+               ,(406#27,412#27)};
+               {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{!129,string,(414#45,414#47)}],{V(!128),string,(414#44,414#48)}),bool,(414#44,414#48)},
+                  {[
+                     {PC(((java.lang,StringBuffer),"append"),[string],[{!131,string,(415#45,415#64)}],{V(!3),class((java.lang,StringBuffer)),(415#44,415#65)})
+                     ,(415#31,415#65)}
+                     ]
+                  ,(414#52,416#27)},
+                  {[
+                     {PC(((java.lang,StringBuffer),"append"),[string],[{!132,string,(417#45,417#66)}],{V(!3),class((java.lang,StringBuffer)),(417#44,417#67)})
+                     ,(417#31,417#67)}
+                     ]
+                  ,(416#34,418#27)})
+               ,(414#27,418#27)};
+               {BR @ 
+               ,(419#27,419#32)}
+               ],(404#17,419#32)}),
+         ({!42,int,(421#22,421#22)},{[
+               {VD(!133,arr(char),{NO(char,[{!134,int,(422#46,422#48)}]),arr(char),(422#37,422#49)})
+               ,(422#32,422#49)};
+               {TR(
+                  {[
+                     {VD(!135,class((java.io,FileReader)),{NO(class((java.io,FileReader)),[string],[{V(!9),string,(424#58,424#61)}]),class((java.io,FileReader)),(424#43,424#62)})
+                     ,(424#40,424#62)};
+                     {PC(((java.io,Reader),"read"),[arr(char)],[{V(!133),arr(char),(425#37,425#40)}],{V(!135),class((java.io,FileReader)),(425#36,425#41)})
+                     ,(425#29,425#41)}
+                     ]
+                  ,(423#25,426#25)}
+                  ,[
+                     {((java.lang,Exception),{V(!35),class((java.lang,Exception)),(426#32,426#42)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!136,string,(427#47,427#71)}],{V(!3),class((java.lang,StringBuffer)),(427#46,427#72)})
+                        ,(427#33,427#72)}
+                        ]
+                     ,(426#26,428#25)}),(426#26,428#25)}],
+                  {;
+                  ,(423#25,426#25)})
+               ,(423#25,426#25)};
+               {BR @ 
+               ,(429#25,429#30)}
+               ],(421#17,429#30)}),
+         (,{[
+               {PC(((java.lang,StringBuffer),"append"),[string],[{!94,string,(431#39,431#44)}],{V(!3),class((java.lang,StringBuffer)),(431#38,431#45)})
+               ,(431#25,431#45)};
+               {BR @ 
+               ,(432#25,432#30)}
+               ],(430#17,432#30)})
+         ])
+      ,(397#17,433#17)};
+      {RE({FC(((java.lang,StringBuffer),"toString"),[],[],{V(!3),class((java.lang,StringBuffer)),(435#31,435#32)}),string,(435#31,435#32)})
+      ,(435#9,435#33)};
+      {RE0
+      ,(393#16,436#9)}
+      ]
+   ,(393#16,436#9)}
+   )
+   ,(393#16,436#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/test/controller/TestController.java",
+   [
+      S("// TODO Auto-generated catch block\r\n",87),
+      S("//buffer.append(data);\r\n",161),
+      S("// util.initMSSQLDB();\r\n",238),
+      S("// 쿠키 유지 기간 - 1년\r\n",269),
+      S("//		Cookie cookie=new Cookie(\"data\",data);\r\n",298),
+      S("//		response.addCookie(cookie);\r\n",299),
+      S("// 사용자정보 조회 요청인 경우 DB에서 해당 사용자 정보를 조회한 결과를 응답\r\n",338),
+      S("// 조회한 사용자 정보는 세션에 저장\r\n",345),
+      S("// 사용자정보 수정 요청인 경우, 사용자정보를 먼저 조회한 뒤 수정\r\n",352),
+      S("// 사용자정보 삭제 요청인 경우, 사용자정보를 먼저 조회한 뒤 삭제\r\n",364),
+      S("// 사용자정보 편집 요청인 경우, 사용자정보를 DB에 추가\r\n",374),
+      S("// 에러메시지를 통한 정보노출\r\n",398),
+      S("// 에러처리부재\r\n",403),
+      S("//부적절한 예외처리\r\n",420)
+   ]
+   }
+]

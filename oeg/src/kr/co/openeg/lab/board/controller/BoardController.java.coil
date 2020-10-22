@@ -1,0 +1,767 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!69, "redirect:view.do"S);
+   (!68, "commentModel");
+   (!67, "redirect:list.do"S);
+   (!66, "<br />"S);
+   (!29, "i");
+   (!65, "\r\n"S);
+   (!27, "<span><a href=\"list.do?page="S);
+   (!28, "\"><이전></a>&nbsp;&nbsp;"S);
+   (!25, "lastPage");
+   (!26, "<span>"S);
+   (!23, "showPageLimit");
+   (!24, "startPage");
+   (!21, "totalNum");
+   (!22, "showArticleLimit");
+   (!31, "<a href=\"list.do?page="S);
+   (!30, ".&nbsp;<strong>"S);
+   (!74, "/board/modify"S);
+   (!75, "/files/"S);
+   (!72, "errCode"S);
+   (!73, "1"S);
+   (!70, "userId");
+   (!71, "userId"S);
+   (!59, ""S);
+   (!58, "file"S);
+   (!18, "pageHtml"S);
+   (!55, "files/"S);
+   (!19, "/board/list"S);
+   (!54, "/"S);
+   (!57, "file");
+   (!56, "uploadPath: "S);
+   (!14, "boardList");
+   (!15, "pageHtml");
+   (!16, "mav");
+   (!17, "boardList"S);
+   (!10, "this");
+   (!11, "java.lang.Integer");
+   (!12, "type"S);
+   (!13, "keyword"S);
+   (!20, "currentPage");
+   (!61, "uploadFile");
+   (!62, "e");
+   (!63, "upload error"S);
+   (!64, "content");
+   (!60, "fileName");
+   (!87, "comment");
+   (!45, "board");
+   (!46, "commentList");
+   (!43, "idx");
+   (!44, "idx"S);
+   (!49, "/board/view"S);
+   (!47, "board"S);
+   (!48, "commentList"S);
+   (!53, "uploadPath");
+   (!52, "session");
+   (!51, "/board/write"S);
+   (!50, "boardModel");
+   (!77, "orgFile"S);
+   (!76, "orgFileName");
+   (!79, "newFile"S);
+   (!78, "newFile");
+   (!32, "\" class=\"page\">"S);
+   (!33, "</a>"S);
+   (!34, "&nbsp;</strong>"S);
+   (!35, ".&nbsp;<a href=\"list.do?page="S);
+   (!36, "</a>&nbsp;"S);
+   (!37, ".</span>"S);
+   (!38, ".&nbsp;&nbsp;<a href=\"list.do?page="S);
+   (!39, "\"><다음></a></span>"S);
+   (!9, "0"S);
+   (!40, "&type="S);
+   (!42, "</span>"S);
+   (!41, "&keyword="S);
+   (!4, "request");
+   (!80, "newFileName");
+   (!3, "0"N);
+   (!2, "10"N);
+   (!81, "removeFile");
+   (!82, "newUploadFile");
+   (!1, "1"N);
+   (!83, "redirect:/board/view.do"S);
+   (!8, "page"S);
+   (!84, "2"S);
+   (!7, "keyword");
+   (!6, "type");
+   (!85, "linkedArticleNum");
+   (!86, "linkedArticleNum"S);
+   (!5, "response");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   CL([public],(kr.co.openeg.lab.board.controller,BoardController),(java.lang,Object),[])
+   {
+      ([private],"service":class((kr.co.openeg.lab.board.service,BoardService)),(30#30,30#36));
+      ([private],"currentPage":int,{!1,int,(35#35,35#35)},(35#21,35#35));
+      ([private],"showArticleLimit":int,{!2,int,(36#40,36#41)},(36#21,36#41));
+      ([private],"showPageLimit":int,{!2,int,(37#37,37#38)},(37#21,37#38));
+      ([private],"startArticleNum":int,{!3,int,(38#39,38#39)},(38#21,38#39));
+      ([private],"endArticleNum":int,{!3,int,(39#37,39#37)},(39#21,39#37));
+      ([private],"totalNum":int,{!3,int,(40#32,40#32)},(40#21,40#32))
+   }
+   ,(27#8,374#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   CN([public],(kr.co.openeg.lab.board.controller,BoardController),[],[],
+   {[
+      {RE0
+      ,(27#8,27#8)}
+      ]
+   ,(27#8,27#8)}
+   )
+   ,(27#8,27#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardList"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(48#39,48#64)),(!5:class((javax.servlet.http,HttpServletResponse)),(48#67,48#94))],[],
+   {[
+      {VD(!6,string,{NIL,string,(51#31,51#34)})
+      ,(51#24,51#34)};
+      {VD(!7,string,{NIL,string,(52#34,52#37)})
+      ,(52#24,52#37)};
+      {IF({BO(||,{BO(||,{BO(==,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!8,string,(55#41,55#46)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(55#40,55#47)}),class((,UnknownType)),(55#40,55#47)},{NIL,id,(55#52,55#55)}),bool,(55#40,55#47)},{FC(((,UnknownType),"isEmpty"),[],[],{FC(((,UnknownType),"trim"),[],[],{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!8,string,(55#81,55#86)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(55#80,55#87)}),class((,UnknownType)),(55#80,55#87)}),class((,UnknownType)),(55#93,55#94)}),class((,UnknownType)),(55#103,55#104)}),bool,(55#40,55#47)},{FC(((java.lang,Object),"equals"),[class((java.lang,Object))],[{!9,string,(55#145,55#147)}],{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!8,string,(55#130,55#135)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(55#129,55#136)}),class((,UnknownType)),(55#129,55#136)}),bool,(55#144,55#148)}),bool,(55#40,55#47)},
+         {[
+            {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(56#25,56#35)},"currentPage"),int,(56#25,56#35)},{!1,int,(56#39,56#39)})
+            ,(56#25,56#35)}
+            ]
+         ,(55#151,57#17)},
+         {[
+            {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(58#25,58#35)},"currentPage"),int,(58#25,58#35)},{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!8,string,(58#77,58#82)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(58#76,58#83)}),class((,UnknownType)),(58#76,58#83)}]),class((,UnknownType)),(58#55,58#84)})
+            ,(58#25,58#35)}
+            ]
+         ,(57#24,59#17)})
+      ,(55#17,59#17)};
+      {IF0({BO(!=,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!12,string,(61#41,61#46)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(61#40,61#47)}),class((,UnknownType)),(61#40,61#47)},{NIL,id,(61#52,61#55)}),bool,(61#40,61#47)},
+         {[
+            {({LL(!6),string,(62#25,62#28)},{FC(((,UnknownType),"trim"),[],[],{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!12,string,(62#53,62#58)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(62#52,62#59)}),class((,UnknownType)),(62#52,62#59)}),class((,UnknownType)),(62#65,62#66)})
+            ,(62#25,62#28)}
+            ]
+         ,(61#57,63#17)})
+      ,(61#17,63#17)};
+      {IF0({BO(!=,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!13,string,(65#41,65#49)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(65#40,65#50)}),class((,UnknownType)),(65#40,65#50)},{NIL,id,(65#55,65#58)}),bool,(65#40,65#50)},
+         {[
+            {({LL(!7),string,(66#25,66#31)},{FC(((,UnknownType),"trim"),[],[],{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!13,string,(66#56,66#64)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(66#55,66#65)}),class((,UnknownType)),(66#55,66#65)}),class((,UnknownType)),(66#71,66#72)})
+            ,(66#25,66#31)}
+            ]
+         ,(65#60,67#17)})
+      ,(65#17,67#17)};
+      {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(71#17,71#31)},"startArticleNum"),int,(71#17,71#31)},{BO(+,{BO(*,{BO(-,{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(71#36,71#46)},"currentPage"),int,(71#36,71#46)},{!1,int,(71#50,71#50)}),int,(71#36,71#46)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(71#55,71#70)},"showArticleLimit"),int,(71#55,71#70)}),int,(71#36,71#46)},{!1,int,(71#74,71#74)}),int,(71#36,71#46)})
+      ,(71#17,71#31)};
+      {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(72#17,72#29)},"endArticleNum"),int,(72#17,72#29)},{BO(-,{BO(+,{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(72#33,72#47)},"startArticleNum"),int,(72#33,72#47)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(72#51,72#66)},"showArticleLimit"),int,(72#51,72#66)}),int,(72#33,72#47)},{!1,int,(72#69,72#69)}),int,(72#33,72#47)})
+      ,(72#17,72#29)};
+      {VD(!14,class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])))
+      ,(76#34,76#42)};
+      {IF({BO(&&,{BO(!=,{V(!6),string,(77#20,77#23)},{NIL,id,(77#28,77#31)}),bool,(77#20,77#23)},{BO(!=,{V(!7),string,(77#36,77#42)},{NIL,id,(77#47,77#50)}),bool,(77#36,77#42)}),bool,(77#20,77#23)},
+         {[
+            {({LL(!14),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),(78#25,78#33)},{FC(((kr.co.openeg.lab.board.service,BoardService),"searchArticle"),[string,string,int,int],[{V(!6),string,(78#59,78#62)},{V(!7),string,(78#65,78#71)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(78#74,78#88)},"startArticleNum"),int,(78#74,78#88)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(78#91,78#103)},"endArticleNum"),int,(78#91,78#103)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(78#58,78#104)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(78#58,78#104)}),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),(78#58,78#104)})
+            ,(78#25,78#33)};
+            {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(79#25,79#32)},"totalNum"),int,(79#25,79#32)},{FC(((kr.co.openeg.lab.board.service,BoardService),"getSearchTotalNum"),[string,string],[{V(!6),string,(79#62,79#65)},{V(!7),string,(79#68,79#74)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(79#61,79#75)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(79#61,79#75)}),int,(79#61,79#75)})
+            ,(79#25,79#32)}
+            ]
+         ,(77#52,80#17)},
+         {[
+            {({LL(!14),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),(81#25,81#33)},{FC(((kr.co.openeg.lab.board.service,BoardService),"getBoardList"),[int,int],[{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(81#58,81#72)},"startArticleNum"),int,(81#58,81#72)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(81#75,81#87)},"endArticleNum"),int,(81#75,81#87)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(81#57,81#88)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(81#57,81#88)}),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),(81#57,81#88)})
+            ,(81#25,81#33)};
+            {({LO({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(82#25,82#32)},"totalNum"),int,(82#25,82#32)},{FC(((kr.co.openeg.lab.board.service,BoardService),"getTotalNum"),[],[],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(82#55,82#56)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(82#55,82#56)}),int,(82#55,82#56)})
+            ,(82#25,82#32)}
+            ]
+         ,(80#24,83#17)})
+      ,(77#17,83#17)};
+      {VD(!15,class((java.lang,StringBuffer)),{FC(((kr.co.openeg.lab.board.controller,BoardController),"getPageHtml"),[int,int,int,int,string,string],[{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(84#53,84#63)},"currentPage"),int,(84#53,84#63)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(84#66,84#73)},"totalNum"),int,(84#66,84#73)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(84#76,84#91)},"showArticleLimit"),int,(84#76,84#91)},{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(84#94,84#106)},"showPageLimit"),int,(84#94,84#106)},{V(!6),string,(84#109,84#112)},{V(!7),string,(84#115,84#121)}],{V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(84#52,84#122)}),class((java.lang,StringBuffer)),(84#52,84#122)})
+      ,(84#30,84#122)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(87#36,87#53)})
+      ,(87#30,87#53)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!17,string,(88#31,88#41)},{V(!14),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardModel))])),(88#44,88#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(88#30,88#53)})
+      ,(88#17,88#53)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(89#31,89#40)},{V(!15),class((java.lang,StringBuffer)),(89#43,89#50)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(89#30,89#51)})
+      ,(89#17,89#51)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!19,string,(90#33,90#45)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(90#32,90#46)})
+      ,(90#17,90#46)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(92#24,92#26)})
+      ,(92#17,92#27)};
+      {RE0
+      ,(48#16,93#9)}
+      ]
+   ,(48#16,93#9)}
+   )
+   ,(48#16,93#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([private],((kr.co.openeg.lab.board.controller,BoardController),"getPageHtml"):class((java.lang,StringBuffer)),[(!20:int,(96#42,96#56)),(!21:int,(96#59,96#70)),(!22:int,(96#73,96#92)),(!23:int,(96#95,96#111)),(!6:string,(96#114,96#124)),(!7:string,(96#127,96#140))],[],
+   {[
+      {VD(!15,class((java.lang,StringBuffer)),{NO(class((java.lang,StringBuffer)),[],[]),class((java.lang,StringBuffer)),(97#41,97#58)})
+      ,(97#30,97#58)};
+      {VD(!24,int,{!3,int,(98#33,98#33)})
+      ,(98#21,98#33)};
+      {VD(!25,int,{!3,int,(99#32,99#32)})
+      ,(99#21,99#32)};
+      {({LL(!24),int,(102#17,102#25)},{BO(+,{BO(*,{BO(/,{BO(-,{V(!20),int,(102#31,102#41)},{!1,int,(102#43,102#43)}),int,(102#31,102#41)},{V(!23),int,(102#48,102#60)}),int,(102#31,102#41)},{V(!23),int,(102#65,102#77)}),int,(102#31,102#41)},{!1,int,(102#81,102#81)}),int,(102#31,102#41)})
+      ,(102#17,102#25)};
+      {({LL(!25),int,(103#17,103#24)},{BO(-,{BO(+,{V(!24),int,(103#28,103#36)},{V(!23),int,(103#40,103#52)}),int,(103#28,103#36)},{!1,int,(103#56,103#56)}),int,(103#28,103#36)})
+      ,(103#17,103#24)};
+      {IF0({BO(>,{V(!25),int,(105#20,105#27)},{BO(/,{V(!21),int,(105#31,105#38)},{V(!22),int,(105#42,105#57)}),int,(105#31,105#38)}),bool,(105#20,105#27)},
+         {[
+            {({LL(!25),int,(106#25,106#32)},{BO(+,{BO(/,{V(!21),int,(106#37,106#44)},{V(!22),int,(106#48,106#63)}),int,(106#37,106#44)},{!1,int,(106#68,106#68)}),int,(106#37,106#44)})
+            ,(106#25,106#32)}
+            ]
+         ,(105#60,107#17)})
+      ,(105#17,107#17)};
+      {IF({BO(&&,{BO(==,{V(!6),string,(112#20,112#23)},{NIL,id,(112#28,112#31)}),bool,(112#20,112#23)},{BO(==,{V(!7),string,(112#36,112#42)},{NIL,id,(112#47,112#50)}),bool,(112#36,112#42)}),bool,(112#20,112#23)},
+         {[
+            {IF({BO(==,{V(!20),int,(113#28,113#38)},{!1,int,(113#43,113#43)}),bool,(113#28,113#38)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!26,string,(114#49,114#56)}],{V(!15),class((java.lang,StringBuffer)),(114#48,114#57)})
+                  ,(114#33,114#57)}
+                  ]
+               ,(113#45,115#25)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{!27,string,(116#49,116#79)},{BO(-,{V(!20),int,(116#84,116#94)},{!1,int,(116#96,116#96)}),int,(116#84,116#94)}),string,(116#49,116#79)},{!28,string,(116#101,116#125)}),string,(116#49,116#79)}],{V(!15),class((java.lang,StringBuffer)),(116#48,116#126)})
+                  ,(116#33,116#126)}
+                  ]
+               ,(115#32,117#25)})
+            ,(113#25,117#25)};
+            {FL(L8,
+               {[
+                  {VD(!29,int,{V(!24),int,(119#37,119#45)})
+                  ,(119#33,119#45)}
+               ]
+               ,(119#25,128#25)},{BO(<=,{V(!29),int,(119#49,119#49)},{V(!25),int,(119#54,119#61)}),bool,(119#49,119#49)},
+               {[
+                  {({LL(!29),int,(119#65,119#65)},{BO(+,{V(!29),int,(119#65,119#65)},{!1,int,(119#65,119#65)}),int,(119#65,119#65)})
+                  ,(119#65,119#65)}
+               ]
+               ,(119#25,128#25)},
+               {[
+                  {IF({BO(==,{V(!29),int,(120#36,120#36)},{V(!20),int,(120#41,120#51)}),bool,(120#36,120#36)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!30,string,(121#57,121#73)}],{V(!15),class((java.lang,StringBuffer)),(121#56,121#74)})
+                        ,(121#41,121#74)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{!31,string,(122#57,122#81)},{V(!29),int,(122#84,122#84)}),string,(122#57,122#81)},{!32,string,(122#88,122#107)}),string,(122#57,122#81)},{V(!29),int,(122#111,122#111)}),string,(122#57,122#81)},{!33,string,(122#115,122#120)}),string,(122#57,122#81)}],{V(!15),class((java.lang,StringBuffer)),(122#56,122#121)})
+                        ,(122#41,122#121)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!34,string,(123#57,123#73)}],{V(!15),class((java.lang,StringBuffer)),(123#56,123#74)})
+                        ,(123#41,123#74)}
+                        ]
+                     ,(120#53,124#33)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{!35,string,(125#57,125#88)},{V(!29),int,(125#91,125#91)}),string,(125#57,125#88)},{!32,string,(125#95,125#114)}),string,(125#57,125#88)},{V(!29),int,(125#118,125#118)}),string,(125#57,125#88)},{!36,string,(125#122,125#133)}),string,(125#57,125#88)}],{V(!15),class((java.lang,StringBuffer)),(125#56,125#134)})
+                        ,(125#41,125#134)}
+                        ]
+                     ,(124#40,126#33)})
+                  ,(120#33,126#33)}
+                  ]
+               ,(119#70,128#25)})
+            ,(119#25,128#25)};
+            {IF({BO(==,{V(!20),int,(129#28,129#38)},{V(!25),int,(129#43,129#50)}),bool,(129#28,129#38)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!37,string,(130#49,130#58)}],{V(!15),class((java.lang,StringBuffer)),(130#48,130#59)})
+                  ,(130#33,130#59)}
+                  ]
+               ,(129#52,131#25)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{!38,string,(132#49,132#86)},{BO(+,{V(!20),int,(132#91,132#101)},{!1,int,(132#103,132#103)}),int,(132#91,132#101)}),string,(132#49,132#86)},{!39,string,(132#108,132#127)}),string,(132#49,132#86)}],{V(!15),class((java.lang,StringBuffer)),(132#48,132#128)})
+                  ,(132#33,132#128)}
+                  ]
+               ,(131#32,133#25)})
+            ,(129#25,133#25)}
+            ]
+         ,(112#52,136#17)},
+         {[
+            {IF({BO(==,{V(!20),int,(137#28,137#38)},{!1,int,(137#43,137#43)}),bool,(137#28,137#38)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!26,string,(138#49,138#56)}],{V(!15),class((java.lang,StringBuffer)),(138#48,138#57)})
+                  ,(138#33,138#57)}
+                  ]
+               ,(137#45,139#25)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{!27,string,(140#49,140#79)},{BO(-,{V(!20),int,(140#84,140#94)},{!1,int,(140#96,140#96)}),int,(140#84,140#94)}),string,(140#49,140#79)},{!40,string,(140#101,140#108)}),string,(140#49,140#79)},{V(!6),string,(140#112,140#115)}),string,(140#49,140#79)},{!41,string,(140#119,140#129)}),string,(140#49,140#79)},{V(!7),string,(140#133,140#139)}),string,(140#49,140#79)},{!28,string,(140#143,140#167)}),string,(140#49,140#79)}],{V(!15),class((java.lang,StringBuffer)),(140#48,140#168)})
+                  ,(140#33,140#168)}
+                  ]
+               ,(139#32,141#25)})
+            ,(137#25,141#25)};
+            {FL(L9,
+               {[
+                  {VD(!29,int,{V(!24),int,(143#37,143#45)})
+                  ,(143#33,143#45)}
+               ]
+               ,(143#25,152#25)},{BO(<=,{V(!29),int,(143#49,143#49)},{V(!25),int,(143#54,143#61)}),bool,(143#49,143#49)},
+               {[
+                  {({LL(!29),int,(143#65,143#65)},{BO(+,{V(!29),int,(143#65,143#65)},{!1,int,(143#65,143#65)}),int,(143#65,143#65)})
+                  ,(143#65,143#65)}
+               ]
+               ,(143#25,152#25)},
+               {[
+                  {IF({BO(==,{V(!29),int,(144#36,144#36)},{V(!20),int,(144#41,144#51)}),bool,(144#36,144#36)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!30,string,(145#57,145#73)}],{V(!15),class((java.lang,StringBuffer)),(145#56,145#74)})
+                        ,(145#41,145#74)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{!31,string,(146#57,146#81)},{V(!29),int,(146#84,146#84)}),string,(146#57,146#81)},{!40,string,(146#88,146#95)}),string,(146#57,146#81)},{V(!6),string,(146#99,146#102)}),string,(146#57,146#81)},{!41,string,(146#106,146#116)}),string,(146#57,146#81)},{V(!7),string,(146#120,146#126)}),string,(146#57,146#81)},{!32,string,(146#130,146#149)}),string,(146#57,146#81)},{V(!29),int,(146#153,146#153)}),string,(146#57,146#81)},{!36,string,(146#157,146#168)}),string,(146#57,146#81)}],{V(!15),class((java.lang,StringBuffer)),(146#56,146#169)})
+                        ,(146#41,146#169)};
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{!34,string,(147#57,147#73)}],{V(!15),class((java.lang,StringBuffer)),(147#56,147#74)})
+                        ,(147#41,147#74)}
+                        ]
+                     ,(144#53,148#33)},
+                     {[
+                        {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{!35,string,(149#57,149#88)},{V(!29),int,(149#91,149#91)}),string,(149#57,149#88)},{!40,string,(149#95,149#102)}),string,(149#57,149#88)},{V(!6),string,(149#106,149#109)}),string,(149#57,149#88)},{!41,string,(149#113,149#123)}),string,(149#57,149#88)},{V(!7),string,(149#127,149#133)}),string,(149#57,149#88)},{!32,string,(149#137,149#156)}),string,(149#57,149#88)},{V(!29),int,(149#160,149#160)}),string,(149#57,149#88)},{!36,string,(149#164,149#175)}),string,(149#57,149#88)}],{V(!15),class((java.lang,StringBuffer)),(149#56,149#176)})
+                        ,(149#41,149#176)}
+                        ]
+                     ,(148#40,150#33)})
+                  ,(144#33,150#33)}
+                  ]
+               ,(143#70,152#25)})
+            ,(143#25,152#25)};
+            {IF({BO(==,{V(!20),int,(153#28,153#38)},{V(!25),int,(153#43,153#50)}),bool,(153#28,153#38)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{!42,string,(154#49,154#57)}],{V(!15),class((java.lang,StringBuffer)),(154#48,154#58)})
+                  ,(154#33,154#58)}
+                  ]
+               ,(153#52,155#25)},
+               {[
+                  {PC(((java.lang,StringBuffer),"append"),[string],[{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{BO(+,{!38,string,(156#49,156#86)},{BO(+,{V(!20),int,(156#91,156#101)},{!1,int,(156#103,156#103)}),int,(156#91,156#101)}),string,(156#49,156#86)},{!40,string,(156#108,156#115)}),string,(156#49,156#86)},{V(!6),string,(156#119,156#122)}),string,(156#49,156#86)},{!41,string,(156#126,156#136)}),string,(156#49,156#86)},{V(!7),string,(156#140,156#146)}),string,(156#49,156#86)},{!39,string,(156#150,156#169)}),string,(156#49,156#86)}],{V(!15),class((java.lang,StringBuffer)),(156#48,156#170)})
+                  ,(156#33,156#170)}
+                  ]
+               ,(155#32,157#25)})
+            ,(153#25,157#25)}
+            ]
+         ,(136#24,158#17)})
+      ,(112#17,158#17)};
+      {RE({V(!15),class((java.lang,StringBuffer)),(160#24,160#31)})
+      ,(160#17,160#32)}
+      ]
+   ,(96#17,161#9)}
+   )
+   ,(96#17,161#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardView"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(164#39,164#64))],[],
+   {[
+      {VD(!43,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!44,string,(165#65,165#69)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(165#64,165#70)}),class((,UnknownType)),(165#64,165#70)}]),class((,UnknownType)),(165#43,165#71)})
+      ,(165#21,165#71)};
+      {VD(!45,class((kr.co.openeg.lab.board.model,BoardModel)),{FC(((kr.co.openeg.lab.board.service,BoardService),"getOneArticle"),[int],[{V(!43),int,(166#58,166#60)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(166#57,166#61)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(166#57,166#61)}),class((kr.co.openeg.lab.board.model,BoardModel)),(166#57,166#61)})
+      ,(166#28,166#61)};
+      {PC(((kr.co.openeg.lab.board.service,BoardService),"updateHitcount"),[int,int],[{BO(+,{FC(((kr.co.openeg.lab.board.model,BoardModel),"getHitcount"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(167#57,167#58)}),int,(167#57,167#58)},{!1,int,(167#60,167#60)}),int,(167#57,167#58)},{V(!43),int,(167#63,167#65)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(167#39,167#66)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(167#39,167#66)})
+      ,(167#17,167#66)};
+      {VD(!46,class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),{FC(((kr.co.openeg.lab.board.service,BoardService),"getCommentList"),[int],[{V(!43),int,(169#78,169#80)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(169#77,169#81)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(169#77,169#81)}),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),(169#77,169#81)})
+      ,(169#41,169#81)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(171#36,171#53)})
+      ,(171#30,171#53)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!47,string,(172#31,172#37)},{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(172#40,172#44)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(172#30,172#45)})
+      ,(172#17,172#45)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!48,string,(173#31,173#43)},{V(!46),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),(173#46,173#56)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(173#30,173#57)})
+      ,(173#17,173#57)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!49,string,(174#33,174#45)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(174#32,174#46)})
+      ,(174#17,174#46)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(175#24,175#26)})
+      ,(175#17,175#27)};
+      {RE0
+      ,(164#16,176#9)}
+      ]
+   ,(164#16,176#9)}
+   )
+   ,(164#16,176#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardWrite"):string,[(!50:class((kr.co.openeg.lab.board.model,BoardModel)),(179#34,179#84))],[],
+   {[
+      {RE({!51,string,(180#24,180#37)})
+      ,(180#17,180#38)};
+      {RE0
+      ,(179#16,181#9)}
+      ]
+   ,(179#16,181#9)}
+   )
+   ,(179#16,181#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardWriteProc"):string,[(!50:class((kr.co.openeg.lab.board.model,BoardModel)),(184#38,184#88)),(!4:class((org.springframework.web.multipart,MultipartHttpServletRequest)),(184#91,184#125)),(!52:class((javax.servlet.http,HttpSession)),(184#128,184#146))],[],
+   {[
+      {VD(!53,string,{BO(+,{FC(((,UnknownType),"getRealPath"),[string],[{!54,string,(186#77,186#79)}],{FC(((javax.servlet.http,HttpSession),"getServletContext"),[],[],{V(!52),class((javax.servlet.http,HttpSession)),(186#62,186#63)}),class((,UnknownType)),(186#62,186#63)}),class((,UnknownType)),(186#76,186#80)},{!55,string,(186#82,186#89)}),string,(186#76,186#80)})
+      ,(186#24,186#89)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!56,string,(187#36,187#49)},{V(!53),string,(187#51,187#60)}),string,(187#36,187#49)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(187#35,187#61)})
+      ,(187#17,187#61)};
+      {VD(!57,class((org.springframework.web.multipart,MultipartFile)),{FC(((org.springframework.web.multipart,MultipartRequest),"getFile"),[string],[{!58,string,(188#54,188#59)}],{V(!4),class((org.springframework.web.multipart,MultipartHttpServletRequest)),(188#53,188#60)}),class((org.springframework.web.multipart,MultipartFile)),(188#53,188#60)})
+      ,(188#31,188#60)};
+      {IF0({BO(&&,{BO(!=,{V(!57),class((org.springframework.web.multipart,MultipartFile)),(189#22,189#25)},{NIL,id,(189#30,189#33)}),bool,(189#22,189#25)},{UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((org.springframework.web.multipart,MultipartFile),"getOriginalFilename"),[],[],{V(!57),class((org.springframework.web.multipart,MultipartFile)),(189#74,189#75)}),string,(189#74,189#75)}],{!59,string,(189#40,189#41)}),bool,(189#49,189#76)}),bool,(189#49,189#76)}),bool,(189#22,189#25)},
+         {[
+            {VD(!60,string,{FC(((org.springframework.web.multipart,MultipartFile),"getOriginalFilename"),[],[],{V(!57),class((org.springframework.web.multipart,MultipartFile)),(190#67,190#68)}),string,(190#67,190#68)})
+            ,(190#32,190#68)};
+            {VD(!61,class((java.io,File)),{NO(class((java.io,File)),[string],[{BO(+,{V(!53),string,(193#52,193#61)},{V(!60),string,(193#64,193#71)}),string,(193#52,193#61)}]),class((java.io,File)),(193#43,193#72)})
+            ,(193#30,193#72)};
+            {IF0({FC(((java.io,File),"exists"),[],[],{V(!61),class((java.io,File)),(194#45,194#46)}),bool,(194#45,194#46)},
+               {[
+                  {({LL(!60),string,(195#33,195#40)},{BO(+,{FC(((java.util,Date),"getTime"),[],[],{NO(class((java.util,Date)),[],[]),class((java.util,Date)),(195#44,195#53)}),long,(195#62,195#63)},{V(!60),string,(195#67,195#74)}),string,(195#62,195#63)})
+                  ,(195#33,195#40)};
+                  {({LL(!61),class((java.io,File)),(196#33,196#42)},{NO(class((java.io,File)),[string],[{BO(+,{V(!53),string,(196#55,196#64)},{V(!60),string,(196#68,196#75)}),string,(196#55,196#64)}]),class((java.io,File)),(196#46,196#76)})
+                  ,(196#33,196#42)}
+                  ]
+               ,(194#48,197#25)})
+            ,(194#25,197#25)};
+            {TR(
+               {[
+                  {PC(((org.springframework.web.multipart,MultipartFile),"transferTo"),[class((java.io,File))],[{V(!61),class((java.io,File)),(200#49,200#58)}],{V(!57),class((org.springframework.web.multipart,MultipartFile)),(200#48,200#59)})
+                  ,(200#33,200#59)}
+                  ]
+               ,(199#25,201#25)}
+               ,[
+                  {((java.lang,Exception),{V(!62),class((java.lang,Exception)),(201#34,201#44)},
+                  {[
+                     {PC(((java.io,PrintStream),"println"),[string],[{!63,string,(202#52,202#65)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(202#51,202#66)})
+                     ,(202#33,202#66)}
+                     ]
+                  ,(201#27,203#25)}),(201#27,203#25)}],
+               {;
+               ,(199#25,201#25)})
+            ,(199#25,201#25)};
+            {PC(((kr.co.openeg.lab.board.model,BoardModel),"setFileName"),[string],[{V(!60),string,(204#48,204#55)}],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(204#47,204#56)})
+            ,(204#25,204#56)}
+            ]
+         ,(189#79,207#17)})
+      ,(189#17,207#17)};
+      {VD(!64,string,{FC(((java.lang,String),"replaceAll"),[string,string],[{!65,string,(209#70,209#75)},{!66,string,(209#78,209#85)}],{FC(((kr.co.openeg.lab.board.model,BoardModel),"getContent"),[],[],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(209#56,209#57)}),string,(209#56,209#57)}),string,(209#69,209#86)})
+      ,(209#24,209#86)};
+      {PC(((kr.co.openeg.lab.board.model,BoardModel),"setContent"),[string],[{V(!64),string,(210#39,210#45)}],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(210#38,210#46)})
+      ,(210#17,210#46)};
+      {PC(((kr.co.openeg.lab.board.service,BoardService),"writeArticle"),[class((kr.co.openeg.lab.board.model,BoardModel))],[{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(212#38,212#47)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(212#37,212#48)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(212#37,212#48)})
+      ,(212#17,212#48)};
+      {RE({!67,string,(214#24,214#41)})
+      ,(214#17,214#42)};
+      {RE0
+      ,(184#16,215#9)}
+      ]
+   ,(184#16,215#9)}
+   )
+   ,(184#16,215#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"commentWriteProc"):class((org.springframework.web.servlet,ModelAndView)),[(!68:class((kr.co.openeg.lab.board.model,BoardCommentModel)),(218#46,218#107))],[],
+   {[
+      {VD(!64,string,{FC(((java.lang,String),"replaceAll"),[string,string],[{!65,string,(220#71,220#76)},{!66,string,(220#79,220#86)}],{FC(((kr.co.openeg.lab.board.model,BoardCommentModel),"getContent"),[],[],{V(!68),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(220#57,220#58)}),string,(220#57,220#58)}),string,(220#70,220#87)})
+      ,(220#24,220#87)};
+      {PC(((kr.co.openeg.lab.board.model,BoardCommentModel),"setContent"),[string],[{V(!64),string,(221#41,221#47)}],{V(!68),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(221#40,221#48)})
+      ,(221#17,221#48)};
+      {PC(((kr.co.openeg.lab.board.service,BoardService),"writeComment"),[class((kr.co.openeg.lab.board.model,BoardCommentModel))],[{V(!68),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(223#38,223#49)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(223#37,223#50)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(223#37,223#50)})
+      ,(223#17,223#50)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(224#36,224#53)})
+      ,(224#30,224#53)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(225#31,225#35)},{FC(((kr.co.openeg.lab.board.model,BoardCommentModel),"getLinkedArticleNum"),[],[],{V(!68),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(225#70,225#71)}),int,(225#70,225#71)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(225#30,225#72)})
+      ,(225#17,225#72)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!69,string,(226#33,226#50)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(226#32,226#51)})
+      ,(226#17,226#51)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(228#24,228#26)})
+      ,(228#17,228#27)};
+      {RE0
+      ,(218#16,229#9)}
+      ]
+   ,(218#16,229#9)}
+   )
+   ,(218#16,229#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardModify"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(232#41,232#66)),(!52:class((javax.servlet.http,HttpSession)),(232#69,232#87))],[],
+   {[
+      {VD(!70,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!71,string,(233#63,233#70)}],{V(!52),class((javax.servlet.http,HttpSession)),(233#62,233#71)}),class((,UnknownType)),(233#62,233#71)}),string,(233#62,233#71)})
+      ,(233#24,233#71)};
+      {VD(!43,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!44,string,(234#65,234#69)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(234#64,234#70)}),class((,UnknownType)),(234#64,234#70)}]),class((,UnknownType)),(234#43,234#71)})
+      ,(234#21,234#71)};
+      {VD(!45,class((kr.co.openeg.lab.board.model,BoardModel)),{FC(((kr.co.openeg.lab.board.service,BoardService),"getOneArticle"),[int],[{V(!43),int,(236#58,236#60)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(236#57,236#61)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(236#57,236#61)}),class((kr.co.openeg.lab.board.model,BoardModel)),(236#57,236#61)})
+      ,(236#28,236#61)};
+      {VD(!64,string,{FC(((java.lang,String),"replaceAll"),[string,string],[{!66,string,(238#64,238#71)},{!65,string,(238#74,238#79)}],{FC(((kr.co.openeg.lab.board.model,BoardModel),"getContent"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(238#50,238#51)}),string,(238#50,238#51)}),string,(238#63,238#80)})
+      ,(238#24,238#80)};
+      {PC(((kr.co.openeg.lab.board.model,BoardModel),"setContent"),[string],[{V(!64),string,(239#34,239#40)}],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(239#33,239#41)})
+      ,(239#17,239#41)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(242#36,242#53)})
+      ,(242#30,242#53)};
+      {IF({UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((kr.co.openeg.lab.board.model,BoardModel),"getWriterId"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(244#52,244#53)}),string,(244#52,244#53)}],{V(!70),string,(244#34,244#54)}),bool,(244#34,244#54)}),bool,(244#34,244#54)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!72,string,(245#39,245#47)},{!73,string,(245#50,245#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(245#38,245#53)})
+            ,(245#25,245#53)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(246#39,246#43)},{V(!43),int,(246#46,246#48)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(246#38,246#49)})
+            ,(246#25,246#49)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!69,string,(247#41,247#58)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(247#40,247#59)})
+            ,(247#25,247#59)}
+            ]
+         ,(244#56,248#17)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!47,string,(249#39,249#45)},{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(249#48,249#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(249#38,249#53)})
+            ,(249#25,249#53)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!74,string,(250#41,250#55)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(250#40,250#56)})
+            ,(250#25,250#56)}
+            ]
+         ,(248#24,251#17)})
+      ,(244#17,251#17)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(253#24,253#26)})
+      ,(253#17,253#27)};
+      {RE0
+      ,(232#16,254#9)}
+      ]
+   ,(232#16,254#9)}
+   )
+   ,(232#16,254#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardModifyProc"):class((org.springframework.web.servlet,ModelAndView)),[(!50:class((kr.co.openeg.lab.board.model,BoardModel)),(257#45,257#95)),(!4:class((org.springframework.web.multipart,MultipartHttpServletRequest)),(257#98,257#132))],[],
+   {[
+      {VD(!53,string,{BO(+,{FC(((org.springframework.web.multipart,MultipartHttpServletRequest),"getContextPath"),[],[],{V(!4),class((org.springframework.web.multipart,MultipartHttpServletRequest)),(258#57,258#58)}),class((,UnknownType)),(258#57,258#58)},{!75,string,(258#60,258#68)}),string,(258#57,258#58)})
+      ,(258#24,258#68)};
+      {VD(!76,string,{FC(((org.springframework.web.multipart,MultipartHttpServletRequest),"getParameter"),[string],[{!77,string,(259#59,259#67)}],{V(!4),class((org.springframework.web.multipart,MultipartHttpServletRequest)),(259#58,259#68)}),class((,UnknownType)),(259#58,259#68)})
+      ,(259#24,259#68)};
+      {VD(!78,class((org.springframework.web.multipart,MultipartFile)),{FC(((org.springframework.web.multipart,MultipartRequest),"getFile"),[string],[{!79,string,(260#57,260#65)}],{V(!4),class((org.springframework.web.multipart,MultipartHttpServletRequest)),(260#56,260#66)}),class((org.springframework.web.multipart,MultipartFile)),(260#56,260#66)})
+      ,(260#31,260#66)};
+      {VD(!80,string,{FC(((org.springframework.web.multipart,MultipartFile),"getOriginalFilename"),[],[],{V(!78),class((org.springframework.web.multipart,MultipartFile)),(261#65,261#66)}),string,(261#65,261#66)})
+      ,(261#24,261#66)};
+      {PC(((kr.co.openeg.lab.board.model,BoardModel),"setFileName"),[string],[{V(!76),string,(263#40,263#50)}],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(263#39,263#51)})
+      ,(263#17,263#51)};
+      {IF0({BO(&&,{BO(!=,{V(!78),class((org.springframework.web.multipart,MultipartFile)),(266#20,266#26)},{NIL,id,(266#31,266#34)}),bool,(266#20,266#26)},{UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{!59,string,(266#59,266#60)}],{V(!80),string,(266#58,266#61)}),bool,(266#58,266#61)}),bool,(266#58,266#61)}),bool,(266#20,266#26)},
+         {[
+            {IF0({BO(||,{BO(!=,{V(!76),string,(267#28,267#38)},{NIL,id,(267#43,267#46)}),bool,(267#28,267#38)},{UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{!59,string,(267#71,267#72)}],{V(!76),string,(267#70,267#73)}),bool,(267#70,267#73)}),bool,(267#70,267#73)}),bool,(267#28,267#38)},
+               {[
+                  {VD(!81,class((java.io,File)),{NO(class((java.io,File)),[string],[{BO(+,{V(!53),string,(269#60,269#69)},{V(!76),string,(269#74,269#84)}),string,(269#60,269#69)}]),class((java.io,File)),(269#51,269#85)})
+                  ,(269#38,269#85)};
+                  {PC(((java.io,File),"delete"),[],[],{V(!81),class((java.io,File)),(270#50,270#51)})
+                  ,(270#33,270#51)}
+                  ]
+               ,(267#75,272#25)})
+            ,(267#25,272#25)};
+            {VD(!82,class((java.io,File)),{NO(class((java.io,File)),[string],[{BO(+,{V(!53),string,(274#55,274#64)},{V(!80),string,(274#67,274#77)}),string,(274#55,274#64)}]),class((java.io,File)),(274#46,274#78)})
+            ,(274#30,274#78)};
+            {TR(
+               {[
+                  {PC(((org.springframework.web.multipart,MultipartFile),"transferTo"),[class((java.io,File))],[{V(!82),class((java.io,File)),(276#52,276#64)}],{V(!78),class((org.springframework.web.multipart,MultipartFile)),(276#51,276#65)})
+                  ,(276#33,276#65)}
+                  ]
+               ,(275#25,277#25)}
+               ,[
+                  {((java.lang,Exception),{V(!62),class((java.lang,Exception)),(277#34,277#44)},
+                  {[
+                     {PC(((java.lang,Throwable),"printStackTrace"),[],[],{V(!62),class((java.lang,Exception)),(278#50,278#51)})
+                     ,(278#33,278#51)}
+                     ]
+                  ,(277#27,279#25)}),(277#27,279#25)}],
+               {;
+               ,(275#25,277#25)})
+            ,(275#25,277#25)};
+            {PC(((kr.co.openeg.lab.board.model,BoardModel),"setFileName"),[string],[{V(!80),string,(281#48,281#58)}],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(281#47,281#59)})
+            ,(281#25,281#59)}
+            ]
+         ,(266#63,282#17)})
+      ,(266#17,282#17)};
+      {VD(!64,string,{FC(((java.lang,String),"replaceAll"),[string,string],[{!65,string,(285#70,285#75)},{!66,string,(285#78,285#85)}],{FC(((kr.co.openeg.lab.board.model,BoardModel),"getContent"),[],[],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(285#56,285#57)}),string,(285#56,285#57)}),string,(285#69,285#86)})
+      ,(285#24,285#86)};
+      {PC(((kr.co.openeg.lab.board.model,BoardModel),"setContent"),[string],[{V(!64),string,(286#39,286#45)}],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(286#38,286#46)})
+      ,(286#17,286#46)};
+      {PC(((kr.co.openeg.lab.board.service,BoardService),"modifyArticle"),[class((kr.co.openeg.lab.board.model,BoardModel))],[{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(289#39,289#48)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(289#38,289#49)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(289#38,289#49)})
+      ,(289#17,289#49)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(291#36,291#53)})
+      ,(291#30,291#53)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(292#31,292#35)},{FC(((kr.co.openeg.lab.board.model,BoardModel),"getIdx"),[],[],{V(!50),class((kr.co.openeg.lab.board.model,BoardModel)),(292#55,292#56)}),int,(292#55,292#56)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(292#30,292#57)})
+      ,(292#17,292#57)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!83,string,(293#33,293#57)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(293#32,293#58)})
+      ,(293#17,293#58)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(294#24,294#26)})
+      ,(294#17,294#27)};
+      {RE0
+      ,(257#16,295#9)}
+      ]
+   ,(257#16,295#9)}
+   )
+   ,(257#16,295#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"boardDelete"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(298#41,298#66)),(!52:class((javax.servlet.http,HttpSession)),(298#69,298#87))],[],
+   {[
+      {VD(!53,string,{BO(+,{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!4),class((javax.servlet.http,HttpServletRequest)),(299#57,299#58)}),class((,UnknownType)),(299#57,299#58)},{!75,string,(299#60,299#68)}),string,(299#57,299#58)})
+      ,(299#24,299#68)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!56,string,(300#36,300#49)},{V(!53),string,(300#51,300#60)}),string,(300#36,300#49)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(300#35,300#61)})
+      ,(300#17,300#61)};
+      {VD(!70,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!71,string,(301#63,301#70)}],{V(!52),class((javax.servlet.http,HttpSession)),(301#62,301#71)}),class((,UnknownType)),(301#62,301#71)}),string,(301#62,301#71)})
+      ,(301#24,301#71)};
+      {VD(!43,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!44,string,(302#65,302#69)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(302#64,302#70)}),class((,UnknownType)),(302#64,302#70)}]),class((,UnknownType)),(302#43,302#71)})
+      ,(302#21,302#71)};
+      {VD(!45,class((kr.co.openeg.lab.board.model,BoardModel)),{FC(((kr.co.openeg.lab.board.service,BoardService),"getOneArticle"),[int],[{V(!43),int,(304#58,304#60)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(304#57,304#61)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(304#57,304#61)}),class((kr.co.openeg.lab.board.model,BoardModel)),(304#57,304#61)})
+      ,(304#28,304#61)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(306#36,306#53)})
+      ,(306#30,306#53)};
+      {IF({UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((kr.co.openeg.lab.board.model,BoardModel),"getWriterId"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(308#52,308#53)}),string,(308#52,308#53)}],{V(!70),string,(308#34,308#54)}),bool,(308#34,308#54)}),bool,(308#34,308#54)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!72,string,(309#39,309#47)},{!73,string,(309#50,309#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(309#38,309#53)})
+            ,(309#25,309#53)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(310#39,310#43)},{V(!43),int,(310#46,310#48)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(310#38,310#49)})
+            ,(310#25,310#49)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!69,string,(311#41,311#58)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(311#40,311#59)})
+            ,(311#25,311#59)}
+            ]
+         ,(308#56,312#17)},
+         {[
+            {VD(!46,class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),{FC(((kr.co.openeg.lab.board.service,BoardService),"getCommentList"),[int],[{V(!43),int,(313#86,313#88)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(313#85,313#89)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(313#85,313#89)}),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),(313#85,313#89)})
+            ,(313#49,313#89)};
+            {IF({BO(>,{FC(((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))]),"size"),[],[],{V(!46),class((java.util,List,[class((kr.co.openeg.lab.board.model,BoardCommentModel))])),(314#44,314#45)}),int,(314#44,314#45)},{!3,int,(314#49,314#49)}),bool,(314#44,314#45)},
+               {[
+                  {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!72,string,(315#47,315#55)},{!84,string,(315#58,315#60)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(315#46,315#61)})
+                  ,(315#33,315#61)};
+                  {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(316#47,316#51)},{V(!43),int,(316#54,316#56)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(316#46,316#57)})
+                  ,(316#33,316#57)};
+                  {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!69,string,(317#49,317#66)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(317#48,317#67)})
+                  ,(317#33,317#67)}
+                  ]
+               ,(314#51,318#25)},
+               {[
+                  {IF0({BO(!=,{FC(((kr.co.openeg.lab.board.model,BoardModel),"getFileName"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(320#53,320#54)}),string,(320#53,320#54)},{NIL,id,(320#59,320#62)}),bool,(320#53,320#54)},
+                     {[
+                        {VD(!81,class((java.io,File)),{NO(class((java.io,File)),[string],[{BO(+,{V(!53),string,(321#68,321#77)},{FC(((kr.co.openeg.lab.board.model,BoardModel),"getFileName"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(321#98,321#99)}),string,(321#98,321#99)}),string,(321#68,321#77)}]),class((java.io,File)),(321#59,321#100)})
+                        ,(321#46,321#100)};
+                        {PC(((java.io,File),"delete"),[],[],{V(!81),class((java.io,File)),(322#58,322#59)})
+                        ,(322#41,322#59)}
+                        ]
+                     ,(320#64,323#33)})
+                  ,(320#33,323#33)};
+                  {PC(((kr.co.openeg.lab.board.service,BoardService),"deleteArticle"),[int],[{V(!43),int,(325#55,325#57)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(325#54,325#58)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(325#54,325#58)})
+                  ,(325#33,325#58)};
+                  {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!67,string,(327#49,327#66)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(327#48,327#67)})
+                  ,(327#33,327#67)}
+                  ]
+               ,(318#32,328#25)})
+            ,(314#25,328#25)}
+            ]
+         ,(312#24,329#17)})
+      ,(308#17,329#17)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(330#24,330#26)})
+      ,(330#17,330#27)};
+      {RE0
+      ,(298#16,331#9)}
+      ]
+   ,(298#16,331#9)}
+   )
+   ,(298#16,331#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"commendDelete"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(334#43,334#68)),(!52:class((javax.servlet.http,HttpSession)),(334#71,334#89))],[],
+   {[
+      {VD(!43,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!44,string,(335#65,335#69)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(335#64,335#70)}),class((,UnknownType)),(335#64,335#70)}]),class((,UnknownType)),(335#43,335#71)})
+      ,(335#21,335#71)};
+      {VD(!85,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!86,string,(336#78,336#95)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(336#77,336#96)}),class((,UnknownType)),(336#77,336#96)}]),class((,UnknownType)),(336#56,336#97)})
+      ,(336#21,336#97)};
+      {VD(!70,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!71,string,(338#63,338#70)}],{V(!52),class((javax.servlet.http,HttpSession)),(338#62,338#71)}),class((,UnknownType)),(338#62,338#71)}),string,(338#62,338#71)})
+      ,(338#24,338#71)};
+      {VD(!87,class((kr.co.openeg.lab.board.model,BoardCommentModel)),{FC(((kr.co.openeg.lab.board.service,BoardService),"getOneComment"),[int],[{V(!43),int,(339#67,339#69)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(339#66,339#70)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(339#66,339#70)}),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(339#66,339#70)})
+      ,(339#35,339#70)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(341#36,341#53)})
+      ,(341#30,341#53)};
+      {IF({UO(!,{FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((kr.co.openeg.lab.board.model,BoardCommentModel),"getWriterId"),[],[],{V(!87),class((kr.co.openeg.lab.board.model,BoardCommentModel)),(343#54,343#55)}),string,(343#54,343#55)}],{V(!70),string,(343#34,343#56)}),bool,(343#34,343#56)}),bool,(343#34,343#56)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!72,string,(344#39,344#47)},{!73,string,(344#50,344#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(344#38,344#53)})
+            ,(344#25,344#53)}
+            ]
+         ,(343#58,345#17)},
+         {[
+            {PC(((kr.co.openeg.lab.board.service,BoardService),"deleteComment"),[int],[{V(!43),int,(346#47,346#49)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(346#46,346#50)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(346#46,346#50)})
+            ,(346#25,346#50)}
+            ]
+         ,(345#24,347#17)})
+      ,(343#17,347#17)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(349#31,349#35)},{V(!85),int,(349#38,349#53)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(349#30,349#54)})
+      ,(349#17,349#54)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!69,string,(350#33,350#50)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(350#32,350#51)})
+      ,(350#17,350#51)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(352#24,352#26)})
+      ,(352#17,352#27)};
+      {RE0
+      ,(334#16,353#9)}
+      ]
+   ,(334#16,353#9)}
+   )
+   ,(334#16,353#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   FN([public],((kr.co.openeg.lab.board.controller,BoardController),"updateRecommendcount"):class((org.springframework.web.servlet,ModelAndView)),[(!4:class((javax.servlet.http,HttpServletRequest)),(356#50,356#75)),(!52:class((javax.servlet.http,HttpSession)),(356#78,356#96))],[],
+   {[
+      {VD(!43,int,{SC(((java.lang,Integer),"parseInt"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!44,string,(357#65,357#69)}],{V(!4),class((javax.servlet.http,HttpServletRequest)),(357#64,357#70)}),class((,UnknownType)),(357#64,357#70)}]),class((,UnknownType)),(357#43,357#71)})
+      ,(357#21,357#71)};
+      {VD(!70,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!71,string,(358#63,358#70)}],{V(!52),class((javax.servlet.http,HttpSession)),(358#62,358#71)}),class((,UnknownType)),(358#62,358#71)}),string,(358#62,358#71)})
+      ,(358#24,358#71)};
+      {VD(!45,class((kr.co.openeg.lab.board.model,BoardModel)),{FC(((kr.co.openeg.lab.board.service,BoardService),"getOneArticle"),[int],[{V(!43),int,(359#58,359#60)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(359#57,359#61)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(359#57,359#61)}),class((kr.co.openeg.lab.board.model,BoardModel)),(359#57,359#61)})
+      ,(359#28,359#61)};
+      {VD(!16,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(361#36,361#53)})
+      ,(361#30,361#53)};
+      {IF({FC(((java.lang,String),"equals"),[class((java.lang,Object))],[{FC(((kr.co.openeg.lab.board.model,BoardModel),"getWriterId"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(363#51,363#52)}),string,(363#51,363#52)}],{V(!70),string,(363#33,363#53)}),bool,(363#33,363#53)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!72,string,(364#39,364#47)},{!73,string,(364#50,364#52)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(364#38,364#53)})
+            ,(364#25,364#53)}
+            ]
+         ,(363#55,365#17)},
+         {[
+            {PC(((kr.co.openeg.lab.board.service,BoardService),"updateRecommendCount"),[int,int],[{BO(+,{FC(((kr.co.openeg.lab.board.model,BoardModel),"getRecommendcount"),[],[],{V(!45),class((kr.co.openeg.lab.board.model,BoardModel)),(366#77,366#78)}),int,(366#77,366#78)},{!1,int,(366#80,366#80)}),int,(366#77,366#78)},{V(!43),int,(366#83,366#85)}],{OA({V(!10),class((kr.co.openeg.lab.board.controller,BoardController)),(366#53,366#86)},"service"),class((kr.co.openeg.lab.board.service,BoardService)),(366#53,366#86)})
+            ,(366#25,366#86)}
+            ]
+         ,(365#24,367#17)})
+      ,(363#17,367#17)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!44,string,(369#31,369#35)},{V(!43),int,(369#38,369#40)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(369#30,369#41)})
+      ,(369#17,369#41)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!83,string,(370#33,370#57)}],{V(!16),class((org.springframework.web.servlet,ModelAndView)),(370#32,370#58)})
+      ,(370#17,370#58)};
+      {RE({V(!16),class((org.springframework.web.servlet,ModelAndView)),(372#24,372#26)})
+      ,(372#17,372#27)};
+      {RE0
+      ,(356#16,373#9)}
+      ]
+   ,(356#16,373#9)}
+   )
+   ,(356#16,373#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/controller/BoardController.java",
+   [
+      S("//\r\n",32),
+      S("// * User variable\r\n",33),
+      S("// article, page variables\r\n",34),
+      S("// change value if want to show more articles by one page\r\n",36),
+      S("// change value if want to show more page links\r\n",37),
+      S("//\r\n",41),
+      S("// file upload path\r\n",42),
+      S("//private String uploadPath = \"D:\\\\Workspace\\\\SummerBoard\\\\WebContent\\\\files\\\\\";\r\n",43),
+      S("//\r\n",44),
+      S("//\r\n",45),
+      S("// set variables from request parameter\r\n",54),
+      S("//\r\n",68),
+      S("// expression article variables value\r\n",70),
+      S("//\r\n",73),
+      S("// get boardList and get page html code\r\n",75),
+      S("//\r\n",85),
+      S("// A method for Creating page html code\r\n",95),
+      S("// expression page variables\r\n",101),
+      S("//\r\n",108),
+      S("// create page html code\r\n",110),
+      S("// if: when no search	\r\n",111),
+      S("//\r\n",134),
+      S("// else: when search\r\n",135),
+      S("//		\r\n",159),
+      S("// get selected article model\r\n",166),
+      S("// update hitcount\r\n",167),
+      S("// get comment list\r\n",169),
+      S("// get upload file\r\n",185),
+      S("//			if (fileName.toLowerCase().endsWith(\".jpg\") || fileName.toLowerCase().endsWith(\".png\")) {\r\n",191),
+      S("//}\r\n",206),
+      S("// new line code change to <br /> tag\r\n",219),
+      S("//\r\n",222),
+      S("// <br /> tag change to new line code\r\n",237),
+      S("//\r\n",240),
+      S("// forbidden connection\r\n",245),
+      S("// if: when want to change upload file\r\n",265),
+      S("// remove uploaded file\r\n",268),
+      S("//\r\n",271),
+      S("// create new upload file\r\n",273),
+      S("//\r\n",280),
+      S("//\r\n",283),
+      S("// new line code change to <br /> tag\r\n",284),
+      S("//\r\n",287),
+      S("// it's forbidden connection\r\n",309),
+      S("// check comments\r\n",313),
+      S("// can't delete because a article has comments\r\n",315),
+      S("// if: when the article has upload file - remove that\r\n",319),
+      S("//				\r\n",324),
+      S("// move back to the article\r\n",349)
+   ]
+   }
+]

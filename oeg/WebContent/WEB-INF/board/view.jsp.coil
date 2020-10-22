@@ -1,0 +1,359 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp");
+   ("version", "1.2rc2.1");
+}
+{
+   (!29, "/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\""S);
+   (!65, " \r\n		</div>\r\n	\r\n</div>\r\n</div>\r\n</body>\r\n</html>"S);
+   (!27, "/index.html\">홈으로</a></li>\r\n			<li><a href=\""S);
+   (!28, "/board/list.do\">게시판</a></li>\r\n			<li><a href=\""S);
+   (!25, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp");
+   (!26, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\""S);
+   (!23, "\";\r\n			}\r\n			break;\r\n			\r\n		case 3:\r\n			location.href = \"list.do\";			\r\n			break;\r\n		\r\n		case 4:\r\n			if(confirm(\"글을 추천하시겠습니까?\")){\r\n				location.href = \"recommend.do?idx="S);
+   (!24, "\";\r\n			}\r\n			break;\r\n		}\r\n	}\r\n</script>\r\n</head>\r\n<body onload=\"errCodeCheck()\">\r\n<div id=\"container\">\r\n	\r\n		<h1>\r\n			"S);
+   (!21, ";\r\n		if(errCode != null || errCode != \"\"){\r\n			switch (errCode) {\r\n			case 1:\r\n				alert(\"잘못된 접근 경로입니다!\");\r\n				break;\r\n			case 2:\r\n				alert(\"댓글이 있어 글을 삭제하실 수 없습니다!\");\r\n				break;\r\n			}\r\n		}		\r\n	}\r\n	\r\n	function commentDelete(commentIdx, linkedArticleNum){\r\n		if(confirm(\"선택하신 댓글을 삭제하시겠습니까?\")){\r\n			location.href(\"commentDelete.do?idx=\" + commentIdx + \"&linkedArticleNum=\" + linkedArticleNum);\r\n		}		\r\n	}\r\n	\r\n	function moveAction(where){\r\n		switch (where) {\r\n		case 1:\r\n			if(confirm(\"글을 삭제하시겠습니까?\")){\r\n				location.href =\"delete.do?idx="S);
+   (!22, "\";\r\n			}\r\n			break;\r\n\r\n		case 2:\r\n			if(confirm(\"글을 수정하시겠습니까?\")){\r\n				location.href = \"modify.do?idx="S);
+   (!31, "/test/init_db.do?id="S);
+   (!30, "/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\""S);
+   (!59, "\r\n			<input type=\"button\" value=\"추천\" class=\"writeBt\" onclick=\"moveAction(4)\" />\r\n			<input type=\"button\" value=\"목록\" class=\"writeBt\" onclick=\"moveAction(3)\" />\r\n		"S);
+   (!58, "\r\n			<input type=\"button\" value=\"삭제\" class=\"writeBt\" onclick=\"moveAction(1)\" />\r\n			<input type=\"button\" value=\"수정\" class=\"writeBt\" onclick=\"moveAction(2)\" />\r\n			<input type=\"button\" value=\"목록\" class=\"writeBt\" onclick=\"moveAction(3)\" />\r\n		"S);
+   (!55, "\" />\r\n					<input type=\"hidden\" id=\"linkedArticleNum\" name=\"linkedArticleNum\" value=\""S);
+   (!18, "/css/board.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<link href=\""S);
+   (!54, "\" />\r\n					<input type=\"hidden\" id=\"writerId\" name=\"writerId\" value=\""S);
+   (!19, "/css/main.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\">\r\n	function errCodeCheck(){\r\n		var errCode = "S);
+   (!57, "\r\n		"S);
+   (!56, "\" />\r\n					<textarea id=\"content\" name=\"content\" class=\"commentForm1\"></textarea>\r\n					<input type=\"submit\" value=\"확인\" class=\"commentBt\" />\r\n				</form>\r\n			</td>\r\n		</tr>\r\n	</table>\r\n	<br />\r\n	<center>\r\n	"S);
+   (!14, "\r\n"S);
+   (!15, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>글 보기: "S);
+   (!16, "board"S);
+   (!17, "</title>\r\n<link href=\""S);
+   (!10, "page");
+   (!11, "this");
+   (!12, "_jspx_out");
+   (!13, "_jspx_page_context");
+   (!20, "errCode"S);
+   (!61, "\r\n	</center>\r\n</div>\r\n	    <div id=\"aside\">\r\n		<fieldset>\r\n			<center>\r\n			   <label>[ "S);
+   (!62, " ]님 환영합니다.</label><br/>\r\n			   <a href=\"../logout.do\">로그아웃</a>&nbsp;&nbsp;&nbsp;\r\n	           <a href=\"../member/modify.do\">정보수정</a>\r\n			</center>\r\n		</fieldset>\r\n		</div>\r\n		<div id=\"footer\">\r\n			 "S);
+   (!63, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/footer.jsp");
+   (!64, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n\r\n</head>\r\n<body> \r\n		<p>		  \r\n                Copyright (C) 김영숙(yskim@openeg.co.kr), 2014\r\n		</p>\r\n</body>\r\n</html>"S);
+   (!60, "\r\n	"S);
+   (!45, "\r\n				"S);
+   (!46, "\r\n					<br /><a onclick=\"commentDelete("S);
+   (!43, "\r\n		<tr>\r\n			<td class=\"writer\">				\r\n				<p>"S);
+   (!44, "comment"S);
+   (!49, "\r\n				</p>\r\n			</td>\r\n			<td class=\"content\" align=\"left\">\r\n				<span class=\"date\">"S);
+   (!47, ", "S);
+   (!48, ")\"><small>댓글 삭제</small></a>					\r\n				"S);
+   (!53, "userName"S);
+   (!52, "\r\n		<tr>\r\n			<td class=\"writer2\"><strong>댓글 쓰기</strong></td>\r\n			<td class=\"content2\">\r\n				<form action=\"commentWrite.do\" method=\"post\">\r\n					<input type=\"hidden\" id=\"writer\" name=\"writer\" value=\""S);
+   (!51, "</p>\r\n			</td>\r\n		</tr>\r\n		"S);
+   (!50, "</span>\r\n				<p>"S);
+   (!32, "userId"S);
+   (!33, "\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>"S);
+   (!34, "  \r\n		</h1>\r\n\r\n	\r\n	<div id=\"content-container\">\r\n	<div id=\"content\">\r\n	<table class=\"boardView\">\r\n		<tr>\r\n			<td colspan=\"4\"><h3>"S);
+   (!35, "</h3></td>\r\n		</tr>\r\n		<tr>\r\n			<th>작성자</th>\r\n			<th>조회수</th>\r\n			<th>추천수</th>\r\n			<th>작성일</th>\r\n		</tr>\r\n		<tr>\r\n			<td>"S);
+   (!36, "</td>\r\n			<td>"S);
+   (!37, "</td>\r\n		</tr>\r\n		<tr>\r\n			<th colspan=\"4\">내용</th>\r\n		</tr>\r\n		"S);
+   (!38, "\r\n		<tr>\r\n			<td colspan=\"4\" align=\"left\">\r\n			<span class=\"date\">첨부파일:&nbsp;\r\n			<a href=\"../files/"S);
+   (!39, "\" \r\n			target=\"_blank\">"S);
+   (!9, "config");
+   (!40, "</a></span></td>\r\n		</tr>\r\n		"S);
+   (!42, "</p><br /><br /></td>\r\n		</tr>		\r\n	</table>\r\n	<table class=\"commentView\">\r\n		<tr>\r\n			<th colspan=\"2\">댓글</th>\r\n		</tr>		\r\n		"S);
+   (!41, "	\r\n		<tr>\r\n			<td colspan=\"4\" align=\"left\"><p>"S);
+   (!4, "out");
+   (!3, "response");
+   (!2, "request");
+   (!1, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp");
+   (!8, "application");
+   (!7, "session");
+   (!6, "pageContext");
+   (!5, "_jspxFactory");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp",
+   CL([public,final],(temp,view___),(org.apache.jasper.runtime,HttpJspBase),[(org.apache.jasper.runtime,JspSourceDependent)])
+   {
+
+   }
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp",
+   CN([public],(temp,view___),[],[],
+   {[
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp",
+   FN([public],((temp,view___),"_jspService"):unit,[(!2:class((javax.servlet.http,HttpServletRequest)),(!)),(!3:class((,HttpServletResponse)),(!))],[(java.io,IOException),(,ServletException)],
+   {[
+      {VD(!4,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!5,class((,JspFactory)),{NO(class((,JspFactory)),[],[]),class((,JspFactory)),(!)})
+      ,(!)};
+      {VD(!6,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {VD(!7,class((,HttpSession)),{NO(class((,HttpSession)),[],[]),class((,HttpSession)),(!)})
+      ,(!)};
+      {VD(!8,class((,ServletContext)),{NO(class((,ServletContext)),[],[]),class((,ServletContext)),(!)})
+      ,(!)};
+      {VD(!9,class((,ServletConfig)),{NO(class((,ServletConfig)),[],[]),class((,ServletConfig)),(!)})
+      ,(!)};
+      {VD(!10,class((java.lang,Object)),{V(!11),class((temp,view___)),(!)})
+      ,(!)};
+      {VD(!12,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!13,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(2#11,2#16,!1)}],{V(!4),class((,JspWriter)),(2#10,2#17,!1)})
+      ,(2#1,2#17,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!15,string,(3#11,3#234,!1)}],{V(!4),class((,JspWriter)),(3#10,3#235,!1)})
+      ,(3#1,3#235,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getSubject"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(8#41,8#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(8#40,8#48,!1)}),class((,UnknownType)),(8#40,8#48,!1)}),class((,Board)),(8#40,8#48,!1)}),class((,UnknownType)),(8#61,8#62,!1)}],{V(!4),class((,JspWriter)),(8#10,8#64,!1)})
+      ,(8#1,8#64,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!17,string,(8#11,8#37,!1)}],{V(!4),class((,JspWriter)),(8#10,8#38,!1)})
+      ,(8#1,8#38,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(9#33,9#34,!1)}),class((,UnknownType)),(9#33,9#34,!1)}],{V(!4),class((,JspWriter)),(9#10,9#35,!1)})
+      ,(9#1,9#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!18,string,(9#11,9#85,!1)}],{V(!4),class((,JspWriter)),(9#10,9#86,!1)})
+      ,(9#1,9#86,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(10#33,10#34,!1)}),class((,UnknownType)),(10#33,10#34,!1)}],{V(!4),class((,JspWriter)),(10#10,10#35,!1)})
+      ,(10#1,10#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!19,string,(10#11,10#167,!1)}],{V(!4),class((,JspWriter)),(10#10,10#168,!1)})
+      ,(10#1,10#168,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!20,string,(13#32,13#40,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(13#31,13#41,!1)}),class((,UnknownType)),(13#31,13#41,!1)}],{V(!4),class((,JspWriter)),(13#10,13#42,!1)})
+      ,(13#1,13#42,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!21,string,(13#11,13#944,!1)}],{V(!4),class((,JspWriter)),(13#10,13#945,!1)})
+      ,(13#1,13#945,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getIdx"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(36#41,36#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(36#40,36#48,!1)}),class((,UnknownType)),(36#40,36#48,!1)}),class((,Board)),(36#40,36#48,!1)}),class((,UnknownType)),(36#57,36#58,!1)}],{V(!4),class((,JspWriter)),(36#10,36#60,!1)})
+      ,(36#1,36#60,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!22,string,(36#11,36#217,!1)}],{V(!4),class((,JspWriter)),(36#10,36#218,!1)})
+      ,(36#1,36#218,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getIdx"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(42#41,42#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(42#40,42#48,!1)}),class((,UnknownType)),(42#40,42#48,!1)}),class((,Board)),(42#40,42#48,!1)}),class((,UnknownType)),(42#57,42#58,!1)}],{V(!4),class((,JspWriter)),(42#10,42#60,!1)})
+      ,(42#1,42#60,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!23,string,(42#11,42#388,!1)}],{V(!4),class((,JspWriter)),(42#10,42#389,!1)})
+      ,(42#1,42#389,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getIdx"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(52#41,52#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(52#40,52#48,!1)}),class((,UnknownType)),(52#40,52#48,!1)}),class((,Board)),(52#40,52#48,!1)}),class((,UnknownType)),(52#57,52#58,!1)}],{V(!4),class((,JspWriter)),(52#10,52#60,!1)})
+      ,(52#1,52#60,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!24,string,(52#11,52#241,!1)}],{V(!4),class((,JspWriter)),(52#10,52#242,!1)})
+      ,(52#1,52#242,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!26,string,(2#11,2#751,!25)}],{V(!4),class((,JspWriter)),(2#10,2#752,!25)})
+      ,(2#1,2#752,!25)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(27#33,27#34,!25)}),class((,UnknownType)),(27#33,27#34,!25)}],{V(!4),class((,JspWriter)),(27#10,27#35,!25)})
+      ,(27#1,27#35,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!27,string,(27#11,27#79,!25)}],{V(!4),class((,JspWriter)),(27#10,27#80,!25)})
+      ,(27#1,27#80,!25)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(28#33,28#34,!25)}),class((,UnknownType)),(28#33,28#34,!25)}],{V(!4),class((,JspWriter)),(28#10,28#35,!25)})
+      ,(28#1,28#35,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!28,string,(28#11,28#79,!25)}],{V(!4),class((,JspWriter)),(28#10,28#80,!25)})
+      ,(28#1,28#80,!25)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(29#33,29#34,!25)}),class((,UnknownType)),(29#33,29#34,!25)}],{V(!4),class((,JspWriter)),(29#10,29#35,!25)})
+      ,(29#1,29#35,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!29,string,(29#11,29#87,!25)}],{V(!4),class((,JspWriter)),(29#10,29#88,!25)})
+      ,(29#1,29#88,!25)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(30#33,30#34,!25)}),class((,UnknownType)),(30#33,30#34,!25)}],{V(!4),class((,JspWriter)),(30#10,30#35,!25)})
+      ,(30#1,30#35,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!30,string,(30#11,30#295,!25)}],{V(!4),class((,JspWriter)),(30#10,30#296,!25)})
+      ,(30#1,30#296,!25)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#33,33#34,!25)}),class((,UnknownType)),(33#33,33#34,!25)}],{V(!4),class((,JspWriter)),(33#10,33#35,!25)})
+      ,(33#1,33#35,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!31,string,(33#11,33#32,!25)}],{V(!4),class((,JspWriter)),(33#10,33#33,!25)})
+      ,(33#1,33#33,!25)};
+      {PC(((,JspWriter),"write"),[class((,UserId))],[{CS(class((,UserId)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!32,string,(33#41,33#48,!25)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#40,33#49,!25)}),class((,UnknownType)),(33#40,33#49,!25)}),class((,UserId)),(33#40,33#49,!25)}],{V(!4),class((,JspWriter)),(33#10,33#51,!25)})
+      ,(33#1,33#51,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!33,string,(33#11,33#125,!25)}],{V(!4),class((,JspWriter)),(33#10,33#126,!25)})
+      ,(33#1,33#126,!25)};
+      {PC(((,JspWriter),"write"),[string],[{!34,string,(63#11,63#223,!1)}],{V(!4),class((,JspWriter)),(63#10,63#224,!1)})
+      ,(63#1,63#224,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getSubject"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(71#41,71#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(71#40,71#48,!1)}),class((,UnknownType)),(71#40,71#48,!1)}),class((,Board)),(71#40,71#48,!1)}),class((,UnknownType)),(71#61,71#62,!1)}],{V(!4),class((,JspWriter)),(71#10,71#64,!1)})
+      ,(71#1,71#64,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!35,string,(71#11,71#309,!1)}],{V(!4),class((,JspWriter)),(71#10,71#310,!1)})
+      ,(71#1,71#310,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getWriter"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(80#41,80#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(80#40,80#48,!1)}),class((,UnknownType)),(80#40,80#48,!1)}),class((,Board)),(80#40,80#48,!1)}),class((,UnknownType)),(80#60,80#61,!1)}],{V(!4),class((,JspWriter)),(80#10,80#63,!1)})
+      ,(80#1,80#63,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!36,string,(80#11,80#45,!1)}],{V(!4),class((,JspWriter)),(80#10,80#46,!1)})
+      ,(80#1,80#46,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getHitcount"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(81#41,81#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(81#40,81#48,!1)}),class((,UnknownType)),(81#40,81#48,!1)}),class((,Board)),(81#40,81#48,!1)}),class((,UnknownType)),(81#62,81#63,!1)}],{V(!4),class((,JspWriter)),(81#10,81#65,!1)})
+      ,(81#1,81#65,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!36,string,(81#11,81#45,!1)}],{V(!4),class((,JspWriter)),(81#10,81#46,!1)})
+      ,(81#1,81#46,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getRecommendcount"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(82#41,82#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(82#40,82#48,!1)}),class((,UnknownType)),(82#40,82#48,!1)}),class((,Board)),(82#40,82#48,!1)}),class((,UnknownType)),(82#68,82#69,!1)}],{V(!4),class((,JspWriter)),(82#10,82#71,!1)})
+      ,(82#1,82#71,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!36,string,(82#11,82#45,!1)}],{V(!4),class((,JspWriter)),(82#10,82#46,!1)})
+      ,(82#1,82#46,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getWriteDate"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(83#41,83#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(83#40,83#48,!1)}),class((,UnknownType)),(83#40,83#48,!1)}),class((,Board)),(83#40,83#48,!1)}),class((,UnknownType)),(83#63,83#64,!1)}],{V(!4),class((,JspWriter)),(83#10,83#66,!1)})
+      ,(83#1,83#66,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!37,string,(83#11,83#153,!1)}],{V(!4),class((,JspWriter)),(83#10,83#154,!1)})
+      ,(83#1,83#154,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!38,string,(88#11,88#188,!1)}],{V(!4),class((,JspWriter)),(88#10,88#189,!1)})
+      ,(88#1,88#189,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getFileName"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(92#41,92#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(92#40,92#48,!1)}),class((,UnknownType)),(92#40,92#48,!1)}),class((,Board)),(92#40,92#48,!1)}),class((,UnknownType)),(92#62,92#63,!1)}],{V(!4),class((,JspWriter)),(92#10,92#65,!1)})
+      ,(92#1,92#65,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!39,string,(92#11,92#59,!1)}],{V(!4),class((,JspWriter)),(92#10,92#60,!1)})
+      ,(92#1,92#60,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getFileName"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(93#41,93#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(93#40,93#48,!1)}),class((,UnknownType)),(93#40,93#48,!1)}),class((,Board)),(93#40,93#48,!1)}),class((,UnknownType)),(93#62,93#63,!1)}],{V(!4),class((,JspWriter)),(93#10,93#65,!1)})
+      ,(93#1,93#65,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!40,string,(93#11,93#65,!1)}],{V(!4),class((,JspWriter)),(93#10,93#66,!1)})
+      ,(93#1,93#66,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!41,string,(95#11,95#101,!1)}],{V(!4),class((,JspWriter)),(95#10,95#102,!1)})
+      ,(95#1,95#102,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getContent"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(97#41,97#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(97#40,97#48,!1)}),class((,UnknownType)),(97#40,97#48,!1)}),class((,Board)),(97#40,97#48,!1)}),class((,UnknownType)),(97#61,97#62,!1)}],{V(!4),class((,JspWriter)),(97#10,97#64,!1)})
+      ,(97#1,97#64,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!42,string,(97#11,97#241,!1)}],{V(!4),class((,JspWriter)),(97#10,97#242,!1)})
+      ,(97#1,97#242,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!43,string,(104#11,104#140,!1)}],{V(!4),class((,JspWriter)),(104#10,104#141,!1)})
+      ,(104#1,104#141,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Comment),"getWriter"),[],[],{CS(class((,Comment)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!44,string,(107#43,107#51,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(107#42,107#52,!1)}),class((,UnknownType)),(107#42,107#52,!1)}),class((,Comment)),(107#42,107#52,!1)}),class((,UnknownType)),(107#64,107#65,!1)}],{V(!4),class((,JspWriter)),(107#10,107#67,!1)})
+      ,(107#1,107#67,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!45,string,(107#11,107#41,!1)}],{V(!4),class((,JspWriter)),(107#10,107#42,!1)})
+      ,(107#1,107#42,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!46,string,(108#11,108#82,!1)}],{V(!4),class((,JspWriter)),(108#10,108#83,!1)})
+      ,(108#1,108#83,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Comment),"getIdx"),[],[],{CS(class((,Comment)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!44,string,(109#43,109#51,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(109#42,109#52,!1)}),class((,UnknownType)),(109#42,109#52,!1)}),class((,Comment)),(109#42,109#52,!1)}),class((,UnknownType)),(109#61,109#62,!1)}],{V(!4),class((,JspWriter)),(109#10,109#64,!1)})
+      ,(109#1,109#64,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!47,string,(109#11,109#14,!1)}],{V(!4),class((,JspWriter)),(109#10,109#15,!1)})
+      ,(109#1,109#15,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getIdx"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(109#41,109#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(109#40,109#48,!1)}),class((,UnknownType)),(109#40,109#48,!1)}),class((,Board)),(109#40,109#48,!1)}),class((,UnknownType)),(109#57,109#58,!1)}],{V(!4),class((,JspWriter)),(109#10,109#60,!1)})
+      ,(109#1,109#60,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!48,string,(109#11,109#105,!1)}],{V(!4),class((,JspWriter)),(109#10,109#106,!1)})
+      ,(109#1,109#106,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!49,string,(110#11,110#198,!1)}],{V(!4),class((,JspWriter)),(110#10,110#199,!1)})
+      ,(110#1,110#199,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Comment),"getWriteDate"),[],[],{CS(class((,Comment)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!44,string,(114#43,114#51,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(114#42,114#52,!1)}),class((,UnknownType)),(114#42,114#52,!1)}),class((,Comment)),(114#42,114#52,!1)}),class((,UnknownType)),(114#67,114#68,!1)}],{V(!4),class((,JspWriter)),(114#10,114#70,!1)})
+      ,(114#1,114#70,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!50,string,(114#11,114#52,!1)}],{V(!4),class((,JspWriter)),(114#10,114#53,!1)})
+      ,(114#1,114#53,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Comment),"getContent"),[],[],{CS(class((,Comment)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!44,string,(115#43,115#51,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(115#42,115#52,!1)}),class((,UnknownType)),(115#42,115#52,!1)}),class((,Comment)),(115#42,115#52,!1)}),class((,UnknownType)),(115#65,115#66,!1)}],{V(!4),class((,JspWriter)),(115#10,115#68,!1)})
+      ,(115#1,115#68,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!51,string,(115#11,115#89,!1)}],{V(!4),class((,JspWriter)),(115#10,115#90,!1)})
+      ,(115#1,115#90,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!52,string,(118#11,118#334,!1)}],{V(!4),class((,JspWriter)),(118#10,118#335,!1)})
+      ,(118#1,118#335,!1)};
+      {PC(((,JspWriter),"write"),[class((,UserName))],[{CS(class((,UserName)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!53,string,(123#43,123#52,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(123#42,123#53,!1)}),class((,UnknownType)),(123#42,123#53,!1)}),class((,UserName)),(123#42,123#53,!1)}],{V(!4),class((,JspWriter)),(123#10,123#55,!1)})
+      ,(123#1,123#55,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!54,string,(123#11,123#122,!1)}],{V(!4),class((,JspWriter)),(123#10,123#123,!1)})
+      ,(123#1,123#123,!1)};
+      {PC(((,JspWriter),"write"),[class((,UserId))],[{CS(class((,UserId)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!32,string,(124#41,124#48,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(124#40,124#49,!1)}),class((,UnknownType)),(124#40,124#49,!1)}),class((,UserId)),(124#40,124#49,!1)}],{V(!4),class((,JspWriter)),(124#10,124#51,!1)})
+      ,(124#1,124#51,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!55,string,(124#11,124#138,!1)}],{V(!4),class((,JspWriter)),(124#10,124#139,!1)})
+      ,(124#1,124#139,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((,Board),"getIdx"),[],[],{CS(class((,Board)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!16,string,(125#41,125#47,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(125#40,125#48,!1)}),class((,UnknownType)),(125#40,125#48,!1)}),class((,Board)),(125#40,125#48,!1)}),class((,UnknownType)),(125#57,125#58,!1)}],{V(!4),class((,JspWriter)),(125#10,125#60,!1)})
+      ,(125#1,125#60,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!56,string,(125#11,125#385,!1)}],{V(!4),class((,JspWriter)),(125#10,125#386,!1)})
+      ,(125#1,125#386,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!57,string,(134#11,134#25,!1)}],{V(!4),class((,JspWriter)),(134#10,134#26,!1)})
+      ,(134#1,134#26,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!58,string,(135#11,135#337,!1)}],{V(!4),class((,JspWriter)),(135#10,135#338,!1)})
+      ,(135#1,135#338,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!57,string,(139#11,139#25,!1)}],{V(!4),class((,JspWriter)),(139#10,139#26,!1)})
+      ,(139#1,139#26,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!59,string,(140#11,140#233,!1)}],{V(!4),class((,JspWriter)),(140#10,140#234,!1)})
+      ,(140#1,140#234,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!60,string,(143#11,143#17,!1)}],{V(!4),class((,JspWriter)),(143#10,143#18,!1)})
+      ,(143#1,143#18,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!61,string,(144#11,144#157,!1)}],{V(!4),class((,JspWriter)),(144#10,144#158,!1)})
+      ,(144#1,144#158,!1)};
+      {PC(((,JspWriter),"write"),[class((,UserName))],[{CS(class((,UserName)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!53,string,(150#43,150#52,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(150#42,150#53,!1)}),class((,UnknownType)),(150#42,150#53,!1)}),class((,UserName)),(150#42,150#53,!1)}],{V(!4),class((,JspWriter)),(150#10,150#55,!1)})
+      ,(150#1,150#55,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!62,string,(150#11,150#306,!1)}],{V(!4),class((,JspWriter)),(150#10,150#307,!1)})
+      ,(150#1,150#307,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!64,string,(2#11,2#419,!63)}],{V(!4),class((,JspWriter)),(2#10,2#420,!63)})
+      ,(2#1,2#420,!63)};
+      {PC(((,JspWriter),"write"),[string],[{!65,string,(157#11,157#91,!1)}],{V(!4),class((,JspWriter)),(157#10,157#92,!1)})
+      ,(157#1,157#92,!1)};
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp",
+   [
+      D("\n	function errCodeCheck(){\n		var errCode = __UNKNOWN__;\n		if(errCode != null || errCode != \"\"){\n			switch (errCode) {\n			case 1:\n				alert(\"잘못된 접근 경로입니다!\");\n				break;\n			case 2:\n				alert(\"댓글이 있어 글을 삭제하실 수 없습니다!\");\n				break;\n			}\n		}		\n	}\n	\n	function commentDelete(commentIdx, linkedArticleNum){\n		if(confirm(\"선택하신 댓글을 삭제하시겠습니까?\")){\n			location.href(\"commentDelete.do?idx=\" + commentIdx + \"&linkedArticleNum=\" + linkedArticleNum);\n		}		\n	}\n	\n	function moveAction(where){\n		switch (where) {\n		case 1:\n			if(confirm(\"글을 삭제하시겠습니까?\")){\n				location.href =\"delete.do?idx=__UNKNOWN__\";\n			}\n			break;\n\n		case 2:\n			if(confirm(\"글을 수정하시겠습니까?\")){\n				location.href = \"modify.do?idx=__UNKNOWN__\";\n			}\n			break;\n			\n		case 3:\n			location.href = \"list.do\";			\n			break;\n		\n		case 4:\n			if(confirm(\"글을 추천하시겠습니까?\")){\n				location.href = \"recommend.do?idx=__UNKNOWN__\";\n			}\n			break;\n		}\n	}\n",11,(11#32,56#10)),
+      D("\r\n",2,(2#11,2#16,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>글 보기: ",3,(3#11,3#234,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",8,(8#61,8#62,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</title>\r\n<link href=\"",8,(8#11,8#37,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",9,(9#33,9#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("/css/board.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<link href=\"",9,(9#11,9#85,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",10,(10#33,10#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("/css/main.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n<script type=\"text/javascript\">\r\n	function errCodeCheck(){\r\n		var errCode = ",10,(10#11,10#167,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",13,(13#31,13#41,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D(";\r\n		if(errCode != null || errCode != \"\"){\r\n			switch (errCode) {\r\n			case 1:\r\n				alert(\"잘못된 접근 경로입니다!\");\r\n				break;\r\n			case 2:\r\n				alert(\"댓글이 있어 글을 삭제하실 수 없습니다!\");\r\n				break;\r\n			}\r\n		}		\r\n	}\r\n	\r\n	function commentDelete(commentIdx, linkedArticleNum){\r\n		if(confirm(\"선택하신 댓글을 삭제하시겠습니까?\")){\r\n			location.href(\"commentDelete.do?idx=\" + commentIdx + \"&linkedArticleNum=\" + linkedArticleNum);\r\n		}		\r\n	}\r\n	\r\n	function moveAction(where){\r\n		switch (where) {\r\n		case 1:\r\n			if(confirm(\"글을 삭제하시겠습니까?\")){\r\n				location.href =\"delete.do?idx=",13,(13#11,13#944,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",36,(36#57,36#58,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\";\r\n			}\r\n			break;\r\n\r\n		case 2:\r\n			if(confirm(\"글을 수정하시겠습니까?\")){\r\n				location.href = \"modify.do?idx=",36,(36#11,36#217,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",42,(42#57,42#58,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\";\r\n			}\r\n			break;\r\n			\r\n		case 3:\r\n			location.href = \"list.do\";			\r\n			break;\r\n		\r\n		case 4:\r\n			if(confirm(\"글을 추천하시겠습니까?\")){\r\n				location.href = \"recommend.do?idx=",42,(42#11,42#388,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",52,(52#57,52#58,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\";\r\n			}\r\n			break;\r\n		}\r\n	}\r\n</script>\r\n</head>\r\n<body onload=\"errCodeCheck()\">\r\n<div id=\"container\">\r\n	\r\n		<h1>\r\n			",52,(52#11,52#241,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\"",2,(2#11,2#751,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",27,(27#33,27#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/index.html\">홈으로</a></li>\r\n			<li><a href=\"",27,(27#11,27#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",28,(28#33,28#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/board/list.do\">게시판</a></li>\r\n			<li><a href=\"",28,(28#11,28#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",29,(29#33,29#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\"",29,(29#11,29#87,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",30,(30#33,30#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\"",30,(30#11,30#295,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#33,33#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/init_db.do?id=",33,(33#11,33#32,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#40,33#49,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>",33,(33#11,33#125,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  \r\n		</h1>\r\n\r\n	\r\n	<div id=\"content-container\">\r\n	<div id=\"content\">\r\n	<table class=\"boardView\">\r\n		<tr>\r\n			<td colspan=\"4\"><h3>",63,(63#11,63#223,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",71,(71#61,71#62,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</h3></td>\r\n		</tr>\r\n		<tr>\r\n			<th>작성자</th>\r\n			<th>조회수</th>\r\n			<th>추천수</th>\r\n			<th>작성일</th>\r\n		</tr>\r\n		<tr>\r\n			<td>",71,(71#11,71#309,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",80,(80#60,80#61,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</td>\r\n			<td>",80,(80#11,80#45,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",81,(81#62,81#63,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</td>\r\n			<td>",81,(81#11,81#45,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",82,(82#68,82#69,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</td>\r\n			<td>",82,(82#11,82#45,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",83,(83#63,83#64,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</td>\r\n		</tr>\r\n		<tr>\r\n			<th colspan=\"4\">내용</th>\r\n		</tr>\r\n		",83,(83#11,83#153,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n		<tr>\r\n			<td colspan=\"4\" align=\"left\">\r\n			<span class=\"date\">첨부파일:&nbsp;\r\n			<a href=\"../files/",88,(88#11,88#188,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",92,(92#62,92#63,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\" \r\n			target=\"_blank\">",92,(92#11,92#59,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",93,(93#62,93#63,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</a></span></td>\r\n		</tr>\r\n		",93,(93#11,93#65,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("	\r\n		<tr>\r\n			<td colspan=\"4\" align=\"left\"><p>",95,(95#11,95#101,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",97,(97#61,97#62,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</p><br /><br /></td>\r\n		</tr>		\r\n	</table>\r\n	<table class=\"commentView\">\r\n		<tr>\r\n			<th colspan=\"2\">댓글</th>\r\n		</tr>		\r\n		",97,(97#11,97#241,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n		<tr>\r\n			<td class=\"writer\">				\r\n				<p>",104,(104#11,104#140,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",107,(107#64,107#65,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n				",107,(107#11,107#41,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n					<br /><a onclick=\"commentDelete(",108,(108#11,108#82,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",109,(109#61,109#62,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D(", ",109,(109#11,109#14,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",109,(109#57,109#58,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D(")\"><small>댓글 삭제</small></a>					\r\n				",109,(109#11,109#105,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n				</p>\r\n			</td>\r\n			<td class=\"content\" align=\"left\">\r\n				<span class=\"date\">",110,(110#11,110#198,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",114,(114#67,114#68,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</span>\r\n				<p>",114,(114#11,114#52,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",115,(115#65,115#66,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("</p>\r\n			</td>\r\n		</tr>\r\n		",115,(115#11,115#89,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n		<tr>\r\n			<td class=\"writer2\"><strong>댓글 쓰기</strong></td>\r\n			<td class=\"content2\">\r\n				<form action=\"commentWrite.do\" method=\"post\">\r\n					<input type=\"hidden\" id=\"writer\" name=\"writer\" value=\"",118,(118#11,118#334,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",123,(123#42,123#53,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\" />\r\n					<input type=\"hidden\" id=\"writerId\" name=\"writerId\" value=\"",123,(123#11,123#122,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",124,(124#40,124#49,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\" />\r\n					<input type=\"hidden\" id=\"linkedArticleNum\" name=\"linkedArticleNum\" value=\"",124,(124#11,124#138,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",125,(125#57,125#58,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\" />\r\n					<textarea id=\"content\" name=\"content\" class=\"commentForm1\"></textarea>\r\n					<input type=\"submit\" value=\"확인\" class=\"commentBt\" />\r\n				</form>\r\n			</td>\r\n		</tr>\r\n	</table>\r\n	<br />\r\n	<center>\r\n	",125,(125#11,125#385,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n		",134,(134#11,134#25,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n			<input type=\"button\" value=\"삭제\" class=\"writeBt\" onclick=\"moveAction(1)\" />\r\n			<input type=\"button\" value=\"수정\" class=\"writeBt\" onclick=\"moveAction(2)\" />\r\n			<input type=\"button\" value=\"목록\" class=\"writeBt\" onclick=\"moveAction(3)\" />\r\n		",135,(135#11,135#337,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n		",139,(139#11,139#25,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n			<input type=\"button\" value=\"추천\" class=\"writeBt\" onclick=\"moveAction(4)\" />\r\n			<input type=\"button\" value=\"목록\" class=\"writeBt\" onclick=\"moveAction(3)\" />\r\n		",140,(140#11,140#233,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n	",143,(143#11,143#17,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n	</center>\r\n</div>\r\n	    <div id=\"aside\">\r\n		<fieldset>\r\n			<center>\r\n			   <label>[ ",144,(144#11,144#157,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("  __UNKNOWN__  ",150,(150#42,150#53,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D(" ]님 환영합니다.</label><br/>\r\n			   <a href=\"../logout.do\">로그아웃</a>&nbsp;&nbsp;&nbsp;\r\n	           <a href=\"../member/modify.do\">정보수정</a>\r\n			</center>\r\n		</fieldset>\r\n		</div>\r\n		<div id=\"footer\">\r\n			 ",150,(150#11,150#306,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp")),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n\r\n</head>\r\n<body> \r\n		<p>		  \r\n                Copyright (C) 김영숙(yskim@openeg.co.kr), 2014\r\n		</p>\r\n</body>\r\n</html>",2,(2#11,2#419,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/footer.jsp")),
+      D(" \r\n		</div>\r\n	\r\n</div>\r\n</div>\r\n</body>\r\n</html>",157,(157#11,157#91,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/view.jsp"))
+   ]
+   }
+]

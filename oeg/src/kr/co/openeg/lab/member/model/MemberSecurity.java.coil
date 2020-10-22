@@ -1,0 +1,128 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!4, "super");
+   (!3, "secKey");
+   (!2, "salt");
+   (!1, "userId");
+   (!5, "this");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   CL([public],(kr.co.openeg.lab.member.model,MemberSecurity),(java.lang,Object),[])
+   {
+      ([private],"userId":string,(4#24,4#29));
+      ([private],"salt":string,(5#24,5#27));
+      ([private],"secKey":string,(6#24,6#29))
+   }
+   ,(3#8,53#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   CN([public],(kr.co.openeg.lab.member.model,MemberSecurity),[],[],
+   {[
+      {RE0
+      ,(8#16,8#34)}
+      ]
+   ,(8#16,8#34)}
+   )
+   ,(8#16,8#34)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   CN([public],(kr.co.openeg.lab.member.model,MemberSecurity),[(!1:string,(9#31,9#43)),(!2:string,(9#46,9#56)),(!3:string,(9#59,9#71))],[],
+   {[
+      {PC(((java.lang,Object),"Object"),[],[],{V(!4),class((java.lang,Object)),(10#17,10#24)})
+      ,(10#17,10#24)};
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(11#17,11#20)},"userId"),string,(11#17,11#27)},{V(!1),string,(11#31,11#36)})
+      ,(11#17,11#27)};
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(12#17,12#20)},"salt"),string,(12#17,12#25)},{V(!2),string,(12#29,12#32)})
+      ,(12#17,12#25)};
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(13#17,13#20)},"secKey"),string,(13#17,13#27)},{V(!3),string,(13#31,13#36)})
+      ,(13#17,13#27)};
+      {RE0
+      ,(9#16,14#9)}
+      ]
+   ,(9#16,14#9)}
+   )
+   ,(9#16,14#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"getUserId"):string,[],[],
+   {[
+      {RE({OA({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(19#24,19#29)},"userId"),string,(19#24,19#29)})
+      ,(19#17,19#30)}
+      ]
+   ,(18#16,20#9)}
+   )
+   ,(18#16,20#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"setUserId"):unit,[(!1:string,(24#31,24#43))],[],
+   {[
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(25#17,25#20)},"userId"),string,(25#17,25#27)},{V(!1),string,(25#31,25#36)})
+      ,(25#17,25#27)};
+      {RE0
+      ,(24#16,26#9)}
+      ]
+   ,(24#16,26#9)}
+   )
+   ,(24#16,26#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"getSalt"):string,[],[],
+   {[
+      {RE({OA({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(31#24,31#27)},"salt"),string,(31#24,31#27)})
+      ,(31#17,31#28)}
+      ]
+   ,(30#16,32#9)}
+   )
+   ,(30#16,32#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"setSalt"):unit,[(!2:string,(36#29,36#39))],[],
+   {[
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(37#17,37#20)},"salt"),string,(37#17,37#25)},{V(!2),string,(37#29,37#32)})
+      ,(37#17,37#25)};
+      {RE0
+      ,(36#16,38#9)}
+      ]
+   ,(36#16,38#9)}
+   )
+   ,(36#16,38#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"getSecKey"):string,[],[],
+   {[
+      {RE({OA({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(43#24,43#29)},"secKey"),string,(43#24,43#29)})
+      ,(43#17,43#30)}
+      ]
+   ,(42#16,44#9)}
+   )
+   ,(42#16,44#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   FN([public],((kr.co.openeg.lab.member.model,MemberSecurity),"setSecKey"):unit,[(!3:string,(48#31,48#43))],[],
+   {[
+      {({LO({V(!5),class((kr.co.openeg.lab.member.model,MemberSecurity)),(49#17,49#20)},"secKey"),string,(49#17,49#27)},{V(!3),string,(49#31,49#36)})
+      ,(49#17,49#27)};
+      {RE0
+      ,(48#16,50#9)}
+      ]
+   ,(48#16,50#9)}
+   )
+   ,(48#16,50#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/model/MemberSecurity.java",
+   [
+      D("/**\r\n	 * @return the userId\r\n	 */",15,(15#9,17#11)),
+      D("/**\r\n	 * @param userId the userId to set\r\n	 */",21,(21#9,23#11)),
+      D("/**\r\n	 * @return the salt\r\n	 */",27,(27#9,29#11)),
+      D("/**\r\n	 * @param salt the salt to set\r\n	 */",33,(33#9,35#11)),
+      D("/**\r\n	 * @return the secKey\r\n	 */",39,(39#9,41#11)),
+      D("/**\r\n	 * @param secKey the secKey to set\r\n	 */",45,(45#9,47#11))
+   ]
+   }
+]

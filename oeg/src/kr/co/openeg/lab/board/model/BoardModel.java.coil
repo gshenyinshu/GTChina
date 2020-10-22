@@ -1,0 +1,314 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!14, "savedFileName");
+   (!10, "comment");
+   (!11, "writeDate");
+   (!12, "writerId");
+   (!13, "fileName");
+   (!9, "recommendcount");
+   (!4, "idx");
+   (!3, "rnum");
+   (!2, "this");
+   (!1, "0"N);
+   (!8, "hitcount");
+   (!7, "content");
+   (!6, "subject");
+   (!5, "writer");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   CL([public],(kr.co.openeg.lab.board.model,BoardModel),(java.lang,Object),[])
+   {
+      ([private],"rnum":int,(4#21,4#24));
+      ([private],"idx":int,(5#21,5#23));
+      ([private],"writer":string,(6#24,6#29));
+      ([private],"subject":string,(7#24,7#30));
+      ([private],"content":string,(8#24,8#30));
+      ([private],"hitcount":int,{!1,int,(9#32,9#32)},(9#21,9#32));
+      ([private],"recommendcount":int,{!1,int,(10#38,10#38)},(10#21,10#38));
+      ([private],"comment":int,{!1,int,(11#31,11#31)},(11#21,11#31));
+      ([private],"writeDate":string,(12#24,12#32));
+      ([private],"writerId":string,(13#24,13#31));
+      ([private],"fileName":string,(14#24,14#31));
+      ([private],"savedFileName":string,(15#24,15#36))
+   }
+   ,(3#8,91#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   CN([public],(kr.co.openeg.lab.board.model,BoardModel),[],[],
+   {[
+      {RE0
+      ,(3#8,3#8)}
+      ]
+   ,(3#8,3#8)}
+   )
+   ,(3#8,3#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getRnum"):int,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(19#24,19#27)},"rnum"),int,(19#24,19#27)})
+      ,(19#17,19#28)}
+      ]
+   ,(18#16,20#9)}
+   )
+   ,(18#16,20#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setRnum"):unit,[(!3:int,(21#29,21#36))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(22#17,22#20)},"rnum"),int,(22#17,22#25)},{V(!3),int,(22#29,22#32)})
+      ,(22#17,22#25)};
+      {RE0
+      ,(21#16,23#9)}
+      ]
+   ,(21#16,23#9)}
+   )
+   ,(21#16,23#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getIdx"):int,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(25#24,25#26)},"idx"),int,(25#24,25#26)})
+      ,(25#17,25#27)}
+      ]
+   ,(24#16,26#9)}
+   )
+   ,(24#16,26#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setIdx"):unit,[(!4:int,(27#28,27#34))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(28#17,28#20)},"idx"),int,(28#17,28#24)},{V(!4),int,(28#28,28#30)})
+      ,(28#17,28#24)};
+      {RE0
+      ,(27#16,29#9)}
+      ]
+   ,(27#16,29#9)}
+   )
+   ,(27#16,29#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getWriter"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(31#24,31#29)},"writer"),string,(31#24,31#29)})
+      ,(31#17,31#30)}
+      ]
+   ,(30#16,32#9)}
+   )
+   ,(30#16,32#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setWriter"):unit,[(!5:string,(33#31,33#43))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(34#17,34#20)},"writer"),string,(34#17,34#27)},{V(!5),string,(34#31,34#36)})
+      ,(34#17,34#27)};
+      {RE0
+      ,(33#16,35#9)}
+      ]
+   ,(33#16,35#9)}
+   )
+   ,(33#16,35#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getSubject"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(37#24,37#30)},"subject"),string,(37#24,37#30)})
+      ,(37#17,37#31)}
+      ]
+   ,(36#16,38#9)}
+   )
+   ,(36#16,38#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setSubject"):unit,[(!6:string,(39#32,39#45))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(40#17,40#20)},"subject"),string,(40#17,40#28)},{V(!6),string,(40#32,40#38)})
+      ,(40#17,40#28)};
+      {RE0
+      ,(39#16,41#9)}
+      ]
+   ,(39#16,41#9)}
+   )
+   ,(39#16,41#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getContent"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(43#24,43#30)},"content"),string,(43#24,43#30)})
+      ,(43#17,43#31)}
+      ]
+   ,(42#16,44#9)}
+   )
+   ,(42#16,44#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setContent"):unit,[(!7:string,(45#32,45#45))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(46#17,46#20)},"content"),string,(46#17,46#28)},{V(!7),string,(46#32,46#38)})
+      ,(46#17,46#28)};
+      {RE0
+      ,(45#16,47#9)}
+      ]
+   ,(45#16,47#9)}
+   )
+   ,(45#16,47#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getHitcount"):int,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(49#24,49#31)},"hitcount"),int,(49#24,49#31)})
+      ,(49#17,49#32)}
+      ]
+   ,(48#16,50#9)}
+   )
+   ,(48#16,50#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setHitcount"):unit,[(!8:int,(51#33,51#44))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(52#17,52#20)},"hitcount"),int,(52#17,52#29)},{V(!8),int,(52#33,52#40)})
+      ,(52#17,52#29)};
+      {RE0
+      ,(51#16,53#9)}
+      ]
+   ,(51#16,53#9)}
+   )
+   ,(51#16,53#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getRecommendcount"):int,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(55#24,55#37)},"recommendcount"),int,(55#24,55#37)})
+      ,(55#17,55#38)}
+      ]
+   ,(54#16,56#9)}
+   )
+   ,(54#16,56#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setRecommendcount"):unit,[(!9:int,(57#39,57#56))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(58#17,58#20)},"recommendcount"),int,(58#17,58#35)},{V(!9),int,(58#39,58#52)})
+      ,(58#17,58#35)};
+      {RE0
+      ,(57#16,59#9)}
+      ]
+   ,(57#16,59#9)}
+   )
+   ,(57#16,59#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getComment"):int,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(61#24,61#30)},"comment"),int,(61#24,61#30)})
+      ,(61#17,61#31)}
+      ]
+   ,(60#16,62#9)}
+   )
+   ,(60#16,62#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setComment"):unit,[(!10:int,(63#32,63#42))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(64#17,64#20)},"comment"),int,(64#17,64#28)},{V(!10),int,(64#32,64#38)})
+      ,(64#17,64#28)};
+      {RE0
+      ,(63#16,65#9)}
+      ]
+   ,(63#16,65#9)}
+   )
+   ,(63#16,65#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getWriteDate"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(67#24,67#32)},"writeDate"),string,(67#24,67#32)})
+      ,(67#17,67#33)}
+      ]
+   ,(66#16,68#9)}
+   )
+   ,(66#16,68#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setWriteDate"):unit,[(!11:string,(69#34,69#49))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(70#17,70#20)},"writeDate"),string,(70#17,70#30)},{V(!11),string,(70#34,70#42)})
+      ,(70#17,70#30)};
+      {RE0
+      ,(69#16,71#9)}
+      ]
+   ,(69#16,71#9)}
+   )
+   ,(69#16,71#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getWriterId"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(73#24,73#31)},"writerId"),string,(73#24,73#31)})
+      ,(73#17,73#32)}
+      ]
+   ,(72#16,74#9)}
+   )
+   ,(72#16,74#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setWriterId"):unit,[(!12:string,(75#33,75#47))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(76#17,76#20)},"writerId"),string,(76#17,76#29)},{V(!12),string,(76#33,76#40)})
+      ,(76#17,76#29)};
+      {RE0
+      ,(75#16,77#9)}
+      ]
+   ,(75#16,77#9)}
+   )
+   ,(75#16,77#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getFileName"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(79#24,79#31)},"fileName"),string,(79#24,79#31)})
+      ,(79#17,79#32)}
+      ]
+   ,(78#16,80#9)}
+   )
+   ,(78#16,80#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setFileName"):unit,[(!13:string,(81#33,81#47))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(82#17,82#20)},"fileName"),string,(82#17,82#29)},{V(!13),string,(82#33,82#40)})
+      ,(82#17,82#29)};
+      {RE0
+      ,(81#16,83#9)}
+      ]
+   ,(81#16,83#9)}
+   )
+   ,(81#16,83#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"getSavedFileName"):string,[],[],
+   {[
+      {RE({OA({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(85#24,85#36)},"savedFileName"),string,(85#24,85#36)})
+      ,(85#17,85#37)}
+      ]
+   ,(84#16,86#9)}
+   )
+   ,(84#16,86#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/board/model/BoardModel.java",
+   FN([public],((kr.co.openeg.lab.board.model,BoardModel),"setSavedFileName"):unit,[(!14:string,(87#38,87#57))],[],
+   {[
+      {({LO({V(!2),class((kr.co.openeg.lab.board.model,BoardModel)),(88#17,88#20)},"savedFileName"),string,(88#17,88#34)},{V(!14),string,(88#38,88#50)})
+      ,(88#17,88#34)};
+      {RE0
+      ,(87#16,89#9)}
+      ]
+   ,(87#16,89#9)}
+   )
+   ,(87#16,89#9)}
+]

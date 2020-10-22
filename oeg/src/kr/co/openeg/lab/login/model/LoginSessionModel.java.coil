@@ -1,0 +1,142 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!4, "auth");
+   (!3, "userName");
+   (!2, "userPw");
+   (!1, "userId");
+   (!6, "this");
+   (!5, "super");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   CL([public],(kr.co.openeg.lab.login.model,LoginSessionModel),(java.lang,Object),[])
+   {
+      ([private],"userId":string,(5#24,5#29));
+      ([private],"userPw":string,(6#24,6#29));
+      ([private],"userName":string,(7#24,7#31));
+      ([private],"auth":bool,(8#25,8#28))
+   }
+   ,(4#8,43#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   CN([public],(kr.co.openeg.lab.login.model,LoginSessionModel),[],[],
+   {[
+      {RE0
+      ,(10#16,10#37)}
+      ]
+   ,(10#16,10#37)}
+   )
+   ,(10#16,10#37)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   CN([public],(kr.co.openeg.lab.login.model,LoginSessionModel),[(!1:string,(11#34,11#46)),(!2:string,(11#49,11#61)),(!3:string,(11#64,11#78)),(!4:bool,(12#25,12#36))],[],
+   {[
+      {PC(((java.lang,Object),"Object"),[],[],{V(!5),class((java.lang,Object)),(13#17,13#24)})
+      ,(13#17,13#24)};
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(14#17,14#20)},"userId"),string,(14#17,14#27)},{V(!1),string,(14#31,14#36)})
+      ,(14#17,14#27)};
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(15#17,15#20)},"userPw"),string,(15#17,15#27)},{V(!2),string,(15#31,15#36)})
+      ,(15#17,15#27)};
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(16#17,16#20)},"userName"),string,(16#17,16#29)},{V(!3),string,(16#33,16#40)})
+      ,(16#17,16#29)};
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(17#17,17#20)},"auth"),bool,(17#17,17#25)},{V(!4),bool,(17#29,17#32)})
+      ,(17#17,17#25)};
+      {RE0
+      ,(11#16,18#9)}
+      ]
+   ,(11#16,18#9)}
+   )
+   ,(11#16,18#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserId"):string,[],[],
+   {[
+      {RE({OA({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(20#24,20#29)},"userId"),string,(20#24,20#29)})
+      ,(20#17,20#30)}
+      ]
+   ,(19#16,21#9)}
+   )
+   ,(19#16,21#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"setUserId"):unit,[(!1:string,(22#31,22#43))],[],
+   {[
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(23#17,23#20)},"userId"),string,(23#17,23#27)},{V(!1),string,(23#31,23#36)})
+      ,(23#17,23#27)};
+      {RE0
+      ,(22#16,24#9)}
+      ]
+   ,(22#16,24#9)}
+   )
+   ,(22#16,24#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserPw"):string,[],[],
+   {[
+      {RE({OA({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(26#24,26#29)},"userPw"),string,(26#24,26#29)})
+      ,(26#17,26#30)}
+      ]
+   ,(25#16,27#9)}
+   )
+   ,(25#16,27#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"setUserPw"):unit,[(!2:string,(28#31,28#43))],[],
+   {[
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(29#17,29#20)},"userPw"),string,(29#17,29#27)},{V(!2),string,(29#31,29#36)})
+      ,(29#17,29#27)};
+      {RE0
+      ,(28#16,30#9)}
+      ]
+   ,(28#16,30#9)}
+   )
+   ,(28#16,30#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserName"):string,[],[],
+   {[
+      {RE({OA({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(32#24,32#31)},"userName"),string,(32#24,32#31)})
+      ,(32#17,32#32)}
+      ]
+   ,(31#16,33#9)}
+   )
+   ,(31#16,33#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"setUserName"):unit,[(!3:string,(34#33,34#47))],[],
+   {[
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(35#17,35#20)},"userName"),string,(35#17,35#29)},{V(!3),string,(35#33,35#40)})
+      ,(35#17,35#29)};
+      {RE0
+      ,(34#16,36#9)}
+      ]
+   ,(34#16,36#9)}
+   )
+   ,(34#16,36#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"isAuth"):bool,[],[],
+   {[
+      {RE({OA({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(38#24,38#27)},"auth"),bool,(38#24,38#27)})
+      ,(38#17,38#28)}
+      ]
+   ,(37#16,39#9)}
+   )
+   ,(37#16,39#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginSessionModel.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginSessionModel),"setAuth"):unit,[(!4:bool,(40#29,40#40))],[],
+   {[
+      {({LO({V(!6),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(41#17,41#20)},"auth"),bool,(41#17,41#25)},{V(!4),bool,(41#29,41#32)})
+      ,(41#17,41#25)};
+      {RE0
+      ,(40#16,42#9)}
+      ]
+   ,(40#16,42#9)}
+   )
+   ,(40#16,42#9)}
+]

@@ -1,0 +1,128 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!14, "redirect:/board/list.do"S);
+   (!15, "redirect:login.do"S);
+   (!10, "userId"S);
+   (!11, "errCode"S);
+   (!12, "1"N);
+   (!13, "userName"S);
+   (!9, "this");
+   (!4, "session");
+   (!3, "result");
+   (!2, "loginModel");
+   (!1, "/board/login"S);
+   (!8, "loginCheckResult");
+   (!7, "userPw");
+   (!6, "userId");
+   (!5, "mav");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   CL([public],(kr.co.openeg.lab.login.controller,LoginController),(java.lang,Object),[])
+   {
+      ([private],"service":class((kr.co.openeg.lab.login.service,LoginService)),(25#30,25#36))
+   }
+   ,(22#8,68#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   CN([public],(kr.co.openeg.lab.login.controller,LoginController),[],[],
+   {[
+      {RE0
+      ,(22#8,22#8)}
+      ]
+   ,(22#8,22#8)}
+   )
+   ,(22#8,22#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   FN([public],((kr.co.openeg.lab.login.controller,LoginController),"login"):string,[],[],
+   {[
+      {RE({!1,string,(30#24,30#37)})
+      ,(30#17,30#38)};
+      {RE0
+      ,(28#16,31#9)}
+      ]
+   ,(28#16,31#9)}
+   )
+   ,(28#16,31#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   FN([public],((kr.co.openeg.lab.login.controller,LoginController),"loginProc"):class((org.springframework.web.servlet,ModelAndView)),[(!2:class((kr.co.openeg.lab.login.model,LoginSessionModel)),(34#39,34#96)),(!3:class((org.springframework.validation,BindingResult)),(34#99,34#118)),(!4:class((javax.servlet.http,HttpSession)),(34#121,34#139))],[],
+   {[
+      {VD(!5,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(35#36,35#53)})
+      ,(35#30,35#53)};
+      {PC(((kr.co.openeg.lab.login.service,LoginValidator),"validate"),[class((java.lang,Object)),class((org.springframework.validation,Errors))],[{V(!2),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(38#47,38#56)},{V(!3),class((org.springframework.validation,BindingResult)),(38#59,38#64)}],{NO(class((kr.co.openeg.lab.login.service,LoginValidator)),[],[]),class((kr.co.openeg.lab.login.service,LoginValidator)),(38#17,38#36)})
+      ,(38#17,38#65)};
+      {IF0({FC(((org.springframework.validation,Errors),"hasErrors"),[],[],{V(!3),class((org.springframework.validation,BindingResult)),(39#36,39#37)}),bool,(39#36,39#37)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!1,string,(40#41,40#54)}],{V(!5),class((org.springframework.web.servlet,ModelAndView)),(40#40,40#55)})
+            ,(40#25,40#55)};
+            {RE({V(!5),class((org.springframework.web.servlet,ModelAndView)),(41#32,41#34)})
+            ,(41#25,41#35)}
+            ]
+         ,(39#39,42#17)})
+      ,(39#17,42#17)};
+      {VD(!6,string,{FC(((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserId"),[],[],{V(!2),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(44#53,44#54)}),string,(44#53,44#54)})
+      ,(44#24,44#54)};
+      {VD(!7,string,{FC(((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserPw"),[],[],{V(!2),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(45#53,45#54)}),string,(45#53,45#54)})
+      ,(45#24,45#54)};
+      {VD(!8,class((kr.co.openeg.lab.login.model,LoginSessionModel)),{FC(((kr.co.openeg.lab.login.service,LoginService),"checkUserId"),[string,string],[{V(!6),string,(46#74,46#79)},{V(!7),string,(46#81,46#86)}],{OA({V(!9),class((kr.co.openeg.lab.login.controller,LoginController)),(46#73,46#87)},"service"),class((kr.co.openeg.lab.login.service,LoginService)),(46#73,46#87)}),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(46#73,46#87)})
+      ,(46#35,46#87)};
+      {IF({BO(==,{V(!8),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(49#20,49#35)},{NIL,id,(49#40,49#43)}),bool,(49#20,49#35)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!10,string,(50#39,50#46)},{V(!6),string,(50#49,50#54)}],{V(!5),class((org.springframework.web.servlet,ModelAndView)),(50#38,50#55)})
+            ,(50#25,50#55)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!11,string,(51#39,51#47)},{!12,int,(51#50,51#50)}],{V(!5),class((org.springframework.web.servlet,ModelAndView)),(51#38,51#51)})
+            ,(51#25,51#51)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!1,string,(52#41,52#54)}],{V(!5),class((org.springframework.web.servlet,ModelAndView)),(52#40,52#55)})
+            ,(52#25,52#55)};
+            {RE({V(!5),class((org.springframework.web.servlet,ModelAndView)),(53#32,53#34)})
+            ,(53#25,53#35)}
+            ]
+         ,(49#45,54#17)},
+         {[
+            {PC(((javax.servlet.http,HttpSession),"setAttribute"),[string,string],[{!10,string,(55#46,55#53)},{V(!6),string,(55#56,55#61)}],{V(!4),class((javax.servlet.http,HttpSession)),(55#45,55#62)})
+            ,(55#25,55#62)};
+            {PC(((javax.servlet.http,HttpSession),"setAttribute"),[string,string],[{!13,string,(56#46,56#55)},{FC(((kr.co.openeg.lab.login.model,LoginSessionModel),"getUserName"),[],[],{V(!8),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(56#86,56#87)}),string,(56#86,56#87)}],{V(!4),class((javax.servlet.http,HttpSession)),(56#45,56#88)})
+            ,(56#25,56#88)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!14,string,(57#41,57#65)}],{V(!5),class((org.springframework.web.servlet,ModelAndView)),(57#40,57#66)})
+            ,(57#25,57#66)};
+            {RE({V(!5),class((org.springframework.web.servlet,ModelAndView)),(58#32,58#34)})
+            ,(58#25,58#35)}
+            ]
+         ,(54#23,59#17)})
+      ,(49#17,59#17)};
+      {RE0
+      ,(34#16,61#9)}
+      ]
+   ,(34#16,61#9)}
+   )
+   ,(34#16,61#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   FN([public],((kr.co.openeg.lab.login.controller,LoginController),"logout"):string,[(!4:class((javax.servlet.http,HttpSession)),(64#30,64#48))],[],
+   {[
+      {PC(((javax.servlet.http,HttpSession),"invalidate"),[],[],{V(!4),class((javax.servlet.http,HttpSession)),(65#35,65#36)})
+      ,(65#17,65#36)};
+      {RE({!15,string,(66#24,66#42)})
+      ,(66#17,66#43)};
+      {RE0
+      ,(64#16,67#9)}
+      ]
+   ,(64#16,67#9)}
+   )
+   ,(64#16,67#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/controller/LoginController.java",
+   [
+      S("// form validation\r\n",37),
+      S("//check joined user\r\n",48),
+      S("// not exist userId in database\r\n",51)
+   ]
+   }
+]

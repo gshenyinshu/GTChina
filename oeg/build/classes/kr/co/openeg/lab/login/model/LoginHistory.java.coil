@@ -1,0 +1,212 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!4, "lastFailedLogin");
+   (!3, "retry");
+   (!2, "userId");
+   (!1, "idx");
+   (!8, "this");
+   (!7, "super");
+   (!6, "clientIP");
+   (!5, "lastSuccessedLogin");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   CL([public],(kr.co.openeg.lab.login.model,LoginHistory),(java.lang,Object),[])
+   {
+      ([private],"idx":int,(4#21,4#23));
+      ([private],"userId":string,(5#24,5#29));
+      ([private],"retry":int,(6#21,6#25));
+      ([private],"lastFailedLogin":long,(7#22,7#36));
+      ([private],"lastSuccessedLogin":long,(8#22,8#39));
+      ([private],"clientIP":string,(9#24,9#31))
+   }
+   ,(3#8,95#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   CN([public],(kr.co.openeg.lab.login.model,LoginHistory),[],[],
+   {[
+      {RE0
+      ,(10#16,10#31)}
+      ]
+   ,(10#16,10#31)}
+   )
+   ,(10#16,10#31)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   CN([public],(kr.co.openeg.lab.login.model,LoginHistory),[(!1:int,(11#29,11#35)),(!2:string,(11#38,11#50)),(!3:int,(11#53,11#61)),(!4:long,(11#64,11#83)),(!5:long,(11#86,11#108)),(!6:string,(12#25,12#39))],[],
+   {[
+      {PC(((java.lang,Object),"Object"),[],[],{V(!7),class((java.lang,Object)),(13#17,13#24)})
+      ,(13#17,13#24)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(14#17,14#20)},"idx"),int,(14#17,14#24)},{V(!1),int,(14#28,14#30)})
+      ,(14#17,14#24)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(15#17,15#20)},"userId"),string,(15#17,15#27)},{V(!2),string,(15#31,15#36)})
+      ,(15#17,15#27)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(16#17,16#20)},"retry"),int,(16#17,16#26)},{V(!3),int,(16#30,16#34)})
+      ,(16#17,16#26)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(17#17,17#20)},"lastFailedLogin"),long,(17#17,17#36)},{V(!4),long,(17#40,17#54)})
+      ,(17#17,17#36)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(18#17,18#20)},"lastSuccessedLogin"),long,(18#17,18#39)},{V(!5),long,(18#43,18#60)})
+      ,(18#17,18#39)};
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(19#17,19#20)},"clientIP"),string,(19#17,19#29)},{V(!6),string,(19#33,19#40)})
+      ,(19#17,19#29)};
+      {RE0
+      ,(11#16,20#9)}
+      ]
+   ,(11#16,20#9)}
+   )
+   ,(11#16,20#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getIdx"):int,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(25#24,25#26)},"idx"),int,(25#24,25#26)})
+      ,(25#17,25#27)}
+      ]
+   ,(24#16,26#9)}
+   )
+   ,(24#16,26#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setIdx"):unit,[(!1:int,(30#28,30#34))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(31#17,31#20)},"idx"),int,(31#17,31#24)},{V(!1),int,(31#28,31#30)})
+      ,(31#17,31#24)};
+      {RE0
+      ,(30#16,32#9)}
+      ]
+   ,(30#16,32#9)}
+   )
+   ,(30#16,32#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getUserId"):string,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(37#24,37#29)},"userId"),string,(37#24,37#29)})
+      ,(37#17,37#30)}
+      ]
+   ,(36#16,38#9)}
+   )
+   ,(36#16,38#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setUserId"):unit,[(!2:string,(42#31,42#43))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(43#17,43#20)},"userId"),string,(43#17,43#27)},{V(!2),string,(43#31,43#36)})
+      ,(43#17,43#27)};
+      {RE0
+      ,(42#16,44#9)}
+      ]
+   ,(42#16,44#9)}
+   )
+   ,(42#16,44#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getRetry"):int,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(49#24,49#28)},"retry"),int,(49#24,49#28)})
+      ,(49#17,49#29)}
+      ]
+   ,(48#16,50#9)}
+   )
+   ,(48#16,50#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setRetry"):unit,[(!3:int,(54#30,54#38))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(55#17,55#20)},"retry"),int,(55#17,55#26)},{V(!3),int,(55#30,55#34)})
+      ,(55#17,55#26)};
+      {RE0
+      ,(54#16,56#9)}
+      ]
+   ,(54#16,56#9)}
+   )
+   ,(54#16,56#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getLastFailedLogin"):long,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(61#24,61#38)},"lastFailedLogin"),long,(61#24,61#38)})
+      ,(61#17,61#39)}
+      ]
+   ,(60#16,62#9)}
+   )
+   ,(60#16,62#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setLastFailedLogin"):unit,[(!4:long,(66#40,66#59))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(67#17,67#20)},"lastFailedLogin"),long,(67#17,67#36)},{V(!4),long,(67#40,67#54)})
+      ,(67#17,67#36)};
+      {RE0
+      ,(66#16,68#9)}
+      ]
+   ,(66#16,68#9)}
+   )
+   ,(66#16,68#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getLastSuccessedLogin"):long,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(73#24,73#41)},"lastSuccessedLogin"),long,(73#24,73#41)})
+      ,(73#17,73#42)}
+      ]
+   ,(72#16,74#9)}
+   )
+   ,(72#16,74#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setLastSuccessedLogin"):unit,[(!5:long,(78#43,78#65))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(79#17,79#20)},"lastSuccessedLogin"),long,(79#17,79#39)},{V(!5),long,(79#43,79#60)})
+      ,(79#17,79#39)};
+      {RE0
+      ,(78#16,80#9)}
+      ]
+   ,(78#16,80#9)}
+   )
+   ,(78#16,80#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"getClientIP"):string,[],[],
+   {[
+      {RE({OA({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(85#24,85#31)},"clientIP"),string,(85#24,85#31)})
+      ,(85#17,85#32)}
+      ]
+   ,(84#16,86#9)}
+   )
+   ,(84#16,86#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   FN([public],((kr.co.openeg.lab.login.model,LoginHistory),"setClientIP"):unit,[(!6:string,(90#33,90#47))],[],
+   {[
+      {({LO({V(!8),class((kr.co.openeg.lab.login.model,LoginHistory)),(91#17,91#20)},"clientIP"),string,(91#17,91#29)},{V(!6),string,(91#33,91#40)})
+      ,(91#17,91#29)};
+      {RE0
+      ,(90#16,92#9)}
+      ]
+   ,(90#16,92#9)}
+   )
+   ,(90#16,92#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/login/model/LoginHistory.java",
+   [
+      D("/**\r\n	 * @return the idx\r\n	 */",21,(21#9,23#11)),
+      D("/**\r\n	 * @param idx the idx to set\r\n	 */",27,(27#9,29#11)),
+      D("/**\r\n	 * @return the userId\r\n	 */",33,(33#9,35#11)),
+      D("/**\r\n	 * @param userId the userId to set\r\n	 */",39,(39#9,41#11)),
+      D("/**\r\n	 * @return the retry\r\n	 */",45,(45#9,47#11)),
+      D("/**\r\n	 * @param retry the retry to set\r\n	 */",51,(51#9,53#11)),
+      D("/**\r\n	 * @return the lastFailedLogin\r\n	 */",57,(57#9,59#11)),
+      D("/**\r\n	 * @param lastFailedLogin the lastFailedLogin to set\r\n	 */",63,(63#9,65#11)),
+      D("/**\r\n	 * @return the lastSuccessedLogin\r\n	 */",69,(69#9,71#11)),
+      D("/**\r\n	 * @param lastSuccessedLogin the lastSuccessedLogin to set\r\n	 */",75,(75#9,77#11)),
+      D("/**\r\n	 * @return the clientIp\r\n	 */",81,(81#9,83#11)),
+      D("/**\r\n	 * @param clientIp the clientIp to set\r\n	 */",87,(87#9,89#11))
+   ]
+   }
+]

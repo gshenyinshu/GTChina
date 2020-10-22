@@ -1,0 +1,120 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp");
+   ("version", "1.2rc2.1");
+}
+{
+   (!21, "\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>"S);
+   (!18, "/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\""S);
+   (!19, "/test/init_db.do?id="S);
+   (!14, "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\""S);
+   (!15, "/index.html\">홈으로</a></li>\r\n			<li><a href=\""S);
+   (!16, "/board/list.do\">게시판</a></li>\r\n			<li><a href=\""S);
+   (!17, "/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\""S);
+   (!10, "page");
+   (!11, "this");
+   (!12, "_jspx_out");
+   (!13, "_jspx_page_context");
+   (!20, "userId"S);
+   (!9, "config");
+   (!4, "out");
+   (!3, "response");
+   (!2, "request");
+   (!1, "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp");
+   (!8, "application");
+   (!7, "session");
+   (!6, "pageContext");
+   (!5, "_jspxFactory");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp",
+   CL([public,final],(temp,header___),(org.apache.jasper.runtime,HttpJspBase),[(org.apache.jasper.runtime,JspSourceDependent)])
+   {
+
+   }
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp",
+   CN([public],(temp,header___),[],[],
+   {[
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp",
+   FN([public],((temp,header___),"_jspService"):unit,[(!2:class((javax.servlet.http,HttpServletRequest)),(!)),(!3:class((,HttpServletResponse)),(!))],[(java.io,IOException),(,ServletException)],
+   {[
+      {VD(!4,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!5,class((,JspFactory)),{NO(class((,JspFactory)),[],[]),class((,JspFactory)),(!)})
+      ,(!)};
+      {VD(!6,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {VD(!7,class((,HttpSession)),{NO(class((,HttpSession)),[],[]),class((,HttpSession)),(!)})
+      ,(!)};
+      {VD(!8,class((,ServletContext)),{NO(class((,ServletContext)),[],[]),class((,ServletContext)),(!)})
+      ,(!)};
+      {VD(!9,class((,ServletConfig)),{NO(class((,ServletConfig)),[],[]),class((,ServletConfig)),(!)})
+      ,(!)};
+      {VD(!10,class((java.lang,Object)),{V(!11),class((temp,header___)),(!)})
+      ,(!)};
+      {VD(!12,class((,JspWriter)),{NO(class((,JspWriter)),[],[]),class((,JspWriter)),(!)})
+      ,(!)};
+      {VD(!13,class((,PageContext)),{NO(class((,PageContext)),[],[]),class((,PageContext)),(!)})
+      ,(!)};
+      {PC(((,JspWriter),"write"),[string],[{!14,string,(2#11,2#751,!1)}],{V(!4),class((,JspWriter)),(2#10,2#752,!1)})
+      ,(2#1,2#752,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(27#33,27#34,!1)}),class((,UnknownType)),(27#33,27#34,!1)}],{V(!4),class((,JspWriter)),(27#10,27#35,!1)})
+      ,(27#1,27#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!15,string,(27#11,27#79,!1)}],{V(!4),class((,JspWriter)),(27#10,27#80,!1)})
+      ,(27#1,27#80,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(28#33,28#34,!1)}),class((,UnknownType)),(28#33,28#34,!1)}],{V(!4),class((,JspWriter)),(28#10,28#35,!1)})
+      ,(28#1,28#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!16,string,(28#11,28#79,!1)}],{V(!4),class((,JspWriter)),(28#10,28#80,!1)})
+      ,(28#1,28#80,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(29#33,29#34,!1)}),class((,UnknownType)),(29#33,29#34,!1)}],{V(!4),class((,JspWriter)),(29#10,29#35,!1)})
+      ,(29#1,29#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!17,string,(29#11,29#87,!1)}],{V(!4),class((,JspWriter)),(29#10,29#88,!1)})
+      ,(29#1,29#88,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(30#33,30#34,!1)}),class((,UnknownType)),(30#33,30#34,!1)}],{V(!4),class((,JspWriter)),(30#10,30#35,!1)})
+      ,(30#1,30#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!18,string,(30#11,30#295,!1)}],{V(!4),class((,JspWriter)),(30#10,30#296,!1)})
+      ,(30#1,30#296,!1)};
+      {PC(((,JspWriter),"write"),[class((,UnknownType))],[{FC(((javax.servlet.http,HttpServletRequest),"getContextPath"),[],[],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#33,33#34,!1)}),class((,UnknownType)),(33#33,33#34,!1)}],{V(!4),class((,JspWriter)),(33#10,33#35,!1)})
+      ,(33#1,33#35,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!19,string,(33#11,33#32,!1)}],{V(!4),class((,JspWriter)),(33#10,33#33,!1)})
+      ,(33#1,33#33,!1)};
+      {PC(((,JspWriter),"write"),[class((,UserId))],[{CS(class((,UserId)),{FC(((javax.servlet.http,HttpServletRequest),"getAttribute"),[string],[{!20,string,(33#41,33#48,!1)}],{V(!2),class((javax.servlet.http,HttpServletRequest)),(33#40,33#49,!1)}),class((,UnknownType)),(33#40,33#49,!1)}),class((,UserId)),(33#40,33#49,!1)}],{V(!4),class((,JspWriter)),(33#10,33#51,!1)})
+      ,(33#1,33#51,!1)};
+      {PC(((,JspWriter),"write"),[string],[{!21,string,(33#11,33#125,!1)}],{V(!4),class((,JspWriter)),(33#10,33#126,!1)})
+      ,(33#1,33#126,!1)};
+      {RE0
+      ,(!)}
+      ]
+   ,(!)}
+   )
+   ,(!)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp",
+   [
+      D("\n    function confirmInitDB() {\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\n    		return true;\n    	} else {\n    		return false;\n    	}\n    }\n",8,(8#9,15#6)),
+      D("\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n<title>Insert title here</title>\r\n<script>\r\n    function confirmInitDB() {\r\n    	if ( confirm(\"정말 초기화 하시겠습니까?\")  ) {\r\n    		return true;\r\n    	} else {\r\n    		return false;\r\n    	}\r\n    }\r\n</script>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"header\">\r\n		<p class=\"page_header\">		  \r\n                      openeg.co.kr  \r\n		</p>\r\n	</div>\r\n	<div id=\"navigation\">\r\n		<ul>\r\n			<li><a href=\"",2,(2#11,2#751,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",27,(27#33,27#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/index.html\">홈으로</a></li>\r\n			<li><a href=\"",27,(27#11,27#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",28,(28#33,28#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/board/list.do\">게시판</a></li>\r\n			<li><a href=\"",28,(28#11,28#79,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",29,(29#33,29#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/test.do?no=0\">보안코딩테스트</a></li>\r\n			<li><a href=\"",29,(29#11,29#87,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",30,(30#33,30#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/esapi_test.do\">ESAPI 테스트</a></li>\r\n			<li><a href=\"http://openeg.co.kr\" target=\"_blank\">OpenEG</a></li>\r\n			<li><a href=\"http://cafe.naver.com/sunschool\" target=\"_blank\">SunSchool</a></li>\r\n			<li><a href=\"",30,(30#11,30#295,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#33,33#34,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("/test/init_db.do?id=",33,(33#11,33#32,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("  __UNKNOWN__  ",33,(33#40,33#49,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp")),
+      D("\"  onclick=\"return confirmInitDB();\">DB초기화</a></li>\r\n		</ul>\r\n	</div>\r\n</body>\r\n</html>",33,(33#11,33#125,"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/WebContent/WEB-INF/board/header.jsp"))
+   ]
+   }
+]

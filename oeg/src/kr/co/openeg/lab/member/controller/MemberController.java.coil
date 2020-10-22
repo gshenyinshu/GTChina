@@ -1,0 +1,204 @@
+{
+   ("encoding", "UTF-8");
+   ("filename", "C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java");
+   ("version", "1.2rc2.1");
+}
+{
+   (!25, "/board/member_join_success"S);
+   (!23, "errCode");
+   (!24, "3"N);
+   (!21, "userName"S);
+   (!22, "2"N);
+   (!18, "errCode"S);
+   (!19, "1"N);
+   (!14, "request");
+   (!15, "passwd");
+   (!16, "oldUserPw"S);
+   (!17, "passwd: "S);
+   (!10, "member"S);
+   (!11, "/board/member_modify"S);
+   (!12, "memberModel");
+   (!13, "result");
+   (!20, "redirect:/board/list.do"S);
+   (!9, "this");
+   (!4, "member_modify.do GET Request"S);
+   (!3, "mav");
+   (!2, "session");
+   (!1, "/board/join"S);
+   (!8, "m");
+   (!7, "session userid: "S);
+   (!6, "userId"S);
+   (!5, "userId");
+}
+[
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   CL([public],(kr.co.openeg.lab.member.controller,MemberController),(java.lang,Object),[])
+   {
+      ([private],"service":class((kr.co.openeg.lab.member.service,MemberService)),(24#31,24#37));
+      ([private],"loginService":class((kr.co.openeg.lab.login.service,LoginService)),(27#30,27#41))
+   }
+   ,(21#8,101#1)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   CN([public],(kr.co.openeg.lab.member.controller,MemberController),[],[],
+   {[
+      {RE0
+      ,(21#8,21#8)}
+      ]
+   ,(21#8,21#8)}
+   )
+   ,(21#8,21#8)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   FN([public],((kr.co.openeg.lab.member.controller,MemberController),"memberJoin"):string,[],[],
+   {[
+      {RE({!1,string,(31#24,31#36)})
+      ,(31#17,31#37)};
+      {RE0
+      ,(30#16,32#9)}
+      ]
+   ,(30#16,32#9)}
+   )
+   ,(30#16,32#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   FN([public],((kr.co.openeg.lab.member.controller,MemberController),"memberModify"):class((org.springframework.web.servlet,ModelAndView)),[(!2:class((javax.servlet.http,HttpSession)),(35#42,35#60))],[],
+   {[
+      {VD(!3,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(36#34,36#51)})
+      ,(36#30,36#51)};
+      {PC(((java.io,PrintStream),"println"),[string],[{!4,string,(37#36,37#65)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(37#35,37#66)})
+      ,(37#17,37#66)};
+      {VD(!5,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!6,string,(38#60,38#67)}],{V(!2),class((javax.servlet.http,HttpSession)),(38#59,38#68)}),class((,UnknownType)),(38#59,38#68)}),string,(38#59,38#68)})
+      ,(38#24,38#68)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!7,string,(39#36,39#53)},{V(!5),string,(39#55,39#60)}),string,(39#36,39#53)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(39#35,39#61)})
+      ,(39#17,39#61)};
+      {VD(!8,class((kr.co.openeg.lab.member.model,MemberModel)),{FC(((kr.co.openeg.lab.member.service,MemberService),"findMember"),[string],[{V(!5),string,(40#51,40#56)}],{OA({V(!9),class((kr.co.openeg.lab.member.controller,MemberController)),(40#50,40#57)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(40#50,40#57)}),class((kr.co.openeg.lab.member.model,MemberModel)),(40#50,40#57)})
+      ,(40#29,40#57)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!10,string,(41#31,41#38)},{V(!8),class((kr.co.openeg.lab.member.model,MemberModel)),(41#41,41#41)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(41#30,41#42)})
+      ,(41#17,41#42)};
+      {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!11,string,(42#33,42#54)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(42#32,42#55)})
+      ,(42#17,42#55)};
+      {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(43#24,43#26)})
+      ,(43#17,43#27)};
+      {RE0
+      ,(35#16,44#9)}
+      ]
+   ,(35#16,44#9)}
+   )
+   ,(35#16,44#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   FN([public],((kr.co.openeg.lab.member.controller,MemberController),"memberModifyProcess"):class((org.springframework.web.servlet,ModelAndView)),[(!12:class((kr.co.openeg.lab.member.model,MemberModel)),(47#49,47#102)),(!13:class((org.springframework.validation,BindingResult)),(48#26,48#45)),(!14:class((javax.servlet.http,HttpServletRequest)),(48#48,48#73)),(!2:class((javax.servlet.http,HttpSession)),(48#76,48#94))],[],
+   {[
+      {VD(!3,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(49#34,49#51)})
+      ,(49#30,49#51)};
+      {VD(!5,string,{CS(string,{FC(((javax.servlet.http,HttpSession),"getAttribute"),[string],[{!6,string,(50#60,50#67)}],{V(!2),class((javax.servlet.http,HttpSession)),(50#59,50#68)}),class((,UnknownType)),(50#59,50#68)}),string,(50#59,50#68)})
+      ,(50#24,50#68)};
+      {VD(!15,string,{FC(((javax.servlet.http,HttpServletRequest),"getParameter"),[string],[{!16,string,(51#52,51#62)}],{V(!14),class((javax.servlet.http,HttpServletRequest)),(51#51,51#63)}),class((,UnknownType)),(51#51,51#63)})
+      ,(51#24,51#63)};
+      {PC(((java.io,PrintStream),"println"),[string],[{BO(+,{!17,string,(52#36,52#45)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserPw"),[],[],{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(52#68,52#69)}),string,(52#68,52#69)}),string,(52#36,52#45)}],{CA((java.lang,System),"out"),class((java.io,PrintStream)),(52#35,52#70)})
+      ,(52#17,52#70)};
+      {IF0({BO(==,{FC(((kr.co.openeg.lab.login.service,LoginService),"checkUserId"),[string,string],[{V(!5),string,(54#47,54#52)},{V(!15),string,(54#55,54#60)}],{OA({V(!9),class((kr.co.openeg.lab.member.controller,MemberController)),(54#46,54#61)},"loginService"),class((kr.co.openeg.lab.login.service,LoginService)),(54#46,54#61)}),class((kr.co.openeg.lab.login.model,LoginSessionModel)),(54#46,54#61)},{NIL,id,(54#66,54#69)}),bool,(54#46,54#61)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(55#39,55#47)},{!19,int,(55#50,55#50)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(55#38,55#51)})
+            ,(55#25,55#51)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!10,string,(56#39,56#46)},{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(56#48,56#58)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(56#38,56#59)})
+            ,(56#25,56#59)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!11,string,(57#41,57#62)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(57#40,57#63)})
+            ,(57#25,57#63)};
+            {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(58#32,58#34)})
+            ,(58#25,58#35)}
+            ]
+         ,(54#73,59#17)})
+      ,(54#17,59#17)};
+      {IF({FC(((kr.co.openeg.lab.member.service,MemberService),"modifyMember"),[class((kr.co.openeg.lab.member.model,MemberModel))],[{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(61#43,61#53)}],{OA({V(!9),class((kr.co.openeg.lab.member.controller,MemberController)),(61#42,61#54)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(61#42,61#54)}),bool,(61#42,61#54)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!20,string,(62#37,62#61)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(62#36,62#62)})
+            ,(62#21,62#62)};
+            {PC(((javax.servlet.http,HttpSession),"setAttribute"),[string,string],[{!21,string,(63#42,63#51)},{FC(((kr.co.openeg.lab.member.model,MemberModel),"getUserName"),[],[],{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(63#77,63#78)}),string,(63#77,63#78)}],{V(!2),class((javax.servlet.http,HttpSession)),(63#41,63#79)})
+            ,(63#21,63#79)};
+            {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(64#28,64#30)})
+            ,(64#21,64#31)}
+            ]
+         ,(61#58,65#17)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(66#39,66#47)},{!22,int,(66#50,66#50)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(66#38,66#51)})
+            ,(66#25,66#51)};
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!11,string,(67#41,67#62)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(67#40,67#63)})
+            ,(67#25,67#63)};
+            {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(68#32,68#34)})
+            ,(68#25,68#35)}
+            ]
+         ,(65#24,69#17)})
+      ,(61#17,69#17)};
+      {RE0
+      ,(47#16,70#9)}
+      ]
+   ,(47#16,70#9)}
+   )
+   ,(47#16,70#9)},
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   FN([public],((kr.co.openeg.lab.member.controller,MemberController),"addMember"):class((org.springframework.web.servlet,ModelAndView)),[(!12:class((kr.co.openeg.lab.member.model,MemberModel)),(74#39,74#92)),(!13:class((org.springframework.validation,BindingResult)),(74#95,74#114))],[],
+   {[
+      {VD(!3,class((org.springframework.web.servlet,ModelAndView)),{NO(class((org.springframework.web.servlet,ModelAndView)),[],[]),class((org.springframework.web.servlet,ModelAndView)),(75#36,75#53)})
+      ,(75#30,75#53)};
+      {PC(((kr.co.openeg.lab.member.service,MemberValidatior),"validate"),[class((java.lang,Object)),class((org.springframework.validation,Errors))],[{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(76#49,76#59)},{V(!13),class((org.springframework.validation,BindingResult)),(76#62,76#67)}],{NO(class((kr.co.openeg.lab.member.service,MemberValidatior)),[],[]),class((kr.co.openeg.lab.member.service,MemberValidatior)),(76#17,76#38)})
+      ,(76#17,76#68)};
+      {IF0({FC(((org.springframework.validation,Errors),"hasErrors"),[],[],{V(!13),class((org.springframework.validation,BindingResult)),(77#36,77#37)}),bool,(77#36,77#37)},
+         {[
+            {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!1,string,(78#41,78#53)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(78#40,78#54)})
+            ,(78#25,78#54)};
+            {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(79#32,79#34)})
+            ,(79#25,79#35)}
+            ]
+         ,(77#39,80#17)})
+      ,(77#17,80#17)};
+      {VD(!23,int,{FC(((kr.co.openeg.lab.member.service,MemberService),"addMember"),[class((kr.co.openeg.lab.member.model,MemberModel))],[{V(!12),class((kr.co.openeg.lab.member.model,MemberModel)),(82#47,82#57)}],{OA({V(!9),class((kr.co.openeg.lab.member.controller,MemberController)),(82#46,82#58)},"service"),class((kr.co.openeg.lab.member.service,MemberService)),(82#46,82#58)}),int,(82#46,82#58)})
+      ,(82#21,82#58)};
+      {SW({V(!23),int,(84#24,84#30)},
+         [
+         ({!19,int,(85#22,85#22)},{[
+               {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(86#39,86#47)},{!19,int,(86#50,86#50)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(86#38,86#51)})
+               ,(86#25,86#51)};
+               {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!1,string,(87#41,87#53)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(87#40,87#54)})
+               ,(87#25,87#54)};
+               {BR @ 
+               ,(88#25,88#30)}
+               ],(85#17,88#30)}),
+         ({!22,int,(89#22,89#22)},{[
+               {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(90#39,90#47)},{!22,int,(90#50,90#50)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(90#38,90#51)})
+               ,(90#25,90#51)};
+               {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!1,string,(91#41,91#53)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(91#40,91#54)})
+               ,(91#25,91#54)};
+               {BR @ 
+               ,(92#25,92#30)}
+               ],(89#17,92#30)}),
+         ({!24,int,(93#22,93#22)},{[
+               {PC(((org.springframework.web.servlet,ModelAndView),"addObject"),[string,class((java.lang,Object))],[{!18,string,(94#39,94#47)},{!24,int,(94#50,94#50)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(94#38,94#51)})
+               ,(94#25,94#51)};
+               {PC(((org.springframework.web.servlet,ModelAndView),"setViewName"),[string],[{!25,string,(95#41,95#68)}],{V(!3),class((org.springframework.web.servlet,ModelAndView)),(95#40,95#69)})
+               ,(95#25,95#69)};
+               {BR @ 
+               ,(96#25,96#30)}
+               ],(93#17,96#30)})
+         ])
+      ,(84#17,97#17)};
+      {RE({V(!3),class((org.springframework.web.servlet,ModelAndView)),(98#24,98#26)})
+      ,(98#17,98#27)};
+      {RE0
+      ,(74#16,100#9)}
+      ]
+   ,(74#16,100#9)}
+   )
+   ,(74#16,100#9)},
+
+
+   {"C:/Users/Administrator/Desktop/Project/OpenEG 진단원 교육/src/20151021113100/src/kr/co/openeg/lab/member/controller/MemberController.java",
+   [
+      S("// userId already exist \r\n",86),
+      S("// failed to add new member\r\n",90),
+      S("// success to add new member; move to login page\r\n",95)
+   ]
+   }
+]
