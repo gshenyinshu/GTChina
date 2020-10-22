@@ -51,7 +51,7 @@ public class TestUtil {
 	 
 	   System.out.println("ccard 출력");
 
-	   name=name.replaceAll("['''[@=/]", "");
+	   //name=name.replaceAll("['''[@=/]", "");
 	   String expression = "/addresses/address[@name='"+name+"']/ccard";
 
 	   NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
